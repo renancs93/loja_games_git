@@ -15,11 +15,12 @@ namespace telaLogin
         public telaLogin()
         {
             InitializeComponent();
+
         }
 
         private void telaLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtCampoUsuario_Leave(object sender, EventArgs e)
@@ -67,7 +68,13 @@ namespace telaLogin
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
+            //necessário fechar ou esconder a tela Login ao abrir a outra
 
+
+            //exibe a tela principal
+            telaPrincipal telaPri = new telaPrincipal();
+            telaPri.Show();
+            
         }
     }
 }

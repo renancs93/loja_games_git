@@ -16,7 +16,8 @@ namespace telaLogin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new telaLogin());
+            Application.Run(new telaPrincipal()); // escolha a tela incial ao iniciar o programa
+            
         }
     }
 }

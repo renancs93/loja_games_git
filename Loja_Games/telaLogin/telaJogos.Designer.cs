@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaJogos));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
-            this.abaExibeJogos = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.abaExibeJogos = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
@@ -63,6 +63,15 @@
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
             this.abaCadastraJogos.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "teste1";
+            // 
             // abaExibeJogos
             // 
             this.abaExibeJogos.Controls.Add(this.label2);
@@ -73,15 +82,6 @@
             this.abaExibeJogos.TabIndex = 1;
             this.abaExibeJogos.Text = "Exibir Jogos";
             this.abaExibeJogos.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "teste1";
             // 
             // label2
             // 

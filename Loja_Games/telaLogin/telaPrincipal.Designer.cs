@@ -29,7 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaPrincipal));
+            this.btnJogos = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnJogos
+            // 
+            this.btnJogos.Location = new System.Drawing.Point(580, 121);
+            this.btnJogos.Name = "btnJogos";
+            this.btnJogos.Size = new System.Drawing.Size(105, 31);
+            this.btnJogos.TabIndex = 0;
+            this.btnJogos.Text = "Jogos";
+            this.btnJogos.UseVisualStyleBackColor = true;
+            this.btnJogos.Click += new System.EventHandler(this.btnJogos_Click);
             // 
             // telaPrincipal
             // 
@@ -37,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(734, 522);
+            this.Controls.Add(this.btnJogos);
             this.Name = "telaPrincipal";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Tela Principal";
@@ -45,5 +57,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnJogos;
     }
 }

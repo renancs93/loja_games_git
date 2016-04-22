@@ -7,23 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Loja_games;
 
-namespace telaLogin
+namespace Loja_games
 {
-    public partial class telaPrincipal : Form
+    public partial class telaJogos : Form
     {
-        public telaPrincipal()
+        public telaJogos()
         {
             InitializeComponent();
+            
         }
 
-        private void btnJogos_Click(object sender, EventArgs e)
+        private void telaJogos_Load(object sender, EventArgs e)
         {
-            telaJogos jogos = new telaJogos();
-
-            jogos.Show();
-
+            
         }
+
+        
     }
 }

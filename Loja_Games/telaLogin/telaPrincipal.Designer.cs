@@ -32,6 +32,7 @@
             this.btnJogos = new System.Windows.Forms.Button();
             this.barraProgresso = new System.Windows.Forms.ProgressBar();
             this.btnLogar = new System.Windows.Forms.Button();
+            this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -71,6 +72,22 @@
             this.btnLogar.UseVisualStyleBackColor = true;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
+            // btnCadastroCliente
+            // 
+            this.btnCadastroCliente.BackColor = System.Drawing.Color.Black;
+            this.btnCadastroCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastroCliente.ForeColor = System.Drawing.Color.Red;
+            this.btnCadastroCliente.Location = new System.Drawing.Point(575, 146);
+            this.btnCadastroCliente.Name = "btnCadastroCliente";
+            this.btnCadastroCliente.Size = new System.Drawing.Size(115, 57);
+            this.btnCadastroCliente.TabIndex = 3;
+            this.btnCadastroCliente.Text = "Cadastrar Cliente";
+            this.btnCadastroCliente.UseVisualStyleBackColor = false;
+            this.btnCadastroCliente.Click += new System.EventHandler(this.btnCadastroCliente_Click);
+            this.btnCadastroCliente.MouseEnter += new System.EventHandler(this.btnCadastroCliente_MouseEnter_1);
+            this.btnCadastroCliente.MouseLeave += new System.EventHandler(this.btnCadastroCliente_MouseLeave_1);
+            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +97,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 497);
+            this.Controls.Add(this.btnCadastroCliente);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.barraProgresso);
             this.Controls.Add(this.btnJogos);
@@ -98,5 +116,6 @@
         private System.Windows.Forms.Button btnJogos;
         private System.Windows.Forms.ProgressBar barraProgresso;
         private System.Windows.Forms.Button btnLogar;
+        private System.Windows.Forms.Button btnCadastroCliente;
     }
 }

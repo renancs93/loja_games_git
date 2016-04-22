@@ -409,6 +409,7 @@
             this.MinimizeBox = false;
             this.Name = "telaCadastroCliente";
             this.Text = "telaCadastroCliente";
+            this.Load += new System.EventHandler(this.telaCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbDadosPessoais.ResumeLayout(false);
             this.gpbDadosPessoais.PerformLayout();

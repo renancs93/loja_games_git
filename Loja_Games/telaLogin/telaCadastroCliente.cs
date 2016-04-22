@@ -33,5 +33,10 @@ namespace Loja_games
         {
             this.Close();
         }
+
+        private void telaCadastroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

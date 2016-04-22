@@ -41,7 +41,7 @@
             this.btnJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJogos.ForeColor = System.Drawing.Color.Red;
-            this.btnJogos.Location = new System.Drawing.Point(575, 88);
+            this.btnJogos.Location = new System.Drawing.Point(575, 71);
             this.btnJogos.Name = "btnJogos";
             this.btnJogos.Size = new System.Drawing.Size(115, 30);
             this.btnJogos.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.barraProgresso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.barraProgresso.Enabled = false;
-            this.barraProgresso.Location = new System.Drawing.Point(513, 518);
+            this.barraProgresso.Location = new System.Drawing.Point(513, 485);
             this.barraProgresso.Name = "barraProgresso";
             this.barraProgresso.Size = new System.Drawing.Size(220, 10);
             this.barraProgresso.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(734, 530);
+            this.ClientSize = new System.Drawing.Size(734, 497);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.barraProgresso);
             this.Controls.Add(this.btnJogos);

@@ -66,7 +66,8 @@ namespace LojaGames
         {
             //exibe a tela principal
             telaPrincipal telaPri = new telaPrincipal();
-            telaPri.Visible = true;
+            telaPri.ShowDialog();
+            //telaPri.Visible = true;
 
             //necessário fechar ou esconder a tela Login ao abrir a outra
             Dispose();

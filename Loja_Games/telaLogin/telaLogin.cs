@@ -73,13 +73,13 @@ namespace LojaGames
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            //necessário fechar ou esconder a tela Login ao abrir a outra
-            Dispose();
-
             //exibe a tela principal
             telaPrincipal telaPri = new telaPrincipal();
             telaPri.Visible = true;
-            
+
+            //necessário fechar ou esconder a tela Login ao abrir a outra
+            Dispose();
+
         }
     }
 }

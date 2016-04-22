@@ -17,6 +17,7 @@ namespace LojaGames
         public telaPrincipal()
         {
             InitializeComponent();
+
         }
 
         private void btnJogos_Click(object sender, EventArgs e)
@@ -49,7 +50,8 @@ namespace LojaGames
             telaLogin login = new telaLogin();
             login.Show();
 
-            Hide();//esconde a telaPrincipal
+            Visible = false;
+            //Hide();//esconde a telaPrincipal
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)

@@ -87,7 +87,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "telaPrincipal";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.telaPrincipal_Load);
             this.ResumeLayout(false);

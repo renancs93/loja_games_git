@@ -64,9 +64,11 @@ namespace LojaGames
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            telaPrincipal cancel =  new telaPrincipal();
-            cancel.Visible = true; //ativa a visibilidade da telaPrincipal
+            //exibe a tela principal
+            telaPrincipal telaPri = new telaPrincipal();
+            telaPri.Visible = true;
 
+            //necessário fechar ou esconder a tela Login ao abrir a outra
             Dispose();
 
         }

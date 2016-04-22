@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace telaLogin
+namespace LojaGames
 {
     public partial class telaLogin : Form
     {
+        
         public telaLogin()
         {
             InitializeComponent();
@@ -63,17 +64,21 @@ namespace telaLogin
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            telaPrincipal cancel =  new telaPrincipal();
+            cancel.Visible = true; //ativa a visibilidade da telaPrincipal
+
             Dispose();
+
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //necessário fechar ou esconder a tela Login ao abrir a outra
-
+            Dispose();
 
             //exibe a tela principal
             telaPrincipal telaPri = new telaPrincipal();
-            telaPri.Show();
+            telaPri.Visible = true;
             
         }
     }

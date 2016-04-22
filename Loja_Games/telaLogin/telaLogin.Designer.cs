@@ -1,4 +1,4 @@
-﻿namespace telaLogin
+﻿namespace LojaGames
 {
     partial class telaLogin
     {
@@ -176,7 +176,7 @@
             this.imgOK_senha.TabStop = false;
             this.imgOK_senha.Visible = false;
             // 
-            // telaLogin
+            // LojaGames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,7 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "telaLogin";
+            this.Name = "LojaGames";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.telaLogin_Load);

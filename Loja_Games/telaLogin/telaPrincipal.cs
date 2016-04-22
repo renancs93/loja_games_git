@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Loja_games;
 
-namespace telaLogin
+namespace LojaGames
 {
     public partial class telaPrincipal : Form
     {
@@ -32,6 +32,29 @@ namespace telaLogin
             
         }
 
-        
+        private void btnJogos_MouseEnter(object sender, EventArgs e)
+        {
+           
+            btnJogos.ForeColor =  Color.Yellow;
+            //btnJogos.ForeColor = Color.Red;
+        }
+
+        private void btnJogos_MouseLeave(object sender, EventArgs e)
+        {
+            btnJogos.ForeColor = Color.Red;
+        }
+
+        private void btnLogar_Click(object sender, EventArgs e)
+        {
+            telaLogin login = new telaLogin();
+            login.Show();
+
+            Hide();//esconde a telaPrincipal
+        }
+
+        private void telaPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

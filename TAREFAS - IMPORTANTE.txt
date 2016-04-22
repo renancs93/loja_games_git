@@ -1,9 +1,9 @@
 Nome da tarefa - Atribuído para - Concluido (%)
 
 Criar tela de Login - Renan - 50%
-Criar tela de Cadastro de Cliente - a definir - 0%
+Criar tela de Cadastro de Cliente - Vinicius Canalles - 0%
 Criar tela de Jogos (Cadastro/Exibição) - a definir - 0%
 Criar tela de Venda/Aluguel de Produtos/Jogos - a definir - 0%
 Criar tela Principal do Projeto (Essa tela direcionará para as outras) - Renan - 0%
-Criar tela Cadastra Funcionário -  a definir - 0%
+Criar tela Cadastra Funcionário -  Vinicius Canalles - 0%
 

@@ -60,5 +60,21 @@ namespace LojaGames
             
 
         }
+
+        private void btnCadastroCliente_Click(object sender, EventArgs e)
+        {
+            telaCadastroCliente cliente = new telaCadastroCliente();
+            cliente.Show();
+        }
+
+        private void btnCadastroCliente_MouseEnter_1(object sender, EventArgs e)
+        {
+            btnCadastroCliente.ForeColor = Color.Yellow;
+        }
+
+        private void btnCadastroCliente_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnCadastroCliente.ForeColor = Color.Red;
+        }
     }
 }

@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Settings.cs" />
+    <Compile Include="telaCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadastroCliente.Designer.cs">
+      <DependentUpon>telaCadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="telaJogos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="telaPrincipal.Designer.cs">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="telaCadastroCliente.resx">
+      <DependentUpon>telaCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="telaJogos.resx">
       <DependentUpon>telaJogos.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +137,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cadastro_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cadastro_cliente1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

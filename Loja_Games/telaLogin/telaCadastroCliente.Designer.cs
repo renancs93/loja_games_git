@@ -32,7 +32,6 @@
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.lbStatus = new System.Windows.Forms.Label();
             this.rbntFeminino = new System.Windows.Forms.RadioButton();
             this.rbntMasculino = new System.Windows.Forms.RadioButton();
@@ -60,6 +59,7 @@
             this.lbCidade = new System.Windows.Forms.Label();
             this.lbNumero = new System.Windows.Forms.Label();
             this.lbRua = new System.Windows.Forms.Label();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,9 +81,9 @@
             // 
             // gpbDadosPessoais
             // 
+            this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
             this.gpbDadosPessoais.Controls.Add(this.lbEmail);
-            this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
             this.gpbDadosPessoais.Controls.Add(this.lbStatus);
             this.gpbDadosPessoais.Controls.Add(this.rbntFeminino);
             this.gpbDadosPessoais.Controls.Add(this.rbntMasculino);
@@ -121,19 +121,6 @@
             this.lbEmail.Size = new System.Drawing.Size(58, 18);
             this.lbEmail.TabIndex = 14;
             this.lbEmail.Text = "Email:";
-            // 
-            // cbxStatus
-            // 
-            this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Items.AddRange(new object[] {
-            "Casado",
-            "Solteiro",
-            "Viúvo/a"});
-            this.cbxStatus.Location = new System.Drawing.Point(435, 140);
-            this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(134, 26);
-            this.cbxStatus.TabIndex = 13;
-            this.cbxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lbStatus
             // 
@@ -373,27 +360,39 @@
             this.lbRua.TabIndex = 0;
             this.lbRua.Text = "Rua:";
             // 
+            // cbxStatus
+            // 
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Casado\t",
+            "Solteiro",
+            "Viúvo/a"});
+            this.cbxStatus.Location = new System.Drawing.Point(435, 139);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(134, 26);
+            this.cbxStatus.TabIndex = 16;
+            // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(86, 477);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(86, 484);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(192, 64);
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(197, 58);
             this.btnCadastrarCliente.TabIndex = 3;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(360, 477);
+            this.btnCancelar.Location = new System.Drawing.Point(360, 485);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(192, 64);
+            this.btnCancelar.Size = new System.Drawing.Size(197, 58);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // telaCadastroCliente
             // 
@@ -425,7 +424,6 @@
         private System.Windows.Forms.GroupBox gpbDadosPessoais;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.RadioButton rbntFeminino;
         private System.Windows.Forms.RadioButton rbntMasculino;
@@ -451,9 +449,10 @@
         private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.Label lbNumero;
         private System.Windows.Forms.Label lbRua;
-        private System.Windows.Forms.Button btnCadastrarCliente;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

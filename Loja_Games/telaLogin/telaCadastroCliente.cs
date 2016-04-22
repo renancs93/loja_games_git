@@ -17,21 +17,15 @@ namespace Loja_games
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Cliente Cadastrado com Sucesso!");
+            Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente Cadastrado com sucesso!");
-            this.Close();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Close();
         }
 
         private void telaCadastroCliente_Load(object sender, EventArgs e)

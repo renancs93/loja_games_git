@@ -32,7 +32,6 @@
             this.btnJogos = new System.Windows.Forms.Button();
             this.barraProgresso = new System.Windows.Forms.ProgressBar();
             this.btnLogar = new System.Windows.Forms.Button();
-            this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -42,7 +41,7 @@
             this.btnJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJogos.ForeColor = System.Drawing.Color.Red;
-            this.btnJogos.Location = new System.Drawing.Point(575, 88);
+            this.btnJogos.Location = new System.Drawing.Point(575, 71);
             this.btnJogos.Name = "btnJogos";
             this.btnJogos.Size = new System.Drawing.Size(115, 30);
             this.btnJogos.TabIndex = 0;
@@ -56,7 +55,7 @@
             // 
             this.barraProgresso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.barraProgresso.Enabled = false;
-            this.barraProgresso.Location = new System.Drawing.Point(513, 518);
+            this.barraProgresso.Location = new System.Drawing.Point(513, 485);
             this.barraProgresso.Name = "barraProgresso";
             this.barraProgresso.Size = new System.Drawing.Size(220, 10);
             this.barraProgresso.TabIndex = 1;
@@ -72,24 +71,6 @@
             this.btnLogar.UseVisualStyleBackColor = true;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
-            // btnCadastroCliente
-            // 
-            this.btnCadastroCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCadastroCliente.BackColor = System.Drawing.Color.Black;
-            this.btnCadastroCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastroCliente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroCliente.ForeColor = System.Drawing.Color.Red;
-            this.btnCadastroCliente.Location = new System.Drawing.Point(575, 151);
-            this.btnCadastroCliente.Name = "btnCadastroCliente";
-            this.btnCadastroCliente.Size = new System.Drawing.Size(115, 47);
-            this.btnCadastroCliente.TabIndex = 3;
-            this.btnCadastroCliente.Text = "Cadastro Cliente";
-            this.btnCadastroCliente.UseVisualStyleBackColor = false;
-            this.btnCadastroCliente.Click += new System.EventHandler(this.button1_Click);
-            this.btnCadastroCliente.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.btnCadastroCliente.MouseLeave += new System.EventHandler(this.btnCadastroCliente_MouseLeave);
-            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,8 +79,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(734, 530);
-            this.Controls.Add(this.btnCadastroCliente);
+            this.ClientSize = new System.Drawing.Size(734, 497);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.barraProgresso);
             this.Controls.Add(this.btnJogos);
@@ -107,7 +87,6 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "telaPrincipal";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.telaPrincipal_Load);
             this.ResumeLayout(false);
@@ -119,6 +98,5 @@
         private System.Windows.Forms.Button btnJogos;
         private System.Windows.Forms.ProgressBar barraProgresso;
         private System.Windows.Forms.Button btnLogar;
-        private System.Windows.Forms.Button btnCadastroCliente;
     }
 }

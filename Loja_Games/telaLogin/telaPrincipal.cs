@@ -47,16 +47,21 @@ namespace LojaGames
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
+            Hide();
+           
             telaLogin login = new telaLogin();
-            login.Show();
+            login.ShowDialog();
 
-            Visible = false;
+            
             //Hide();//esconde a telaPrincipal
+            
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
+
             
+
         }
 
         private void button1_Click(object sender, EventArgs e)

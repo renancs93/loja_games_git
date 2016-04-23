@@ -440,7 +440,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Loja_games.Properties.Resources.imagem_clientes1;
             this.ClientSize = new System.Drawing.Size(634, 562);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnCancelar);

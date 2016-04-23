@@ -27,5 +27,10 @@ namespace Loja_games
         {
             Close();
         }
+
+        private void telaCadastroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

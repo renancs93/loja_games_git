@@ -30,6 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.lbCidade = new System.Windows.Forms.Label();
             this.lbNumero = new System.Windows.Forms.Label();
             this.lbRua = new System.Windows.Forms.Label();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,13 +74,14 @@
             this.pictureBox1.Image = global::Loja_games.Properties.Resources.img_cadastro_cliente1;
             this.pictureBox1.Location = new System.Drawing.Point(167, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // gpbDadosPessoais
             // 
+            this.gpbDadosPessoais.BackColor = System.Drawing.Color.Transparent;
             this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
             this.gpbDadosPessoais.Controls.Add(this.lbEmail);
@@ -105,6 +106,18 @@
             this.gpbDadosPessoais.TabIndex = 1;
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
+            // 
+            // cbxStatus
+            // 
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Casado\t",
+            "Solteiro",
+            "Viúvo/a"});
+            this.cbxStatus.Location = new System.Drawing.Point(435, 139);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(134, 26);
+            this.cbxStatus.TabIndex = 16;
             // 
             // txtEmail
             // 
@@ -244,6 +257,7 @@
             // 
             // gpbEndereco
             // 
+            this.gpbEndereco.BackColor = System.Drawing.Color.Transparent;
             this.gpbEndereco.Controls.Add(this.txtCEP);
             this.gpbEndereco.Controls.Add(this.lbCEP);
             this.gpbEndereco.Controls.Add(this.txtEstado);
@@ -360,18 +374,6 @@
             this.lbRua.TabIndex = 0;
             this.lbRua.Text = "Rua:";
             // 
-            // cbxStatus
-            // 
-            this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Items.AddRange(new object[] {
-            "Casado\t",
-            "Solteiro",
-            "Viúvo/a"});
-            this.cbxStatus.Location = new System.Drawing.Point(435, 139);
-            this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(134, 26);
-            this.cbxStatus.TabIndex = 16;
-            // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -398,7 +400,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 561);
+            this.BackgroundImage = global::Loja_games.Properties.Resources.imagem_ps4_editado;
+            this.ClientSize = new System.Drawing.Size(634, 562);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.gpbEndereco);

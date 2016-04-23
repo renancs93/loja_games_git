@@ -63,6 +63,16 @@ namespace Loja_games.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagem_ps4_editado {
+            get {
+                object obj = ResourceManager.GetObject("imagem_ps4_editado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_cadastro_cliente {
             get {
                 object obj = ResourceManager.GetObject("img_cadastro_cliente", resourceCulture);

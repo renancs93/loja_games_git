@@ -51,6 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCabecalho.AutoSize = true;
             this.lbCabecalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCabecalho.ForeColor = System.Drawing.Color.White;
             this.lbCabecalho.Location = new System.Drawing.Point(78, 17);
             this.lbCabecalho.Name = "lbCabecalho";
             this.lbCabecalho.Size = new System.Drawing.Size(187, 24);
@@ -75,6 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.ForeColor = System.Drawing.Color.White;
             this.lbUsuario.Location = new System.Drawing.Point(18, 263);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(67, 18);
@@ -87,6 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbSenha.AutoSize = true;
             this.lbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSenha.ForeColor = System.Drawing.Color.White;
             this.lbSenha.Location = new System.Drawing.Point(18, 299);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(55, 18);
@@ -176,11 +179,12 @@
             this.imgOK_senha.TabStop = false;
             this.imgOK_senha.Visible = false;
             // 
-            // LojaGames
+            // telaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(345, 436);
             this.Controls.Add(this.imgOK_senha);
             this.Controls.Add(this.imgOK_usuario);
@@ -196,7 +200,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LojaGames";
+            this.Name = "telaLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.telaLogin_Load);

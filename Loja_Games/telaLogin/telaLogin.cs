@@ -64,21 +64,15 @@ namespace LojaGames
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //exibe a tela principal
-            telaPrincipal telaPri = new telaPrincipal();
-            telaPri.ShowDialog();
-            //telaPri.Visible = true;
 
             //necessário fechar ou esconder a tela Login ao abrir a outra
             Dispose();
-
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            //exibe a tela principal
-            telaPrincipal telaPri = new telaPrincipal();
-            telaPri.Visible = true;
+            //validar os campos digitados
+
 
             //necessário fechar ou esconder a tela Login ao abrir a outra
             Dispose();

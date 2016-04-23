@@ -33,7 +33,7 @@
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.abaExibeJogos = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGridResultado = new System.Windows.Forms.DataGridView();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnExibirTodos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             this.abaExibeJogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gboxGenero.SuspendLayout();
@@ -104,7 +104,7 @@
             // abaExibeJogos
             // 
             this.abaExibeJogos.BackColor = System.Drawing.SystemColors.Control;
-            this.abaExibeJogos.Controls.Add(this.dataGridView1);
+            this.abaExibeJogos.Controls.Add(this.dGridResultado);
             this.abaExibeJogos.Controls.Add(this.imgLogo);
             this.abaExibeJogos.Controls.Add(this.btnExibirTodos);
             this.abaExibeJogos.Controls.Add(this.btnSair);
@@ -117,15 +117,15 @@
             this.abaExibeJogos.TabIndex = 1;
             this.abaExibeJogos.Text = "Exibir Jogos";
             // 
-            // dataGridView1
+            // dGridResultado
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 299);
-            this.dataGridView1.TabIndex = 5;
+            this.dGridResultado.AllowUserToOrderColumns = true;
+            this.dGridResultado.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dGridResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridResultado.Location = new System.Drawing.Point(9, 132);
+            this.dGridResultado.Name = "dGridResultado";
+            this.dGridResultado.Size = new System.Drawing.Size(743, 299);
+            this.dGridResultado.TabIndex = 5;
             // 
             // imgLogo
             // 
@@ -412,7 +412,7 @@
             this.lbNomeDoJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeDoJogo.Location = new System.Drawing.Point(7, 15);
             this.lbNomeDoJogo.Name = "lbNomeDoJogo";
-            this.lbNomeDoJogo.Size = new System.Drawing.Size(113, 16);
+            this.lbNomeDoJogo.Size = new System.Drawing.Size(110, 16);
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
@@ -432,7 +432,7 @@
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();
             this.abaExibeJogos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.gboxGenero.ResumeLayout(false);
@@ -476,6 +476,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnBuscarTipo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGridResultado;
     }
 }

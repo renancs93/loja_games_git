@@ -100,6 +100,7 @@
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
             this.gpbDadosPessoais.Controls.Add(this.lbNome);
             this.gpbDadosPessoais.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbDadosPessoais.ForeColor = System.Drawing.Color.Black;
             this.gpbDadosPessoais.Location = new System.Drawing.Point(12, 79);
             this.gpbDadosPessoais.Name = "gpbDadosPessoais";
             this.gpbDadosPessoais.Size = new System.Drawing.Size(604, 215);
@@ -109,6 +110,8 @@
             // 
             // cbxStatus
             // 
+            this.cbxStatus.BackColor = System.Drawing.Color.Black;
+            this.cbxStatus.ForeColor = System.Drawing.Color.White;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
             "Casado\t",
@@ -121,6 +124,8 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.Black;
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(74, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(495, 26);
@@ -177,6 +182,8 @@
             // 
             // txtTelefone
             // 
+            this.txtTelefone.BackColor = System.Drawing.Color.Black;
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
             this.txtTelefone.Location = new System.Drawing.Point(435, 107);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(134, 26);
@@ -193,6 +200,8 @@
             // 
             // txtDataNascimento
             // 
+            this.txtDataNascimento.BackColor = System.Drawing.Color.Black;
+            this.txtDataNascimento.ForeColor = System.Drawing.Color.White;
             this.txtDataNascimento.Location = new System.Drawing.Point(191, 107);
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(120, 26);
@@ -209,6 +218,8 @@
             // 
             // txtRG
             // 
+            this.txtRG.BackColor = System.Drawing.Color.Black;
+            this.txtRG.ForeColor = System.Drawing.Color.White;
             this.txtRG.Location = new System.Drawing.Point(389, 70);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(180, 26);
@@ -225,6 +236,8 @@
             // 
             // txtCPF
             // 
+            this.txtCPF.BackColor = System.Drawing.Color.Black;
+            this.txtCPF.ForeColor = System.Drawing.Color.White;
             this.txtCPF.Location = new System.Drawing.Point(74, 70);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(237, 26);
@@ -241,6 +254,8 @@
             // 
             // txtNome
             // 
+            this.txtNome.BackColor = System.Drawing.Color.Black;
+            this.txtNome.ForeColor = System.Drawing.Color.White;
             this.txtNome.Location = new System.Drawing.Point(74, 31);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(495, 26);
@@ -280,6 +295,8 @@
             // 
             // txtCEP
             // 
+            this.txtCEP.BackColor = System.Drawing.Color.Black;
+            this.txtCEP.ForeColor = System.Drawing.Color.White;
             this.txtCEP.Location = new System.Drawing.Point(389, 93);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(180, 26);
@@ -296,6 +313,8 @@
             // 
             // txtEstado
             // 
+            this.txtEstado.BackColor = System.Drawing.Color.Black;
+            this.txtEstado.ForeColor = System.Drawing.Color.White;
             this.txtEstado.Location = new System.Drawing.Point(74, 126);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(495, 26);
@@ -303,6 +322,8 @@
             // 
             // txtCidade
             // 
+            this.txtCidade.BackColor = System.Drawing.Color.Black;
+            this.txtCidade.ForeColor = System.Drawing.Color.White;
             this.txtCidade.Location = new System.Drawing.Point(74, 93);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(237, 26);
@@ -310,6 +331,8 @@
             // 
             // txtBairro
             // 
+            this.txtBairro.BackColor = System.Drawing.Color.Black;
+            this.txtBairro.ForeColor = System.Drawing.Color.White;
             this.txtBairro.Location = new System.Drawing.Point(211, 61);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(358, 26);
@@ -317,6 +340,8 @@
             // 
             // txtNumero
             // 
+            this.txtNumero.BackColor = System.Drawing.Color.Black;
+            this.txtNumero.ForeColor = System.Drawing.Color.White;
             this.txtNumero.Location = new System.Drawing.Point(74, 61);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(64, 26);
@@ -324,6 +349,8 @@
             // 
             // txtRua
             // 
+            this.txtRua.BackColor = System.Drawing.Color.Black;
+            this.txtRua.ForeColor = System.Drawing.Color.White;
             this.txtRua.Location = new System.Drawing.Point(74, 28);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(495, 26);

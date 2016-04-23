@@ -419,7 +419,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Loja_games.Properties.Resources.img_cadastro_cliente1;
-            this.pictureBox1.Location = new System.Drawing.Point(273, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(225, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(308, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

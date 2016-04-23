@@ -448,9 +448,11 @@
             this.Controls.Add(this.gpbEndereco);
             this.Controls.Add(this.gpbDadosPessoais);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaCadastroCliente";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "telaCadastroCliente";
             this.Load += new System.EventHandler(this.telaCadastroCliente_Load);
             this.gpbDadosPessoais.ResumeLayout(false);

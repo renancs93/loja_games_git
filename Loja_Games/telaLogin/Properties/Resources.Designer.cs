@@ -63,6 +63,56 @@ namespace Loja_games.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cabeçalho_cliente {
+            get {
+                object obj = ResourceManager.GetObject("cabeçalho_cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_clientes {
+            get {
+                object obj = ResourceManager.GetObject("imagem_clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_clientes1 {
+            get {
+                object obj = ResourceManager.GetObject("imagem_clientes1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_games {
+            get {
+                object obj = ResourceManager.GetObject("imagem_games", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_games1 {
+            get {
+                object obj = ResourceManager.GetObject("imagem_games1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagem_ps4_editado {
             get {
                 object obj = ResourceManager.GetObject("imagem_ps4_editado", resourceCulture);
@@ -86,6 +136,26 @@ namespace Loja_games.Properties {
         internal static System.Drawing.Bitmap img_cadastro_cliente1 {
             get {
                 object obj = ResourceManager.GetObject("img_cadastro_cliente1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_game_logo {
+            get {
+                object obj = ResourceManager.GetObject("img_game_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_game_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("img_game_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

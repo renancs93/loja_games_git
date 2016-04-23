@@ -115,6 +115,7 @@
             // 
             // btnLogar
             // 
+            this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogar.Enabled = false;
             this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogar.Image = ((System.Drawing.Image)(resources.GetObject("btnLogar.Image")));
@@ -130,6 +131,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,6 +151,8 @@
             this.txtObservacoes.BackColor = System.Drawing.SystemColors.Window;
             this.txtObservacoes.Cursor = System.Windows.Forms.Cursors.Help;
             this.txtObservacoes.Enabled = false;
+            this.txtObservacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacoes.ForeColor = System.Drawing.Color.Red;
             this.txtObservacoes.Location = new System.Drawing.Point(53, 330);
             this.txtObservacoes.Name = "txtObservacoes";
             this.txtObservacoes.Size = new System.Drawing.Size(235, 20);

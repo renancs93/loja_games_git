@@ -46,6 +46,32 @@ namespace Loja_games
         {
             Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtCampoBusca.Text = "";
+
+            //verifica se algumas da opcoes do radioButom (consoles) estão ativas e remove a seleção
+            if((rbtnPSP.Checked || rbtnXbox.Checked || rbtnPc.Checked) == true)
+            {
+                rbtnPSP.Checked = false;
+                rbtnXbox.Checked = false;
+                rbtnPc.Checked = false;
+            }
+
+            //remove as seleções dos combobox de gênero
+            cboxAcaoAventura.Checked = false;
+            cboxCorrida.Checked = false;
+            cboxEsportes.Checked = false;
+            cboxEstrategia.Checked = false;
+            cboxLuta.Checked = false;
+            cboxMusicalRitmico.Checked = false;
+            cboxPlataforma.Checked = false;
+            cboxPuzzle.Checked = false;
+            cboxRpg.Checked = false;
+            cboxTiro.Checked = false;
+
+        }
     }
     
 }

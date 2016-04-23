@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LojaGames
@@ -72,10 +65,24 @@ namespace LojaGames
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //validar os campos digitados
+            if(txtCampoUsuario.Text == "admin" && txtCampoSenha.Text == "admin")
+            {
+                MessageBox.Show("Usuário encontrado");
 
+                //necessário fechar ou esconder a tela Login ao abrir a outra
+                Dispose();
+            }
+            else
+            {
+                txtObservacoes.Visible = true;
+                txtObservacoes.Text = "Usuário não encontrado!";
+                txtObservacoes.TextAlign = HorizontalAlignment.Center ;
 
-            //necessário fechar ou esconder a tela Login ao abrir a outra
-            Dispose();
+                txtCampoSenha.Text = "";
+                txtCampoUsuario.Text = "";
+            }
+
+            
 
         }
     }

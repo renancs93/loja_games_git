@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Loja_games;
 
@@ -25,7 +19,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(20);
+                Thread.Sleep(40);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
                 telaJogos jogos = new telaJogos();
@@ -35,9 +29,7 @@ namespace LojaGames
 
         private void btnJogos_MouseEnter(object sender, EventArgs e)
         {
-           
-            btnJogos.ForeColor =  Color.Yellow;
-            //btnJogos.ForeColor = Color.Red;
+            btnJogos.ForeColor =  Color.Blue;
         }
 
         private void btnJogos_MouseLeave(object sender, EventArgs e)
@@ -53,7 +45,7 @@ namespace LojaGames
             //Hide();//esconde a telaPrincipal
 
         }
-
+        
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
 
@@ -69,12 +61,27 @@ namespace LojaGames
 
         private void btnCadastroCliente_MouseEnter_1(object sender, EventArgs e)
         {
-            btnCadastroCliente.ForeColor = Color.Yellow;
+            btnCadastroCliente.ForeColor = Color.Blue;
         }
 
         private void btnCadastroCliente_MouseLeave_1(object sender, EventArgs e)
         {
             btnCadastroCliente.ForeColor = Color.Red;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSair_MouseEnter(object sender, EventArgs e)
+        {
+            btnSair.ForeColor = Color.Yellow;
+        }
+
+        private void btnSair_MouseLeave(object sender, EventArgs e)
+        {
+            btnSair.ForeColor = Color.Silver;
         }
     }
 }

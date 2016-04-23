@@ -52,7 +52,7 @@
             this.cboxRpg = new System.Windows.Forms.CheckBox();
             this.cboxAcaoAventura = new System.Windows.Forms.CheckBox();
             this.gboxConsole = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtnPc = new System.Windows.Forms.RadioButton();
             this.rbtnPSP = new System.Windows.Forms.RadioButton();
             this.rbtnXbox = new System.Windows.Forms.RadioButton();
             this.gbxBuscar = new System.Windows.Forms.GroupBox();
@@ -177,18 +177,19 @@
             // 
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(652, 44);
+            this.btnLimpar.Location = new System.Drawing.Point(654, 45);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnBuscarTipo
             // 
             this.btnBuscarTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarTipo.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarTipo.Location = new System.Drawing.Point(652, 15);
+            this.btnBuscarTipo.Location = new System.Drawing.Point(654, 15);
             this.btnBuscarTipo.Name = "btnBuscarTipo";
             this.btnBuscarTipo.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarTipo.TabIndex = 4;
@@ -208,7 +209,7 @@
             this.gboxGenero.Controls.Add(this.cboxRpg);
             this.gboxGenero.Controls.Add(this.cboxAcaoAventura);
             this.gboxGenero.ForeColor = System.Drawing.Color.Black;
-            this.gboxGenero.Location = new System.Drawing.Point(174, 9);
+            this.gboxGenero.Location = new System.Drawing.Point(184, 9);
             this.gboxGenero.Name = "gboxGenero";
             this.gboxGenero.Size = new System.Drawing.Size(456, 59);
             this.gboxGenero.TabIndex = 3;
@@ -327,28 +328,28 @@
             // 
             // gboxConsole
             // 
-            this.gboxConsole.Controls.Add(this.radioButton1);
+            this.gboxConsole.Controls.Add(this.rbtnPc);
             this.gboxConsole.Controls.Add(this.rbtnPSP);
             this.gboxConsole.Controls.Add(this.rbtnXbox);
             this.gboxConsole.ForeColor = System.Drawing.Color.Black;
-            this.gboxConsole.Location = new System.Drawing.Point(7, 15);
+            this.gboxConsole.Location = new System.Drawing.Point(13, 14);
             this.gboxConsole.Name = "gboxConsole";
             this.gboxConsole.Size = new System.Drawing.Size(161, 53);
             this.gboxConsole.TabIndex = 2;
             this.gboxConsole.TabStop = false;
             this.gboxConsole.Text = "Console";
             // 
-            // radioButton1
+            // rbtnPc
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(116, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "PC";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnPc.AutoSize = true;
+            this.rbtnPc.ForeColor = System.Drawing.Color.Black;
+            this.rbtnPc.Location = new System.Drawing.Point(116, 21);
+            this.rbtnPc.Name = "rbtnPc";
+            this.rbtnPc.Size = new System.Drawing.Size(39, 17);
+            this.rbtnPc.TabIndex = 2;
+            this.rbtnPc.TabStop = true;
+            this.rbtnPc.Text = "PC";
+            this.rbtnPc.UseVisualStyleBackColor = true;
             // 
             // rbtnPSP
             // 
@@ -473,7 +474,7 @@
         private System.Windows.Forms.CheckBox cboxPlataforma;
         private System.Windows.Forms.CheckBox cboxCorrida;
         private System.Windows.Forms.CheckBox cboxEsportes;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtnPc;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnBuscarTipo;
         private System.Windows.Forms.DataGridView dGridResultado;

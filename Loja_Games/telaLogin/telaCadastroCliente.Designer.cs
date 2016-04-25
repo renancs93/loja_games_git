@@ -1,4 +1,4 @@
-﻿namespace Loja_games
+﻿namespace LojaGames
 {
     partial class telaCadastroCliente
     {
@@ -418,7 +418,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Loja_games.Properties.Resources.img_cadastro_cliente1;
+            this.pictureBox1.Image = global::LojaGames.Properties.Resources.img_cadastro_cliente1;
             this.pictureBox1.Location = new System.Drawing.Point(225, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(308, 45);
@@ -428,7 +428,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Loja_games.Properties.Resources.cabeçalho_cliente;
+            this.pictureBox2.Image = global::LojaGames.Properties.Resources.cabeçalho_cliente;
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(141, 45);

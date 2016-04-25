@@ -1,4 +1,4 @@
-﻿namespace Loja_games
+﻿namespace LojaGames
 {
     partial class telaVenda
     {
@@ -247,7 +247,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Loja_games.Properties.Resources.cabeçalho_cliente;
+            this.pictureBox2.Image = global::LojaGames.Properties.Resources.cabeçalho_cliente;
             this.pictureBox2.Location = new System.Drawing.Point(13, 469);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";

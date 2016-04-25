@@ -1,4 +1,4 @@
-﻿namespace Loja_games.Properties {
+﻿namespace LojaGames.Properties {
     
     
     // Esta classe permite que você trate eventos específicos na classe de configurações:

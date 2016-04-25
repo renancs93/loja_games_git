@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 
-namespace Loja_games
+namespace LojaGames
 {
     public partial class telaJogos : Form
     {

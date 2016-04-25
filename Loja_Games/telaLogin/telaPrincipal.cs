@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using Loja_games;
+using LojaGames;
 
 namespace LojaGames
 {
@@ -23,6 +23,7 @@ namespace LojaGames
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
                 telaJogos jogos = new telaJogos();
+                //jogos.MdiParent = this;            
                 jogos.Show();
             
         }
@@ -40,10 +41,11 @@ namespace LojaGames
         private void btnLogar_Click(object sender, EventArgs e)
         {
             telaLogin login = new telaLogin();
+            login.setTelaPrincipal(this, btnLogarUsuario);
+            login.setBotoes(btnJogos, btnCadastroCliente, btnVenda);
+            Hide(); //esconde a telaPrincipal
             login.ShowDialog();
             
-            //Hide();//esconde a telaPrincipal
-
         }
         
         private void telaPrincipal_Load(object sender, EventArgs e)
@@ -55,8 +57,11 @@ namespace LojaGames
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
-            telaCadastroCliente cliente = new telaCadastroCliente();
-            cliente.Show();
+            telaCadastroCliente cadCliente = new telaCadastroCliente();
+            cadCliente.setTelaPrincipal(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
+            cadCliente.Show();
+            Hide();
+
         }
 
         private void btnCadastroCliente_MouseEnter_1(object sender, EventArgs e)
@@ -88,6 +93,16 @@ namespace LojaGames
         {
             telaVenda venda = new telaVenda();
             venda.Show();
+        }
+
+        private void btnVenda_MouseEnter(object sender, EventArgs e)
+        {
+            btnVenda.ForeColor = Color.Blue;
+        }
+
+        private void btnVenda_MouseLeave(object sender, EventArgs e)
+        {
+            btnVenda.ForeColor = Color.Red;
         }
     }
 }

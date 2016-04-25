@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Loja_games
+namespace LojaGames
 {
     public partial class telaCadastroCliente : Form
     {
+        private telaPrincipal telaPri = null;
+
         public telaCadastroCliente()
         {
             InitializeComponent();
@@ -13,17 +15,24 @@ namespace Loja_games
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cliente Cadastrado com Sucesso!");
+            telaPri.Show();
             Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            telaPri.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
+            Close();//fecha esse form
         }
 
         private void telaCadastroCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void setTelaPrincipal(telaPrincipal t)
+        {
+            telaPri = t;
         }
     }
 }

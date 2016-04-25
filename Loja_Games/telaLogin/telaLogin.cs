@@ -5,7 +5,10 @@ namespace LojaGames
 {
     public partial class telaLogin : Form
     {
-        
+        private telaPrincipal telaP = null;//variável que declara a tela principal
+        private Button corBotao;
+        private Button ver_btJogos, ver_btCadCli, ver_btVenda;
+
         public telaLogin()
         {
             InitializeComponent();
@@ -57,17 +60,26 @@ namespace LojaGames
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
-            //necessário fechar ou esconder a tela Login ao abrir a outra
+            //Chama a tela principal
+            telaP.Show();
             Dispose();
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //validar os campos digitados
-            if(txtCampoUsuario.Text == "admin" && txtCampoSenha.Text == "admin")
+            string user = txtCampoUsuario.Text;
+            string senha = txtCampoSenha.Text;
+    
+            if(user == "admin" && senha == "admin")
             {
-                MessageBox.Show("Usuário encontrado");
+                MessageBox.Show("Bem Vindo "+ user);
+
+                telaP.Show();
+                corBotao.BackColor = System.Drawing.Color.Green;
+                ver_btJogos.Visible = true;
+                ver_btCadCli.Visible = true;
+                ver_btVenda.Visible = true;
 
                 //necessário fechar ou esconder a tela Login ao abrir a outra
                 Dispose();
@@ -85,5 +97,21 @@ namespace LojaGames
             
 
         }
+
+        public void setTelaPrincipal(telaPrincipal t, Button botao)
+        {
+            telaP = t;
+            corBotao = botao;
+
+        }
+        //Relaciona os botões da tela principal com os botoes da tela Login, para que possam ser alterados
+        public void setBotoes(Button bJogos, Button bCadCli, Button bVenda)
+        {
+            ver_btJogos = bJogos;
+            ver_btCadCli = bCadCli;
+            ver_btVenda = bVenda;
+
+        }
+
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Loja_games.Properties {
+namespace LojaGames.Properties {
     using System;
     
     

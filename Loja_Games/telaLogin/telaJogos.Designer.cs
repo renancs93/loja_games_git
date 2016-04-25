@@ -1,4 +1,4 @@
-﻿namespace Loja_games
+﻿namespace LojaGames
 {
     partial class telaJogos
     {

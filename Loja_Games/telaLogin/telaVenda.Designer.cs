@@ -30,8 +30,18 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.abaVenda = new System.Windows.Forms.TabPage();
-            this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gbpDadoVenda = new System.Windows.Forms.GroupBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.lblJuros = new System.Windows.Forms.Label();
+            this.txtJuros = new System.Windows.Forms.TextBox();
+            this.lblTotalCompra = new System.Windows.Forms.Label();
+            this.lblDesconto = new System.Windows.Forms.Label();
+            this.txtTotalCompra = new System.Windows.Forms.TextBox();
+            this.txtDesconto = new System.Windows.Forms.TextBox();
+            this.btnAdicionarItem = new System.Windows.Forms.Button();
+            this.txtCodigoFuncionario = new System.Windows.Forms.TextBox();
+            this.lblCodigoFuncionario = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRemoverItem = new System.Windows.Forms.Button();
             this.btnFinalizarVenda = new System.Windows.Forms.Button();
@@ -47,56 +57,38 @@
             this.lblCpfCliente = new System.Windows.Forms.Label();
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lblCodigoVenda = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblCodigoFuncionario = new System.Windows.Forms.Label();
-            this.txtCodigoFuncionario = new System.Windows.Forms.TextBox();
-            this.btnAdicionarItem = new System.Windows.Forms.Button();
-            this.txtDesconto = new System.Windows.Forms.TextBox();
-            this.txtTotalCompra = new System.Windows.Forms.TextBox();
-            this.lblDesconto = new System.Windows.Forms.Label();
-            this.lblTotalCompra = new System.Windows.Forms.Label();
-            this.txtJuros = new System.Windows.Forms.TextBox();
-            this.lblJuros = new System.Windows.Forms.Label();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.abaAluguel = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.abaVenda);
             this.tabControl1.Controls.Add(this.abaAluguel);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Location = new System.Drawing.Point(10, 11);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(995, 449);
+            this.tabControl1.Size = new System.Drawing.Size(746, 365);
             this.tabControl1.TabIndex = 0;
             // 
             // abaVenda
             // 
             this.abaVenda.Controls.Add(this.gbpDadoVenda);
-            this.abaVenda.Location = new System.Drawing.Point(4, 25);
+            this.abaVenda.Location = new System.Drawing.Point(4, 22);
+            this.abaVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.abaVenda.Name = "abaVenda";
-            this.abaVenda.Padding = new System.Windows.Forms.Padding(3);
-            this.abaVenda.Size = new System.Drawing.Size(987, 420);
+            this.abaVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaVenda.Size = new System.Drawing.Size(738, 339);
             this.abaVenda.TabIndex = 0;
             this.abaVenda.Text = "Venda";
             this.abaVenda.UseVisualStyleBackColor = true;
             this.abaVenda.Click += new System.EventHandler(this.tabPage1_Click_1);
-            // 
-            // abaAluguel
-            // 
-            this.abaAluguel.Location = new System.Drawing.Point(4, 25);
-            this.abaAluguel.Name = "abaAluguel";
-            this.abaAluguel.Padding = new System.Windows.Forms.Padding(3);
-            this.abaAluguel.Size = new System.Drawing.Size(987, 420);
-            this.abaAluguel.TabIndex = 1;
-            this.abaAluguel.Text = "Aluguel";
-            this.abaAluguel.UseVisualStyleBackColor = true;
             // 
             // gbpDadoVenda
             // 
@@ -121,28 +113,132 @@
             this.gbpDadoVenda.Controls.Add(this.lblCpfCliente);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
             this.gbpDadoVenda.Controls.Add(this.lblCodigoVenda);
-            this.gbpDadoVenda.Location = new System.Drawing.Point(6, 6);
+            this.gbpDadoVenda.Location = new System.Drawing.Point(4, 5);
+            this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbpDadoVenda.Name = "gbpDadoVenda";
-            this.gbpDadoVenda.Size = new System.Drawing.Size(975, 408);
+            this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbpDadoVenda.Size = new System.Drawing.Size(731, 332);
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
             this.gbpDadoVenda.Text = "Dados Venda";
             this.gbpDadoVenda.Enter += new System.EventHandler(this.gbpDadoVenda_Enter);
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Location = new System.Drawing.Point(288, 76);
+            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(76, 20);
+            this.txtQuantidade.TabIndex = 21;
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Location = new System.Drawing.Point(212, 77);
+            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(71, 13);
+            this.lblQuantidade.TabIndex = 20;
+            this.lblQuantidade.Text = "Quantidade : ";
+            // 
+            // lblJuros
+            // 
+            this.lblJuros.AutoSize = true;
+            this.lblJuros.Location = new System.Drawing.Point(522, 286);
+            this.lblJuros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJuros.Name = "lblJuros";
+            this.lblJuros.Size = new System.Drawing.Size(49, 13);
+            this.lblJuros.TabIndex = 19;
+            this.lblJuros.Text = "Juros % :";
+            // 
+            // txtJuros
+            // 
+            this.txtJuros.Location = new System.Drawing.Point(606, 286);
+            this.txtJuros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJuros.Name = "txtJuros";
+            this.txtJuros.Size = new System.Drawing.Size(76, 20);
+            this.txtJuros.TabIndex = 18;
+            // 
+            // lblTotalCompra
+            // 
+            this.lblTotalCompra.AutoSize = true;
+            this.lblTotalCompra.Location = new System.Drawing.Point(522, 313);
+            this.lblTotalCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalCompra.Name = "lblTotalCompra";
+            this.lblTotalCompra.Size = new System.Drawing.Size(79, 13);
+            this.lblTotalCompra.TabIndex = 17;
+            this.lblTotalCompra.Text = "Total Compra : ";
+            // 
+            // lblDesconto
+            // 
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Location = new System.Drawing.Point(522, 261);
+            this.lblDesconto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(70, 13);
+            this.lblDesconto.TabIndex = 16;
+            this.lblDesconto.Text = "Desconto % :";
+            // 
+            // txtTotalCompra
+            // 
+            this.txtTotalCompra.Location = new System.Drawing.Point(606, 309);
+            this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalCompra.Name = "txtTotalCompra";
+            this.txtTotalCompra.Size = new System.Drawing.Size(76, 20);
+            this.txtTotalCompra.TabIndex = 15;
+            // 
+            // txtDesconto
+            // 
+            this.txtDesconto.Location = new System.Drawing.Point(606, 261);
+            this.txtDesconto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesconto.Name = "txtDesconto";
+            this.txtDesconto.Size = new System.Drawing.Size(76, 20);
+            this.txtDesconto.TabIndex = 14;
+            // 
+            // btnAdicionarItem
+            // 
+            this.btnAdicionarItem.Location = new System.Drawing.Point(392, 77);
+            this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionarItem.Name = "btnAdicionarItem";
+            this.btnAdicionarItem.Size = new System.Drawing.Size(95, 29);
+            this.btnAdicionarItem.TabIndex = 12;
+            this.btnAdicionarItem.Text = "Adiconar Item";
+            this.btnAdicionarItem.UseVisualStyleBackColor = true;
+            // 
+            // txtCodigoFuncionario
+            // 
+            this.txtCodigoFuncionario.Location = new System.Drawing.Point(544, 44);
+            this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
+            this.txtCodigoFuncionario.Size = new System.Drawing.Size(77, 20);
+            this.txtCodigoFuncionario.TabIndex = 11;
+            // 
+            // lblCodigoFuncionario
+            // 
+            this.lblCodigoFuncionario.AutoSize = true;
+            this.lblCodigoFuncionario.Location = new System.Drawing.Point(433, 44);
+            this.lblCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigoFuncionario.Name = "lblCodigoFuncionario";
+            this.lblCodigoFuncionario.Size = new System.Drawing.Size(107, 13);
+            this.lblCodigoFuncionario.TabIndex = 10;
+            this.lblCodigoFuncionario.Text = "Código Funcionario : ";
+            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(10, 341);
+            this.btnCancelar.Location = new System.Drawing.Point(8, 277);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(129, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(97, 29);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnRemoverItem
             // 
-            this.btnRemoverItem.Location = new System.Drawing.Point(683, 95);
+            this.btnRemoverItem.Location = new System.Drawing.Point(512, 77);
+            this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoverItem.Name = "btnRemoverItem";
-            this.btnRemoverItem.Size = new System.Drawing.Size(143, 36);
+            this.btnRemoverItem.Size = new System.Drawing.Size(107, 29);
             this.btnRemoverItem.TabIndex = 8;
             this.btnRemoverItem.Text = "Remover Item";
             this.btnRemoverItem.UseVisualStyleBackColor = true;
@@ -150,26 +246,29 @@
             // 
             // btnFinalizarVenda
             // 
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(164, 341);
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(123, 277);
+            this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
-            this.btnFinalizarVenda.Size = new System.Drawing.Size(133, 36);
+            this.btnFinalizarVenda.Size = new System.Drawing.Size(100, 29);
             this.btnFinalizarVenda.TabIndex = 7;
             this.btnFinalizarVenda.Text = "Finalizar Venda";
             this.btnFinalizarVenda.UseVisualStyleBackColor = true;
             // 
             // txtCodigoProduto
             // 
-            this.txtCodigoProduto.Location = new System.Drawing.Point(123, 95);
+            this.txtCodigoProduto.Location = new System.Drawing.Point(92, 77);
+            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
-            this.txtCodigoProduto.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigoProduto.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoProduto.TabIndex = 6;
             // 
             // lblCodigoProduto
             // 
             this.lblCodigoProduto.AutoSize = true;
-            this.lblCodigoProduto.Location = new System.Drawing.Point(7, 95);
+            this.lblCodigoProduto.Location = new System.Drawing.Point(5, 77);
+            this.lblCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoProduto.Name = "lblCodigoProduto";
-            this.lblCodigoProduto.Size = new System.Drawing.Size(118, 17);
+            this.lblCodigoProduto.Size = new System.Drawing.Size(89, 13);
             this.lblCodigoProduto.TabIndex = 5;
             this.lblCodigoProduto.Text = "Código Produto : ";
             // 
@@ -182,10 +281,11 @@
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
-            this.dgvDescreveProdutos.Location = new System.Drawing.Point(10, 148);
+            this.dgvDescreveProdutos.Location = new System.Drawing.Point(8, 120);
+            this.dgvDescreveProdutos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDescreveProdutos.Name = "dgvDescreveProdutos";
             this.dgvDescreveProdutos.RowTemplate.Height = 24;
-            this.dgvDescreveProdutos.Size = new System.Drawing.Size(933, 150);
+            this.dgvDescreveProdutos.Size = new System.Drawing.Size(700, 122);
             this.dgvDescreveProdutos.TabIndex = 4;
             // 
             // dgvtbcCodigo
@@ -215,142 +315,69 @@
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(386, 54);
+            this.txtCpf.Location = new System.Drawing.Point(290, 44);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(140, 22);
+            this.txtCpf.Size = new System.Drawing.Size(106, 20);
             this.txtCpf.TabIndex = 3;
             // 
             // lblCpfCliente
             // 
             this.lblCpfCliente.AutoSize = true;
-            this.lblCpfCliente.Location = new System.Drawing.Point(283, 54);
+            this.lblCpfCliente.Location = new System.Drawing.Point(212, 44);
+            this.lblCpfCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCpfCliente.Name = "lblCpfCliente";
-            this.lblCpfCliente.Size = new System.Drawing.Size(97, 17);
+            this.lblCpfCliente.Size = new System.Drawing.Size(74, 13);
             this.lblCpfCliente.TabIndex = 2;
             this.lblCpfCliente.Text = "CPF Cliente  : ";
             // 
             // txtCodigoVenda
             // 
-            this.txtCodigoVenda.Location = new System.Drawing.Point(122, 54);
+            this.txtCodigoVenda.Location = new System.Drawing.Point(92, 44);
+            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoVenda.Name = "txtCodigoVenda";
-            this.txtCodigoVenda.Size = new System.Drawing.Size(130, 22);
+            this.txtCodigoVenda.Size = new System.Drawing.Size(98, 20);
             this.txtCodigoVenda.TabIndex = 1;
             // 
             // lblCodigoVenda
             // 
             this.lblCodigoVenda.AutoSize = true;
-            this.lblCodigoVenda.Location = new System.Drawing.Point(7, 54);
+            this.lblCodigoVenda.Location = new System.Drawing.Point(5, 44);
+            this.lblCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoVenda.Name = "lblCodigoVenda";
-            this.lblCodigoVenda.Size = new System.Drawing.Size(109, 17);
+            this.lblCodigoVenda.Size = new System.Drawing.Size(83, 13);
             this.lblCodigoVenda.TabIndex = 0;
             this.lblCodigoVenda.Text = "Código Venda : ";
             // 
-            // pictureBox2
+            // abaAluguel
             // 
-            this.pictureBox2.Image = global::LojaGames.Properties.Resources.cabeçalho_cliente;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 469);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 55);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.abaAluguel.Location = new System.Drawing.Point(4, 22);
+            this.abaAluguel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Name = "abaAluguel";
+            this.abaAluguel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Size = new System.Drawing.Size(738, 339);
+            this.abaAluguel.TabIndex = 1;
+            this.abaAluguel.Text = "Aluguel";
+            this.abaAluguel.UseVisualStyleBackColor = true;
             // 
-            // lblCodigoFuncionario
+            // pictureBox1
             // 
-            this.lblCodigoFuncionario.AutoSize = true;
-            this.lblCodigoFuncionario.Location = new System.Drawing.Point(577, 54);
-            this.lblCodigoFuncionario.Name = "lblCodigoFuncionario";
-            this.lblCodigoFuncionario.Size = new System.Drawing.Size(142, 17);
-            this.lblCodigoFuncionario.TabIndex = 10;
-            this.lblCodigoFuncionario.Text = "Código Funcionario : ";
-            // 
-            // txtCodigoFuncionario
-            // 
-            this.txtCodigoFuncionario.Location = new System.Drawing.Point(725, 54);
-            this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
-            this.txtCodigoFuncionario.Size = new System.Drawing.Size(101, 22);
-            this.txtCodigoFuncionario.TabIndex = 11;
-            // 
-            // btnAdicionarItem
-            // 
-            this.btnAdicionarItem.Location = new System.Drawing.Point(522, 95);
-            this.btnAdicionarItem.Name = "btnAdicionarItem";
-            this.btnAdicionarItem.Size = new System.Drawing.Size(127, 36);
-            this.btnAdicionarItem.TabIndex = 12;
-            this.btnAdicionarItem.Text = "Adiconar Item";
-            this.btnAdicionarItem.UseVisualStyleBackColor = true;
-            // 
-            // txtDesconto
-            // 
-            this.txtDesconto.Location = new System.Drawing.Point(808, 321);
-            this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(100, 22);
-            this.txtDesconto.TabIndex = 14;
-            // 
-            // txtTotalCompra
-            // 
-            this.txtTotalCompra.Location = new System.Drawing.Point(808, 380);
-            this.txtTotalCompra.Name = "txtTotalCompra";
-            this.txtTotalCompra.Size = new System.Drawing.Size(100, 22);
-            this.txtTotalCompra.TabIndex = 15;
-            // 
-            // lblDesconto
-            // 
-            this.lblDesconto.AutoSize = true;
-            this.lblDesconto.Location = new System.Drawing.Point(696, 321);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(92, 17);
-            this.lblDesconto.TabIndex = 16;
-            this.lblDesconto.Text = "Desconto % :";
-            // 
-            // lblTotalCompra
-            // 
-            this.lblTotalCompra.AutoSize = true;
-            this.lblTotalCompra.Location = new System.Drawing.Point(696, 385);
-            this.lblTotalCompra.Name = "lblTotalCompra";
-            this.lblTotalCompra.Size = new System.Drawing.Size(105, 17);
-            this.lblTotalCompra.TabIndex = 17;
-            this.lblTotalCompra.Text = "Total Compra : ";
-            // 
-            // txtJuros
-            // 
-            this.txtJuros.Location = new System.Drawing.Point(808, 352);
-            this.txtJuros.Name = "txtJuros";
-            this.txtJuros.Size = new System.Drawing.Size(100, 22);
-            this.txtJuros.TabIndex = 18;
-            // 
-            // lblJuros
-            // 
-            this.lblJuros.AutoSize = true;
-            this.lblJuros.Location = new System.Drawing.Point(696, 352);
-            this.lblJuros.Name = "lblJuros";
-            this.lblJuros.Size = new System.Drawing.Size(67, 17);
-            this.lblJuros.TabIndex = 19;
-            this.lblJuros.Text = "Juros % :";
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Location = new System.Drawing.Point(283, 95);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(94, 17);
-            this.lblQuantidade.TabIndex = 20;
-            this.lblQuantidade.Text = "Quantidade : ";
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(384, 94);
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(100, 22);
-            this.txtQuantidade.TabIndex = 21;
+            this.pictureBox1.Image = global::Loja_games.Properties.Resources.img_game_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 381);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // telaVenda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 537);
+            this.ClientSize = new System.Drawing.Size(758, 436);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "telaVenda";
             this.Text = "telaVenda";
             this.tabControl1.ResumeLayout(false);
@@ -358,7 +385,7 @@
             this.gbpDadoVenda.ResumeLayout(false);
             this.gbpDadoVenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,7 +411,6 @@
         private System.Windows.Forms.Label lblCpfCliente;
         private System.Windows.Forms.TextBox txtCodigoVenda;
         private System.Windows.Forms.Label lblCodigoVenda;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAdicionarItem;
         private System.Windows.Forms.TextBox txtCodigoFuncionario;
         private System.Windows.Forms.Label lblCodigoFuncionario;
@@ -396,5 +422,6 @@
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

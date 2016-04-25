@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaCadastroCliente));
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -62,12 +61,8 @@
             this.lbRua = new System.Windows.Forms.Label();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
-            this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbDadosPessoais
@@ -414,32 +409,12 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pcbCadastroCliente
-            // 
-            this.pcbCadastroCliente.Image = global::Loja_games.Properties.Resources.img_cadastro_cliente2;
-            this.pcbCadastroCliente.Location = new System.Drawing.Point(301, 20);
-            this.pcbCadastroCliente.Name = "pcbCadastroCliente";
-            this.pcbCadastroCliente.Size = new System.Drawing.Size(280, 45);
-            this.pcbCadastroCliente.TabIndex = 5;
-            this.pcbCadastroCliente.TabStop = false;
-            // 
-            // pcbLogoGame
-            // 
-            this.pcbLogoGame.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogoGame.Image")));
-            this.pcbLogoGame.Location = new System.Drawing.Point(21, 20);
-            this.pcbLogoGame.Name = "pcbLogoGame";
-            this.pcbLogoGame.Size = new System.Drawing.Size(140, 45);
-            this.pcbLogoGame.TabIndex = 6;
-            this.pcbLogoGame.TabStop = false;
-            // 
             // telaCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 562);
-            this.Controls.Add(this.pcbLogoGame);
-            this.Controls.Add(this.pcbCadastroCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.gpbEndereco);
@@ -455,8 +430,6 @@
             this.gpbDadosPessoais.PerformLayout();
             this.gpbEndereco.ResumeLayout(false);
             this.gpbEndereco.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,7 +468,5 @@
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.Button btnCadastrarCliente;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.PictureBox pcbCadastroCliente;
-        private System.Windows.Forms.PictureBox pcbLogoGame;
     }
 }

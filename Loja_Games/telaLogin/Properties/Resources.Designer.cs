@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Loja_games.Properties {
+namespace LojaGames.Properties {
     using System;
     
     
@@ -136,16 +136,6 @@ namespace Loja_games.Properties {
         internal static System.Drawing.Bitmap img_cadastro_cliente1 {
             get {
                 object obj = ResourceManager.GetObject("img_cadastro_cliente1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap img_cadastro_cliente2 {
-            get {
-                object obj = ResourceManager.GetObject("img_cadastro_cliente2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -101,9 +101,9 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Silver;
-            this.btnSair.Location = new System.Drawing.Point(597, 357);
+            this.btnSair.Location = new System.Drawing.Point(613, 357);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(93, 28);
+            this.btnSair.Size = new System.Drawing.Size(77, 28);
             this.btnSair.TabIndex = 4;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
             this.btnVenda.Location = new System.Drawing.Point(575, 163);
-            this.btnVenda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(115, 37);
             this.btnVenda.TabIndex = 5;

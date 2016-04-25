@@ -53,6 +53,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,6 +92,12 @@
     <Compile Include="telaPrincipal.Designer.cs">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="telaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaVenda.Designer.cs">
+      <DependentUpon>telaVenda.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="telaCadastroCliente.resx">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="telaPrincipal.resx">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaVenda.resx">
+      <DependentUpon>telaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

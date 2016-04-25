@@ -83,5 +83,11 @@ namespace LojaGames
         {
             btnSair.ForeColor = Color.Silver;
         }
+
+        private void btnVenda_Click(object sender, EventArgs e)
+        {
+            telaVenda venda = new telaVenda();
+            venda.Show();
+        }
     }
 }

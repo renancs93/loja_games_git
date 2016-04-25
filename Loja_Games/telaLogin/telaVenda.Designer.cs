@@ -58,12 +58,10 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lblCodigoVenda = new System.Windows.Forms.Label();
             this.abaAluguel = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -71,7 +69,7 @@
             this.tabControl1.Controls.Add(this.abaVenda);
             this.tabControl1.Controls.Add(this.abaAluguel);
             this.tabControl1.Location = new System.Drawing.Point(10, 11);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(746, 365);
@@ -81,9 +79,9 @@
             // 
             this.abaVenda.Controls.Add(this.gbpDadoVenda);
             this.abaVenda.Location = new System.Drawing.Point(4, 22);
-            this.abaVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaVenda.Margin = new System.Windows.Forms.Padding(2);
             this.abaVenda.Name = "abaVenda";
-            this.abaVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaVenda.Padding = new System.Windows.Forms.Padding(2);
             this.abaVenda.Size = new System.Drawing.Size(738, 339);
             this.abaVenda.TabIndex = 0;
             this.abaVenda.Text = "Venda";
@@ -114,9 +112,9 @@
             this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
             this.gbpDadoVenda.Controls.Add(this.lblCodigoVenda);
             this.gbpDadoVenda.Location = new System.Drawing.Point(4, 5);
-            this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Name = "gbpDadoVenda";
-            this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Size = new System.Drawing.Size(731, 332);
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
@@ -126,7 +124,7 @@
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(288, 76);
-            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(76, 20);
             this.txtQuantidade.TabIndex = 21;
@@ -154,7 +152,7 @@
             // txtJuros
             // 
             this.txtJuros.Location = new System.Drawing.Point(606, 286);
-            this.txtJuros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJuros.Margin = new System.Windows.Forms.Padding(2);
             this.txtJuros.Name = "txtJuros";
             this.txtJuros.Size = new System.Drawing.Size(76, 20);
             this.txtJuros.TabIndex = 18;
@@ -182,7 +180,7 @@
             // txtTotalCompra
             // 
             this.txtTotalCompra.Location = new System.Drawing.Point(606, 309);
-            this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(76, 20);
             this.txtTotalCompra.TabIndex = 15;
@@ -190,7 +188,7 @@
             // txtDesconto
             // 
             this.txtDesconto.Location = new System.Drawing.Point(606, 261);
-            this.txtDesconto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesconto.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(76, 20);
             this.txtDesconto.TabIndex = 14;
@@ -198,7 +196,7 @@
             // btnAdicionarItem
             // 
             this.btnAdicionarItem.Location = new System.Drawing.Point(392, 77);
-            this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionarItem.Name = "btnAdicionarItem";
             this.btnAdicionarItem.Size = new System.Drawing.Size(95, 29);
             this.btnAdicionarItem.TabIndex = 12;
@@ -208,7 +206,7 @@
             // txtCodigoFuncionario
             // 
             this.txtCodigoFuncionario.Location = new System.Drawing.Point(544, 44);
-            this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
             this.txtCodigoFuncionario.Size = new System.Drawing.Size(77, 20);
             this.txtCodigoFuncionario.TabIndex = 11;
@@ -226,7 +224,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(8, 277);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 29);
             this.btnCancelar.TabIndex = 9;
@@ -236,7 +234,7 @@
             // btnRemoverItem
             // 
             this.btnRemoverItem.Location = new System.Drawing.Point(512, 77);
-            this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverItem.Name = "btnRemoverItem";
             this.btnRemoverItem.Size = new System.Drawing.Size(107, 29);
             this.btnRemoverItem.TabIndex = 8;
@@ -247,7 +245,7 @@
             // btnFinalizarVenda
             // 
             this.btnFinalizarVenda.Location = new System.Drawing.Point(123, 277);
-            this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(100, 29);
             this.btnFinalizarVenda.TabIndex = 7;
@@ -257,7 +255,7 @@
             // txtCodigoProduto
             // 
             this.txtCodigoProduto.Location = new System.Drawing.Point(92, 77);
-            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoProduto.TabIndex = 6;
@@ -282,7 +280,7 @@
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
             this.dgvDescreveProdutos.Location = new System.Drawing.Point(8, 120);
-            this.dgvDescreveProdutos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDescreveProdutos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDescreveProdutos.Name = "dgvDescreveProdutos";
             this.dgvDescreveProdutos.RowTemplate.Height = 24;
             this.dgvDescreveProdutos.Size = new System.Drawing.Size(700, 122);
@@ -316,7 +314,7 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(290, 44);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(106, 20);
             this.txtCpf.TabIndex = 3;
@@ -334,7 +332,7 @@
             // txtCodigoVenda
             // 
             this.txtCodigoVenda.Location = new System.Drawing.Point(92, 44);
-            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoVenda.Name = "txtCodigoVenda";
             this.txtCodigoVenda.Size = new System.Drawing.Size(98, 20);
             this.txtCodigoVenda.TabIndex = 1;
@@ -352,32 +350,21 @@
             // abaAluguel
             // 
             this.abaAluguel.Location = new System.Drawing.Point(4, 22);
-            this.abaAluguel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Name = "abaAluguel";
-            this.abaAluguel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Padding = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Size = new System.Drawing.Size(738, 339);
             this.abaAluguel.TabIndex = 1;
             this.abaAluguel.Text = "Aluguel";
             this.abaAluguel.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Loja_games.Properties.Resources.img_game_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 381);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 436);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "telaVenda";
             this.Text = "telaVenda";
             this.tabControl1.ResumeLayout(false);
@@ -385,7 +372,6 @@
             this.gbpDadoVenda.ResumeLayout(false);
             this.gbpDadoVenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,6 +408,5 @@
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

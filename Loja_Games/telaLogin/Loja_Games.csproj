@@ -152,34 +152,10 @@
     <None Include="Resources\img_cadastro_cliente.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\img_cadastro_cliente1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagem_ps4_editado.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\img_game_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cabeçalho_cliente.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\imagem_games.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagem_games1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagem_clientes.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imagem_clientes1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img_game_logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img_cadastro_cliente2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

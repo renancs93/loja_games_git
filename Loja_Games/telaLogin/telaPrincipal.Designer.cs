@@ -35,6 +35,7 @@
             this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVenda = new System.Windows.Forms.Button();
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -129,6 +130,22 @@
             this.btnVenda.MouseEnter += new System.EventHandler(this.btnVenda_MouseEnter);
             this.btnVenda.MouseLeave += new System.EventHandler(this.btnVenda_MouseLeave);
             // 
+            // btnCadastrarFuncionario
+            // 
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.Black;
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.Red;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(575, 205);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(115, 47);
+            this.btnCadastrarFuncionario.TabIndex = 6;
+            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.Visible = false;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            this.btnCadastrarFuncionario.MouseEnter += new System.EventHandler(this.btnCadastrarFuncionario_MouseEnter);
+            this.btnCadastrarFuncionario.MouseLeave += new System.EventHandler(this.btnCadastrarFuncionario_MouseLeave);
+            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +155,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 497);
+            this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnVenda);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastroCliente);
@@ -162,5 +180,6 @@
         private System.Windows.Forms.Button btnCadastroCliente;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVenda;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
     }
 }

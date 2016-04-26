@@ -16,5 +16,16 @@ namespace Loja_games
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Funcionário cadastrado com sucesso!");
+            Close();
+        }
     }
 }

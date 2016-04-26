@@ -47,20 +47,20 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
+            this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.txtCEP = new System.Windows.Forms.TextBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lbCidade = new System.Windows.Forms.Label();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lbBairro = new System.Windows.Forms.Label();
             this.lbEstado = new System.Windows.Forms.Label();
-            this.lbCidade = new System.Windows.Forms.Label();
             this.lbNumero = new System.Windows.Forms.Label();
             this.lbRua = new System.Windows.Forms.Label();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais.SuspendLayout();
@@ -283,6 +283,44 @@
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
             // 
+            // cbxEstado
+            // 
+            this.cbxEstado.BackColor = System.Drawing.Color.Black;
+            this.cbxEstado.ForeColor = System.Drawing.Color.White;
+            this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
+            this.cbxEstado.Location = new System.Drawing.Point(74, 93);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Size = new System.Drawing.Size(237, 26);
+            this.cbxEstado.TabIndex = 13;
+            // 
             // txtCEP
             // 
             this.txtCEP.BackColor = System.Drawing.Color.Black;
@@ -328,6 +366,15 @@
             this.txtNumero.Size = new System.Drawing.Size(64, 26);
             this.txtNumero.TabIndex = 11;
             // 
+            // lbCidade
+            // 
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Location = new System.Drawing.Point(6, 129);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(69, 18);
+            this.lbCidade.TabIndex = 2;
+            this.lbCidade.Text = "Cidade:";
+            // 
             // txtRua
             // 
             this.txtRua.BackColor = System.Drawing.Color.Black;
@@ -354,15 +401,6 @@
             this.lbEstado.Size = new System.Drawing.Size(70, 18);
             this.lbEstado.TabIndex = 3;
             this.lbEstado.Text = "Estado:";
-            // 
-            // lbCidade
-            // 
-            this.lbCidade.AutoSize = true;
-            this.lbCidade.Location = new System.Drawing.Point(6, 129);
-            this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(69, 18);
-            this.lbCidade.TabIndex = 2;
-            this.lbCidade.Text = "Cidade:";
             // 
             // lbNumero
             // 
@@ -403,44 +441,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // cbxEstado
-            // 
-            this.cbxEstado.BackColor = System.Drawing.Color.Black;
-            this.cbxEstado.ForeColor = System.Drawing.Color.White;
-            this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Items.AddRange(new object[] {
-            "Acre (AC)",
-            "Alagoas (AL)",
-            "Amapá (AP)",
-            "Amazonas (AM)",
-            "Bahia (BA)",
-            "Ceará (CE)",
-            "Distrito Federal (DF)",
-            "Espírito Santo (ES)",
-            "Goiás (GO)",
-            "Maranhão (MA)",
-            "Mato Grosso (MT)",
-            "Mato Grosso do Sul (MS)",
-            "Minas Gerais (MG)",
-            "Pará (PA)",
-            "Paraíba (PB)",
-            "Paraná (PR)",
-            "Pernambuco (PE)",
-            "Piauí (PI)",
-            "Rio de Janeiro (RJ)",
-            "Rio Grande do Norte (RN)",
-            "Rio Grande do Sul (RS)",
-            "Rondônia (RO)",
-            "Roraima (RR)",
-            "Santa Catarina (SC)",
-            "São Paulo (SP)",
-            "Sergipe (SE)",
-            "Tocantins (TO)"});
-            this.cbxEstado.Location = new System.Drawing.Point(74, 93);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(237, 26);
-            this.cbxEstado.TabIndex = 13;
             // 
             // pcbCadastroCliente
             // 

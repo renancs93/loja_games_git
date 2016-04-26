@@ -58,14 +58,19 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lblCodigoVenda = new System.Windows.Forms.Label();
             this.abaAluguel = new System.Windows.Forms.TabPage();
+            this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.abaVenda);
             this.tabControl1.Controls.Add(this.abaAluguel);
             this.tabControl1.Location = new System.Drawing.Point(10, 11);
@@ -358,11 +363,22 @@
             this.abaAluguel.Text = "Aluguel";
             this.abaAluguel.UseVisualStyleBackColor = true;
             // 
+            // pcbLogoGame
+            // 
+            this.pcbLogoGame.Image = global::Loja_games.Properties.Resources.img_game_logo;
+            this.pcbLogoGame.Location = new System.Drawing.Point(26, 381);
+            this.pcbLogoGame.Name = "pcbLogoGame";
+            this.pcbLogoGame.Size = new System.Drawing.Size(130, 50);
+            this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogoGame.TabIndex = 1;
+            this.pcbLogoGame.TabStop = false;
+            // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 436);
+            this.Controls.Add(this.pcbLogoGame);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "telaVenda";
@@ -372,6 +388,7 @@
             this.gbpDadoVenda.ResumeLayout(false);
             this.gbpDadoVenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,5 +425,6 @@
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.PictureBox pcbLogoGame;
     }
 }

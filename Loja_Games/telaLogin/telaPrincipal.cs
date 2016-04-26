@@ -104,5 +104,20 @@ namespace LojaGames
         {
             btnVenda.ForeColor = Color.Red;
         }
+
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCadastrarFuncionario_MouseEnter(object sender, EventArgs e)
+        {
+            btnCadastrarFuncionario.ForeColor = Color.Blue;
+        }
+
+        private void btnCadastrarFuncionario_MouseLeave(object sender, EventArgs e)
+        {
+            btnCadastrarFuncionario.ForeColor = Color.Red;
+        }
     }
 }

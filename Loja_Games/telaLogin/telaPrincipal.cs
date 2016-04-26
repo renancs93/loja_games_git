@@ -90,7 +90,7 @@ namespace LojaGames
         private void btnVenda_Click(object sender, EventArgs e)
         {
             telaVenda venda = new telaVenda();
-            venda.getTelaPrincipal(this);//cahama o metodo dentro da tela venda passado a Tela Principal
+            venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passado a Tela Principal
             venda.Show();
 
             Hide();

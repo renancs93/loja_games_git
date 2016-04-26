@@ -5,6 +5,8 @@ namespace LojaGames
 {
     public partial class telaVenda : Form
     {
+        private telaPrincipal telaP = null;
+
         public telaVenda()
         {
             InitializeComponent();
@@ -94,5 +96,12 @@ namespace LojaGames
         {
 
         }
+
+        //Metodo para a TelaPrincipal
+        public void getTelaPrincipal(telaPrincipal t)
+        {
+            telaP = t;
+        }
+
     }
 }

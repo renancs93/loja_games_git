@@ -5,8 +5,6 @@ namespace LojaGames
 {
     public partial class telaVenda : Form
     {
-        private telaPrincipal telaP = null;
-
         public telaVenda()
         {
             InitializeComponent();
@@ -42,28 +40,59 @@ namespace LojaGames
 
         }
 
-        public void getTelaPrincipal(telaPrincipal t)
+        private void label1_Click(object sender, EventArgs e)
         {
-            telaP = t;
-        }
-        
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            telaP.Show(); //exibe a tela Principal
-            Close(); //fecha a telaVenda
+            
         }
 
-        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Compra realizada com Sucesso");
 
-            telaP.Show();
-            Close();
         }
 
-        private void telaVenda_FormClosing(object sender, FormClosingEventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
-            telaP.Show();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCodigoProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lvlJurAlug_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

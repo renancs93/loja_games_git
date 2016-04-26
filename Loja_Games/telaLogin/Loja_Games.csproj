@@ -77,6 +77,12 @@
     <Compile Include="telaCadastroCliente.Designer.cs">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="telaCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaCadastroFuncionario.Designer.cs">
+      <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="telaJogos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="telaCadastroCliente.resx">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telaCadastroFuncionario.resx">
+      <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="telaJogos.resx">
       <DependentUpon>telaJogos.cs</DependentUpon>
@@ -156,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagem_games.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem_cadastro_funcionario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

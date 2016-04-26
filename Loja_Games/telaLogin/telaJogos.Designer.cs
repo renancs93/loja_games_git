@@ -86,7 +86,7 @@
             this.abaCadastraJogos.Controls.Add(this.label1);
             this.abaCadastraJogos.Location = new System.Drawing.Point(4, 22);
             this.abaCadastraJogos.Name = "abaCadastraJogos";
-            this.abaCadastraJogos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.abaCadastraJogos.Padding = new System.Windows.Forms.Padding(3);
             this.abaCadastraJogos.Size = new System.Drawing.Size(766, 465);
             this.abaCadastraJogos.TabIndex = 0;
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
@@ -112,7 +112,7 @@
             this.abaExibeJogos.Controls.Add(this.gbxBuscar);
             this.abaExibeJogos.Location = new System.Drawing.Point(4, 22);
             this.abaExibeJogos.Name = "abaExibeJogos";
-            this.abaExibeJogos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.abaExibeJogos.Padding = new System.Windows.Forms.Padding(3);
             this.abaExibeJogos.Size = new System.Drawing.Size(766, 465);
             this.abaExibeJogos.TabIndex = 1;
             this.abaExibeJogos.Text = "Exibir Jogos";
@@ -428,7 +428,6 @@
             this.Name = "telaJogos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Jogos";
-            this.Load += new System.EventHandler(this.telaJogos_Load);
             this.paginaAbasJogos.ResumeLayout(false);
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();

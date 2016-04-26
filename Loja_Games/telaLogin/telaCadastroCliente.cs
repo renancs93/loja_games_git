@@ -25,11 +25,6 @@ namespace LojaGames
             Close();//fecha esse form
         }
 
-        private void telaCadastroCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void setTelaPrincipal(telaPrincipal t)
         {
             telaPri = t;

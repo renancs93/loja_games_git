@@ -102,6 +102,12 @@ namespace LojaGames
         {
             telaP = t;
         }
-
+        
+        //evento ao clicar no X da tela
+        private void telaVenda_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            telaP.Show();
+            Dispose();
+        }
     }
 }

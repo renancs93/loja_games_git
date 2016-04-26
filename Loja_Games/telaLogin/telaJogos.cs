@@ -12,11 +12,6 @@ namespace LojaGames
 
         }
 
-        private void telaJogos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscarNome_Click(object sender, EventArgs e)
         {
             if (txtCampoBusca.Text == String.Empty)

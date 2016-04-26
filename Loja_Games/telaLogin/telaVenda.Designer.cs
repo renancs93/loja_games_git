@@ -221,7 +221,7 @@
             this.btnAdicionarItem.Name = "btnAdicionarItem";
             this.btnAdicionarItem.Size = new System.Drawing.Size(95, 29);
             this.btnAdicionarItem.TabIndex = 12;
-            this.btnAdicionarItem.Text = "Adiconar Item";
+            this.btnAdicionarItem.Text = "Adicionar Item";
             this.btnAdicionarItem.UseVisualStyleBackColor = true;
             // 
             // txtCodigoFuncionario
@@ -391,6 +391,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "telaVenda";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaVenda_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.abaVenda.ResumeLayout(false);
             this.gbpDadoVenda.ResumeLayout(false);

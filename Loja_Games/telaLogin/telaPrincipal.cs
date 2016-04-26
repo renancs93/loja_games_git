@@ -46,12 +46,6 @@ namespace LojaGames
             login.ShowDialog();
             
         }
-        
-        private void telaPrincipal_Load(object sender, EventArgs e)
-        {
- 
-
-        }
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
@@ -90,9 +84,8 @@ namespace LojaGames
         private void btnVenda_Click(object sender, EventArgs e)
         {
             telaVenda venda = new telaVenda();
-            venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passado a Tela Principal
+            venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
             venda.Show();
-
             Hide();
         }
 
@@ -109,10 +102,9 @@ namespace LojaGames
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
-            novoFunc.getTelaPrincipal(this);
+            novoFunc.getTelaPrincipal(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
             novoFunc.Show();
             Hide();
-
         }
 
         private void btnCadastrarFuncionario_MouseEnter(object sender, EventArgs e)

@@ -84,5 +84,15 @@ namespace LojaGames
         {
 
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lvlJurAlug_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

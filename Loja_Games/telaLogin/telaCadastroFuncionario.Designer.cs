@@ -62,12 +62,8 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lbRua = new System.Windows.Forms.Label();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
-            this.txtHorario = new System.Windows.Forms.TextBox();
-            this.lbHorario = new System.Windows.Forms.Label();
             this.txtDataInicio = new System.Windows.Forms.TextBox();
             this.lbDataInicio = new System.Windows.Forms.Label();
-            this.txtCargaHoraria = new System.Windows.Forms.TextBox();
-            this.lbCargaHoraria = new System.Windows.Forms.Label();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lbSalarioBase = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
@@ -86,7 +82,7 @@
             this.pcbCadastroFuncionarios.Image = global::LojaGames.Properties.Resources.imagem_cadastro_funcionario;
             this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(216, 12);
             this.pcbCadastroFuncionarios.Name = "pcbCadastroFuncionarios";
-            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(390, 50);
+            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(390, 39);
             this.pcbCadastroFuncionarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbCadastroFuncionarios.TabIndex = 1;
             this.pcbCadastroFuncionarios.TabStop = false;
@@ -96,7 +92,7 @@
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
             this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
-            this.pcbLogoGame.Size = new System.Drawing.Size(130, 50);
+            this.pcbLogoGame.Size = new System.Drawing.Size(130, 39);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoGame.TabIndex = 0;
             this.pcbLogoGame.TabStop = false;
@@ -121,7 +117,7 @@
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
             this.gpbDadosPessoais.Controls.Add(this.lbNome);
             this.gpbDadosPessoais.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDadosPessoais.Location = new System.Drawing.Point(21, 86);
+            this.gpbDadosPessoais.Location = new System.Drawing.Point(21, 65);
             this.gpbDadosPessoais.Name = "gpbDadosPessoais";
             this.gpbDadosPessoais.Size = new System.Drawing.Size(585, 212);
             this.gpbDadosPessoais.TabIndex = 2;
@@ -305,7 +301,7 @@
             this.gpbEndereco.Controls.Add(this.txtRua);
             this.gpbEndereco.Controls.Add(this.lbRua);
             this.gpbEndereco.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbEndereco.Location = new System.Drawing.Point(21, 314);
+            this.gpbEndereco.Location = new System.Drawing.Point(21, 289);
             this.gpbEndereco.Name = "gpbEndereco";
             this.gpbEndereco.Size = new System.Drawing.Size(585, 197);
             this.gpbEndereco.TabIndex = 3;
@@ -451,77 +447,37 @@
             // 
             // gpbDadosCadastrais
             // 
-            this.gpbDadosCadastrais.Controls.Add(this.txtHorario);
-            this.gpbDadosCadastrais.Controls.Add(this.lbHorario);
             this.gpbDadosCadastrais.Controls.Add(this.txtDataInicio);
             this.gpbDadosCadastrais.Controls.Add(this.lbDataInicio);
-            this.gpbDadosCadastrais.Controls.Add(this.txtCargaHoraria);
-            this.gpbDadosCadastrais.Controls.Add(this.lbCargaHoraria);
             this.gpbDadosCadastrais.Controls.Add(this.txtSalarioBase);
             this.gpbDadosCadastrais.Controls.Add(this.lbSalarioBase);
             this.gpbDadosCadastrais.Controls.Add(this.txtCargo);
             this.gpbDadosCadastrais.Controls.Add(this.lbCargo);
             this.gpbDadosCadastrais.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDadosCadastrais.Location = new System.Drawing.Point(21, 529);
+            this.gpbDadosCadastrais.Location = new System.Drawing.Point(21, 494);
             this.gpbDadosCadastrais.Name = "gpbDadosCadastrais";
-            this.gpbDadosCadastrais.Size = new System.Drawing.Size(585, 140);
+            this.gpbDadosCadastrais.Size = new System.Drawing.Size(585, 106);
             this.gpbDadosCadastrais.TabIndex = 4;
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Cadastrais";
-            // 
-            // txtHorario
-            // 
-            this.txtHorario.BackColor = System.Drawing.Color.Black;
-            this.txtHorario.ForeColor = System.Drawing.Color.White;
-            this.txtHorario.Location = new System.Drawing.Point(365, 106);
-            this.txtHorario.Name = "txtHorario";
-            this.txtHorario.Size = new System.Drawing.Size(194, 26);
-            this.txtHorario.TabIndex = 9;
-            // 
-            // lbHorario
-            // 
-            this.lbHorario.AutoSize = true;
-            this.lbHorario.Location = new System.Drawing.Point(285, 109);
-            this.lbHorario.Name = "lbHorario";
-            this.lbHorario.Size = new System.Drawing.Size(74, 18);
-            this.lbHorario.TabIndex = 8;
-            this.lbHorario.Text = "Horário:";
             // 
             // txtDataInicio
             // 
             this.txtDataInicio.BackColor = System.Drawing.Color.Black;
             this.txtDataInicio.ForeColor = System.Drawing.Color.White;
-            this.txtDataInicio.Location = new System.Drawing.Point(139, 106);
+            this.txtDataInicio.Location = new System.Drawing.Point(440, 71);
             this.txtDataInicio.Name = "txtDataInicio";
-            this.txtDataInicio.Size = new System.Drawing.Size(137, 26);
+            this.txtDataInicio.Size = new System.Drawing.Size(119, 26);
             this.txtDataInicio.TabIndex = 7;
             // 
             // lbDataInicio
             // 
             this.lbDataInicio.AutoSize = true;
-            this.lbDataInicio.Location = new System.Drawing.Point(6, 109);
+            this.lbDataInicio.Location = new System.Drawing.Point(307, 74);
             this.lbDataInicio.Name = "lbDataInicio";
             this.lbDataInicio.Size = new System.Drawing.Size(127, 18);
             this.lbDataInicio.TabIndex = 6;
             this.lbDataInicio.Text = "Data de Início:";
-            // 
-            // txtCargaHoraria
-            // 
-            this.txtCargaHoraria.BackColor = System.Drawing.Color.Black;
-            this.txtCargaHoraria.ForeColor = System.Drawing.Color.White;
-            this.txtCargaHoraria.Location = new System.Drawing.Point(418, 71);
-            this.txtCargaHoraria.Name = "txtCargaHoraria";
-            this.txtCargaHoraria.Size = new System.Drawing.Size(141, 26);
-            this.txtCargaHoraria.TabIndex = 5;
-            // 
-            // lbCargaHoraria
-            // 
-            this.lbCargaHoraria.AutoSize = true;
-            this.lbCargaHoraria.Location = new System.Drawing.Point(285, 74);
-            this.lbCargaHoraria.Name = "lbCargaHoraria";
-            this.lbCargaHoraria.Size = new System.Drawing.Size(127, 18);
-            this.lbCargaHoraria.TabIndex = 4;
-            this.lbCargaHoraria.Text = "Carga Horária:";
             // 
             // txtSalarioBase
             // 
@@ -562,7 +518,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(95, 686);
+            this.btnCadastrar.Location = new System.Drawing.Point(95, 610);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(202, 52);
             this.btnCadastrar.TabIndex = 5;
@@ -573,7 +529,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(331, 686);
+            this.btnCancelar.Location = new System.Drawing.Point(331, 609);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(202, 52);
             this.btnCancelar.TabIndex = 6;
@@ -586,7 +542,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(634, 750);
+            this.ClientSize = new System.Drawing.Size(634, 672);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.gpbDadosCadastrais);
@@ -646,12 +602,8 @@
         private System.Windows.Forms.TextBox txtCIdade;
         private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.GroupBox gpbDadosCadastrais;
-        private System.Windows.Forms.TextBox txtHorario;
-        private System.Windows.Forms.Label lbHorario;
         private System.Windows.Forms.TextBox txtDataInicio;
         private System.Windows.Forms.Label lbDataInicio;
-        private System.Windows.Forms.TextBox txtCargaHoraria;
-        private System.Windows.Forms.Label lbCargaHoraria;
         private System.Windows.Forms.TextBox txtSalarioBase;
         private System.Windows.Forms.Label lbSalarioBase;
         private System.Windows.Forms.TextBox txtCargo;

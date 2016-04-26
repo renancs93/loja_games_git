@@ -1,4 +1,4 @@
-﻿namespace Loja_games
+﻿namespace LojaGames
 {
     partial class telaCadastroFuncionario
     {
@@ -83,7 +83,7 @@
             // 
             // pcbCadastroFuncionarios
             // 
-            this.pcbCadastroFuncionarios.Image = global::Loja_games.Properties.Resources.imagem_cadastro_funcionario;
+            this.pcbCadastroFuncionarios.Image = global::LojaGames.Properties.Resources.imagem_cadastro_funcionario;
             this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(216, 12);
             this.pcbCadastroFuncionarios.Name = "pcbCadastroFuncionarios";
             this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(390, 50);
@@ -93,7 +93,7 @@
             // 
             // pcbLogoGame
             // 
-            this.pcbLogoGame.Image = global::Loja_games.Properties.Resources.img_game_logo;
+            this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
             this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
             this.pcbLogoGame.Size = new System.Drawing.Size(130, 50);

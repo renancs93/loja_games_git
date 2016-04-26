@@ -444,7 +444,7 @@
             // 
             // pcbCadastroCliente
             // 
-            this.pcbCadastroCliente.Image = global::Loja_games.Properties.Resources.img_cadastro_cliente;
+            this.pcbCadastroCliente.Image = global::LojaGames.Properties.Resources.img_cadastro_cliente;
             this.pcbCadastroCliente.Location = new System.Drawing.Point(293, 12);
             this.pcbCadastroCliente.Name = "pcbCadastroCliente";
             this.pcbCadastroCliente.Size = new System.Drawing.Size(288, 50);
@@ -453,7 +453,7 @@
             // 
             // pcbLogoGame
             // 
-            this.pcbLogoGame.Image = global::Loja_games.Properties.Resources.img_game_logo;
+            this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
             this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
             this.pcbLogoGame.Size = new System.Drawing.Size(130, 50);

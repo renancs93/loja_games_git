@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using LojaGames;
 
 namespace LojaGames
 {
@@ -42,7 +41,7 @@ namespace LojaGames
         {
             telaLogin login = new telaLogin();
             login.setTelaPrincipal(this, btnLogarUsuario);
-            login.setBotoes(btnJogos, btnCadastroCliente, btnVenda);
+            login.setBotoes(btnJogos, btnCadastroCliente, btnVenda, btnCadastrarFuncionario);
             Hide(); //esconde a telaPrincipal
             login.ShowDialog();
             
@@ -50,8 +49,7 @@ namespace LojaGames
         
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
-
-            
+ 
 
         }
 
@@ -92,7 +90,10 @@ namespace LojaGames
         private void btnVenda_Click(object sender, EventArgs e)
         {
             telaVenda venda = new telaVenda();
+            venda.getTelaPrincipal(this);//cahama o metodo dentro da tela venda passado a Tela Principal
             venda.Show();
+
+            Hide();
         }
 
         private void btnVenda_MouseEnter(object sender, EventArgs e)
@@ -107,7 +108,11 @@ namespace LojaGames
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            
+            telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
+            novoFunc.getTelaPrincipal(this);
+            novoFunc.Show();
+            Hide();
+
         }
 
         private void btnCadastrarFuncionario_MouseEnter(object sender, EventArgs e)

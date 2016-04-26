@@ -206,6 +206,7 @@
             this.MinimizeBox = false;
             this.Name = "telaLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.telaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();

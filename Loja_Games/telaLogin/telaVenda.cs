@@ -5,6 +5,8 @@ namespace LojaGames
 {
     public partial class telaVenda : Form
     {
+        private telaPrincipal telaP = null;
+
         public telaVenda()
         {
             InitializeComponent();
@@ -38,6 +40,30 @@ namespace LojaGames
         private void gbpDadoVenda_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        public void getTelaPrincipal(telaPrincipal t)
+        {
+            telaP = t;
+        }
+        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            telaP.Show(); //exibe a tela Principal
+            Close(); //fecha a telaVenda
+        }
+
+        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compra realizada com Sucesso");
+
+            telaP.Show();
+            Close();
+        }
+
+        private void telaVenda_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            telaP.Show();
         }
     }
 }

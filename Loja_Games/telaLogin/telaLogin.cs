@@ -7,7 +7,7 @@ namespace LojaGames
     {
         private telaPrincipal telaP = null;//variável que declara a tela principal
         private Button corBotao;
-        private Button ver_btJogos, ver_btCadCli, ver_btVenda;
+        private Button ver_btJogos, ver_btCadCli, ver_btVenda, ver_btCadFunc;
 
         public telaLogin()
         {
@@ -65,6 +65,12 @@ namespace LojaGames
             Dispose();
         }
 
+        private void telaLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+            telaP.Show();
+        }
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //validar os campos digitados
@@ -73,13 +79,16 @@ namespace LojaGames
     
             if(user == "admin" && senha == "admin")
             {
-                MessageBox.Show("Bem Vindo "+ user);
+                MessageBox.Show("Bem Vindo "+ user.ToUpper());
 
                 telaP.Show();
                 corBotao.BackColor = System.Drawing.Color.Green;
+
+                //Ativa a visibilidade dos botões da tela Principal
                 ver_btJogos.Visible = true;
                 ver_btCadCli.Visible = true;
                 ver_btVenda.Visible = true;
+                ver_btCadFunc.Visible = true;
 
                 //necessário fechar ou esconder a tela Login ao abrir a outra
                 Dispose();
@@ -104,13 +113,14 @@ namespace LojaGames
             corBotao = botao;
 
         }
+        
         //Relaciona os botões da tela principal com os botoes da tela Login, para que possam ser alterados
-        public void setBotoes(Button bJogos, Button bCadCli, Button bVenda)
+        public void setBotoes(Button bJogos, Button bCadCli, Button bVenda, Button bFunc)
         {
             ver_btJogos = bJogos;
             ver_btCadCli = bCadCli;
             ver_btVenda = bVenda;
-
+            ver_btCadFunc = bFunc;
         }
 
     }

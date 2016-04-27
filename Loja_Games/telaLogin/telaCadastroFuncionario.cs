@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Loja_games
+namespace LojaGames
 {
     public partial class telaCadastroFuncionario : Form
     {
+        private telaPrincipal telaP = null;
+
         public telaCadastroFuncionario()
         {
             InitializeComponent();
@@ -20,12 +22,29 @@ namespace Loja_games
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+            telaP.Show();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //realizar as verificações dos campos antes de cadastrar
+
+
             MessageBox.Show("Funcionário cadastrado com sucesso!");
             Close();
+            telaP.Show();
+        }
+
+        public void getTelaPrincipal(telaPrincipal t)
+        {
+            telaP = t;
+        }
+
+        private void telaCadastroFuncionario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            Dispose();
+            telaP.Show();
         }
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{2C384C55-30CC-437E-AA14-89294A9BA2E5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Loja_games</RootNamespace>
-    <AssemblyName>Loja_games</AssemblyName>
+    <RootNamespace>LojaGames</RootNamespace>
+    <AssemblyName>LojaGames</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

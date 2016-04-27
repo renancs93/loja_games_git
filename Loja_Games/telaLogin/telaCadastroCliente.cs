@@ -5,7 +5,7 @@ namespace LojaGames
 {
     public partial class telaCadastroCliente : Form
     {
-        private telaPrincipal telaPri = null;
+        private telaPrincipal telaP = null;
 
         public telaCadastroCliente()
         {
@@ -15,24 +15,25 @@ namespace LojaGames
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cliente Cadastrado com Sucesso!");
-            telaPri.Show();
+            telaP.Show();
             Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            telaPri.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
+            telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
             Close();//fecha esse form
-        }
-
-        private void telaCadastroCliente_Load(object sender, EventArgs e)
-        {
-
         }
 
         public void setTelaPrincipal(telaPrincipal t)
         {
-            telaPri = t;
+            telaP = t;
+        }
+
+        private void telaCadastroCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+            telaP.Show();
         }
     }
 }

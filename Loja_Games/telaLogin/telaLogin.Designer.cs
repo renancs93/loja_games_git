@@ -119,13 +119,13 @@
             this.btnLogar.Enabled = false;
             this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogar.Image = ((System.Drawing.Image)(resources.GetObject("btnLogar.Image")));
-            this.btnLogar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogar.Location = new System.Drawing.Point(53, 363);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(93, 38);
             this.btnLogar.TabIndex = 6;
             this.btnLogar.Text = "Logar";
             this.btnLogar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogar.UseVisualStyleBackColor = true;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
@@ -134,13 +134,13 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(196, 363);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 38);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -206,7 +206,9 @@
             this.MinimizeBox = false;
             this.Name = "telaLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaLogin_FormClosing);
             this.Load += new System.EventHandler(this.telaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK_usuario)).EndInit();

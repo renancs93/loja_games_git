@@ -479,6 +479,7 @@
             this.Name = "telaCadastroCliente";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "telaCadastroCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaCadastroCliente_FormClosing);
             this.gpbDadosPessoais.ResumeLayout(false);
             this.gpbDadosPessoais.PerformLayout();
             this.gpbEndereco.ResumeLayout(false);

@@ -208,6 +208,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaLogin_FormClosing);
             this.Load += new System.EventHandler(this.telaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK_usuario)).EndInit();

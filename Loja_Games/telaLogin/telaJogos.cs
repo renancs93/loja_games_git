@@ -6,6 +6,8 @@ namespace LojaGames
 {
     public partial class telaJogos : Form
     {
+        private telaPrincipal TelaP = null; 
+
         public telaJogos()
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace LojaGames
 
         private void btnSair_Click(object sender, EventArgs e)
         {
+            TelaP.Show();
             Close();
         }
 
@@ -66,6 +69,17 @@ namespace LojaGames
             cboxRpg.Checked = false;
             cboxTiro.Checked = false;
 
+        }
+
+        public void getTelaPrincipal(telaPrincipal t)
+        {
+            TelaP = t;
+        }
+
+        private void telaJogos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+            TelaP.Show();
         }
     }
     

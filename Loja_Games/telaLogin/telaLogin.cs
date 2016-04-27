@@ -65,6 +65,12 @@ namespace LojaGames
             Dispose();
         }
 
+        private void telaLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+            telaP.Show();
+        }
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
             //validar os campos digitados

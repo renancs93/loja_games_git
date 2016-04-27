@@ -123,7 +123,7 @@
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(115, 37);
             this.btnVenda.TabIndex = 5;
-            this.btnVenda.Text = "Venda";
+            this.btnVenda.Text = "Venda / Aluga";
             this.btnVenda.UseVisualStyleBackColor = false;
             this.btnVenda.Visible = false;
             this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
@@ -168,6 +168,7 @@
             this.Name = "telaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaPrincipal_FormClosing);
             this.ResumeLayout(false);
 
         }

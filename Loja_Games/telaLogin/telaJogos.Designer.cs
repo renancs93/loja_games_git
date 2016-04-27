@@ -428,6 +428,7 @@
             this.Name = "telaJogos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Jogos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaJogos_FormClosing);
             this.paginaAbasJogos.ResumeLayout(false);
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();

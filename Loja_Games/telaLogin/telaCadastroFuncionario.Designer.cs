@@ -554,6 +554,7 @@
             this.MinimizeBox = false;
             this.Name = "telaCadastroFuncionario";
             this.Text = "telaCadastroFuncionario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaCadastroFuncionario_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             this.gpbDadosPessoais.ResumeLayout(false);

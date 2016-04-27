@@ -27,6 +27,9 @@ namespace LojaGames
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //realizar as verificações dos campos antes de cadastrar
+
+
             MessageBox.Show("Funcionário cadastrado com sucesso!");
             Close();
             telaP.Show();
@@ -35,6 +38,13 @@ namespace LojaGames
         public void getTelaPrincipal(telaPrincipal t)
         {
             telaP = t;
+        }
+
+        private void telaCadastroFuncionario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            Dispose();
+            telaP.Show();
         }
     }
 }

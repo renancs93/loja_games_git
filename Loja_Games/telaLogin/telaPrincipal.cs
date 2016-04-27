@@ -18,12 +18,14 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(40);
+                Thread.Sleep(30);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
-                telaJogos jogos = new telaJogos();
-                //jogos.MdiParent = this;            
-                jogos.Show();
+            telaJogos jogos = new telaJogos();
+            //jogos.MdiParent = this;
+            jogos.getTelaPrincipal(this);
+            Hide();
+            jogos.Show();
             
         }
 
@@ -43,12 +45,18 @@ namespace LojaGames
             login.setTelaPrincipal(this, btnLogarUsuario);
             login.setBotoes(btnJogos, btnCadastroCliente, btnVenda, btnCadastrarFuncionario);
             Hide(); //esconde a telaPrincipal
-            login.ShowDialog();
+            login.Show();
             
         }
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
+            barraProgresso.Value = 0;
+            while (barraProgresso.Value < 100)
+            {
+                Thread.Sleep(30);
+                barraProgresso.Value = barraProgresso.Value + 1;
+            }
             telaCadastroCliente cadCliente = new telaCadastroCliente();
             cadCliente.setTelaPrincipal(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
             cadCliente.Show();
@@ -68,21 +76,40 @@ namespace LojaGames
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult SairApp = MessageBox.Show("Deseja realmente Sair?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(SairApp == DialogResult.Yes)
+            {
+                MessageBox.Show("O programa será fechado","",MessageBoxButtons.OK, MessageBoxIcon.None);
+                Application.Exit();
+            }
+            else if(SairApp == DialogResult.No)
+            {
+                //não faz nada apenas volta ao programa
+            }
+            
+            
         }
 
         private void btnSair_MouseEnter(object sender, EventArgs e)
         {
-            btnSair.ForeColor = Color.Yellow;
+              btnSair.ForeColor = Color.Yellow;
+            
         }
 
         private void btnSair_MouseLeave(object sender, EventArgs e)
         {
-            btnSair.ForeColor = Color.Silver;
+           // btnSair.ForeColor = Color.Silver;
         }
 
         private void btnVenda_Click(object sender, EventArgs e)
         {
+            barraProgresso.Value = 0;
+            while (barraProgresso.Value < 100)
+            {
+                Thread.Sleep(30);
+                barraProgresso.Value = barraProgresso.Value + 1;
+            }
             telaVenda venda = new telaVenda();
             venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
             venda.Show();
@@ -101,6 +128,12 @@ namespace LojaGames
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
+            barraProgresso.Value = 0;
+            while (barraProgresso.Value < 100)
+            {
+                Thread.Sleep(30);
+                barraProgresso.Value = barraProgresso.Value + 1;
+            }
             telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
             novoFunc.getTelaPrincipal(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
             novoFunc.Show();
@@ -115,6 +148,11 @@ namespace LojaGames
         private void btnCadastrarFuncionario_MouseLeave(object sender, EventArgs e)
         {
             btnCadastrarFuncionario.ForeColor = Color.Red;
+        }
+
+        private void telaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

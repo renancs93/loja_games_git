@@ -94,5 +94,45 @@ namespace LojaGames
         {
 
         }
+
+        private void groupBox1_Enter_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gbAlug_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTotAlug_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbJurAlug_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

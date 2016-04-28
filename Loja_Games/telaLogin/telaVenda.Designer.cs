@@ -59,18 +59,50 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lblCodigoVenda = new System.Windows.Forms.Label();
             this.abaAluguel = new System.Windows.Forms.TabPage();
+            this.gbAlug = new System.Windows.Forms.GroupBox();
+            this.txtTotalAlug = new System.Windows.Forms.TextBox();
+            this.txtJurAlug = new System.Windows.Forms.TextBox();
+            this.txtDescAlug = new System.Windows.Forms.TextBox();
+            this.lbTotalAlug = new System.Windows.Forms.Label();
+            this.lbDescAlug = new System.Windows.Forms.Label();
+            this.lbJurAlug = new System.Windows.Forms.Label();
+            this.dgvAlug = new System.Windows.Forms.DataGridView();
+            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemAlug = new System.Windows.Forms.Button();
+            this.btnAddAlug = new System.Windows.Forms.Button();
+            this.nudDiasAlug = new System.Windows.Forms.NumericUpDown();
+            this.txtCodAlug = new System.Windows.Forms.TextBox();
+            this.txtFuncAlug = new System.Windows.Forms.TextBox();
+            this.txtProdAlug = new System.Windows.Forms.TextBox();
+            this.txtCpfCliAlug = new System.Windows.Forms.TextBox();
+            this.lbCodAlug = new System.Windows.Forms.Label();
+            this.lbDias = new System.Windows.Forms.Label();
+            this.lbFuncAlug = new System.Windows.Forms.Label();
+            this.lbProdAlug = new System.Windows.Forms.Label();
+            this.lbCpfCliAlug = new System.Windows.Forms.Label();
+            this.btnCancAlug = new System.Windows.Forms.Button();
+            this.btnFinAlug = new System.Windows.Forms.Button();
+            this.imgLogoAlug = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).BeginInit();
+            this.abaAluguel.SuspendLayout();
+            this.gbAlug.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlug)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiasAlug)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoAlug)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.abaVenda);
             this.tabControl1.Controls.Add(this.abaAluguel);
@@ -372,6 +404,7 @@
             // 
             // abaAluguel
             // 
+            this.abaAluguel.Controls.Add(this.gbAlug);
             this.abaAluguel.Location = new System.Drawing.Point(4, 22);
             this.abaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Name = "abaAluguel";
@@ -380,6 +413,244 @@
             this.abaAluguel.TabIndex = 1;
             this.abaAluguel.Text = "Aluguel";
             this.abaAluguel.UseVisualStyleBackColor = true;
+            // 
+            // gbAlug
+            // 
+            this.gbAlug.Controls.Add(this.imgLogoAlug);
+            this.gbAlug.Controls.Add(this.btnFinAlug);
+            this.gbAlug.Controls.Add(this.btnCancAlug);
+            this.gbAlug.Controls.Add(this.txtTotalAlug);
+            this.gbAlug.Controls.Add(this.txtJurAlug);
+            this.gbAlug.Controls.Add(this.txtDescAlug);
+            this.gbAlug.Controls.Add(this.lbTotalAlug);
+            this.gbAlug.Controls.Add(this.lbDescAlug);
+            this.gbAlug.Controls.Add(this.lbJurAlug);
+            this.gbAlug.Controls.Add(this.dgvAlug);
+            this.gbAlug.Controls.Add(this.btnRemAlug);
+            this.gbAlug.Controls.Add(this.btnAddAlug);
+            this.gbAlug.Controls.Add(this.nudDiasAlug);
+            this.gbAlug.Controls.Add(this.txtCodAlug);
+            this.gbAlug.Controls.Add(this.txtFuncAlug);
+            this.gbAlug.Controls.Add(this.txtProdAlug);
+            this.gbAlug.Controls.Add(this.txtCpfCliAlug);
+            this.gbAlug.Controls.Add(this.lbCodAlug);
+            this.gbAlug.Controls.Add(this.lbDias);
+            this.gbAlug.Controls.Add(this.lbFuncAlug);
+            this.gbAlug.Controls.Add(this.lbProdAlug);
+            this.gbAlug.Controls.Add(this.lbCpfCliAlug);
+            this.gbAlug.Location = new System.Drawing.Point(-2, 0);
+            this.gbAlug.Name = "gbAlug";
+            this.gbAlug.Size = new System.Drawing.Size(651, 437);
+            this.gbAlug.TabIndex = 0;
+            this.gbAlug.TabStop = false;
+            this.gbAlug.Text = "Dados Aluguel";
+            // 
+            // txtTotalAlug
+            // 
+            this.txtTotalAlug.Location = new System.Drawing.Point(424, 389);
+            this.txtTotalAlug.Name = "txtTotalAlug";
+            this.txtTotalAlug.Size = new System.Drawing.Size(76, 20);
+            this.txtTotalAlug.TabIndex = 18;
+            // 
+            // txtJurAlug
+            // 
+            this.txtJurAlug.Location = new System.Drawing.Point(236, 392);
+            this.txtJurAlug.Name = "txtJurAlug";
+            this.txtJurAlug.Size = new System.Drawing.Size(75, 20);
+            this.txtJurAlug.TabIndex = 17;
+            // 
+            // txtDescAlug
+            // 
+            this.txtDescAlug.Location = new System.Drawing.Point(236, 366);
+            this.txtDescAlug.Name = "txtDescAlug";
+            this.txtDescAlug.Size = new System.Drawing.Size(75, 20);
+            this.txtDescAlug.TabIndex = 16;
+            // 
+            // lbTotalAlug
+            // 
+            this.lbTotalAlug.AutoSize = true;
+            this.lbTotalAlug.Location = new System.Drawing.Point(332, 392);
+            this.lbTotalAlug.Name = "lbTotalAlug";
+            this.lbTotalAlug.Size = new System.Drawing.Size(75, 13);
+            this.lbTotalAlug.TabIndex = 15;
+            this.lbTotalAlug.Text = "Total Aluguel :";
+            // 
+            // lbDescAlug
+            // 
+            this.lbDescAlug.AutoSize = true;
+            this.lbDescAlug.Location = new System.Drawing.Point(156, 366);
+            this.lbDescAlug.Name = "lbDescAlug";
+            this.lbDescAlug.Size = new System.Drawing.Size(70, 13);
+            this.lbDescAlug.TabIndex = 14;
+            this.lbDescAlug.Text = "Desconto % :";
+            // 
+            // lbJurAlug
+            // 
+            this.lbJurAlug.AutoSize = true;
+            this.lbJurAlug.Location = new System.Drawing.Point(156, 392);
+            this.lbJurAlug.Name = "lbJurAlug";
+            this.lbJurAlug.Size = new System.Drawing.Size(49, 13);
+            this.lbJurAlug.TabIndex = 13;
+            this.lbJurAlug.Text = "Juros % :";
+            // 
+            // dgvAlug
+            // 
+            this.dgvAlug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlug.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCodAlug,
+            this.dgvDescAlug,
+            this.dgvDiasAlug,
+            this.dvgValorAlug});
+            this.dgvAlug.Location = new System.Drawing.Point(14, 179);
+            this.dgvAlug.Name = "dgvAlug";
+            this.dgvAlug.Size = new System.Drawing.Size(619, 160);
+            this.dgvAlug.TabIndex = 12;
+            // 
+            // dgvCodAlug
+            // 
+            this.dgvCodAlug.HeaderText = "Código";
+            this.dgvCodAlug.Name = "dgvCodAlug";
+            // 
+            // dgvDescAlug
+            // 
+            this.dgvDescAlug.HeaderText = "Descrição";
+            this.dgvDescAlug.Name = "dgvDescAlug";
+            // 
+            // dgvDiasAlug
+            // 
+            this.dgvDiasAlug.HeaderText = "Dias";
+            this.dgvDiasAlug.Name = "dgvDiasAlug";
+            // 
+            // dvgValorAlug
+            // 
+            this.dvgValorAlug.HeaderText = "Valor Aluguel";
+            this.dvgValorAlug.Name = "dvgValorAlug";
+            // 
+            // btnRemAlug
+            // 
+            this.btnRemAlug.Location = new System.Drawing.Point(544, 135);
+            this.btnRemAlug.Name = "btnRemAlug";
+            this.btnRemAlug.Size = new System.Drawing.Size(89, 33);
+            this.btnRemAlug.TabIndex = 11;
+            this.btnRemAlug.Text = "Remover Item";
+            this.btnRemAlug.UseVisualStyleBackColor = true;
+            // 
+            // btnAddAlug
+            // 
+            this.btnAddAlug.Location = new System.Drawing.Point(439, 135);
+            this.btnAddAlug.Name = "btnAddAlug";
+            this.btnAddAlug.Size = new System.Drawing.Size(89, 33);
+            this.btnAddAlug.TabIndex = 10;
+            this.btnAddAlug.Text = "Adicionar Item";
+            this.btnAddAlug.UseVisualStyleBackColor = true;
+            // 
+            // nudDiasAlug
+            // 
+            this.nudDiasAlug.Location = new System.Drawing.Point(84, 144);
+            this.nudDiasAlug.Name = "nudDiasAlug";
+            this.nudDiasAlug.Size = new System.Drawing.Size(38, 20);
+            this.nudDiasAlug.TabIndex = 9;
+            // 
+            // txtCodAlug
+            // 
+            this.txtCodAlug.Location = new System.Drawing.Point(553, 19);
+            this.txtCodAlug.Name = "txtCodAlug";
+            this.txtCodAlug.Size = new System.Drawing.Size(79, 20);
+            this.txtCodAlug.TabIndex = 8;
+            // 
+            // txtFuncAlug
+            // 
+            this.txtFuncAlug.Location = new System.Drawing.Point(84, 110);
+            this.txtFuncAlug.Name = "txtFuncAlug";
+            this.txtFuncAlug.Size = new System.Drawing.Size(100, 20);
+            this.txtFuncAlug.TabIndex = 7;
+            // 
+            // txtProdAlug
+            // 
+            this.txtProdAlug.Location = new System.Drawing.Point(84, 73);
+            this.txtProdAlug.Name = "txtProdAlug";
+            this.txtProdAlug.Size = new System.Drawing.Size(100, 20);
+            this.txtProdAlug.TabIndex = 6;
+            // 
+            // txtCpfCliAlug
+            // 
+            this.txtCpfCliAlug.Location = new System.Drawing.Point(84, 34);
+            this.txtCpfCliAlug.Name = "txtCpfCliAlug";
+            this.txtCpfCliAlug.Size = new System.Drawing.Size(100, 20);
+            this.txtCpfCliAlug.TabIndex = 5;
+            // 
+            // lbCodAlug
+            // 
+            this.lbCodAlug.AutoSize = true;
+            this.lbCodAlug.Location = new System.Drawing.Point(439, 22);
+            this.lbCodAlug.Name = "lbCodAlug";
+            this.lbCodAlug.Size = new System.Drawing.Size(84, 13);
+            this.lbCodAlug.TabIndex = 4;
+            this.lbCodAlug.Text = "Código Aluguel :";
+            // 
+            // lbDias
+            // 
+            this.lbDias.AutoSize = true;
+            this.lbDias.Location = new System.Drawing.Point(46, 148);
+            this.lbDias.Name = "lbDias";
+            this.lbDias.Size = new System.Drawing.Size(34, 13);
+            this.lbDias.TabIndex = 3;
+            this.lbDias.Text = "Dias :";
+            // 
+            // lbFuncAlug
+            // 
+            this.lbFuncAlug.AutoSize = true;
+            this.lbFuncAlug.Location = new System.Drawing.Point(12, 113);
+            this.lbFuncAlug.Name = "lbFuncAlug";
+            this.lbFuncAlug.Size = new System.Drawing.Size(68, 13);
+            this.lbFuncAlug.TabIndex = 2;
+            this.lbFuncAlug.Text = "Funcionário :";
+            // 
+            // lbProdAlug
+            // 
+            this.lbProdAlug.AutoSize = true;
+            this.lbProdAlug.Location = new System.Drawing.Point(30, 73);
+            this.lbProdAlug.Name = "lbProdAlug";
+            this.lbProdAlug.Size = new System.Drawing.Size(50, 13);
+            this.lbProdAlug.TabIndex = 1;
+            this.lbProdAlug.Text = "Produto :";
+            // 
+            // lbCpfCliAlug
+            // 
+            this.lbCpfCliAlug.AutoSize = true;
+            this.lbCpfCliAlug.Location = new System.Drawing.Point(12, 37);
+            this.lbCpfCliAlug.Name = "lbCpfCliAlug";
+            this.lbCpfCliAlug.Size = new System.Drawing.Size(68, 13);
+            this.lbCpfCliAlug.TabIndex = 0;
+            this.lbCpfCliAlug.Text = "CPF Cliente :";
+            // 
+            // btnCancAlug
+            // 
+            this.btnCancAlug.Location = new System.Drawing.Point(553, 351);
+            this.btnCancAlug.Name = "btnCancAlug";
+            this.btnCancAlug.Size = new System.Drawing.Size(80, 24);
+            this.btnCancAlug.TabIndex = 19;
+            this.btnCancAlug.Text = "Cancelar";
+            this.btnCancAlug.UseVisualStyleBackColor = true;
+            // 
+            // btnFinAlug
+            // 
+            this.btnFinAlug.Location = new System.Drawing.Point(539, 381);
+            this.btnFinAlug.Name = "btnFinAlug";
+            this.btnFinAlug.Size = new System.Drawing.Size(94, 35);
+            this.btnFinAlug.TabIndex = 20;
+            this.btnFinAlug.Text = "Finalizar Aluguel";
+            this.btnFinAlug.UseVisualStyleBackColor = true;
+            // 
+            // imgLogoAlug
+            // 
+            this.imgLogoAlug.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.imgLogoAlug.Location = new System.Drawing.Point(14, 366);
+            this.imgLogoAlug.Name = "imgLogoAlug";
+            this.imgLogoAlug.Size = new System.Drawing.Size(117, 50);
+            this.imgLogoAlug.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgLogoAlug.TabIndex = 21;
+            this.imgLogoAlug.TabStop = false;
             // 
             // telaVenda
             // 
@@ -401,6 +672,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).EndInit();
+            this.abaAluguel.ResumeLayout(false);
+            this.gbAlug.ResumeLayout(false);
+            this.gbAlug.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlug)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiasAlug)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoAlug)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +715,32 @@
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.PictureBox pcbLogoGame;
         private System.Windows.Forms.NumericUpDown numQuantidade;
+        private System.Windows.Forms.TextBox txtTotalAlug;
+        private System.Windows.Forms.TextBox txtJurAlug;
+        private System.Windows.Forms.TextBox txtDescAlug;
+        private System.Windows.Forms.Label lbTotalAlug;
+        private System.Windows.Forms.Label lbDescAlug;
+        private System.Windows.Forms.Label lbJurAlug;
+        private System.Windows.Forms.DataGridView dgvAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDescAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiasAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgValorAlug;
+        private System.Windows.Forms.Button btnRemAlug;
+        private System.Windows.Forms.Button btnAddAlug;
+        private System.Windows.Forms.NumericUpDown nudDiasAlug;
+        private System.Windows.Forms.TextBox txtCodAlug;
+        private System.Windows.Forms.TextBox txtFuncAlug;
+        private System.Windows.Forms.TextBox txtProdAlug;
+        private System.Windows.Forms.TextBox txtCpfCliAlug;
+        private System.Windows.Forms.Label lbCodAlug;
+        private System.Windows.Forms.Label lbCpfCliAlug;
+        private System.Windows.Forms.Label lbProdAlug;
+        private System.Windows.Forms.Label lbFuncAlug;
+        private System.Windows.Forms.Label lbDias;
+        private System.Windows.Forms.GroupBox gbAlug;
+        private System.Windows.Forms.Button btnFinAlug;
+        private System.Windows.Forms.Button btnCancAlug;
+        private System.Windows.Forms.PictureBox imgLogoAlug;
     }
 }

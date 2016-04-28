@@ -541,7 +541,7 @@
             // 
             // txtCodAlug
             // 
-            this.txtCodAlug.Location = new System.Drawing.Point(650, 24);
+            this.txtCodAlug.Location = new System.Drawing.Point(650, 19);
             this.txtCodAlug.Name = "txtCodAlug";
             this.txtCodAlug.Size = new System.Drawing.Size(79, 26);
             this.txtCodAlug.TabIndex = 8;
@@ -571,7 +571,7 @@
             // lbCodAlug
             // 
             this.lbCodAlug.AutoSize = true;
-            this.lbCodAlug.Location = new System.Drawing.Point(505, 27);
+            this.lbCodAlug.Location = new System.Drawing.Point(505, 22);
             this.lbCodAlug.Name = "lbCodAlug";
             this.lbCodAlug.Size = new System.Drawing.Size(139, 18);
             this.lbCodAlug.TabIndex = 4;

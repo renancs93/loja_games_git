@@ -77,15 +77,15 @@
             this.lbFuncAlug = new System.Windows.Forms.Label();
             this.lbProdAlug = new System.Windows.Forms.Label();
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
-            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
@@ -311,7 +311,7 @@
             // 
             // txtCodigoProduto
             // 
-            this.txtCodigoProduto.Location = new System.Drawing.Point(125, 63);
+            this.txtCodigoProduto.Location = new System.Drawing.Point(125, 62);
             this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(122, 26);
@@ -320,7 +320,7 @@
             // lblCodigoProduto
             // 
             this.lblCodigoProduto.AutoSize = true;
-            this.lblCodigoProduto.Location = new System.Drawing.Point(28, 66);
+            this.lblCodigoProduto.Location = new System.Drawing.Point(33, 65);
             this.lblCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoProduto.Name = "lblCodigoProduto";
             this.lblCodigoProduto.Size = new System.Drawing.Size(89, 18);
@@ -355,7 +355,7 @@
             // lblCpfCliente
             // 
             this.lblCpfCliente.AutoSize = true;
-            this.lblCpfCliente.Location = new System.Drawing.Point(10, 29);
+            this.lblCpfCliente.Location = new System.Drawing.Point(5, 29);
             this.lblCpfCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCpfCliente.Name = "lblCpfCliente";
             this.lblCpfCliente.Size = new System.Drawing.Size(117, 18);
@@ -417,9 +417,9 @@
             this.gbAlug.Controls.Add(this.lbProdAlug);
             this.gbAlug.Controls.Add(this.lbCpfCliAlug);
             this.gbAlug.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAlug.Location = new System.Drawing.Point(-2, 0);
+            this.gbAlug.Location = new System.Drawing.Point(-2, 5);
             this.gbAlug.Name = "gbAlug";
-            this.gbAlug.Size = new System.Drawing.Size(753, 434);
+            this.gbAlug.Size = new System.Drawing.Size(733, 426);
             this.gbAlug.TabIndex = 0;
             this.gbAlug.TabStop = false;
             this.gbAlug.Text = "Dados Aluguel";
@@ -427,7 +427,7 @@
             // imgLogoAlug
             // 
             this.imgLogoAlug.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.imgLogoAlug.Location = new System.Drawing.Point(14, 366);
+            this.imgLogoAlug.Location = new System.Drawing.Point(15, 367);
             this.imgLogoAlug.Name = "imgLogoAlug";
             this.imgLogoAlug.Size = new System.Drawing.Size(117, 50);
             this.imgLogoAlug.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -436,7 +436,7 @@
             // 
             // btnFinAlug
             // 
-            this.btnFinAlug.Location = new System.Drawing.Point(652, 391);
+            this.btnFinAlug.Location = new System.Drawing.Point(635, 382);
             this.btnFinAlug.Name = "btnFinAlug";
             this.btnFinAlug.Size = new System.Drawing.Size(94, 35);
             this.btnFinAlug.TabIndex = 20;
@@ -445,7 +445,7 @@
             // 
             // btnCancAlug
             // 
-            this.btnCancAlug.Location = new System.Drawing.Point(652, 350);
+            this.btnCancAlug.Location = new System.Drawing.Point(635, 339);
             this.btnCancAlug.Name = "btnCancAlug";
             this.btnCancAlug.Size = new System.Drawing.Size(94, 35);
             this.btnCancAlug.TabIndex = 19;
@@ -454,21 +454,21 @@
             // 
             // txtTotalAlug
             // 
-            this.txtTotalAlug.Location = new System.Drawing.Point(570, 396);
+            this.txtTotalAlug.Location = new System.Drawing.Point(545, 387);
             this.txtTotalAlug.Name = "txtTotalAlug";
             this.txtTotalAlug.Size = new System.Drawing.Size(76, 26);
             this.txtTotalAlug.TabIndex = 18;
             // 
             // txtJurAlug
             // 
-            this.txtJurAlug.Location = new System.Drawing.Point(358, 396);
+            this.txtJurAlug.Location = new System.Drawing.Point(333, 387);
             this.txtJurAlug.Name = "txtJurAlug";
             this.txtJurAlug.Size = new System.Drawing.Size(75, 26);
             this.txtJurAlug.TabIndex = 17;
             // 
             // txtDescAlug
             // 
-            this.txtDescAlug.Location = new System.Drawing.Point(358, 359);
+            this.txtDescAlug.Location = new System.Drawing.Point(333, 348);
             this.txtDescAlug.Name = "txtDescAlug";
             this.txtDescAlug.Size = new System.Drawing.Size(75, 26);
             this.txtDescAlug.TabIndex = 16;
@@ -476,7 +476,7 @@
             // lbTotalAlug
             // 
             this.lbTotalAlug.AutoSize = true;
-            this.lbTotalAlug.Location = new System.Drawing.Point(439, 399);
+            this.lbTotalAlug.Location = new System.Drawing.Point(414, 390);
             this.lbTotalAlug.Name = "lbTotalAlug";
             this.lbTotalAlug.Size = new System.Drawing.Size(125, 18);
             this.lbTotalAlug.TabIndex = 15;
@@ -485,7 +485,7 @@
             // lbDescAlug
             // 
             this.lbDescAlug.AutoSize = true;
-            this.lbDescAlug.Location = new System.Drawing.Point(233, 362);
+            this.lbDescAlug.Location = new System.Drawing.Point(208, 351);
             this.lbDescAlug.Name = "lbDescAlug";
             this.lbDescAlug.Size = new System.Drawing.Size(119, 18);
             this.lbDescAlug.TabIndex = 14;
@@ -494,7 +494,7 @@
             // lbJurAlug
             // 
             this.lbJurAlug.AutoSize = true;
-            this.lbJurAlug.Location = new System.Drawing.Point(265, 399);
+            this.lbJurAlug.Location = new System.Drawing.Point(240, 390);
             this.lbJurAlug.Name = "lbJurAlug";
             this.lbJurAlug.Size = new System.Drawing.Size(87, 18);
             this.lbJurAlug.TabIndex = 13;
@@ -508,15 +508,15 @@
             this.dgvDescAlug,
             this.dgvDiasAlug,
             this.dvgValorAlug});
-            this.dgvAlug.Location = new System.Drawing.Point(7, 173);
+            this.dgvAlug.Location = new System.Drawing.Point(7, 156);
             this.dgvAlug.Name = "dgvAlug";
             this.dgvAlug.RowHeadersWidth = 50;
-            this.dgvAlug.Size = new System.Drawing.Size(739, 171);
+            this.dgvAlug.Size = new System.Drawing.Size(726, 176);
             this.dgvAlug.TabIndex = 12;
             // 
             // btnRemAlug
             // 
-            this.btnRemAlug.Location = new System.Drawing.Point(658, 133);
+            this.btnRemAlug.Location = new System.Drawing.Point(640, 115);
             this.btnRemAlug.Name = "btnRemAlug";
             this.btnRemAlug.Size = new System.Drawing.Size(89, 33);
             this.btnRemAlug.TabIndex = 11;
@@ -525,7 +525,7 @@
             // 
             // btnAddAlug
             // 
-            this.btnAddAlug.Location = new System.Drawing.Point(563, 133);
+            this.btnAddAlug.Location = new System.Drawing.Point(545, 115);
             this.btnAddAlug.Name = "btnAddAlug";
             this.btnAddAlug.Size = new System.Drawing.Size(89, 33);
             this.btnAddAlug.TabIndex = 10;
@@ -534,35 +534,36 @@
             // 
             // nudDiasAlug
             // 
-            this.nudDiasAlug.Location = new System.Drawing.Point(130, 140);
+            this.nudDiasAlug.Location = new System.Drawing.Point(130, 120);
             this.nudDiasAlug.Name = "nudDiasAlug";
-            this.nudDiasAlug.Size = new System.Drawing.Size(38, 26);
+            this.nudDiasAlug.Size = new System.Drawing.Size(100, 26);
             this.nudDiasAlug.TabIndex = 9;
             // 
             // txtCodAlug
             // 
-            this.txtCodAlug.Location = new System.Drawing.Point(667, 19);
+            this.txtCodAlug.Location = new System.Drawing.Point(650, 24);
             this.txtCodAlug.Name = "txtCodAlug";
             this.txtCodAlug.Size = new System.Drawing.Size(79, 26);
             this.txtCodAlug.TabIndex = 8;
             // 
             // txtFuncAlug
             // 
-            this.txtFuncAlug.Location = new System.Drawing.Point(130, 110);
+            this.txtFuncAlug.Location = new System.Drawing.Point(130, 88);
             this.txtFuncAlug.Name = "txtFuncAlug";
             this.txtFuncAlug.Size = new System.Drawing.Size(100, 26);
             this.txtFuncAlug.TabIndex = 7;
             // 
             // txtProdAlug
             // 
-            this.txtProdAlug.Location = new System.Drawing.Point(130, 70);
+            this.txtProdAlug.Location = new System.Drawing.Point(130, 56);
             this.txtProdAlug.Name = "txtProdAlug";
             this.txtProdAlug.Size = new System.Drawing.Size(100, 26);
             this.txtProdAlug.TabIndex = 6;
+            this.txtProdAlug.TextChanged += new System.EventHandler(this.txtProdAlug_TextChanged);
             // 
             // txtCpfCliAlug
             // 
-            this.txtCpfCliAlug.Location = new System.Drawing.Point(130, 34);
+            this.txtCpfCliAlug.Location = new System.Drawing.Point(130, 24);
             this.txtCpfCliAlug.Name = "txtCpfCliAlug";
             this.txtCpfCliAlug.Size = new System.Drawing.Size(100, 26);
             this.txtCpfCliAlug.TabIndex = 5;
@@ -570,7 +571,7 @@
             // lbCodAlug
             // 
             this.lbCodAlug.AutoSize = true;
-            this.lbCodAlug.Location = new System.Drawing.Point(522, 22);
+            this.lbCodAlug.Location = new System.Drawing.Point(505, 27);
             this.lbCodAlug.Name = "lbCodAlug";
             this.lbCodAlug.Size = new System.Drawing.Size(139, 18);
             this.lbCodAlug.TabIndex = 4;
@@ -579,7 +580,7 @@
             // lbDias
             // 
             this.lbDias.AutoSize = true;
-            this.lbDias.Location = new System.Drawing.Point(70, 142);
+            this.lbDias.Location = new System.Drawing.Point(70, 122);
             this.lbDias.Name = "lbDias";
             this.lbDias.Size = new System.Drawing.Size(54, 18);
             this.lbDias.TabIndex = 3;
@@ -588,7 +589,7 @@
             // lbFuncAlug
             // 
             this.lbFuncAlug.AutoSize = true;
-            this.lbFuncAlug.Location = new System.Drawing.Point(12, 113);
+            this.lbFuncAlug.Location = new System.Drawing.Point(12, 91);
             this.lbFuncAlug.Name = "lbFuncAlug";
             this.lbFuncAlug.Size = new System.Drawing.Size(112, 18);
             this.lbFuncAlug.TabIndex = 2;
@@ -597,7 +598,7 @@
             // lbProdAlug
             // 
             this.lbProdAlug.AutoSize = true;
-            this.lbProdAlug.Location = new System.Drawing.Point(40, 73);
+            this.lbProdAlug.Location = new System.Drawing.Point(40, 59);
             this.lbProdAlug.Name = "lbProdAlug";
             this.lbProdAlug.Size = new System.Drawing.Size(84, 18);
             this.lbProdAlug.TabIndex = 1;
@@ -606,34 +607,11 @@
             // lbCpfCliAlug
             // 
             this.lbCpfCliAlug.AutoSize = true;
-            this.lbCpfCliAlug.Location = new System.Drawing.Point(12, 37);
+            this.lbCpfCliAlug.Location = new System.Drawing.Point(12, 27);
             this.lbCpfCliAlug.Name = "lbCpfCliAlug";
             this.lbCpfCliAlug.Size = new System.Drawing.Size(112, 18);
             this.lbCpfCliAlug.TabIndex = 0;
             this.lbCpfCliAlug.Text = "CPF Cliente :";
-            // 
-            // dgvCodAlug
-            // 
-            this.dgvCodAlug.HeaderText = "Código";
-            this.dgvCodAlug.Name = "dgvCodAlug";
-            // 
-            // dgvDescAlug
-            // 
-            this.dgvDescAlug.HeaderText = "Descrição";
-            this.dgvDescAlug.Name = "dgvDescAlug";
-            this.dgvDescAlug.Width = 357;
-            // 
-            // dgvDiasAlug
-            // 
-            this.dgvDiasAlug.HeaderText = "Dias";
-            this.dgvDiasAlug.Name = "dgvDiasAlug";
-            this.dgvDiasAlug.Width = 80;
-            // 
-            // dvgValorAlug
-            // 
-            this.dvgValorAlug.HeaderText = "Valor Aluguel";
-            this.dvgValorAlug.Name = "dvgValorAlug";
-            this.dvgValorAlug.Width = 150;
             // 
             // dgvtbcCodigo
             // 
@@ -664,6 +642,29 @@
             this.dgvtbcValorTotalItem.HeaderText = "Valor Total Item";
             this.dgvtbcValorTotalItem.Name = "dgvtbcValorTotalItem";
             this.dgvtbcValorTotalItem.Width = 165;
+            // 
+            // dgvCodAlug
+            // 
+            this.dgvCodAlug.HeaderText = "Código";
+            this.dgvCodAlug.Name = "dgvCodAlug";
+            // 
+            // dgvDescAlug
+            // 
+            this.dgvDescAlug.HeaderText = "Descrição";
+            this.dgvDescAlug.Name = "dgvDescAlug";
+            this.dgvDescAlug.Width = 344;
+            // 
+            // dgvDiasAlug
+            // 
+            this.dgvDiasAlug.HeaderText = "Dias";
+            this.dgvDiasAlug.Name = "dgvDiasAlug";
+            this.dgvDiasAlug.Width = 80;
+            // 
+            // dvgValorAlug
+            // 
+            this.dvgValorAlug.HeaderText = "Valor Aluguel";
+            this.dvgValorAlug.Name = "dvgValorAlug";
+            this.dvgValorAlug.Width = 150;
             // 
             // telaVenda
             // 

@@ -67,6 +67,9 @@ namespace LojaGames
 
         }
 
-        
+        private void txtProdAlug_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -49,6 +49,11 @@
             this.txtCodigoProduto = new System.Windows.Forms.TextBox();
             this.lblCodigoProduto = new System.Windows.Forms.Label();
             this.dgvDescreveProdutos = new System.Windows.Forms.DataGridView();
+            this.dgvtbcCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.lblCpfCliente = new System.Windows.Forms.Label();
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
@@ -65,6 +70,10 @@
             this.lbDescAlug = new System.Windows.Forms.Label();
             this.lbJurAlug = new System.Windows.Forms.Label();
             this.dgvAlug = new System.Windows.Forms.DataGridView();
+            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemAlug = new System.Windows.Forms.Button();
             this.btnAddAlug = new System.Windows.Forms.Button();
             this.nudDiasAlug = new System.Windows.Forms.NumericUpDown();
@@ -77,15 +86,6 @@
             this.lbFuncAlug = new System.Windows.Forms.Label();
             this.lbProdAlug = new System.Windows.Forms.Label();
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
-            this.dgvtbcCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
@@ -344,6 +344,36 @@
             this.dgvDescreveProdutos.Size = new System.Drawing.Size(722, 176);
             this.dgvDescreveProdutos.TabIndex = 4;
             // 
+            // dgvtbcCodigo
+            // 
+            this.dgvtbcCodigo.HeaderText = "Codigo";
+            this.dgvtbcCodigo.Name = "dgvtbcCodigo";
+            this.dgvtbcCodigo.Width = 80;
+            // 
+            // dgvtbcDescricao
+            // 
+            this.dgvtbcDescricao.HeaderText = "Descrição";
+            this.dgvtbcDescricao.Name = "dgvtbcDescricao";
+            this.dgvtbcDescricao.Width = 173;
+            // 
+            // dgvtbcQuantidade
+            // 
+            this.dgvtbcQuantidade.HeaderText = "Quantidade";
+            this.dgvtbcQuantidade.Name = "dgvtbcQuantidade";
+            this.dgvtbcQuantidade.Width = 110;
+            // 
+            // dgvtbcValorUnitario
+            // 
+            this.dgvtbcValorUnitario.HeaderText = "Valor Unitario";
+            this.dgvtbcValorUnitario.Name = "dgvtbcValorUnitario";
+            this.dgvtbcValorUnitario.Width = 142;
+            // 
+            // dgvtbcValorTotalItem
+            // 
+            this.dgvtbcValorTotalItem.HeaderText = "Valor Total Item";
+            this.dgvtbcValorTotalItem.Name = "dgvtbcValorTotalItem";
+            this.dgvtbcValorTotalItem.Width = 165;
+            // 
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(125, 26);
@@ -442,6 +472,7 @@
             this.btnFinAlug.TabIndex = 20;
             this.btnFinAlug.Text = "Finalizar Aluguel";
             this.btnFinAlug.UseVisualStyleBackColor = true;
+            this.btnFinAlug.Click += new System.EventHandler(this.btnFinAlug_Click);
             // 
             // btnCancAlug
             // 
@@ -451,6 +482,7 @@
             this.btnCancAlug.TabIndex = 19;
             this.btnCancAlug.Text = "Cancelar";
             this.btnCancAlug.UseVisualStyleBackColor = true;
+            this.btnCancAlug.Click += new System.EventHandler(this.btnCancAlug_Click);
             // 
             // txtTotalAlug
             // 
@@ -513,6 +545,29 @@
             this.dgvAlug.RowHeadersWidth = 50;
             this.dgvAlug.Size = new System.Drawing.Size(726, 176);
             this.dgvAlug.TabIndex = 12;
+            // 
+            // dgvCodAlug
+            // 
+            this.dgvCodAlug.HeaderText = "Código";
+            this.dgvCodAlug.Name = "dgvCodAlug";
+            // 
+            // dgvDescAlug
+            // 
+            this.dgvDescAlug.HeaderText = "Descrição";
+            this.dgvDescAlug.Name = "dgvDescAlug";
+            this.dgvDescAlug.Width = 344;
+            // 
+            // dgvDiasAlug
+            // 
+            this.dgvDiasAlug.HeaderText = "Dias";
+            this.dgvDiasAlug.Name = "dgvDiasAlug";
+            this.dgvDiasAlug.Width = 80;
+            // 
+            // dvgValorAlug
+            // 
+            this.dvgValorAlug.HeaderText = "Valor Aluguel";
+            this.dvgValorAlug.Name = "dvgValorAlug";
+            this.dvgValorAlug.Width = 150;
             // 
             // btnRemAlug
             // 
@@ -612,59 +667,6 @@
             this.lbCpfCliAlug.Size = new System.Drawing.Size(112, 18);
             this.lbCpfCliAlug.TabIndex = 0;
             this.lbCpfCliAlug.Text = "CPF Cliente :";
-            // 
-            // dgvtbcCodigo
-            // 
-            this.dgvtbcCodigo.HeaderText = "Codigo";
-            this.dgvtbcCodigo.Name = "dgvtbcCodigo";
-            this.dgvtbcCodigo.Width = 80;
-            // 
-            // dgvtbcDescricao
-            // 
-            this.dgvtbcDescricao.HeaderText = "Descrição";
-            this.dgvtbcDescricao.Name = "dgvtbcDescricao";
-            this.dgvtbcDescricao.Width = 173;
-            // 
-            // dgvtbcQuantidade
-            // 
-            this.dgvtbcQuantidade.HeaderText = "Quantidade";
-            this.dgvtbcQuantidade.Name = "dgvtbcQuantidade";
-            this.dgvtbcQuantidade.Width = 110;
-            // 
-            // dgvtbcValorUnitario
-            // 
-            this.dgvtbcValorUnitario.HeaderText = "Valor Unitario";
-            this.dgvtbcValorUnitario.Name = "dgvtbcValorUnitario";
-            this.dgvtbcValorUnitario.Width = 142;
-            // 
-            // dgvtbcValorTotalItem
-            // 
-            this.dgvtbcValorTotalItem.HeaderText = "Valor Total Item";
-            this.dgvtbcValorTotalItem.Name = "dgvtbcValorTotalItem";
-            this.dgvtbcValorTotalItem.Width = 165;
-            // 
-            // dgvCodAlug
-            // 
-            this.dgvCodAlug.HeaderText = "Código";
-            this.dgvCodAlug.Name = "dgvCodAlug";
-            // 
-            // dgvDescAlug
-            // 
-            this.dgvDescAlug.HeaderText = "Descrição";
-            this.dgvDescAlug.Name = "dgvDescAlug";
-            this.dgvDescAlug.Width = 344;
-            // 
-            // dgvDiasAlug
-            // 
-            this.dgvDiasAlug.HeaderText = "Dias";
-            this.dgvDiasAlug.Name = "dgvDiasAlug";
-            this.dgvDiasAlug.Width = 80;
-            // 
-            // dvgValorAlug
-            // 
-            this.dvgValorAlug.HeaderText = "Valor Aluguel";
-            this.dvgValorAlug.Name = "dvgValorAlug";
-            this.dvgValorAlug.Width = 150;
             // 
             // telaVenda
             // 

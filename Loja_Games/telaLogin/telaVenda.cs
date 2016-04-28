@@ -12,10 +12,6 @@ namespace LojaGames
             InitializeComponent();
         }
 
-      
-
-        
-
         private void tabPage1_Click_1(object sender, EventArgs e)
         {
 
@@ -71,5 +67,25 @@ namespace LojaGames
         {
 
         }
+
+        private void btnCancAlug_Click(object sender, EventArgs e)
+        {
+            Close();
+            telaP.Show();
+        }
+
+        private void btnFinAlug_Click(object sender, EventArgs e)
+        {
+            DialogResult FecharAluguel = MessageBox.Show("Deseja realmente finalizar o aluguel?", "Finalizar Aluguel", MessageBoxButtons.YesNo);
+
+            if (FecharAluguel == DialogResult.Yes)
+            {
+                //codigo de verificação
+
+
+                MessageBox.Show("Aluguel realizado com sucesso!");
+                Close();
+                telaP.Show();
+            }
     }
 }

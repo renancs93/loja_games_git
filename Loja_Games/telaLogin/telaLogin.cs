@@ -6,8 +6,6 @@ namespace LojaGames
     public partial class telaLogin : Form
     {
         private telaPrincipal telaP = null;//variável que declara a tela principal
-        private Button corBotao;
-        private Button ver_btJogos, ver_btCadCli, ver_btVenda, ver_btCadFunc;
 
         public telaLogin()
         {
@@ -79,17 +77,15 @@ namespace LojaGames
     
             if(user == "admin" && senha == "admin")
             {
+                //exibe uma mensagem com o nome do usuário
                 MessageBox.Show("Bem Vindo "+ user.ToUpper());
 
+                //chama a tela principal novamente
                 telaP.Show();
-                corBotao.BackColor = System.Drawing.Color.Green;
 
                 //Ativa a visibilidade dos botões da tela Principal
-                ver_btJogos.Visible = true;
-                ver_btCadCli.Visible = true;
-                ver_btVenda.Visible = true;
-                ver_btCadFunc.Visible = true;
-
+                telaP.habilitarBotoes(true);
+                
                 //necessário fechar ou esconder a tela Login ao abrir a outra
                 Dispose();
             }
@@ -107,21 +103,12 @@ namespace LojaGames
 
         }
 
-        public void setTelaPrincipal(telaPrincipal t, Button botao)
+        public void setTelaPrincipal(telaPrincipal t)
         {
             telaP = t;
-            corBotao = botao;
 
         }
         
-        //Relaciona os botões da tela principal com os botoes da tela Login, para que possam ser alterados
-        public void setBotoes(Button bJogos, Button bCadCli, Button bVenda, Button bFunc)
-        {
-            ver_btJogos = bJogos;
-            ver_btCadCli = bCadCli;
-            ver_btVenda = bVenda;
-            ver_btCadFunc = bFunc;
-        }
-
+       
     }
 }

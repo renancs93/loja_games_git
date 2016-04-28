@@ -36,6 +36,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVenda = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.btnLogoff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -146,6 +147,17 @@
             this.btnCadastrarFuncionario.MouseEnter += new System.EventHandler(this.btnCadastrarFuncionario_MouseEnter);
             this.btnCadastrarFuncionario.MouseLeave += new System.EventHandler(this.btnCadastrarFuncionario_MouseLeave);
             // 
+            // btnLogoff
+            // 
+            this.btnLogoff.Enabled = false;
+            this.btnLogoff.Location = new System.Drawing.Point(679, 24);
+            this.btnLogoff.Name = "btnLogoff";
+            this.btnLogoff.Size = new System.Drawing.Size(53, 21);
+            this.btnLogoff.TabIndex = 7;
+            this.btnLogoff.Text = "Logoff";
+            this.btnLogoff.UseVisualStyleBackColor = true;
+            this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
+            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +167,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 497);
+            this.Controls.Add(this.btnLogoff);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnVenda);
             this.Controls.Add(this.btnSair);
@@ -182,5 +195,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVenda;
         private System.Windows.Forms.Button btnCadastrarFuncionario;
+        private System.Windows.Forms.Button btnLogoff;
     }
 }

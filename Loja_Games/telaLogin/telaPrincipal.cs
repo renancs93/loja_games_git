@@ -42,8 +42,7 @@ namespace LojaGames
         private void btnLogar_Click(object sender, EventArgs e)
         {
             telaLogin login = new telaLogin();
-            login.setTelaPrincipal(this, btnLogarUsuario);
-            login.setBotoes(btnJogos, btnCadastroCliente, btnVenda, btnCadastrarFuncionario);
+            login.setTelaPrincipal(this);
             Hide(); //esconde a telaPrincipal
             login.Show();
             
@@ -61,7 +60,6 @@ namespace LojaGames
             cadCliente.setTelaPrincipal(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
             cadCliente.Show();
             Hide();
-
         }
 
         private void btnCadastroCliente_MouseEnter_1(object sender, EventArgs e)
@@ -154,5 +152,32 @@ namespace LojaGames
         {
             Application.Exit();
         }
+
+        public void habilitarBotoes(bool ativarBotoes)
+        {
+            btnJogos.Visible = ativarBotoes;
+            btnCadastroCliente.Visible = ativarBotoes;
+            btnCadastrarFuncionario.Visible = ativarBotoes;
+            btnVenda.Visible = ativarBotoes;
+
+            if (ativarBotoes == true)
+            {
+                btnLogarUsuario.BackColor = Color.Green;
+                btnLogoff.Enabled = ativarBotoes;
+            }
+            else
+            {
+                btnLogarUsuario.BackColor = Color.Gold;
+                btnLogoff.Enabled = ativarBotoes;
+            }
+            
+        }
+
+        private void btnLogoff_Click(object sender, EventArgs e)
+        {
+            //irá desabilitar a visibilidade dos botões da tela principal
+            habilitarBotoes(false);
+        }
+
     }
 }

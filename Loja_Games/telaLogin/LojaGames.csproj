@@ -71,6 +71,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="telaBuscarExibir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaBuscarExibir.Designer.cs">
+      <DependentUpon>telaBuscarExibir.cs</DependentUpon>
+    </Compile>
     <Compile Include="telaCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="telaVenda.Designer.cs">
       <DependentUpon>telaVenda.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="telaBuscarExibir.resx">
+      <DependentUpon>telaBuscarExibir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="telaCadastroCliente.resx">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>

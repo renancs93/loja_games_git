@@ -31,6 +31,9 @@
             this.pcbCadastroFuncionarios = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -40,12 +43,12 @@
             this.lbSexo = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbDataNascimento = new System.Windows.Forms.Label();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lbRG = new System.Windows.Forms.Label();
             this.lbCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
+            this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtCIdade = new System.Windows.Forms.TextBox();
             this.lbCidade = new System.Windows.Forms.Label();
             this.lbCEP = new System.Windows.Forms.Label();
@@ -58,6 +61,7 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lbRua = new System.Windows.Forms.Label();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.lbDataInicio = new System.Windows.Forms.Label();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lbSalarioBase = new System.Windows.Forms.Label();
@@ -65,11 +69,7 @@
             this.lbCargo = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
-            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -80,7 +80,7 @@
             // pcbCadastroFuncionarios
             // 
             this.pcbCadastroFuncionarios.Image = global::LojaGames.Properties.Resources.imagem_cadastro_funcionario;
-            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(229, 12);
+            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(187, 12);
             this.pcbCadastroFuncionarios.Name = "pcbCadastroFuncionarios";
             this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(377, 39);
             this.pcbCadastroFuncionarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -90,7 +90,7 @@
             // pcbLogoGame
             // 
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
+            this.pcbLogoGame.Location = new System.Drawing.Point(30, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
             this.pcbLogoGame.Size = new System.Drawing.Size(130, 39);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,6 +99,7 @@
             // 
             // gpbDadosPessoais
             // 
+            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox3);
             this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
             this.gpbDadosPessoais.Controls.Add(this.mtbTelefone);
             this.gpbDadosPessoais.Controls.Add(this.mtbCPF);
@@ -111,7 +112,6 @@
             this.gpbDadosPessoais.Controls.Add(this.lbSexo);
             this.gpbDadosPessoais.Controls.Add(this.lbTelefone);
             this.gpbDadosPessoais.Controls.Add(this.lbDataNascimento);
-            this.gpbDadosPessoais.Controls.Add(this.txtRG);
             this.gpbDadosPessoais.Controls.Add(this.lbRG);
             this.gpbDadosPessoais.Controls.Add(this.lbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
@@ -124,27 +124,57 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(166, 101);
+            this.maskedTextBox1.Mask = "99/99/9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(126, 23);
+            this.maskedTextBox1.TabIndex = 4;
+            // 
+            // mtbTelefone
+            // 
+            this.mtbTelefone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefone.Location = new System.Drawing.Point(397, 101);
+            this.mtbTelefone.Mask = "(99)9999-9999";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(162, 23);
+            this.mtbTelefone.TabIndex = 5;
+            // 
+            // mtbCPF
+            // 
+            this.mtbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCPF.Location = new System.Drawing.Point(74, 63);
+            this.mtbCPF.Mask = "999,999,999,99";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(218, 23);
+            this.mtbCPF.TabIndex = 2;
+            // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(74, 169);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(485, 26);
+            this.txtEmail.Size = new System.Drawing.Size(485, 23);
             this.txtEmail.TabIndex = 9;
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.Location = new System.Drawing.Point(6, 172);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(58, 18);
+            this.lbEmail.Size = new System.Drawing.Size(53, 16);
             this.lbEmail.TabIndex = 15;
             this.lbEmail.Text = "Email:";
             // 
             // cbxStatus
             // 
             this.cbxStatus.BackColor = System.Drawing.Color.White;
+            this.cbxStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.ForeColor = System.Drawing.Color.Black;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
@@ -153,24 +183,26 @@
             "Viúvo/a"});
             this.cbxStatus.Location = new System.Drawing.Point(397, 134);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(162, 26);
+            this.cbxStatus.Size = new System.Drawing.Size(162, 24);
             this.cbxStatus.TabIndex = 8;
             // 
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.Location = new System.Drawing.Point(307, 140);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(68, 18);
+            this.lbStatus.Size = new System.Drawing.Size(60, 16);
             this.lbStatus.TabIndex = 13;
             this.lbStatus.Text = "Status:";
             // 
             // rbtFeminino
             // 
             this.rbtFeminino.AutoSize = true;
+            this.rbtFeminino.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtFeminino.Location = new System.Drawing.Point(192, 138);
             this.rbtFeminino.Name = "rbtFeminino";
-            this.rbtFeminino.Size = new System.Drawing.Size(100, 22);
+            this.rbtFeminino.Size = new System.Drawing.Size(83, 20);
             this.rbtFeminino.TabIndex = 7;
             this.rbtFeminino.TabStop = true;
             this.rbtFeminino.Text = "Feminino";
@@ -179,9 +211,10 @@
             // rbtMasculino
             // 
             this.rbtMasculino.AutoSize = true;
+            this.rbtMasculino.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtMasculino.Location = new System.Drawing.Point(74, 138);
             this.rbtMasculino.Name = "rbtMasculino";
-            this.rbtMasculino.Size = new System.Drawing.Size(105, 22);
+            this.rbtMasculino.Size = new System.Drawing.Size(90, 20);
             this.rbtMasculino.TabIndex = 6;
             this.rbtMasculino.TabStop = true;
             this.rbtMasculino.Text = "Masculino";
@@ -190,72 +223,70 @@
             // lbSexo
             // 
             this.lbSexo.AutoSize = true;
+            this.lbSexo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSexo.Location = new System.Drawing.Point(6, 140);
             this.lbSexo.Name = "lbSexo";
-            this.lbSexo.Size = new System.Drawing.Size(55, 18);
+            this.lbSexo.Size = new System.Drawing.Size(49, 16);
             this.lbSexo.TabIndex = 10;
             this.lbSexo.Text = "Sexo:";
             // 
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
+            this.lbTelefone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTelefone.Location = new System.Drawing.Point(307, 104);
             this.lbTelefone.Name = "lbTelefone";
-            this.lbTelefone.Size = new System.Drawing.Size(84, 18);
+            this.lbTelefone.Size = new System.Drawing.Size(75, 16);
             this.lbTelefone.TabIndex = 8;
             this.lbTelefone.Text = "Telefone:";
             // 
             // lbDataNascimento
             // 
             this.lbDataNascimento.AutoSize = true;
+            this.lbDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDataNascimento.Location = new System.Drawing.Point(6, 104);
             this.lbDataNascimento.Name = "lbDataNascimento";
-            this.lbDataNascimento.Size = new System.Drawing.Size(154, 18);
+            this.lbDataNascimento.Size = new System.Drawing.Size(137, 16);
             this.lbDataNascimento.TabIndex = 6;
             this.lbDataNascimento.Text = "Data Nascimento:";
-            // 
-            // txtRG
-            // 
-            this.txtRG.BackColor = System.Drawing.Color.White;
-            this.txtRG.ForeColor = System.Drawing.Color.Black;
-            this.txtRG.Location = new System.Drawing.Point(351, 63);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(208, 26);
-            this.txtRG.TabIndex = 3;
             // 
             // lbRG
             // 
             this.lbRG.AutoSize = true;
+            this.lbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRG.Location = new System.Drawing.Point(307, 66);
             this.lbRG.Name = "lbRG";
-            this.lbRG.Size = new System.Drawing.Size(38, 18);
+            this.lbRG.Size = new System.Drawing.Size(32, 16);
             this.lbRG.TabIndex = 4;
             this.lbRG.Text = "RG:";
             // 
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
+            this.lbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCPF.Location = new System.Drawing.Point(6, 66);
             this.lbCPF.Name = "lbCPF";
-            this.lbCPF.Size = new System.Drawing.Size(46, 18);
+            this.lbCPF.Size = new System.Drawing.Size(41, 16);
             this.lbCPF.TabIndex = 2;
             this.lbCPF.Text = "CPF:";
             // 
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.Location = new System.Drawing.Point(74, 28);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(485, 26);
+            this.txtNome.Size = new System.Drawing.Size(485, 23);
             this.txtNome.TabIndex = 1;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
+            this.lbNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNome.Location = new System.Drawing.Point(6, 31);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(62, 18);
+            this.lbNome.Size = new System.Drawing.Size(55, 16);
             this.lbNome.TabIndex = 0;
             this.lbNome.Text = "Nome:";
             // 
@@ -276,41 +307,54 @@
             this.gpbEndereco.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbEndereco.Location = new System.Drawing.Point(21, 289);
             this.gpbEndereco.Name = "gpbEndereco";
-            this.gpbEndereco.Size = new System.Drawing.Size(585, 197);
+            this.gpbEndereco.Size = new System.Drawing.Size(585, 186);
             this.gpbEndereco.TabIndex = 3;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
             // 
+            // mtbCEP
+            // 
+            this.mtbCEP.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCEP.Location = new System.Drawing.Point(359, 109);
+            this.mtbCEP.Mask = "99999-999";
+            this.mtbCEP.Name = "mtbCEP";
+            this.mtbCEP.Size = new System.Drawing.Size(200, 23);
+            this.mtbCEP.TabIndex = 14;
+            // 
             // txtCIdade
             // 
             this.txtCIdade.BackColor = System.Drawing.Color.White;
+            this.txtCIdade.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIdade.ForeColor = System.Drawing.Color.Black;
             this.txtCIdade.Location = new System.Drawing.Point(74, 148);
             this.txtCIdade.Name = "txtCIdade";
-            this.txtCIdade.Size = new System.Drawing.Size(485, 26);
+            this.txtCIdade.Size = new System.Drawing.Size(485, 23);
             this.txtCIdade.TabIndex = 15;
             // 
             // lbCidade
             // 
             this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCidade.Location = new System.Drawing.Point(6, 151);
             this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(69, 18);
+            this.lbCidade.Size = new System.Drawing.Size(63, 16);
             this.lbCidade.TabIndex = 10;
             this.lbCidade.Text = "Cidade:";
             // 
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
+            this.lbCEP.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCEP.Location = new System.Drawing.Point(307, 112);
             this.lbCEP.Name = "lbCEP";
-            this.lbCEP.Size = new System.Drawing.Size(46, 18);
+            this.lbCEP.Size = new System.Drawing.Size(41, 16);
             this.lbCEP.TabIndex = 8;
             this.lbCEP.Text = "CEP:";
             // 
             // cbxEstado
             // 
             this.cbxEstado.BackColor = System.Drawing.Color.White;
+            this.cbxEstado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.ForeColor = System.Drawing.Color.Black;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
@@ -343,69 +387,76 @@
             "Tocantins (TO)"});
             this.cbxEstado.Location = new System.Drawing.Point(74, 109);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(218, 26);
+            this.cbxEstado.Size = new System.Drawing.Size(218, 24);
             this.cbxEstado.TabIndex = 13;
             // 
             // lbEstado
             // 
             this.lbEstado.AutoSize = true;
+            this.lbEstado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEstado.Location = new System.Drawing.Point(6, 112);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(70, 18);
+            this.lbEstado.Size = new System.Drawing.Size(63, 16);
             this.lbEstado.TabIndex = 6;
             this.lbEstado.Text = "Estado:";
             // 
             // txtBairro
             // 
             this.txtBairro.BackColor = System.Drawing.Color.White;
+            this.txtBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.ForeColor = System.Drawing.Color.Black;
             this.txtBairro.Location = new System.Drawing.Point(216, 70);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(343, 26);
+            this.txtBairro.Size = new System.Drawing.Size(343, 23);
             this.txtBairro.TabIndex = 12;
             // 
             // lbBairro
             // 
             this.lbBairro.AutoSize = true;
+            this.lbBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBairro.Location = new System.Drawing.Point(147, 73);
             this.lbBairro.Name = "lbBairro";
-            this.lbBairro.Size = new System.Drawing.Size(63, 18);
+            this.lbBairro.Size = new System.Drawing.Size(57, 16);
             this.lbBairro.TabIndex = 4;
             this.lbBairro.Text = "Bairro:";
             // 
             // txtNumero
             // 
             this.txtNumero.BackColor = System.Drawing.Color.White;
+            this.txtNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(74, 70);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(56, 26);
+            this.txtNumero.Size = new System.Drawing.Size(56, 23);
             this.txtNumero.TabIndex = 11;
             // 
             // lbNumero
             // 
             this.lbNumero.AutoSize = true;
+            this.lbNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumero.Location = new System.Drawing.Point(6, 73);
             this.lbNumero.Name = "lbNumero";
-            this.lbNumero.Size = new System.Drawing.Size(35, 18);
+            this.lbNumero.Size = new System.Drawing.Size(31, 16);
             this.lbNumero.TabIndex = 2;
             this.lbNumero.Text = "Nº:";
             // 
             // txtRua
             // 
             this.txtRua.BackColor = System.Drawing.Color.White;
+            this.txtRua.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRua.ForeColor = System.Drawing.Color.Black;
             this.txtRua.Location = new System.Drawing.Point(74, 30);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(485, 26);
+            this.txtRua.Size = new System.Drawing.Size(485, 23);
             this.txtRua.TabIndex = 10;
             // 
             // lbRua
             // 
             this.lbRua.AutoSize = true;
+            this.lbRua.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRua.Location = new System.Drawing.Point(6, 33);
             this.lbRua.Name = "lbRua";
-            this.lbRua.Size = new System.Drawing.Size(46, 18);
+            this.lbRua.Size = new System.Drawing.Size(40, 16);
             this.lbRua.TabIndex = 0;
             this.lbRua.Text = "Rua:";
             // 
@@ -425,48 +476,62 @@
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Cadastrais";
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(440, 71);
+            this.maskedTextBox2.Mask = "99/99/9999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(119, 23);
+            this.maskedTextBox2.TabIndex = 18;
+            // 
             // lbDataInicio
             // 
             this.lbDataInicio.AutoSize = true;
+            this.lbDataInicio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDataInicio.Location = new System.Drawing.Point(307, 74);
             this.lbDataInicio.Name = "lbDataInicio";
-            this.lbDataInicio.Size = new System.Drawing.Size(127, 18);
+            this.lbDataInicio.Size = new System.Drawing.Size(113, 16);
             this.lbDataInicio.TabIndex = 6;
             this.lbDataInicio.Text = "Data de Início:";
             // 
             // txtSalarioBase
             // 
             this.txtSalarioBase.BackColor = System.Drawing.Color.White;
+            this.txtSalarioBase.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalarioBase.ForeColor = System.Drawing.Color.Black;
             this.txtSalarioBase.Location = new System.Drawing.Point(127, 71);
             this.txtSalarioBase.Name = "txtSalarioBase";
-            this.txtSalarioBase.Size = new System.Drawing.Size(149, 26);
+            this.txtSalarioBase.Size = new System.Drawing.Size(149, 23);
             this.txtSalarioBase.TabIndex = 17;
             // 
             // lbSalarioBase
             // 
             this.lbSalarioBase.AutoSize = true;
+            this.lbSalarioBase.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSalarioBase.Location = new System.Drawing.Point(6, 74);
             this.lbSalarioBase.Name = "lbSalarioBase";
-            this.lbSalarioBase.Size = new System.Drawing.Size(115, 18);
+            this.lbSalarioBase.Size = new System.Drawing.Size(103, 16);
             this.lbSalarioBase.TabIndex = 2;
             this.lbSalarioBase.Text = "Salário Base:";
             // 
             // txtCargo
             // 
             this.txtCargo.BackColor = System.Drawing.Color.White;
+            this.txtCargo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.ForeColor = System.Drawing.Color.Black;
             this.txtCargo.Location = new System.Drawing.Point(74, 30);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(485, 26);
+            this.txtCargo.Size = new System.Drawing.Size(485, 23);
             this.txtCargo.TabIndex = 16;
             // 
             // lbCargo
             // 
             this.lbCargo.AutoSize = true;
+            this.lbCargo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCargo.Location = new System.Drawing.Point(6, 33);
             this.lbCargo.Name = "lbCargo";
-            this.lbCargo.Size = new System.Drawing.Size(62, 18);
+            this.lbCargo.Size = new System.Drawing.Size(56, 16);
             this.lbCargo.TabIndex = 0;
             this.lbCargo.Text = "Cargo:";
             // 
@@ -492,45 +557,14 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // mtbCPF
+            // maskedTextBox3
             // 
-            this.mtbCPF.Location = new System.Drawing.Point(74, 63);
-            this.mtbCPF.Mask = "999,999,999,99";
-            this.mtbCPF.Name = "mtbCPF";
-            this.mtbCPF.Size = new System.Drawing.Size(218, 26);
-            this.mtbCPF.TabIndex = 2;
-            // 
-            // mtbTelefone
-            // 
-            this.mtbTelefone.Location = new System.Drawing.Point(397, 101);
-            this.mtbTelefone.Mask = "(99)9999-9999";
-            this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(162, 26);
-            this.mtbTelefone.TabIndex = 5;
-            // 
-            // mtbCEP
-            // 
-            this.mtbCEP.Location = new System.Drawing.Point(359, 109);
-            this.mtbCEP.Mask = "99999-999";
-            this.mtbCEP.Name = "mtbCEP";
-            this.mtbCEP.Size = new System.Drawing.Size(200, 26);
-            this.mtbCEP.TabIndex = 14;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(166, 101);
-            this.maskedTextBox1.Mask = "99/99/9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 26);
-            this.maskedTextBox1.TabIndex = 4;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(440, 71);
-            this.maskedTextBox2.Mask = "99/99/9999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(119, 26);
-            this.maskedTextBox2.TabIndex = 18;
+            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(397, 61);
+            this.maskedTextBox3.Mask = "99,999,999-99";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(162, 23);
+            this.maskedTextBox3.TabIndex = 3;
             // 
             // telaCadastroFuncionario
             // 
@@ -548,6 +582,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaCadastroFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "telaCadastroFuncionario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaCadastroFuncionario_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).EndInit();
@@ -568,7 +603,6 @@
         private System.Windows.Forms.PictureBox pcbCadastroFuncionarios;
         private System.Windows.Forms.GroupBox gpbDadosPessoais;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lbRG;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.TextBox txtNome;
@@ -606,5 +640,6 @@
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
     }
 }

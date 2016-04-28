@@ -87,5 +87,6 @@ namespace LojaGames
                 Close();
                 telaP.Show();
             }
+        }
     }
 }

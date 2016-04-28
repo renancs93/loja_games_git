@@ -38,20 +38,16 @@
             this.rbtFeminino = new System.Windows.Forms.RadioButton();
             this.rbtMasculino = new System.Windows.Forms.RadioButton();
             this.lbSexo = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
-            this.txtDataNascimento = new System.Windows.Forms.TextBox();
             this.lbDataNascimento = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.lbRG = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lbCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.txtCIdade = new System.Windows.Forms.TextBox();
             this.lbCidade = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.lbEstado = new System.Windows.Forms.Label();
@@ -62,7 +58,6 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lbRua = new System.Windows.Forms.Label();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
-            this.txtDataInicio = new System.Windows.Forms.TextBox();
             this.lbDataInicio = new System.Windows.Forms.Label();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lbSalarioBase = new System.Windows.Forms.Label();
@@ -70,6 +65,11 @@
             this.lbCargo = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -80,9 +80,9 @@
             // pcbCadastroFuncionarios
             // 
             this.pcbCadastroFuncionarios.Image = global::LojaGames.Properties.Resources.imagem_cadastro_funcionario;
-            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(216, 12);
+            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(229, 12);
             this.pcbCadastroFuncionarios.Name = "pcbCadastroFuncionarios";
-            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(390, 39);
+            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(377, 39);
             this.pcbCadastroFuncionarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbCadastroFuncionarios.TabIndex = 1;
             this.pcbCadastroFuncionarios.TabStop = false;
@@ -99,6 +99,9 @@
             // 
             // gpbDadosPessoais
             // 
+            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
+            this.gpbDadosPessoais.Controls.Add(this.mtbTelefone);
+            this.gpbDadosPessoais.Controls.Add(this.mtbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
             this.gpbDadosPessoais.Controls.Add(this.lbEmail);
             this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
@@ -106,13 +109,10 @@
             this.gpbDadosPessoais.Controls.Add(this.rbtFeminino);
             this.gpbDadosPessoais.Controls.Add(this.rbtMasculino);
             this.gpbDadosPessoais.Controls.Add(this.lbSexo);
-            this.gpbDadosPessoais.Controls.Add(this.txtTelefone);
             this.gpbDadosPessoais.Controls.Add(this.lbTelefone);
-            this.gpbDadosPessoais.Controls.Add(this.txtDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.lbDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.txtRG);
             this.gpbDadosPessoais.Controls.Add(this.lbRG);
-            this.gpbDadosPessoais.Controls.Add(this.txtCPF);
             this.gpbDadosPessoais.Controls.Add(this.lbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
             this.gpbDadosPessoais.Controls.Add(this.lbNome);
@@ -126,12 +126,12 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Black;
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(74, 169);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(485, 26);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 9;
             // 
             // lbEmail
             // 
@@ -144,8 +144,8 @@
             // 
             // cbxStatus
             // 
-            this.cbxStatus.BackColor = System.Drawing.Color.Black;
-            this.cbxStatus.ForeColor = System.Drawing.Color.White;
+            this.cbxStatus.BackColor = System.Drawing.Color.White;
+            this.cbxStatus.ForeColor = System.Drawing.Color.Black;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
             "Casado/a",
@@ -154,7 +154,7 @@
             this.cbxStatus.Location = new System.Drawing.Point(397, 134);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(162, 26);
-            this.cbxStatus.TabIndex = 14;
+            this.cbxStatus.TabIndex = 8;
             // 
             // lbStatus
             // 
@@ -171,7 +171,7 @@
             this.rbtFeminino.Location = new System.Drawing.Point(192, 138);
             this.rbtFeminino.Name = "rbtFeminino";
             this.rbtFeminino.Size = new System.Drawing.Size(100, 22);
-            this.rbtFeminino.TabIndex = 12;
+            this.rbtFeminino.TabIndex = 7;
             this.rbtFeminino.TabStop = true;
             this.rbtFeminino.Text = "Feminino";
             this.rbtFeminino.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.rbtMasculino.Location = new System.Drawing.Point(74, 138);
             this.rbtMasculino.Name = "rbtMasculino";
             this.rbtMasculino.Size = new System.Drawing.Size(105, 22);
-            this.rbtMasculino.TabIndex = 11;
+            this.rbtMasculino.TabIndex = 6;
             this.rbtMasculino.TabStop = true;
             this.rbtMasculino.Text = "Masculino";
             this.rbtMasculino.UseVisualStyleBackColor = true;
@@ -196,15 +196,6 @@
             this.lbSexo.TabIndex = 10;
             this.lbSexo.Text = "Sexo:";
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.Black;
-            this.txtTelefone.ForeColor = System.Drawing.Color.White;
-            this.txtTelefone.Location = new System.Drawing.Point(397, 101);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(162, 26);
-            this.txtTelefone.TabIndex = 9;
-            // 
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
@@ -213,15 +204,6 @@
             this.lbTelefone.Size = new System.Drawing.Size(84, 18);
             this.lbTelefone.TabIndex = 8;
             this.lbTelefone.Text = "Telefone:";
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.BackColor = System.Drawing.Color.Black;
-            this.txtDataNascimento.ForeColor = System.Drawing.Color.White;
-            this.txtDataNascimento.Location = new System.Drawing.Point(166, 101);
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(126, 26);
-            this.txtDataNascimento.TabIndex = 7;
             // 
             // lbDataNascimento
             // 
@@ -234,12 +216,12 @@
             // 
             // txtRG
             // 
-            this.txtRG.BackColor = System.Drawing.Color.Black;
-            this.txtRG.ForeColor = System.Drawing.Color.White;
+            this.txtRG.BackColor = System.Drawing.Color.White;
+            this.txtRG.ForeColor = System.Drawing.Color.Black;
             this.txtRG.Location = new System.Drawing.Point(351, 63);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(208, 26);
-            this.txtRG.TabIndex = 5;
+            this.txtRG.TabIndex = 3;
             // 
             // lbRG
             // 
@@ -249,15 +231,6 @@
             this.lbRG.Size = new System.Drawing.Size(38, 18);
             this.lbRG.TabIndex = 4;
             this.lbRG.Text = "RG:";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.BackColor = System.Drawing.Color.Black;
-            this.txtCPF.ForeColor = System.Drawing.Color.White;
-            this.txtCPF.Location = new System.Drawing.Point(74, 63);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(218, 26);
-            this.txtCPF.TabIndex = 3;
             // 
             // lbCPF
             // 
@@ -270,8 +243,8 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.Black;
-            this.txtNome.ForeColor = System.Drawing.Color.White;
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.Location = new System.Drawing.Point(74, 28);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(485, 26);
@@ -288,9 +261,9 @@
             // 
             // gpbEndereco
             // 
+            this.gpbEndereco.Controls.Add(this.mtbCEP);
             this.gpbEndereco.Controls.Add(this.txtCIdade);
             this.gpbEndereco.Controls.Add(this.lbCidade);
-            this.gpbEndereco.Controls.Add(this.txtCEP);
             this.gpbEndereco.Controls.Add(this.lbCEP);
             this.gpbEndereco.Controls.Add(this.cbxEstado);
             this.gpbEndereco.Controls.Add(this.lbEstado);
@@ -310,12 +283,12 @@
             // 
             // txtCIdade
             // 
-            this.txtCIdade.BackColor = System.Drawing.Color.Black;
-            this.txtCIdade.ForeColor = System.Drawing.Color.White;
+            this.txtCIdade.BackColor = System.Drawing.Color.White;
+            this.txtCIdade.ForeColor = System.Drawing.Color.Black;
             this.txtCIdade.Location = new System.Drawing.Point(74, 148);
             this.txtCIdade.Name = "txtCIdade";
             this.txtCIdade.Size = new System.Drawing.Size(485, 26);
-            this.txtCIdade.TabIndex = 11;
+            this.txtCIdade.TabIndex = 15;
             // 
             // lbCidade
             // 
@@ -325,15 +298,6 @@
             this.lbCidade.Size = new System.Drawing.Size(69, 18);
             this.lbCidade.TabIndex = 10;
             this.lbCidade.Text = "Cidade:";
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.BackColor = System.Drawing.Color.Black;
-            this.txtCEP.ForeColor = System.Drawing.Color.White;
-            this.txtCEP.Location = new System.Drawing.Point(359, 109);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(200, 26);
-            this.txtCEP.TabIndex = 9;
             // 
             // lbCEP
             // 
@@ -346,8 +310,8 @@
             // 
             // cbxEstado
             // 
-            this.cbxEstado.BackColor = System.Drawing.Color.Black;
-            this.cbxEstado.ForeColor = System.Drawing.Color.White;
+            this.cbxEstado.BackColor = System.Drawing.Color.White;
+            this.cbxEstado.ForeColor = System.Drawing.Color.Black;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Acre (AC)",
@@ -380,7 +344,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(74, 109);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(218, 26);
-            this.cbxEstado.TabIndex = 7;
+            this.cbxEstado.TabIndex = 13;
             // 
             // lbEstado
             // 
@@ -393,12 +357,12 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.BackColor = System.Drawing.Color.Black;
-            this.txtBairro.ForeColor = System.Drawing.Color.White;
+            this.txtBairro.BackColor = System.Drawing.Color.White;
+            this.txtBairro.ForeColor = System.Drawing.Color.Black;
             this.txtBairro.Location = new System.Drawing.Point(216, 70);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(343, 26);
-            this.txtBairro.TabIndex = 5;
+            this.txtBairro.TabIndex = 12;
             // 
             // lbBairro
             // 
@@ -411,12 +375,12 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BackColor = System.Drawing.Color.Black;
-            this.txtNumero.ForeColor = System.Drawing.Color.White;
+            this.txtNumero.BackColor = System.Drawing.Color.White;
+            this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(74, 70);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(56, 26);
-            this.txtNumero.TabIndex = 3;
+            this.txtNumero.TabIndex = 11;
             // 
             // lbNumero
             // 
@@ -429,12 +393,12 @@
             // 
             // txtRua
             // 
-            this.txtRua.BackColor = System.Drawing.Color.Black;
-            this.txtRua.ForeColor = System.Drawing.Color.White;
+            this.txtRua.BackColor = System.Drawing.Color.White;
+            this.txtRua.ForeColor = System.Drawing.Color.Black;
             this.txtRua.Location = new System.Drawing.Point(74, 30);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(485, 26);
-            this.txtRua.TabIndex = 1;
+            this.txtRua.TabIndex = 10;
             // 
             // lbRua
             // 
@@ -447,7 +411,7 @@
             // 
             // gpbDadosCadastrais
             // 
-            this.gpbDadosCadastrais.Controls.Add(this.txtDataInicio);
+            this.gpbDadosCadastrais.Controls.Add(this.maskedTextBox2);
             this.gpbDadosCadastrais.Controls.Add(this.lbDataInicio);
             this.gpbDadosCadastrais.Controls.Add(this.txtSalarioBase);
             this.gpbDadosCadastrais.Controls.Add(this.lbSalarioBase);
@@ -461,15 +425,6 @@
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Cadastrais";
             // 
-            // txtDataInicio
-            // 
-            this.txtDataInicio.BackColor = System.Drawing.Color.Black;
-            this.txtDataInicio.ForeColor = System.Drawing.Color.White;
-            this.txtDataInicio.Location = new System.Drawing.Point(440, 71);
-            this.txtDataInicio.Name = "txtDataInicio";
-            this.txtDataInicio.Size = new System.Drawing.Size(119, 26);
-            this.txtDataInicio.TabIndex = 7;
-            // 
             // lbDataInicio
             // 
             this.lbDataInicio.AutoSize = true;
@@ -481,12 +436,12 @@
             // 
             // txtSalarioBase
             // 
-            this.txtSalarioBase.BackColor = System.Drawing.Color.Black;
-            this.txtSalarioBase.ForeColor = System.Drawing.Color.White;
+            this.txtSalarioBase.BackColor = System.Drawing.Color.White;
+            this.txtSalarioBase.ForeColor = System.Drawing.Color.Black;
             this.txtSalarioBase.Location = new System.Drawing.Point(127, 71);
             this.txtSalarioBase.Name = "txtSalarioBase";
             this.txtSalarioBase.Size = new System.Drawing.Size(149, 26);
-            this.txtSalarioBase.TabIndex = 3;
+            this.txtSalarioBase.TabIndex = 17;
             // 
             // lbSalarioBase
             // 
@@ -499,12 +454,12 @@
             // 
             // txtCargo
             // 
-            this.txtCargo.BackColor = System.Drawing.Color.Black;
-            this.txtCargo.ForeColor = System.Drawing.Color.White;
+            this.txtCargo.BackColor = System.Drawing.Color.White;
+            this.txtCargo.ForeColor = System.Drawing.Color.Black;
             this.txtCargo.Location = new System.Drawing.Point(74, 30);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(485, 26);
-            this.txtCargo.TabIndex = 1;
+            this.txtCargo.TabIndex = 16;
             // 
             // lbCargo
             // 
@@ -521,7 +476,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(95, 610);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(202, 52);
-            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "Cadastrar Funcionário";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -532,10 +487,50 @@
             this.btnCancelar.Location = new System.Drawing.Point(331, 609);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(202, 52);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // mtbCPF
+            // 
+            this.mtbCPF.Location = new System.Drawing.Point(74, 63);
+            this.mtbCPF.Mask = "999,999,999,99";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(218, 26);
+            this.mtbCPF.TabIndex = 2;
+            // 
+            // mtbTelefone
+            // 
+            this.mtbTelefone.Location = new System.Drawing.Point(397, 101);
+            this.mtbTelefone.Mask = "(99)9999-9999";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(162, 26);
+            this.mtbTelefone.TabIndex = 5;
+            // 
+            // mtbCEP
+            // 
+            this.mtbCEP.Location = new System.Drawing.Point(359, 109);
+            this.mtbCEP.Mask = "99999-999";
+            this.mtbCEP.Name = "mtbCEP";
+            this.mtbCEP.Size = new System.Drawing.Size(200, 26);
+            this.mtbCEP.TabIndex = 14;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(166, 101);
+            this.maskedTextBox1.Mask = "99/99/9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(126, 26);
+            this.maskedTextBox1.TabIndex = 4;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(440, 71);
+            this.maskedTextBox2.Mask = "99/99/9999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(119, 26);
+            this.maskedTextBox2.TabIndex = 18;
             // 
             // telaCadastroFuncionario
             // 
@@ -575,12 +570,9 @@
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lbRG;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbDataNascimento;
-        private System.Windows.Forms.TextBox txtDataNascimento;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.RadioButton rbtFeminino;
         private System.Windows.Forms.RadioButton rbtMasculino;
@@ -599,11 +591,9 @@
         private System.Windows.Forms.Label lbEstado;
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.Label lbCEP;
-        private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.TextBox txtCIdade;
         private System.Windows.Forms.Label lbCidade;
         private System.Windows.Forms.GroupBox gpbDadosCadastrais;
-        private System.Windows.Forms.TextBox txtDataInicio;
         private System.Windows.Forms.Label lbDataInicio;
         private System.Windows.Forms.TextBox txtSalarioBase;
         private System.Windows.Forms.Label lbSalarioBase;
@@ -611,5 +601,10 @@
         private System.Windows.Forms.Label lbCargo;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbTelefone;
+        private System.Windows.Forms.MaskedTextBox mtbCEP;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }

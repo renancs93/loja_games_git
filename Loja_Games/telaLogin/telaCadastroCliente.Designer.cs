@@ -36,19 +36,15 @@
             this.rbntFeminino = new System.Windows.Forms.RadioButton();
             this.rbntMasculino = new System.Windows.Forms.RadioButton();
             this.lbSexo = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
-            this.txtDataNascimento = new System.Windows.Forms.TextBox();
             this.lbDataNascimento = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.lbRG = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lbCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -63,6 +59,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -72,6 +72,9 @@
             // gpbDadosPessoais
             // 
             this.gpbDadosPessoais.BackColor = System.Drawing.Color.Transparent;
+            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox3);
+            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox2);
+            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
             this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
             this.gpbDadosPessoais.Controls.Add(this.lbEmail);
@@ -79,13 +82,10 @@
             this.gpbDadosPessoais.Controls.Add(this.rbntFeminino);
             this.gpbDadosPessoais.Controls.Add(this.rbntMasculino);
             this.gpbDadosPessoais.Controls.Add(this.lbSexo);
-            this.gpbDadosPessoais.Controls.Add(this.txtTelefone);
             this.gpbDadosPessoais.Controls.Add(this.lbTelefone);
-            this.gpbDadosPessoais.Controls.Add(this.txtDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.lbDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.txtRG);
             this.gpbDadosPessoais.Controls.Add(this.lbRG);
-            this.gpbDadosPessoais.Controls.Add(this.txtCPF);
             this.gpbDadosPessoais.Controls.Add(this.lbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
             this.gpbDadosPessoais.Controls.Add(this.lbNome);
@@ -100,8 +100,8 @@
             // 
             // cbxStatus
             // 
-            this.cbxStatus.BackColor = System.Drawing.Color.Black;
-            this.cbxStatus.ForeColor = System.Drawing.Color.White;
+            this.cbxStatus.BackColor = System.Drawing.Color.White;
+            this.cbxStatus.ForeColor = System.Drawing.Color.Black;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
             "Casado/a\t",
@@ -114,8 +114,8 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Black;
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(74, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(495, 26);
@@ -170,15 +170,6 @@
             this.lbSexo.TabIndex = 10;
             this.lbSexo.Text = "Sexo:";
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.Black;
-            this.txtTelefone.ForeColor = System.Drawing.Color.White;
-            this.txtTelefone.Location = new System.Drawing.Point(435, 107);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(134, 26);
-            this.txtTelefone.TabIndex = 5;
-            // 
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
@@ -187,15 +178,6 @@
             this.lbTelefone.Size = new System.Drawing.Size(84, 18);
             this.lbTelefone.TabIndex = 8;
             this.lbTelefone.Text = "Telefone:";
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.BackColor = System.Drawing.Color.Black;
-            this.txtDataNascimento.ForeColor = System.Drawing.Color.White;
-            this.txtDataNascimento.Location = new System.Drawing.Point(191, 107);
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(120, 26);
-            this.txtDataNascimento.TabIndex = 4;
             // 
             // lbDataNascimento
             // 
@@ -208,8 +190,8 @@
             // 
             // txtRG
             // 
-            this.txtRG.BackColor = System.Drawing.Color.Black;
-            this.txtRG.ForeColor = System.Drawing.Color.White;
+            this.txtRG.BackColor = System.Drawing.Color.White;
+            this.txtRG.ForeColor = System.Drawing.Color.Black;
             this.txtRG.Location = new System.Drawing.Point(389, 70);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(180, 26);
@@ -224,15 +206,6 @@
             this.lbRG.TabIndex = 4;
             this.lbRG.Text = "RG:";
             // 
-            // txtCPF
-            // 
-            this.txtCPF.BackColor = System.Drawing.Color.Black;
-            this.txtCPF.ForeColor = System.Drawing.Color.White;
-            this.txtCPF.Location = new System.Drawing.Point(74, 70);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(237, 26);
-            this.txtCPF.TabIndex = 2;
-            // 
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
@@ -244,8 +217,8 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.Black;
-            this.txtNome.ForeColor = System.Drawing.Color.White;
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.Location = new System.Drawing.Point(74, 31);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(495, 26);
@@ -263,8 +236,8 @@
             // gpbEndereco
             // 
             this.gpbEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.gpbEndereco.Controls.Add(this.maskedTextBox4);
             this.gpbEndereco.Controls.Add(this.cbxEstado);
-            this.gpbEndereco.Controls.Add(this.txtCEP);
             this.gpbEndereco.Controls.Add(this.lbCEP);
             this.gpbEndereco.Controls.Add(this.txtCidade);
             this.gpbEndereco.Controls.Add(this.txtBairro);
@@ -285,8 +258,8 @@
             // 
             // cbxEstado
             // 
-            this.cbxEstado.BackColor = System.Drawing.Color.Black;
-            this.cbxEstado.ForeColor = System.Drawing.Color.White;
+            this.cbxEstado.BackColor = System.Drawing.Color.White;
+            this.cbxEstado.ForeColor = System.Drawing.Color.Black;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Acre (AC)",
@@ -321,15 +294,6 @@
             this.cbxEstado.Size = new System.Drawing.Size(237, 26);
             this.cbxEstado.TabIndex = 13;
             // 
-            // txtCEP
-            // 
-            this.txtCEP.BackColor = System.Drawing.Color.Black;
-            this.txtCEP.ForeColor = System.Drawing.Color.White;
-            this.txtCEP.Location = new System.Drawing.Point(389, 93);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(180, 26);
-            this.txtCEP.TabIndex = 14;
-            // 
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
@@ -341,8 +305,8 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.BackColor = System.Drawing.Color.Black;
-            this.txtCidade.ForeColor = System.Drawing.Color.White;
+            this.txtCidade.BackColor = System.Drawing.Color.White;
+            this.txtCidade.ForeColor = System.Drawing.Color.Black;
             this.txtCidade.Location = new System.Drawing.Point(74, 126);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(495, 26);
@@ -350,8 +314,8 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.BackColor = System.Drawing.Color.Black;
-            this.txtBairro.ForeColor = System.Drawing.Color.White;
+            this.txtBairro.BackColor = System.Drawing.Color.White;
+            this.txtBairro.ForeColor = System.Drawing.Color.Black;
             this.txtBairro.Location = new System.Drawing.Point(211, 61);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(358, 26);
@@ -359,8 +323,8 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BackColor = System.Drawing.Color.Black;
-            this.txtNumero.ForeColor = System.Drawing.Color.White;
+            this.txtNumero.BackColor = System.Drawing.Color.White;
+            this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(74, 61);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(64, 26);
@@ -377,8 +341,8 @@
             // 
             // txtRua
             // 
-            this.txtRua.BackColor = System.Drawing.Color.Black;
-            this.txtRua.ForeColor = System.Drawing.Color.White;
+            this.txtRua.BackColor = System.Drawing.Color.White;
+            this.txtRua.ForeColor = System.Drawing.Color.Black;
             this.txtRua.Location = new System.Drawing.Point(74, 28);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(495, 26);
@@ -461,6 +425,38 @@
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(74, 70);
+            this.maskedTextBox1.Mask = "999,999,999,99";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(237, 26);
+            this.maskedTextBox1.TabIndex = 2;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(435, 107);
+            this.maskedTextBox2.Mask = "(99)9999-9999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(134, 26);
+            this.maskedTextBox2.TabIndex = 5;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(191, 107);
+            this.maskedTextBox3.Mask = "99/99/9999";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(120, 26);
+            this.maskedTextBox3.TabIndex = 4;
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(397, 93);
+            this.maskedTextBox4.Mask = "99999-999";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(172, 26);
+            this.maskedTextBox4.TabIndex = 14;
+            // 
             // telaCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,16 +494,12 @@
         private System.Windows.Forms.RadioButton rbntFeminino;
         private System.Windows.Forms.RadioButton rbntMasculino;
         private System.Windows.Forms.Label lbSexo;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lbTelefone;
-        private System.Windows.Forms.TextBox txtDataNascimento;
         private System.Windows.Forms.Label lbDataNascimento;
         private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lbRG;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.GroupBox gpbEndereco;
-        private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Label lbCEP;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtBairro;
@@ -526,5 +518,9 @@
         private System.Windows.Forms.PictureBox pcbLogoGame;
         private System.Windows.Forms.PictureBox pcbCadastroCliente;
         private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
     }
 }

@@ -149,6 +149,7 @@
             // 
             // btnLogoff
             // 
+            this.btnLogoff.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLogoff.Enabled = false;
             this.btnLogoff.Location = new System.Drawing.Point(679, 24);
             this.btnLogoff.Name = "btnLogoff";

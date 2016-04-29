@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.abaVenda = new System.Windows.Forms.TabPage();
             this.gbpDadoVenda = new System.Windows.Forms.GroupBox();
@@ -107,11 +110,11 @@
             this.tabControl1.Controls.Add(this.abaVenda);
             this.tabControl1.Controls.Add(this.abaAluguel);
             this.tabControl1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(10, 11);
+            this.tabControl1.Location = new System.Drawing.Point(-2, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(758, 460);
+            this.tabControl1.Size = new System.Drawing.Size(772, 482);
             this.tabControl1.TabIndex = 0;
             // 
             // abaVenda
@@ -121,7 +124,7 @@
             this.abaVenda.Margin = new System.Windows.Forms.Padding(2);
             this.abaVenda.Name = "abaVenda";
             this.abaVenda.Padding = new System.Windows.Forms.Padding(2);
-            this.abaVenda.Size = new System.Drawing.Size(750, 431);
+            this.abaVenda.Size = new System.Drawing.Size(764, 453);
             this.abaVenda.TabIndex = 0;
             this.abaVenda.Text = "Venda";
             this.abaVenda.UseVisualStyleBackColor = true;
@@ -156,7 +159,7 @@
             this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Name = "gbpDadoVenda";
             this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2);
-            this.gbpDadoVenda.Size = new System.Drawing.Size(733, 426);
+            this.gbpDadoVenda.Size = new System.Drawing.Size(753, 442);
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
             this.gbpDadoVenda.Text = "Dados Venda";
@@ -329,6 +332,17 @@
             // 
             // dgvDescreveProdutos
             // 
+            this.dgvDescreveProdutos.AllowUserToAddRows = false;
+            this.dgvDescreveProdutos.AllowUserToDeleteRows = false;
+            this.dgvDescreveProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDescreveProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvDescreveProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDescreveProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
@@ -336,43 +350,46 @@
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDescreveProdutos.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvDescreveProdutos.Location = new System.Drawing.Point(7, 164);
             this.dgvDescreveProdutos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDescreveProdutos.Name = "dgvDescreveProdutos";
             this.dgvDescreveProdutos.RowHeadersWidth = 50;
             this.dgvDescreveProdutos.RowTemplate.Height = 24;
-            this.dgvDescreveProdutos.Size = new System.Drawing.Size(722, 176);
+            this.dgvDescreveProdutos.Size = new System.Drawing.Size(742, 176);
             this.dgvDescreveProdutos.TabIndex = 4;
             // 
             // dgvtbcCodigo
             // 
             this.dgvtbcCodigo.HeaderText = "Codigo";
             this.dgvtbcCodigo.Name = "dgvtbcCodigo";
-            this.dgvtbcCodigo.Width = 80;
             // 
             // dgvtbcDescricao
             // 
             this.dgvtbcDescricao.HeaderText = "Descrição";
             this.dgvtbcDescricao.Name = "dgvtbcDescricao";
-            this.dgvtbcDescricao.Width = 173;
             // 
             // dgvtbcQuantidade
             // 
             this.dgvtbcQuantidade.HeaderText = "Quantidade";
             this.dgvtbcQuantidade.Name = "dgvtbcQuantidade";
-            this.dgvtbcQuantidade.Width = 110;
             // 
             // dgvtbcValorUnitario
             // 
             this.dgvtbcValorUnitario.HeaderText = "Valor Unitario";
             this.dgvtbcValorUnitario.Name = "dgvtbcValorUnitario";
-            this.dgvtbcValorUnitario.Width = 142;
             // 
             // dgvtbcValorTotalItem
             // 
             this.dgvtbcValorTotalItem.HeaderText = "Valor Total Item";
             this.dgvtbcValorTotalItem.Name = "dgvtbcValorTotalItem";
-            this.dgvtbcValorTotalItem.Width = 165;
             // 
             // txtCpf
             // 
@@ -394,6 +411,7 @@
             // 
             // txtCodigoVenda
             // 
+            this.txtCodigoVenda.Enabled = false;
             this.txtCodigoVenda.Location = new System.Drawing.Point(643, 14);
             this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoVenda.Name = "txtCodigoVenda";
@@ -417,7 +435,7 @@
             this.abaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Name = "abaAluguel";
             this.abaAluguel.Padding = new System.Windows.Forms.Padding(2);
-            this.abaAluguel.Size = new System.Drawing.Size(750, 431);
+            this.abaAluguel.Size = new System.Drawing.Size(764, 453);
             this.abaAluguel.TabIndex = 1;
             this.abaAluguel.Text = "Aluguel";
             this.abaAluguel.UseVisualStyleBackColor = true;
@@ -449,7 +467,7 @@
             this.gbAlug.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbAlug.Location = new System.Drawing.Point(-2, 5);
             this.gbAlug.Name = "gbAlug";
-            this.gbAlug.Size = new System.Drawing.Size(733, 426);
+            this.gbAlug.Size = new System.Drawing.Size(758, 440);
             this.gbAlug.TabIndex = 0;
             this.gbAlug.TabStop = false;
             this.gbAlug.Text = "Dados Aluguel";
@@ -534,16 +552,27 @@
             // 
             // dgvAlug
             // 
+            this.dgvAlug.AllowUserToAddRows = false;
+            this.dgvAlug.AllowUserToDeleteRows = false;
+            this.dgvAlug.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlug.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvAlug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlug.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
             this.dgvDiasAlug,
             this.dvgValorAlug});
-            this.dgvAlug.Location = new System.Drawing.Point(7, 156);
+            this.dgvAlug.Location = new System.Drawing.Point(12, 156);
             this.dgvAlug.Name = "dgvAlug";
             this.dgvAlug.RowHeadersWidth = 50;
-            this.dgvAlug.Size = new System.Drawing.Size(726, 176);
+            this.dgvAlug.Size = new System.Drawing.Size(740, 176);
             this.dgvAlug.TabIndex = 12;
             // 
             // dgvCodAlug
@@ -555,34 +584,31 @@
             // 
             this.dgvDescAlug.HeaderText = "Descrição";
             this.dgvDescAlug.Name = "dgvDescAlug";
-            this.dgvDescAlug.Width = 344;
             // 
             // dgvDiasAlug
             // 
             this.dgvDiasAlug.HeaderText = "Dias";
             this.dgvDiasAlug.Name = "dgvDiasAlug";
-            this.dgvDiasAlug.Width = 80;
             // 
             // dvgValorAlug
             // 
             this.dvgValorAlug.HeaderText = "Valor Aluguel";
             this.dvgValorAlug.Name = "dvgValorAlug";
-            this.dvgValorAlug.Width = 150;
             // 
             // btnRemAlug
             // 
-            this.btnRemAlug.Location = new System.Drawing.Point(640, 115);
+            this.btnRemAlug.Location = new System.Drawing.Point(620, 113);
             this.btnRemAlug.Name = "btnRemAlug";
-            this.btnRemAlug.Size = new System.Drawing.Size(89, 33);
+            this.btnRemAlug.Size = new System.Drawing.Size(107, 33);
             this.btnRemAlug.TabIndex = 11;
             this.btnRemAlug.Text = "Remover Item";
             this.btnRemAlug.UseVisualStyleBackColor = true;
             // 
             // btnAddAlug
             // 
-            this.btnAddAlug.Location = new System.Drawing.Point(545, 115);
+            this.btnAddAlug.Location = new System.Drawing.Point(507, 113);
             this.btnAddAlug.Name = "btnAddAlug";
-            this.btnAddAlug.Size = new System.Drawing.Size(89, 33);
+            this.btnAddAlug.Size = new System.Drawing.Size(107, 33);
             this.btnAddAlug.TabIndex = 10;
             this.btnAddAlug.Text = "Adicionar Item";
             this.btnAddAlug.UseVisualStyleBackColor = true;
@@ -591,11 +617,12 @@
             // 
             this.nudDiasAlug.Location = new System.Drawing.Point(130, 120);
             this.nudDiasAlug.Name = "nudDiasAlug";
-            this.nudDiasAlug.Size = new System.Drawing.Size(100, 26);
+            this.nudDiasAlug.Size = new System.Drawing.Size(58, 26);
             this.nudDiasAlug.TabIndex = 9;
             // 
             // txtCodAlug
             // 
+            this.txtCodAlug.Enabled = false;
             this.txtCodAlug.Location = new System.Drawing.Point(650, 19);
             this.txtCodAlug.Name = "txtCodAlug";
             this.txtCodAlug.Size = new System.Drawing.Size(79, 26);

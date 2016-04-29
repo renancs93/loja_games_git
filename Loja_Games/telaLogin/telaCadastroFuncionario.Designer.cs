@@ -31,6 +31,7 @@
             this.pcbCadastroFuncionarios = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
@@ -69,7 +70,6 @@
             this.lbCargo = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -124,6 +124,15 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(397, 61);
+            this.maskedTextBox3.Mask = "99,999,999-99";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(162, 23);
+            this.maskedTextBox3.TabIndex = 3;
+            // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +183,7 @@
             // cbxStatus
             // 
             this.cbxStatus.BackColor = System.Drawing.Color.White;
+            this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.ForeColor = System.Drawing.Color.Black;
             this.cbxStatus.FormattingEnabled = true;
@@ -354,6 +364,7 @@
             // cbxEstado
             // 
             this.cbxEstado.BackColor = System.Drawing.Color.White;
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.ForeColor = System.Drawing.Color.Black;
             this.cbxEstado.FormattingEnabled = true;
@@ -556,15 +567,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(397, 61);
-            this.maskedTextBox3.Mask = "99,999,999-99";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(162, 23);
-            this.maskedTextBox3.TabIndex = 3;
             // 
             // telaCadastroFuncionario
             // 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -63,6 +62,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -72,7 +72,7 @@
             // gpbDadosPessoais
             // 
             this.gpbDadosPessoais.BackColor = System.Drawing.Color.Transparent;
-            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox3);
+            this.gpbDadosPessoais.Controls.Add(this.dateTimePicker1);
             this.gpbDadosPessoais.Controls.Add(this.maskedTextBox2);
             this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
             this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
@@ -98,15 +98,6 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(191, 107);
-            this.maskedTextBox3.Mask = "99/99/9999";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(120, 23);
-            this.maskedTextBox3.TabIndex = 4;
-            // 
             // maskedTextBox2
             // 
             this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,6 +119,7 @@
             // cbxStatus
             // 
             this.cbxStatus.BackColor = System.Drawing.Color.White;
+            this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.ForeColor = System.Drawing.Color.Black;
             this.cbxStatus.FormattingEnabled = true;
@@ -309,6 +301,7 @@
             // cbxEstado
             // 
             this.cbxEstado.BackColor = System.Drawing.Color.White;
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.ForeColor = System.Drawing.Color.Black;
             this.cbxEstado.FormattingEnabled = true;
@@ -470,7 +463,7 @@
             // pcbCadastroCliente
             // 
             this.pcbCadastroCliente.Image = global::LojaGames.Properties.Resources.img_cadastro_cliente;
-            this.pcbCadastroCliente.Location = new System.Drawing.Point(293, 12);
+            this.pcbCadastroCliente.Location = new System.Drawing.Point(223, 12);
             this.pcbCadastroCliente.Name = "pcbCadastroCliente";
             this.pcbCadastroCliente.Size = new System.Drawing.Size(288, 40);
             this.pcbCadastroCliente.TabIndex = 6;
@@ -479,12 +472,23 @@
             // pcbLogoGame
             // 
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
+            this.pcbLogoGame.Location = new System.Drawing.Point(12, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
             this.pcbLogoGame.Size = new System.Drawing.Size(130, 40);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 22);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 28, 0, 0, 0, 0);
             // 
             // telaCadastroCliente
             // 
@@ -503,7 +507,8 @@
             this.MinimizeBox = false;
             this.Name = "telaCadastroCliente";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "telaCadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro Cliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaCadastroCliente_FormClosing);
             this.gpbDadosPessoais.ResumeLayout(false);
             this.gpbDadosPessoais.PerformLayout();
@@ -547,9 +552,9 @@
         private System.Windows.Forms.PictureBox pcbLogoGame;
         private System.Windows.Forms.PictureBox pcbCadastroCliente;
         private System.Windows.Forms.ComboBox cbxEstado;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

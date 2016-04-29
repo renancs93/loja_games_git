@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.abaExibeJogos = new System.Windows.Forms.TabPage();
             this.dGridResultado = new System.Windows.Forms.DataGridView();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnExibirTodos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,16 +59,15 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
-            this.imgLogo = new System.Windows.Forms.PictureBox();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             this.abaExibeJogos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gboxGenero.SuspendLayout();
             this.gboxConsole.SuspendLayout();
             this.gbxBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // paginaAbasJogos
@@ -126,6 +126,16 @@
             this.dGridResultado.Name = "dGridResultado";
             this.dGridResultado.Size = new System.Drawing.Size(743, 299);
             this.dGridResultado.TabIndex = 5;
+            // 
+            // imgLogo
+            // 
+            this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
+            this.imgLogo.Location = new System.Drawing.Point(6, 434);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(96, 28);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgLogo.TabIndex = 1;
+            this.imgLogo.TabStop = false;
             // 
             // btnExibirTodos
             // 
@@ -407,16 +417,6 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
-            // imgLogo
-            // 
-            this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(6, 434);
-            this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(96, 28);
-            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgLogo.TabIndex = 1;
-            this.imgLogo.TabStop = false;
-            // 
             // telaJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +427,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "telaJogos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jogos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaJogos_FormClosing);
             this.paginaAbasJogos.ResumeLayout(false);
@@ -434,6 +435,7 @@
             this.abaCadastraJogos.PerformLayout();
             this.abaExibeJogos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.gboxGenero.ResumeLayout(false);
             this.gboxGenero.PerformLayout();
@@ -441,7 +443,6 @@
             this.gboxConsole.PerformLayout();
             this.gbxBuscar.ResumeLayout(false);
             this.gbxBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

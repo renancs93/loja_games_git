@@ -96,6 +96,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.tabControl1);
             this.Name = "telaRelatorios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorios";
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

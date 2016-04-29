@@ -156,7 +156,7 @@
             this.txtObservacoes.Location = new System.Drawing.Point(53, 330);
             this.txtObservacoes.Name = "txtObservacoes";
             this.txtObservacoes.Size = new System.Drawing.Size(235, 20);
-            this.txtObservacoes.TabIndex = 8;
+            this.txtObservacoes.TabIndex = 5;
             this.txtObservacoes.Visible = false;
             // 
             // imgOK_usuario

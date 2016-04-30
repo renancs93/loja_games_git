@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -62,7 +63,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -97,6 +97,17 @@
             this.gpbDadosPessoais.TabIndex = 1;
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 109);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 22);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 30, 15, 27, 56, 0);
             // 
             // maskedTextBox2
             // 
@@ -478,17 +489,6 @@
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 109);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 22);
-            this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 28, 0, 0, 0, 0);
             // 
             // telaCadastroCliente
             // 

@@ -65,75 +65,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="telaBuscarExibir.cs">
+    <Compile Include="Telas\telaBuscarExibir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaBuscarExibir.Designer.cs">
+    <Compile Include="Telas\telaBuscarExibir.Designer.cs">
       <DependentUpon>telaBuscarExibir.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaCadastroCliente.cs">
+    <Compile Include="Telas\telaCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaCadastroCliente.Designer.cs">
+    <Compile Include="Telas\telaCadastroCliente.Designer.cs">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaCadastroFuncionario.cs">
+    <Compile Include="Telas\telaCadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaCadastroFuncionario.Designer.cs">
+    <Compile Include="Telas\telaCadastroFuncionario.Designer.cs">
       <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaJogos.cs">
+    <Compile Include="Telas\telaJogos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaJogos.Designer.cs">
+    <Compile Include="Telas\telaJogos.Designer.cs">
       <DependentUpon>telaJogos.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaLogin.cs">
+    <Compile Include="Telas\telaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaLogin.Designer.cs">
+    <Compile Include="Telas\telaLogin.Designer.cs">
       <DependentUpon>telaLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="telaPrincipal.cs">
+    <Compile Include="Telas\telaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaPrincipal.Designer.cs">
+    <Compile Include="Telas\telaPrincipal.Designer.cs">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaRelatorios.cs">
+    <Compile Include="Telas\telaRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaRelatorios.Designer.cs">
+    <Compile Include="Telas\telaRelatorios.Designer.cs">
       <DependentUpon>telaRelatorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="telaVenda.cs">
+    <Compile Include="Telas\telaVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="telaVenda.Designer.cs">
+    <Compile Include="Telas\telaVenda.Designer.cs">
       <DependentUpon>telaVenda.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="telaBuscarExibir.resx">
+    <EmbeddedResource Include="Telas\telaBuscarExibir.resx">
       <DependentUpon>telaBuscarExibir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaCadastroCliente.resx">
+    <EmbeddedResource Include="Telas\telaCadastroCliente.resx">
       <DependentUpon>telaCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaCadastroFuncionario.resx">
+    <EmbeddedResource Include="Telas\telaCadastroFuncionario.resx">
       <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaJogos.resx">
+    <EmbeddedResource Include="Telas\telaJogos.resx">
       <DependentUpon>telaJogos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaLogin.resx">
+    <EmbeddedResource Include="Telas\telaLogin.resx">
       <DependentUpon>telaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,13 +142,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaPrincipal.resx">
+    <EmbeddedResource Include="Telas\telaPrincipal.resx">
       <DependentUpon>telaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaRelatorios.resx">
+    <EmbeddedResource Include="Telas\telaRelatorios.resx">
       <DependentUpon>telaRelatorios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="telaVenda.resx">
+    <EmbeddedResource Include="Telas\telaVenda.resx">
       <DependentUpon>telaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

@@ -66,6 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\Jogos.cs" />
+    <Compile Include="Classes\Pagamento.cs" />
+    <Compile Include="Classes\Venda.cs" />
+    <Compile Include="ClasseUtil.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

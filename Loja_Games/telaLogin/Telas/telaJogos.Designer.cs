@@ -31,7 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaJogos));
             this.paginaAbasJogos = new System.Windows.Forms.TabControl();
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
+            this.gpbTipoJogo = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbPreco = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lbNome = new System.Windows.Forms.Label();
             this.abaExibeJogos = new System.Windows.Forms.TabPage();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.dGridResultado = new System.Windows.Forms.DataGridView();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnExibirTodos = new System.Windows.Forms.Button();
@@ -58,15 +73,17 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.lbNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lbPreco = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gpbTipoJogo = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
+            this.gpbTipoJogo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.abaExibeJogos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -74,7 +91,6 @@
             this.gpbGenero.SuspendLayout();
             this.gpbConsole.SuspendLayout();
             this.gbxBuscar.SuspendLayout();
-            this.gpbTipoJogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // paginaAbasJogos
@@ -103,6 +119,164 @@
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
             this.abaCadastraJogos.UseVisualStyleBackColor = true;
             // 
+            // gpbTipoJogo
+            // 
+            this.gpbTipoJogo.Controls.Add(this.groupBox2);
+            this.gpbTipoJogo.Controls.Add(this.groupBox1);
+            this.gpbTipoJogo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbTipoJogo.Location = new System.Drawing.Point(11, 63);
+            this.gpbTipoJogo.Name = "gpbTipoJogo";
+            this.gpbTipoJogo.Size = new System.Drawing.Size(749, 97);
+            this.gpbTipoJogo.TabIndex = 4;
+            this.gpbTipoJogo.TabStop = false;
+            this.gpbTipoJogo.Text = "Tipo";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkBox10);
+            this.groupBox2.Controls.Add(this.checkBox9);
+            this.groupBox2.Controls.Add(this.checkBox8);
+            this.groupBox2.Controls.Add(this.checkBox7);
+            this.groupBox2.Controls.Add(this.checkBox6);
+            this.groupBox2.Controls.Add(this.checkBox5);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(187, 18);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(556, 73);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Gênero";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(160, 47);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(80, 20);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Corrida";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(160, 22);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(91, 20);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "Esportes";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(15, 47);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(55, 20);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "RPG";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 22);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Ação/Aventura";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(7, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(174, 73);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Console";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(129, 28);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(45, 20);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "PC";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(61, 28);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(65, 20);
+            this.radioButton2.TabIndex = 5;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "XOne";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(4, 28);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(53, 20);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "PS4";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(499, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 23);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "R$";
+            // 
+            // lbPreco
+            // 
+            this.lbPreco.AutoSize = true;
+            this.lbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPreco.Location = new System.Drawing.Point(439, 25);
+            this.lbPreco.Name = "lbPreco";
+            this.lbPreco.Size = new System.Drawing.Size(54, 16);
+            this.lbPreco.TabIndex = 2;
+            this.lbPreco.Text = "Preço:";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(68, 22);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(352, 23);
+            this.txtNome.TabIndex = 1;
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Location = new System.Drawing.Point(8, 23);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(55, 16);
+            this.lbNome.TabIndex = 0;
+            this.lbNome.Text = "Nome:";
+            // 
             // abaExibeJogos
             // 
             this.abaExibeJogos.BackColor = System.Drawing.SystemColors.Control;
@@ -119,6 +293,16 @@
             this.abaExibeJogos.Size = new System.Drawing.Size(766, 465);
             this.abaExibeJogos.TabIndex = 1;
             this.abaExibeJogos.Text = "Exibir Jogos";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(575, 437);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(86, 23);
+            this.btnEditar.TabIndex = 6;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // dGridResultado
             // 
@@ -183,7 +367,7 @@
             // 
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(658, 60);
+            this.btnLimpar.Location = new System.Drawing.Point(668, 60);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 27);
             this.btnLimpar.TabIndex = 13;
@@ -195,7 +379,7 @@
             // 
             this.btnBuscarTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarTipo.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarTipo.Location = new System.Drawing.Point(658, 24);
+            this.btnBuscarTipo.Location = new System.Drawing.Point(668, 25);
             this.btnBuscarTipo.Name = "btnBuscarTipo";
             this.btnBuscarTipo.Size = new System.Drawing.Size(75, 27);
             this.btnBuscarTipo.TabIndex = 4;
@@ -350,9 +534,9 @@
             this.gpbConsole.Controls.Add(this.rbtnXbox);
             this.gpbConsole.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbConsole.ForeColor = System.Drawing.Color.Black;
-            this.gpbConsole.Location = new System.Drawing.Point(7, 24);
+            this.gpbConsole.Location = new System.Drawing.Point(7, 18);
             this.gpbConsole.Name = "gpbConsole";
-            this.gpbConsole.Size = new System.Drawing.Size(174, 67);
+            this.gpbConsole.Size = new System.Drawing.Size(174, 73);
             this.gpbConsole.TabIndex = 2;
             this.gpbConsole.TabStop = false;
             this.gpbConsole.Text = "Console";
@@ -380,7 +564,7 @@
             this.rbtnPSP.Size = new System.Drawing.Size(53, 20);
             this.rbtnPSP.TabIndex = 0;
             this.rbtnPSP.TabStop = true;
-            this.rbtnPSP.Text = "PSP";
+            this.rbtnPSP.Text = "PS4";
             this.rbtnPSP.UseVisualStyleBackColor = true;
             // 
             // rbtnXbox
@@ -388,12 +572,12 @@
             this.rbtnXbox.AutoSize = true;
             this.rbtnXbox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnXbox.ForeColor = System.Drawing.Color.Black;
-            this.rbtnXbox.Location = new System.Drawing.Point(59, 26);
+            this.rbtnXbox.Location = new System.Drawing.Point(58, 26);
             this.rbtnXbox.Name = "rbtnXbox";
-            this.rbtnXbox.Size = new System.Drawing.Size(63, 20);
+            this.rbtnXbox.Size = new System.Drawing.Size(65, 20);
             this.rbtnXbox.TabIndex = 1;
             this.rbtnXbox.TabStop = true;
-            this.rbtnXbox.Text = "Xbox";
+            this.rbtnXbox.Text = "XOne";
             this.rbtnXbox.UseVisualStyleBackColor = true;
             // 
             // gbxBuscar
@@ -421,7 +605,7 @@
             // 
             this.btnBuscarNome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarNome.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarNome.Location = new System.Drawing.Point(659, 22);
+            this.btnBuscarNome.Location = new System.Drawing.Point(669, 22);
             this.btnBuscarNome.Name = "btnBuscarNome";
             this.btnBuscarNome.Size = new System.Drawing.Size(75, 26);
             this.btnBuscarNome.TabIndex = 1;
@@ -439,72 +623,65 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
-            // btnEditar
+            // checkBox5
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(575, 437);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(86, 23);
-            this.btnEditar.TabIndex = 6;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(257, 22);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(107, 20);
+            this.checkBox5.TabIndex = 4;
+            this.checkBox5.Text = "Plataforma";
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // lbNome
+            // checkBox6
             // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(8, 23);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(55, 16);
-            this.lbNome.TabIndex = 0;
-            this.lbNome.Text = "Nome:";
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(257, 47);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(102, 20);
+            this.checkBox6.TabIndex = 5;
+            this.checkBox6.Text = "Estratégia";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // txtNome
+            // checkBox7
             // 
-            this.txtNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(68, 22);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(352, 23);
-            this.txtNome.TabIndex = 1;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(370, 22);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(59, 20);
+            this.checkBox7.TabIndex = 6;
+            this.checkBox7.Text = "Luta";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // lbPreco
+            // checkBox8
             // 
-            this.lbPreco.AutoSize = true;
-            this.lbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPreco.Location = new System.Drawing.Point(439, 25);
-            this.lbPreco.Name = "lbPreco";
-            this.lbPreco.Size = new System.Drawing.Size(54, 16);
-            this.lbPreco.TabIndex = 2;
-            this.lbPreco.Text = "Preço:";
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(370, 47);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(81, 20);
+            this.checkBox8.TabIndex = 7;
+            this.checkBox8.Text = "Musical";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // checkBox9
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(499, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 23);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "R$";
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(452, 22);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(54, 20);
+            this.checkBox9.TabIndex = 5;
+            this.checkBox9.Text = "Tiro";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // gpbTipoJogo
+            // checkBox10
             // 
-            this.gpbTipoJogo.Controls.Add(this.groupBox1);
-            this.gpbTipoJogo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbTipoJogo.Location = new System.Drawing.Point(11, 63);
-            this.gpbTipoJogo.Name = "gpbTipoJogo";
-            this.gpbTipoJogo.Size = new System.Drawing.Size(749, 97);
-            this.gpbTipoJogo.TabIndex = 4;
-            this.gpbTipoJogo.TabStop = false;
-            this.gpbTipoJogo.Text = "Tipo";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(7, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(174, 67);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Console";
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(452, 47);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(74, 20);
+            this.checkBox10.TabIndex = 8;
+            this.checkBox10.Text = "Puzzle";
+            this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // telaJogos
             // 
@@ -522,6 +699,11 @@
             this.paginaAbasJogos.ResumeLayout(false);
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();
+            this.gpbTipoJogo.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.abaExibeJogos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGridResultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
@@ -532,7 +714,6 @@
             this.gpbConsole.PerformLayout();
             this.gbxBuscar.ResumeLayout(false);
             this.gbxBuscar.PerformLayout();
-            this.gpbTipoJogo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -575,5 +756,19 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox gpbTipoJogo;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
     }
 }

@@ -7,6 +7,8 @@ namespace LojaGames
 {
     public partial class telaPrincipal : Form
     {
+        int tempoCarregamento = 30; //tempo de sleep ao clicar nos botões de telas
+
         public telaPrincipal()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(30);
+                Thread.Sleep(tempoCarregamento);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
             telaJogos jogos = new telaJogos();
@@ -48,7 +50,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(30);
+                Thread.Sleep(tempoCarregamento);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
             telaCadastroCliente cadCliente = new telaCadastroCliente();
@@ -62,7 +64,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(30);
+                Thread.Sleep(tempoCarregamento);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
             telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
@@ -76,7 +78,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(30);
+                Thread.Sleep(tempoCarregamento);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
             telaVenda venda = new telaVenda();
@@ -90,7 +92,7 @@ namespace LojaGames
             barraProgresso.Value = 0;
             while (barraProgresso.Value < 100)
             {
-                Thread.Sleep(30);
+                Thread.Sleep(tempoCarregamento);
                 barraProgresso.Value = barraProgresso.Value + 1;
             }
             //exibição da tela BuscaExibir
@@ -98,6 +100,20 @@ namespace LojaGames
             telaBuscaExibir.getTelaPrincipal(this);
             Hide();
             telaBuscaExibir.Show();
+        }
+
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+            barraProgresso.Value = 0;
+            while (barraProgresso.Value < 100)
+            {
+                Thread.Sleep(tempoCarregamento);
+                barraProgresso.Value = barraProgresso.Value + 1;
+            }
+            telaRelatorios telaRelatorios = new telaRelatorios();
+            telaRelatorios.getTelaPrincipal(this);
+            Hide();
+            telaRelatorios.Show();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -188,6 +204,9 @@ namespace LojaGames
             btnVenda.Visible = ativarBotoes;
             btnBuscaExibir.Visible = ativarBotoes;
 
+            //habilitar botões para determinado tipo de login (pendente implantar)
+            btnRelatorios.Visible = ativarBotoes;
+
             if (ativarBotoes == true)
             {
                 btnLogarUsuario.BackColor = Color.Green;
@@ -204,6 +223,6 @@ namespace LojaGames
 
 
 
-    //final da tela principal
+        //final da tela principal
     }
 }

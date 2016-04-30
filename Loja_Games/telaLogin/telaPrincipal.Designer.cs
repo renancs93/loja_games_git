@@ -38,6 +38,7 @@
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.btnLogoff = new System.Windows.Forms.Button();
             this.btnBuscaExibir = new System.Windows.Forms.Button();
+            this.btnRelatorios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -150,7 +151,7 @@
             // 
             // btnLogoff
             // 
-            this.btnLogoff.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLogoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogoff.Enabled = false;
             this.btnLogoff.Location = new System.Drawing.Point(679, 24);
             this.btnLogoff.Name = "btnLogoff";
@@ -162,6 +163,7 @@
             // 
             // btnBuscaExibir
             // 
+            this.btnBuscaExibir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnBuscaExibir.BackColor = System.Drawing.Color.Black;
             this.btnBuscaExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaExibir.ForeColor = System.Drawing.Color.Red;
@@ -176,6 +178,21 @@
             this.btnBuscaExibir.MouseEnter += new System.EventHandler(this.btnBuscaExibir_MouseEnter);
             this.btnBuscaExibir.MouseLeave += new System.EventHandler(this.btnBuscaExibir_MouseLeave);
             // 
+            // btnRelatorios
+            // 
+            this.btnRelatorios.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRelatorios.BackColor = System.Drawing.Color.Black;
+            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
+            this.btnRelatorios.Location = new System.Drawing.Point(545, 294);
+            this.btnRelatorios.Name = "btnRelatorios";
+            this.btnRelatorios.Size = new System.Drawing.Size(119, 35);
+            this.btnRelatorios.TabIndex = 9;
+            this.btnRelatorios.Text = "Relatórios";
+            this.btnRelatorios.UseVisualStyleBackColor = false;
+            this.btnRelatorios.Visible = false;
+            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
+            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,6 +202,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 497);
+            this.Controls.Add(this.btnRelatorios);
             this.Controls.Add(this.btnLogoff);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnVenda);
@@ -216,5 +234,6 @@
         private System.Windows.Forms.Button btnCadastrarFuncionario;
         private System.Windows.Forms.Button btnLogoff;
         private System.Windows.Forms.Button btnBuscaExibir;
+        private System.Windows.Forms.Button btnRelatorios;
     }
 }

@@ -8,7 +8,7 @@ namespace LojaGames.Classes
 {
     class Venda
     {
-
+      
 
     }
 }

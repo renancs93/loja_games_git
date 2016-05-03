@@ -14,10 +14,16 @@ namespace LojaGames
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
+            
+
+            string MensagemErro = ClasseUtil.ValidaCampos(this.Controls);
+            
+            MessageBox.Show(MensagemErro);
+
+
             MessageBox.Show("Cliente Cadastrado com Sucesso!");
             telaP.Show();
             Close();
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -80,7 +80,7 @@
             this.lbUsuario.Location = new System.Drawing.Point(18, 263);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(67, 18);
-            this.lbUsuario.TabIndex = 2;
+            this.lbUsuario.TabIndex = 1;
             this.lbUsuario.Text = "Usuário";
             // 
             // lbSenha
@@ -101,7 +101,7 @@
             this.txtCampoUsuario.Location = new System.Drawing.Point(91, 263);
             this.txtCampoUsuario.Name = "txtCampoUsuario";
             this.txtCampoUsuario.Size = new System.Drawing.Size(184, 20);
-            this.txtCampoUsuario.TabIndex = 1;
+            this.txtCampoUsuario.TabIndex = 2;
             this.txtCampoUsuario.Leave += new System.EventHandler(this.txtCampoUsuario_Leave);
             // 
             // txtCampoSenha
@@ -109,7 +109,7 @@
             this.txtCampoSenha.Location = new System.Drawing.Point(91, 297);
             this.txtCampoSenha.Name = "txtCampoSenha";
             this.txtCampoSenha.Size = new System.Drawing.Size(184, 20);
-            this.txtCampoSenha.TabIndex = 2;
+            this.txtCampoSenha.TabIndex = 4;
             this.txtCampoSenha.UseSystemPasswordChar = true;
             this.txtCampoSenha.Leave += new System.EventHandler(this.txtCampoSenha_Leave);
             // 
@@ -122,7 +122,7 @@
             this.btnLogar.Location = new System.Drawing.Point(53, 363);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(93, 38);
-            this.btnLogar.TabIndex = 3;
+            this.btnLogar.TabIndex = 5;
             this.btnLogar.Text = "Logar";
             this.btnLogar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -137,7 +137,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(196, 363);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 38);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -156,7 +156,7 @@
             this.txtObservacoes.Location = new System.Drawing.Point(53, 330);
             this.txtObservacoes.Name = "txtObservacoes";
             this.txtObservacoes.Size = new System.Drawing.Size(235, 20);
-            this.txtObservacoes.TabIndex = 5;
+            this.txtObservacoes.TabIndex = 7;
             this.txtObservacoes.Visible = false;
             // 
             // imgOK_usuario

@@ -1,0 +1,30 @@
+VO (pasta que tem as classes que refletem as tabelas do banco)
+ FuncionarioVO
+ JogoVO
+ ...
+ 
+Model (pasta onde ficam as classes que fazem as operações do banco)
+ static Banco (classe onde ficarão as listas)
+  static list listaFuncionarios;
+  static list listaGames;
+  
+ FuncionarioBanco
+  salvarFuncionario(FuncionarioVO f)
+   Banca.listaFuncionarios.add(f);
+  excluirFuncionario(FuncionarioVO f)
+  List<FuncionarVO> getFuncionarios(){
+   return Banco.listaFuncionarios;
+  }
+  
+View (pasta onde irão ficar as telas)
+ FuncionarVO f = new FuncionarVO();
+ f.nome = textBox.Nome;
+ ...
+ 
+ FuncionarioBanco fb = new FuncionarioBanco();
+ fb.salvarFuncionario(f);
+ 
+ 
+ 
+ mostrar na tela
+ dg.DataSource = fb.getFuncionarios();

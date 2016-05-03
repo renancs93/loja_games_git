@@ -70,6 +70,8 @@
             this.lbCargo = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -80,9 +82,9 @@
             // pcbCadastroFuncionarios
             // 
             this.pcbCadastroFuncionarios.Image = global::LojaGames.Properties.Resources.imagem_cadastro_funcionario;
-            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(187, 12);
+            this.pcbCadastroFuncionarios.Location = new System.Drawing.Point(148, 12);
             this.pcbCadastroFuncionarios.Name = "pcbCadastroFuncionarios";
-            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(377, 39);
+            this.pcbCadastroFuncionarios.Size = new System.Drawing.Size(362, 39);
             this.pcbCadastroFuncionarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbCadastroFuncionarios.TabIndex = 1;
             this.pcbCadastroFuncionarios.TabStop = false;
@@ -90,9 +92,9 @@
             // pcbLogoGame
             // 
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoGame.Location = new System.Drawing.Point(30, 12);
+            this.pcbLogoGame.Location = new System.Drawing.Point(21, 12);
             this.pcbLogoGame.Name = "pcbLogoGame";
-            this.pcbLogoGame.Size = new System.Drawing.Size(130, 39);
+            this.pcbLogoGame.Size = new System.Drawing.Size(109, 39);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoGame.TabIndex = 0;
             this.pcbLogoGame.TabStop = false;
@@ -568,12 +570,34 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(516, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Código:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(585, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "1";
+            // 
             // telaCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 672);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.gpbDadosCadastrais);
@@ -596,6 +620,7 @@
             this.gpbDadosCadastrais.ResumeLayout(false);
             this.gpbDadosCadastrais.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -643,5 +668,7 @@
         private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

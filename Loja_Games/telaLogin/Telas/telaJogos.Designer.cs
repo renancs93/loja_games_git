@@ -79,6 +79,15 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAlteracoes = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             this.gpbTipoJogo.SuspendLayout();
@@ -91,6 +100,7 @@
             this.gpbGenero.SuspendLayout();
             this.gpbConsole.SuspendLayout();
             this.gbxBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // paginaAbasJogos
@@ -106,6 +116,15 @@
             // 
             // abaCadastraJogos
             // 
+            this.abaCadastraJogos.Controls.Add(this.label4);
+            this.abaCadastraJogos.Controls.Add(this.label3);
+            this.abaCadastraJogos.Controls.Add(this.dateTimePicker1);
+            this.abaCadastraJogos.Controls.Add(this.label2);
+            this.abaCadastraJogos.Controls.Add(this.numericUpDown1);
+            this.abaCadastraJogos.Controls.Add(this.label1);
+            this.abaCadastraJogos.Controls.Add(this.btnCancelar);
+            this.abaCadastraJogos.Controls.Add(this.btnAlteracoes);
+            this.abaCadastraJogos.Controls.Add(this.btnCadastrar);
             this.abaCadastraJogos.Controls.Add(this.gpbTipoJogo);
             this.abaCadastraJogos.Controls.Add(this.textBox1);
             this.abaCadastraJogos.Controls.Add(this.lbPreco);
@@ -124,7 +143,7 @@
             this.gpbTipoJogo.Controls.Add(this.groupBox2);
             this.gpbTipoJogo.Controls.Add(this.groupBox1);
             this.gpbTipoJogo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbTipoJogo.Location = new System.Drawing.Point(11, 63);
+            this.gpbTipoJogo.Location = new System.Drawing.Point(11, 142);
             this.gpbTipoJogo.Name = "gpbTipoJogo";
             this.gpbTipoJogo.Size = new System.Drawing.Size(749, 97);
             this.gpbTipoJogo.TabIndex = 4;
@@ -303,9 +322,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(499, 23);
+            this.textBox1.Location = new System.Drawing.Point(515, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 23);
+            this.textBox1.Size = new System.Drawing.Size(97, 23);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "R$";
             // 
@@ -313,7 +332,7 @@
             // 
             this.lbPreco.AutoSize = true;
             this.lbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPreco.Location = new System.Drawing.Point(439, 25);
+            this.lbPreco.Location = new System.Drawing.Point(452, 25);
             this.lbPreco.Name = "lbPreco";
             this.lbPreco.Size = new System.Drawing.Size(54, 16);
             this.lbPreco.TabIndex = 2;
@@ -339,7 +358,7 @@
             // 
             // abaExibeJogos
             // 
-            this.abaExibeJogos.BackColor = System.Drawing.SystemColors.Control;
+            this.abaExibeJogos.BackColor = System.Drawing.Color.White;
             this.abaExibeJogos.Controls.Add(this.btnEditar);
             this.abaExibeJogos.Controls.Add(this.dGridResultado);
             this.abaExibeJogos.Controls.Add(this.imgLogo);
@@ -367,7 +386,7 @@
             // dGridResultado
             // 
             this.dGridResultado.AllowUserToOrderColumns = true;
-            this.dGridResultado.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dGridResultado.BackgroundColor = System.Drawing.Color.White;
             this.dGridResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridResultado.Location = new System.Drawing.Point(9, 183);
             this.dGridResultado.Name = "dGridResultado";
@@ -642,6 +661,7 @@
             // 
             // gbxBuscar
             // 
+            this.gbxBuscar.BackColor = System.Drawing.Color.White;
             this.gbxBuscar.Controls.Add(this.txtCampoBusca);
             this.gbxBuscar.Controls.Add(this.btnBuscarNome);
             this.gbxBuscar.Controls.Add(this.lbNomeDoJogo);
@@ -683,6 +703,92 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(484, 415);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(86, 42);
+            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
+            // btnAlteracoes
+            // 
+            this.btnAlteracoes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlteracoes.Location = new System.Drawing.Point(576, 415);
+            this.btnAlteracoes.Name = "btnAlteracoes";
+            this.btnAlteracoes.Size = new System.Drawing.Size(86, 42);
+            this.btnAlteracoes.TabIndex = 6;
+            this.btnAlteracoes.Text = "Salvar Alterações";
+            this.btnAlteracoes.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(668, 415);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(86, 42);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Quantidade:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(111, 84);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(74, 23);
+            this.numericUpDown1.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(210, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Data de Lançamento:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(379, 86);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(325, 23);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(627, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Código:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(696, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "1";
+            // 
             // telaJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,6 +820,7 @@
             this.gpbConsole.PerformLayout();
             this.gbxBuscar.ResumeLayout(false);
             this.gbxBuscar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -770,5 +877,14 @@
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAlteracoes;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label2;
     }
 }

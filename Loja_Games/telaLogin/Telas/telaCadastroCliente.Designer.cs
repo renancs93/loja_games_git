@@ -63,6 +63,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -474,7 +476,7 @@
             // pcbCadastroCliente
             // 
             this.pcbCadastroCliente.Image = global::LojaGames.Properties.Resources.img_cadastro_cliente;
-            this.pcbCadastroCliente.Location = new System.Drawing.Point(223, 12);
+            this.pcbCadastroCliente.Location = new System.Drawing.Point(184, 12);
             this.pcbCadastroCliente.Name = "pcbCadastroCliente";
             this.pcbCadastroCliente.Size = new System.Drawing.Size(288, 40);
             this.pcbCadastroCliente.TabIndex = 6;
@@ -490,12 +492,34 @@
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(510, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Código:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(579, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "1";
+            // 
             // telaCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 532);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pcbCadastroCliente);
             this.Controls.Add(this.pcbLogoGame);
             this.Controls.Add(this.btnCancelar);
@@ -517,6 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -556,5 +581,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

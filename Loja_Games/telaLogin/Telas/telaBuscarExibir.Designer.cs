@@ -161,11 +161,11 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox2.Location = new System.Drawing.Point(115, 62);
             this.maskedTextBox2.Mask = "99,999,999-99";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(102, 21);
+            this.maskedTextBox2.Size = new System.Drawing.Size(123, 23);
             this.maskedTextBox2.TabIndex = 2;
             // 
             // lbRg
@@ -180,11 +180,11 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox1.Location = new System.Drawing.Point(115, 30);
             this.maskedTextBox1.Mask = "999,999,999-99";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(102, 21);
+            this.maskedTextBox1.Size = new System.Drawing.Size(123, 23);
             this.maskedTextBox1.TabIndex = 1;
             // 
             // lbCpf
@@ -202,7 +202,7 @@
             this.gbxSexoCliente.Controls.Add(this.rbFemininoCliente);
             this.gbxSexoCliente.Controls.Add(this.rbMasculinoCliente);
             this.gbxSexoCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSexoCliente.Location = new System.Drawing.Point(228, 20);
+            this.gbxSexoCliente.Location = new System.Drawing.Point(244, 21);
             this.gbxSexoCliente.Name = "gbxSexoCliente";
             this.gbxSexoCliente.Size = new System.Drawing.Size(101, 67);
             this.gbxSexoCliente.TabIndex = 4;
@@ -245,9 +245,10 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(58, 108);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 22);
+            this.textBox1.Size = new System.Drawing.Size(287, 23);
             this.textBox1.TabIndex = 3;
             // 
             // lbNomeCliente
@@ -313,7 +314,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(375, 15);
+            this.button4.Location = new System.Drawing.Point(375, 31);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 24);
             this.button4.TabIndex = 7;
@@ -322,9 +323,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(375, 45);
+            this.button2.Location = new System.Drawing.Point(375, 59);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 26);
+            this.button2.Size = new System.Drawing.Size(75, 28);
             this.button2.TabIndex = 8;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
@@ -332,7 +333,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(362, 77);
+            this.button1.Location = new System.Drawing.Point(362, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 52);
             this.button1.TabIndex = 6;
@@ -343,9 +344,9 @@
             // 
             this.gbxSexoFuncionario.Controls.Add(this.radioButton2);
             this.gbxSexoFuncionario.Controls.Add(this.radioButton1);
-            this.gbxSexoFuncionario.Location = new System.Drawing.Point(252, 23);
+            this.gbxSexoFuncionario.Location = new System.Drawing.Point(267, 23);
             this.gbxSexoFuncionario.Name = "gbxSexoFuncionario";
-            this.gbxSexoFuncionario.Size = new System.Drawing.Size(104, 61);
+            this.gbxSexoFuncionario.Size = new System.Drawing.Size(104, 64);
             this.gbxSexoFuncionario.TabIndex = 6;
             this.gbxSexoFuncionario.TabStop = false;
             this.gbxSexoFuncionario.Text = "Sexo";
@@ -374,32 +375,35 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(57, 108);
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(57, 123);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 22);
+            this.textBox2.Size = new System.Drawing.Size(299, 23);
             this.textBox2.TabIndex = 3;
             // 
             // maskedTextBox4
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(146, 63);
+            this.maskedTextBox4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox4.Location = new System.Drawing.Point(146, 62);
             this.maskedTextBox4.Mask = "99,999,999-99";
             this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox4.Size = new System.Drawing.Size(115, 23);
             this.maskedTextBox4.TabIndex = 2;
             // 
             // maskedTextBox3
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(146, 31);
+            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox3.Location = new System.Drawing.Point(146, 30);
             this.maskedTextBox3.Mask = "999,999,999-99";
             this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox3.Size = new System.Drawing.Size(115, 23);
             this.maskedTextBox3.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 111);
+            this.label3.Location = new System.Drawing.Point(6, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 2;
@@ -408,20 +412,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 15);
+            this.label2.Size = new System.Drawing.Size(127, 14);
             this.label2.TabIndex = 1;
             this.label2.Text = "RG do Funcionário";
             // 
             // lbCpfFuncionario
             // 
             this.lbCpfFuncionario.AutoSize = true;
-            this.lbCpfFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfFuncionario.Location = new System.Drawing.Point(7, 31);
+            this.lbCpfFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfFuncionario.Location = new System.Drawing.Point(7, 34);
             this.lbCpfFuncionario.Name = "lbCpfFuncionario";
-            this.lbCpfFuncionario.Size = new System.Drawing.Size(133, 15);
+            this.lbCpfFuncionario.Size = new System.Drawing.Size(134, 14);
             this.lbCpfFuncionario.TabIndex = 0;
             this.lbCpfFuncionario.Text = "CPF do Funcionário";
             // 

@@ -33,15 +33,15 @@
             this.gbxResultado = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbxDadosVendaAluga = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpbPeriodo = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.lbAte = new System.Windows.Forms.Label();
             this.lbDe = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnEncontrar = new System.Windows.Forms.Button();
             this.gbxTipo = new System.Windows.Forms.GroupBox();
-            this.ckAluguel = new System.Windows.Forms.CheckBox();
-            this.ckVenda = new System.Windows.Forms.CheckBox();
+            this.ckbAluguel = new System.Windows.Forms.CheckBox();
+            this.ckbVenda = new System.Windows.Forms.CheckBox();
             this.mtbCpfCliente = new System.Windows.Forms.MaskedTextBox();
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.txtCodVendaAluga = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             this.gbxResultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxDadosVendaAluga.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpbPeriodo.SuspendLayout();
             this.gbxTipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +102,7 @@
             // 
             // gbxDadosVendaAluga
             // 
-            this.gbxDadosVendaAluga.Controls.Add(this.groupBox1);
+            this.gbxDadosVendaAluga.Controls.Add(this.gpbPeriodo);
             this.gbxDadosVendaAluga.Controls.Add(this.btnEncontrar);
             this.gbxDadosVendaAluga.Controls.Add(this.gbxTipo);
             this.gbxDadosVendaAluga.Controls.Add(this.mtbCpfCliente);
@@ -119,18 +119,18 @@
             this.gbxDadosVendaAluga.TabStop = false;
             this.gbxDadosVendaAluga.Text = "Dados";
             // 
-            // groupBox1
+            // gpbPeriodo
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.lbAte);
-            this.groupBox1.Controls.Add(this.lbDe);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Location = new System.Drawing.Point(107, 71);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(190, 76);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Período";
+            this.gpbPeriodo.Controls.Add(this.dateTimePicker2);
+            this.gpbPeriodo.Controls.Add(this.lbAte);
+            this.gpbPeriodo.Controls.Add(this.lbDe);
+            this.gpbPeriodo.Controls.Add(this.dateTimePicker1);
+            this.gpbPeriodo.Location = new System.Drawing.Point(107, 71);
+            this.gpbPeriodo.Name = "gpbPeriodo";
+            this.gpbPeriodo.Size = new System.Drawing.Size(190, 76);
+            this.gpbPeriodo.TabIndex = 8;
+            this.gpbPeriodo.TabStop = false;
+            this.gpbPeriodo.Text = "Período";
             // 
             // dateTimePicker2
             // 
@@ -179,8 +179,8 @@
             // 
             // gbxTipo
             // 
-            this.gbxTipo.Controls.Add(this.ckAluguel);
-            this.gbxTipo.Controls.Add(this.ckVenda);
+            this.gbxTipo.Controls.Add(this.ckbAluguel);
+            this.gbxTipo.Controls.Add(this.ckbVenda);
             this.gbxTipo.Location = new System.Drawing.Point(10, 71);
             this.gbxTipo.Name = "gbxTipo";
             this.gbxTipo.Size = new System.Drawing.Size(90, 76);
@@ -188,28 +188,29 @@
             this.gbxTipo.TabStop = false;
             this.gbxTipo.Text = "Tipo";
             // 
-            // ckAluguel
+            // ckbAluguel
             // 
-            this.ckAluguel.AutoSize = true;
-            this.ckAluguel.Location = new System.Drawing.Point(8, 48);
-            this.ckAluguel.Name = "ckAluguel";
-            this.ckAluguel.Size = new System.Drawing.Size(81, 20);
-            this.ckAluguel.TabIndex = 1;
-            this.ckAluguel.Text = "Aluguel";
-            this.ckAluguel.UseVisualStyleBackColor = true;
+            this.ckbAluguel.AutoSize = true;
+            this.ckbAluguel.Location = new System.Drawing.Point(8, 48);
+            this.ckbAluguel.Name = "ckbAluguel";
+            this.ckbAluguel.Size = new System.Drawing.Size(81, 20);
+            this.ckbAluguel.TabIndex = 1;
+            this.ckbAluguel.Text = "Aluguel";
+            this.ckbAluguel.UseVisualStyleBackColor = true;
             // 
-            // ckVenda
+            // ckbVenda
             // 
-            this.ckVenda.AutoSize = true;
-            this.ckVenda.Location = new System.Drawing.Point(8, 21);
-            this.ckVenda.Name = "ckVenda";
-            this.ckVenda.Size = new System.Drawing.Size(73, 20);
-            this.ckVenda.TabIndex = 0;
-            this.ckVenda.Text = "Venda";
-            this.ckVenda.UseVisualStyleBackColor = true;
+            this.ckbVenda.AutoSize = true;
+            this.ckbVenda.Location = new System.Drawing.Point(8, 21);
+            this.ckbVenda.Name = "ckbVenda";
+            this.ckbVenda.Size = new System.Drawing.Size(73, 20);
+            this.ckbVenda.TabIndex = 0;
+            this.ckbVenda.Text = "Venda";
+            this.ckbVenda.UseVisualStyleBackColor = true;
             // 
             // mtbCpfCliente
             // 
+            this.mtbCpfCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCpfCliente.Location = new System.Drawing.Point(377, 14);
             this.mtbCpfCliente.Mask = "999,999,999-99";
             this.mtbCpfCliente.Name = "mtbCpfCliente";
@@ -227,6 +228,7 @@
             // 
             // txtCodVendaAluga
             // 
+            this.txtCodVendaAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodVendaAluga.Location = new System.Drawing.Point(206, 14);
             this.txtCodVendaAluga.Name = "txtCodVendaAluga";
             this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 23);
@@ -243,6 +245,7 @@
             // 
             // txtNomeCliente
             // 
+            this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCliente.Location = new System.Drawing.Point(118, 44);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(387, 23);
@@ -298,8 +301,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxDadosVendaAluga.ResumeLayout(false);
             this.gbxDadosVendaAluga.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpbPeriodo.ResumeLayout(false);
+            this.gpbPeriodo.PerformLayout();
             this.gbxTipo.ResumeLayout(false);
             this.gbxTipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -321,12 +324,12 @@
         private System.Windows.Forms.TextBox txtCodVendaAluga;
         private System.Windows.Forms.MaskedTextBox mtbCpfCliente;
         private System.Windows.Forms.GroupBox gbxTipo;
-        private System.Windows.Forms.CheckBox ckAluguel;
-        private System.Windows.Forms.CheckBox ckVenda;
+        private System.Windows.Forms.CheckBox ckbAluguel;
+        private System.Windows.Forms.CheckBox ckbVenda;
         private System.Windows.Forms.GroupBox gbxResultado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEncontrar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbPeriodo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbAte;
         private System.Windows.Forms.Label lbDe;

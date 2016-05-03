@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcVendaAluguel = new System.Windows.Forms.TabControl();
             this.abaRelatorioVendaAluga = new System.Windows.Forms.TabPage();
             this.gbxResultado = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.gbxDadosVendaAluga = new System.Windows.Forms.GroupBox();
             this.gpbPeriodo = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpAte = new System.Windows.Forms.DateTimePicker();
             this.lbAte = new System.Windows.Forms.Label();
             this.lbDe = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDe = new System.Windows.Forms.DateTimePicker();
             this.btnEncontrar = new System.Windows.Forms.Button();
             this.gbxTipo = new System.Windows.Forms.GroupBox();
             this.ckbAluguel = new System.Windows.Forms.CheckBox();
@@ -49,25 +49,25 @@
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.lbNomeCliente = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl1.SuspendLayout();
+            this.pcbGameLogo = new System.Windows.Forms.PictureBox();
+            this.tcVendaAluguel.SuspendLayout();
             this.abaRelatorioVendaAluga.SuspendLayout();
             this.gbxResultado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.gbxDadosVendaAluga.SuspendLayout();
             this.gpbPeriodo.SuspendLayout();
             this.gbxTipo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcVendaAluguel
             // 
-            this.tabControl1.Controls.Add(this.abaRelatorioVendaAluga);
-            this.tabControl1.Location = new System.Drawing.Point(6, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(562, 502);
-            this.tabControl1.TabIndex = 0;
+            this.tcVendaAluguel.Controls.Add(this.abaRelatorioVendaAluga);
+            this.tcVendaAluguel.Location = new System.Drawing.Point(6, 2);
+            this.tcVendaAluguel.Name = "tcVendaAluguel";
+            this.tcVendaAluguel.SelectedIndex = 0;
+            this.tcVendaAluguel.Size = new System.Drawing.Size(562, 502);
+            this.tcVendaAluguel.TabIndex = 0;
             // 
             // abaRelatorioVendaAluga
             // 
@@ -83,7 +83,7 @@
             // 
             // gbxResultado
             // 
-            this.gbxResultado.Controls.Add(this.dataGridView1);
+            this.gbxResultado.Controls.Add(this.dgvResultado);
             this.gbxResultado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxResultado.Location = new System.Drawing.Point(8, 167);
             this.gbxResultado.Name = "gbxResultado";
@@ -92,13 +92,13 @@
             this.gbxResultado.TabStop = false;
             this.gbxResultado.Text = "Resultado";
             // 
-            // dataGridView1
+            // dgvResultado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 278);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(7, 19);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.Size = new System.Drawing.Size(526, 278);
+            this.dgvResultado.TabIndex = 0;
             // 
             // gbxDadosVendaAluga
             // 
@@ -121,10 +121,10 @@
             // 
             // gpbPeriodo
             // 
-            this.gpbPeriodo.Controls.Add(this.dateTimePicker2);
+            this.gpbPeriodo.Controls.Add(this.dtpAte);
             this.gpbPeriodo.Controls.Add(this.lbAte);
             this.gpbPeriodo.Controls.Add(this.lbDe);
-            this.gpbPeriodo.Controls.Add(this.dateTimePicker1);
+            this.gpbPeriodo.Controls.Add(this.dtpDe);
             this.gpbPeriodo.Location = new System.Drawing.Point(107, 71);
             this.gpbPeriodo.Name = "gpbPeriodo";
             this.gpbPeriodo.Size = new System.Drawing.Size(190, 76);
@@ -132,14 +132,14 @@
             this.gpbPeriodo.TabStop = false;
             this.gpbPeriodo.Text = "Período";
             // 
-            // dateTimePicker2
+            // dtpAte
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(56, 43);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(117, 23);
-            this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
+            this.dtpAte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpAte.Location = new System.Drawing.Point(56, 43);
+            this.dtpAte.Name = "dtpAte";
+            this.dtpAte.Size = new System.Drawing.Size(117, 23);
+            this.dtpAte.TabIndex = 3;
+            this.dtpAte.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
             // lbAte
             // 
@@ -159,14 +159,14 @@
             this.lbDe.TabIndex = 1;
             this.lbDe.Text = "De:";
             // 
-            // dateTimePicker1
+            // dtpDe
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(57, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(116, 23);
-            this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
+            this.dtpDe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDe.Location = new System.Drawing.Point(57, 16);
+            this.dtpDe.Name = "dtpDe";
+            this.dtpDe.Size = new System.Drawing.Size(116, 23);
+            this.dtpDe.TabIndex = 0;
+            this.dtpDe.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
             // btnEncontrar
             // 
@@ -271,15 +271,15 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // pictureBox1
+            // pcbGameLogo
             // 
-            this.pictureBox1.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 506);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pcbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pcbGameLogo.Location = new System.Drawing.Point(6, 506);
+            this.pcbGameLogo.Name = "pcbGameLogo";
+            this.pcbGameLogo.Size = new System.Drawing.Size(134, 40);
+            this.pcbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbGameLogo.TabIndex = 2;
+            this.pcbGameLogo.TabStop = false;
             // 
             // telaRelatorios
             // 
@@ -287,35 +287,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(570, 553);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pcbGameLogo);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcVendaAluguel);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "telaRelatorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorios";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaRelatorios_FormClosing);
-            this.tabControl1.ResumeLayout(false);
+            this.tcVendaAluguel.ResumeLayout(false);
             this.abaRelatorioVendaAluga.ResumeLayout(false);
             this.gbxResultado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.gbxDadosVendaAluga.ResumeLayout(false);
             this.gbxDadosVendaAluga.PerformLayout();
             this.gpbPeriodo.ResumeLayout(false);
             this.gpbPeriodo.PerformLayout();
             this.gbxTipo.ResumeLayout(false);
             this.gbxTipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcVendaAluguel;
         private System.Windows.Forms.TabPage abaRelatorioVendaAluga;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbGameLogo;
         private System.Windows.Forms.GroupBox gbxDadosVendaAluga;
         private System.Windows.Forms.Label lbNomeCliente;
         private System.Windows.Forms.Label lbCodigoVendaAluguel;
@@ -327,12 +327,12 @@
         private System.Windows.Forms.CheckBox ckbAluguel;
         private System.Windows.Forms.CheckBox ckbVenda;
         private System.Windows.Forms.GroupBox gbxResultado;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvResultado;
         private System.Windows.Forms.Button btnEncontrar;
         private System.Windows.Forms.GroupBox gpbPeriodo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDe;
         private System.Windows.Forms.Label lbAte;
         private System.Windows.Forms.Label lbDe;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpAte;
     }
 }

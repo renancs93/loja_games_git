@@ -50,9 +50,9 @@ namespace LojaGames
             txtCampoBusca.Text = "";
 
             //verifica se algumas da opcoes do radioButom (consoles) estão ativas e remove a seleção
-            if((rbtnPSP.Checked || rbtnXbox.Checked || rbtnPc.Checked) == true)
+            if((rbtnPS4.Checked || rbtnXbox.Checked || rbtnPc.Checked) == true)
             {
-                rbtnPSP.Checked = false;
+                rbtnPS4.Checked = false;
                 rbtnXbox.Checked = false;
                 rbtnPc.Checked = false;
             }

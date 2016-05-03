@@ -31,8 +31,8 @@
             this.pcbCadastroFuncionarios = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbRG = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.lbRua = new System.Windows.Forms.Label();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDataInicio = new System.Windows.Forms.MaskedTextBox();
             this.lbDataInicio = new System.Windows.Forms.Label();
             this.txtSalarioBase = new System.Windows.Forms.TextBox();
             this.lbSalarioBase = new System.Windows.Forms.Label();
@@ -70,8 +70,8 @@
             this.lbCargo = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
+            this.lbCodigoNumero = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -101,8 +101,8 @@
             // 
             // gpbDadosPessoais
             // 
-            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox3);
-            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
+            this.gpbDadosPessoais.Controls.Add(this.mtbRG);
+            this.gpbDadosPessoais.Controls.Add(this.mtbDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.mtbTelefone);
             this.gpbDadosPessoais.Controls.Add(this.mtbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
@@ -126,23 +126,23 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
-            // maskedTextBox3
+            // mtbRG
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(397, 61);
-            this.maskedTextBox3.Mask = "99,999,999-99";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(162, 23);
-            this.maskedTextBox3.TabIndex = 3;
+            this.mtbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbRG.Location = new System.Drawing.Point(397, 61);
+            this.mtbRG.Mask = "99,999,999-99";
+            this.mtbRG.Name = "mtbRG";
+            this.mtbRG.Size = new System.Drawing.Size(162, 23);
+            this.mtbRG.TabIndex = 3;
             // 
-            // maskedTextBox1
+            // mtbDataNascimento
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(166, 101);
-            this.maskedTextBox1.Mask = "99/99/9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 23);
-            this.maskedTextBox1.TabIndex = 4;
+            this.mtbDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbDataNascimento.Location = new System.Drawing.Point(166, 101);
+            this.mtbDataNascimento.Mask = "99/99/9999";
+            this.mtbDataNascimento.Name = "mtbDataNascimento";
+            this.mtbDataNascimento.Size = new System.Drawing.Size(126, 23);
+            this.mtbDataNascimento.TabIndex = 4;
             // 
             // mtbTelefone
             // 
@@ -475,7 +475,7 @@
             // 
             // gpbDadosCadastrais
             // 
-            this.gpbDadosCadastrais.Controls.Add(this.maskedTextBox2);
+            this.gpbDadosCadastrais.Controls.Add(this.mtbDataInicio);
             this.gpbDadosCadastrais.Controls.Add(this.lbDataInicio);
             this.gpbDadosCadastrais.Controls.Add(this.txtSalarioBase);
             this.gpbDadosCadastrais.Controls.Add(this.lbSalarioBase);
@@ -489,14 +489,14 @@
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Cadastrais";
             // 
-            // maskedTextBox2
+            // mtbDataInicio
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(440, 71);
-            this.maskedTextBox2.Mask = "99/99/9999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(119, 23);
-            this.maskedTextBox2.TabIndex = 18;
+            this.mtbDataInicio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbDataInicio.Location = new System.Drawing.Point(440, 71);
+            this.mtbDataInicio.Mask = "99/99/9999";
+            this.mtbDataInicio.Name = "mtbDataInicio";
+            this.mtbDataInicio.Size = new System.Drawing.Size(119, 23);
+            this.mtbDataInicio.TabIndex = 18;
             // 
             // lbDataInicio
             // 
@@ -570,25 +570,25 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label1
+            // lbCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(516, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Código:";
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigo.Location = new System.Drawing.Point(516, 26);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(63, 16);
+            this.lbCodigo.TabIndex = 21;
+            this.lbCodigo.Text = "Código:";
             // 
-            // label2
+            // lbCodigoNumero
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(585, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "1";
+            this.lbCodigoNumero.AutoSize = true;
+            this.lbCodigoNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigoNumero.Location = new System.Drawing.Point(585, 26);
+            this.lbCodigoNumero.Name = "lbCodigoNumero";
+            this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
+            this.lbCodigoNumero.TabIndex = 22;
+            this.lbCodigoNumero.Text = "1";
             // 
             // telaCadastroFuncionario
             // 
@@ -596,8 +596,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 672);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbCodigoNumero);
+            this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.gpbDadosCadastrais);
@@ -663,12 +663,12 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbDataNascimento;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.MaskedTextBox mtbCEP;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox mtbDataInicio;
+        private System.Windows.Forms.MaskedTextBox mtbRG;
+        private System.Windows.Forms.Label lbCodigo;
+        private System.Windows.Forms.Label lbCodigoNumero;
     }
 }

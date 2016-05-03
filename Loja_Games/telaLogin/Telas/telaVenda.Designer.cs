@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcVendaAluguel = new System.Windows.Forms.TabControl();
             this.abaVenda = new System.Windows.Forms.TabPage();
             this.gbpDadoVenda = new System.Windows.Forms.GroupBox();
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
@@ -89,7 +89,7 @@
             this.lbFuncAlug = new System.Windows.Forms.Label();
             this.lbProdAlug = new System.Windows.Forms.Label();
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tcVendaAluguel.SuspendLayout();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
@@ -102,20 +102,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDiasAlug)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcVendaAluguel
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tcVendaAluguel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.abaVenda);
-            this.tabControl1.Controls.Add(this.abaAluguel);
-            this.tabControl1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-2, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(772, 482);
-            this.tabControl1.TabIndex = 0;
+            this.tcVendaAluguel.Controls.Add(this.abaVenda);
+            this.tcVendaAluguel.Controls.Add(this.abaAluguel);
+            this.tcVendaAluguel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcVendaAluguel.Location = new System.Drawing.Point(-2, 0);
+            this.tcVendaAluguel.Margin = new System.Windows.Forms.Padding(2);
+            this.tcVendaAluguel.Name = "tcVendaAluguel";
+            this.tcVendaAluguel.SelectedIndex = 0;
+            this.tcVendaAluguel.Size = new System.Drawing.Size(772, 482);
+            this.tcVendaAluguel.TabIndex = 0;
             // 
             // abaVenda
             // 
@@ -716,7 +716,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(770, 482);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcVendaAluguel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "telaVenda";
@@ -724,7 +724,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venda e Aluguel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaVenda_FormClosing);
-            this.tabControl1.ResumeLayout(false);
+            this.tcVendaAluguel.ResumeLayout(false);
             this.abaVenda.ResumeLayout(false);
             this.gbpDadoVenda.ResumeLayout(false);
             this.gbpDadoVenda.PerformLayout();
@@ -743,7 +743,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcVendaAluguel;
         private System.Windows.Forms.TabPage abaVenda;
         private System.Windows.Forms.TabPage abaAluguel;
         private System.Windows.Forms.GroupBox gbpDadoVenda;

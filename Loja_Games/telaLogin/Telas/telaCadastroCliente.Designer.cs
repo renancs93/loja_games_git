@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
@@ -41,13 +41,12 @@
             this.lbSexo = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbDataNascimento = new System.Windows.Forms.Label();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lbRG = new System.Windows.Forms.Label();
             this.lbCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.gpbEndereco = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -63,8 +62,9 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbCadastroCliente = new System.Windows.Forms.PictureBox();
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
+            this.lbCodigoNumero = new System.Windows.Forms.Label();
+            this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -74,9 +74,10 @@
             // gpbDadosPessoais
             // 
             this.gpbDadosPessoais.BackColor = System.Drawing.Color.Transparent;
-            this.gpbDadosPessoais.Controls.Add(this.dateTimePicker1);
-            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox2);
-            this.gpbDadosPessoais.Controls.Add(this.maskedTextBox1);
+            this.gpbDadosPessoais.Controls.Add(this.mtbRG);
+            this.gpbDadosPessoais.Controls.Add(this.dtpDataNascimento);
+            this.gpbDadosPessoais.Controls.Add(this.mtbTelefone);
+            this.gpbDadosPessoais.Controls.Add(this.mtbCPF);
             this.gpbDadosPessoais.Controls.Add(this.cbxStatus);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
             this.gpbDadosPessoais.Controls.Add(this.lbEmail);
@@ -86,7 +87,6 @@
             this.gpbDadosPessoais.Controls.Add(this.lbSexo);
             this.gpbDadosPessoais.Controls.Add(this.lbTelefone);
             this.gpbDadosPessoais.Controls.Add(this.lbDataNascimento);
-            this.gpbDadosPessoais.Controls.Add(this.txtRG);
             this.gpbDadosPessoais.Controls.Add(this.lbRG);
             this.gpbDadosPessoais.Controls.Add(this.lbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtNome);
@@ -100,34 +100,34 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
-            // dateTimePicker1
+            // dtpDataNascimento
             // 
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 109);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 23);
-            this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 30, 15, 27, 56, 0);
+            this.dtpDataNascimento.CustomFormat = "dd/mm/yyyy";
+            this.dtpDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascimento.Location = new System.Drawing.Point(172, 109);
+            this.dtpDataNascimento.Name = "dtpDataNascimento";
+            this.dtpDataNascimento.Size = new System.Drawing.Size(139, 23);
+            this.dtpDataNascimento.TabIndex = 15;
+            this.dtpDataNascimento.Value = new System.DateTime(2016, 4, 30, 15, 27, 56, 0);
             // 
-            // maskedTextBox2
+            // mtbTelefone
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(435, 107);
-            this.maskedTextBox2.Mask = "(99)9999-9999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(134, 23);
-            this.maskedTextBox2.TabIndex = 5;
+            this.mtbTelefone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefone.Location = new System.Drawing.Point(435, 107);
+            this.mtbTelefone.Mask = "(99)9999-9999";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(134, 23);
+            this.mtbTelefone.TabIndex = 5;
             // 
-            // maskedTextBox1
+            // mtbCPF
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(74, 70);
-            this.maskedTextBox1.Mask = "999,999,999,99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(237, 23);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mtbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCPF.Location = new System.Drawing.Point(74, 70);
+            this.mtbCPF.Mask = "999,999,999,99";
+            this.mtbCPF.Name = "mtbCPF";
+            this.mtbCPF.Size = new System.Drawing.Size(237, 23);
+            this.mtbCPF.TabIndex = 2;
             // 
             // cbxStatus
             // 
@@ -229,16 +229,6 @@
             this.lbDataNascimento.TabIndex = 6;
             this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
-            // txtRG
-            // 
-            this.txtRG.BackColor = System.Drawing.Color.White;
-            this.txtRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.ForeColor = System.Drawing.Color.Black;
-            this.txtRG.Location = new System.Drawing.Point(389, 70);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(180, 23);
-            this.txtRG.TabIndex = 3;
-            // 
             // lbRG
             // 
             this.lbRG.AutoSize = true;
@@ -282,7 +272,7 @@
             // gpbEndereco
             // 
             this.gpbEndereco.BackColor = System.Drawing.Color.Transparent;
-            this.gpbEndereco.Controls.Add(this.maskedTextBox4);
+            this.gpbEndereco.Controls.Add(this.mtbCEP);
             this.gpbEndereco.Controls.Add(this.cbxEstado);
             this.gpbEndereco.Controls.Add(this.lbCEP);
             this.gpbEndereco.Controls.Add(this.txtCidade);
@@ -302,14 +292,14 @@
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
             // 
-            // maskedTextBox4
+            // mtbCEP
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(397, 93);
-            this.maskedTextBox4.Mask = "00000-000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(172, 23);
-            this.maskedTextBox4.TabIndex = 14;
+            this.mtbCEP.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCEP.Location = new System.Drawing.Point(397, 93);
+            this.mtbCEP.Mask = "00000-000";
+            this.mtbCEP.Name = "mtbCEP";
+            this.mtbCEP.Size = new System.Drawing.Size(172, 23);
+            this.mtbCEP.TabIndex = 14;
             // 
             // cbxEstado
             // 
@@ -492,25 +482,34 @@
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
             // 
-            // label1
+            // lbCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(510, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Código:";
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigo.Location = new System.Drawing.Point(510, 28);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(63, 16);
+            this.lbCodigo.TabIndex = 18;
+            this.lbCodigo.Text = "Código:";
             // 
-            // label2
+            // lbCodigoNumero
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(579, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "1";
+            this.lbCodigoNumero.AutoSize = true;
+            this.lbCodigoNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigoNumero.Location = new System.Drawing.Point(579, 28);
+            this.lbCodigoNumero.Name = "lbCodigoNumero";
+            this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
+            this.lbCodigoNumero.TabIndex = 16;
+            this.lbCodigoNumero.Text = "1";
+            // 
+            // mtbRG
+            // 
+            this.mtbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbRG.Location = new System.Drawing.Point(397, 67);
+            this.mtbRG.Mask = "99,999,999-99";
+            this.mtbRG.Name = "mtbRG";
+            this.mtbRG.Size = new System.Drawing.Size(172, 23);
+            this.mtbRG.TabIndex = 16;
             // 
             // telaCadastroCliente
             // 
@@ -518,8 +517,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 532);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbCodigoNumero);
+            this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.pcbCadastroCliente);
             this.Controls.Add(this.pcbLogoGame);
             this.Controls.Add(this.btnCancelar);
@@ -555,7 +554,6 @@
         private System.Windows.Forms.Label lbSexo;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.Label lbDataNascimento;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lbRG;
         private System.Windows.Forms.Label lbCPF;
         private System.Windows.Forms.GroupBox gpbEndereco;
@@ -577,11 +575,12 @@
         private System.Windows.Forms.PictureBox pcbLogoGame;
         private System.Windows.Forms.PictureBox pcbCadastroCliente;
         private System.Windows.Forms.ComboBox cbxEstado;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox mtbTelefone;
+        private System.Windows.Forms.MaskedTextBox mtbCPF;
+        private System.Windows.Forms.MaskedTextBox mtbCEP;
+        private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+        private System.Windows.Forms.Label lbCodigo;
+        private System.Windows.Forms.Label lbCodigoNumero;
+        private System.Windows.Forms.MaskedTextBox mtbRG;
     }
 }

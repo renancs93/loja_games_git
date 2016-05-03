@@ -28,65 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcClienteFuncionario = new System.Windows.Forms.TabControl();
             this.tabExibeBuscaCliente = new System.Windows.Forms.TabPage();
             this.gbxExibirClientes = new System.Windows.Forms.GroupBox();
             this.dtxExibiClientes = new System.Windows.Forms.DataGridView();
             this.gbxBuscarClientes = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.lbRg = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.lbCpf = new System.Windows.Forms.Label();
+            this.mtbRGCliente = new System.Windows.Forms.MaskedTextBox();
+            this.lbRGCliente = new System.Windows.Forms.Label();
+            this.mtbCPFCliente = new System.Windows.Forms.MaskedTextBox();
+            this.lbCPFCliente = new System.Windows.Forms.Label();
             this.gbxSexoCliente = new System.Windows.Forms.GroupBox();
             this.rbFemininoCliente = new System.Windows.Forms.RadioButton();
             this.rbMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.lbNomeCliente = new System.Windows.Forms.Label();
             this.tabExibeBuscaFunc = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gpbExibirFuncionario = new System.Windows.Forms.GroupBox();
+            this.dgvExibirFuncionario = new System.Windows.Forms.DataGridView();
+            this.gpbBuscaFuncionario = new System.Windows.Forms.GroupBox();
+            this.btnExcluirFuncionario = new System.Windows.Forms.Button();
+            this.btnEditarFuncionario = new System.Windows.Forms.Button();
+            this.btnBuscarFuncionario = new System.Windows.Forms.Button();
             this.gbxSexoFuncionario = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.rbtFeminino = new System.Windows.Forms.RadioButton();
+            this.rbtMasculino = new System.Windows.Forms.RadioButton();
+            this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.mtbRGFuncionario = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCPFFuncionario = new System.Windows.Forms.MaskedTextBox();
+            this.lbNomeFuncionario = new System.Windows.Forms.Label();
+            this.lbRGFuncionario = new System.Windows.Forms.Label();
             this.lbCpfFuncionario = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.tcClienteFuncionario.SuspendLayout();
             this.tabExibeBuscaCliente.SuspendLayout();
             this.gbxExibirClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtxExibiClientes)).BeginInit();
             this.gbxBuscarClientes.SuspendLayout();
             this.gbxSexoCliente.SuspendLayout();
             this.tabExibeBuscaFunc.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gpbExibirFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibirFuncionario)).BeginInit();
+            this.gpbBuscaFuncionario.SuspendLayout();
             this.gbxSexoFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcClienteFuncionario
             // 
-            this.tabControl1.Controls.Add(this.tabExibeBuscaCliente);
-            this.tabControl1.Controls.Add(this.tabExibeBuscaFunc);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(481, 433);
-            this.tabControl1.TabIndex = 0;
+            this.tcClienteFuncionario.Controls.Add(this.tabExibeBuscaCliente);
+            this.tcClienteFuncionario.Controls.Add(this.tabExibeBuscaFunc);
+            this.tcClienteFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcClienteFuncionario.Location = new System.Drawing.Point(0, 2);
+            this.tcClienteFuncionario.Name = "tcClienteFuncionario";
+            this.tcClienteFuncionario.SelectedIndex = 0;
+            this.tcClienteFuncionario.Size = new System.Drawing.Size(481, 433);
+            this.tcClienteFuncionario.TabIndex = 0;
             // 
             // tabExibeBuscaCliente
             // 
@@ -121,15 +121,15 @@
             // 
             // gbxBuscarClientes
             // 
-            this.gbxBuscarClientes.Controls.Add(this.button3);
+            this.gbxBuscarClientes.Controls.Add(this.btnExcluir);
             this.gbxBuscarClientes.Controls.Add(this.btnEditarCliente);
-            this.gbxBuscarClientes.Controls.Add(this.maskedTextBox2);
-            this.gbxBuscarClientes.Controls.Add(this.lbRg);
-            this.gbxBuscarClientes.Controls.Add(this.maskedTextBox1);
-            this.gbxBuscarClientes.Controls.Add(this.lbCpf);
+            this.gbxBuscarClientes.Controls.Add(this.mtbRGCliente);
+            this.gbxBuscarClientes.Controls.Add(this.lbRGCliente);
+            this.gbxBuscarClientes.Controls.Add(this.mtbCPFCliente);
+            this.gbxBuscarClientes.Controls.Add(this.lbCPFCliente);
             this.gbxBuscarClientes.Controls.Add(this.gbxSexoCliente);
             this.gbxBuscarClientes.Controls.Add(this.btnBuscarCliente);
-            this.gbxBuscarClientes.Controls.Add(this.textBox1);
+            this.gbxBuscarClientes.Controls.Add(this.txtNomeCliente);
             this.gbxBuscarClientes.Controls.Add(this.lbNomeCliente);
             this.gbxBuscarClientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxBuscarClientes.Location = new System.Drawing.Point(9, 7);
@@ -139,15 +139,15 @@
             this.gbxBuscarClientes.TabStop = false;
             this.gbxBuscarClientes.Text = "Buscar Cliente";
             // 
-            // button3
+            // btnExcluir
             // 
-            this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(383, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 24);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Excluir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(383, 20);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(67, 24);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // btnEditarCliente
             // 
@@ -159,43 +159,43 @@
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox2
+            // mtbRGCliente
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(115, 62);
-            this.maskedTextBox2.Mask = "99,999,999-99";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(123, 23);
-            this.maskedTextBox2.TabIndex = 2;
+            this.mtbRGCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbRGCliente.Location = new System.Drawing.Point(115, 62);
+            this.mtbRGCliente.Mask = "99,999,999-99";
+            this.mtbRGCliente.Name = "mtbRGCliente";
+            this.mtbRGCliente.Size = new System.Drawing.Size(123, 23);
+            this.mtbRGCliente.TabIndex = 2;
             // 
-            // lbRg
+            // lbRGCliente
             // 
-            this.lbRg.AutoSize = true;
-            this.lbRg.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRg.Location = new System.Drawing.Point(6, 65);
-            this.lbRg.Name = "lbRg";
-            this.lbRg.Size = new System.Drawing.Size(96, 14);
-            this.lbRg.TabIndex = 7;
-            this.lbRg.Text = "RG do Cliente";
+            this.lbRGCliente.AutoSize = true;
+            this.lbRGCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRGCliente.Location = new System.Drawing.Point(6, 65);
+            this.lbRGCliente.Name = "lbRGCliente";
+            this.lbRGCliente.Size = new System.Drawing.Size(96, 14);
+            this.lbRGCliente.TabIndex = 7;
+            this.lbRGCliente.Text = "RG do Cliente";
             // 
-            // maskedTextBox1
+            // mtbCPFCliente
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(115, 30);
-            this.maskedTextBox1.Mask = "999,999,999-99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(123, 23);
-            this.maskedTextBox1.TabIndex = 1;
+            this.mtbCPFCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCPFCliente.Location = new System.Drawing.Point(115, 30);
+            this.mtbCPFCliente.Mask = "999,999,999-99";
+            this.mtbCPFCliente.Name = "mtbCPFCliente";
+            this.mtbCPFCliente.Size = new System.Drawing.Size(123, 23);
+            this.mtbCPFCliente.TabIndex = 1;
             // 
-            // lbCpf
+            // lbCPFCliente
             // 
-            this.lbCpf.AutoSize = true;
-            this.lbCpf.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpf.Location = new System.Drawing.Point(6, 30);
-            this.lbCpf.Name = "lbCpf";
-            this.lbCpf.Size = new System.Drawing.Size(103, 14);
-            this.lbCpf.TabIndex = 5;
-            this.lbCpf.Text = "CPF do Cliente";
+            this.lbCPFCliente.AutoSize = true;
+            this.lbCPFCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCPFCliente.Location = new System.Drawing.Point(6, 30);
+            this.lbCPFCliente.Name = "lbCPFCliente";
+            this.lbCPFCliente.Size = new System.Drawing.Size(103, 14);
+            this.lbCPFCliente.TabIndex = 5;
+            this.lbCPFCliente.Text = "CPF do Cliente";
             // 
             // gbxSexoCliente
             // 
@@ -243,13 +243,13 @@
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNomeCliente
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(58, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 23);
-            this.textBox1.TabIndex = 3;
+            this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeCliente.Location = new System.Drawing.Point(58, 108);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.Size = new System.Drawing.Size(287, 23);
+            this.txtNomeCliente.TabIndex = 3;
             // 
             // lbNomeCliente
             // 
@@ -263,8 +263,8 @@
             // 
             // tabExibeBuscaFunc
             // 
-            this.tabExibeBuscaFunc.Controls.Add(this.groupBox2);
-            this.tabExibeBuscaFunc.Controls.Add(this.groupBox1);
+            this.tabExibeBuscaFunc.Controls.Add(this.gpbExibirFuncionario);
+            this.tabExibeBuscaFunc.Controls.Add(this.gpbBuscaFuncionario);
             this.tabExibeBuscaFunc.Location = new System.Drawing.Point(4, 24);
             this.tabExibeBuscaFunc.Name = "tabExibeBuscaFunc";
             this.tabExibeBuscaFunc.Padding = new System.Windows.Forms.Padding(3);
@@ -273,77 +273,77 @@
             this.tabExibeBuscaFunc.Text = "Funcionários";
             this.tabExibeBuscaFunc.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gpbExibirFuncionario
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 175);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(456, 226);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Exibir Funcionários";
+            this.gpbExibirFuncionario.Controls.Add(this.dgvExibirFuncionario);
+            this.gpbExibirFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbExibirFuncionario.Location = new System.Drawing.Point(9, 175);
+            this.gpbExibirFuncionario.Name = "gpbExibirFuncionario";
+            this.gpbExibirFuncionario.Size = new System.Drawing.Size(456, 226);
+            this.gpbExibirFuncionario.TabIndex = 1;
+            this.gpbExibirFuncionario.TabStop = false;
+            this.gpbExibirFuncionario.Text = "Exibir Funcionários";
             // 
-            // dataGridView1
+            // dgvExibirFuncionario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 201);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvExibirFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExibirFuncionario.Location = new System.Drawing.Point(6, 19);
+            this.dgvExibirFuncionario.Name = "dgvExibirFuncionario";
+            this.dgvExibirFuncionario.Size = new System.Drawing.Size(444, 201);
+            this.dgvExibirFuncionario.TabIndex = 0;
             // 
-            // groupBox1
+            // gpbBuscaFuncionario
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.gbxSexoFuncionario);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox4);
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lbCpfFuncionario);
-            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(456, 162);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar Funcionário";
+            this.gpbBuscaFuncionario.Controls.Add(this.btnExcluirFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.btnEditarFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.btnBuscarFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.gbxSexoFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.txtNomeFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.mtbRGFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.mtbCPFFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.lbNomeFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.lbRGFuncionario);
+            this.gpbBuscaFuncionario.Controls.Add(this.lbCpfFuncionario);
+            this.gpbBuscaFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbBuscaFuncionario.Location = new System.Drawing.Point(9, 7);
+            this.gpbBuscaFuncionario.Name = "gpbBuscaFuncionario";
+            this.gpbBuscaFuncionario.Size = new System.Drawing.Size(456, 162);
+            this.gpbBuscaFuncionario.TabIndex = 0;
+            this.gpbBuscaFuncionario.TabStop = false;
+            this.gpbBuscaFuncionario.Text = "Buscar Funcionário";
             // 
-            // button4
+            // btnExcluirFuncionario
             // 
-            this.button4.Location = new System.Drawing.Point(375, 31);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 24);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Excluir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(375, 31);
+            this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
+            this.btnExcluirFuncionario.Size = new System.Drawing.Size(75, 24);
+            this.btnExcluirFuncionario.TabIndex = 7;
+            this.btnExcluirFuncionario.Text = "Excluir";
+            this.btnExcluirFuncionario.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEditarFuncionario
             // 
-            this.button2.Location = new System.Drawing.Point(375, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditarFuncionario.Location = new System.Drawing.Point(375, 59);
+            this.btnEditarFuncionario.Name = "btnEditarFuncionario";
+            this.btnEditarFuncionario.Size = new System.Drawing.Size(75, 28);
+            this.btnEditarFuncionario.TabIndex = 8;
+            this.btnEditarFuncionario.Text = "Editar";
+            this.btnEditarFuncionario.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBuscarFuncionario
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(362, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 52);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscarFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarFuncionario.Location = new System.Drawing.Point(362, 93);
+            this.btnBuscarFuncionario.Name = "btnBuscarFuncionario";
+            this.btnBuscarFuncionario.Size = new System.Drawing.Size(88, 52);
+            this.btnBuscarFuncionario.TabIndex = 6;
+            this.btnBuscarFuncionario.Text = "Buscar";
+            this.btnBuscarFuncionario.UseVisualStyleBackColor = true;
             // 
             // gbxSexoFuncionario
             // 
-            this.gbxSexoFuncionario.Controls.Add(this.radioButton2);
-            this.gbxSexoFuncionario.Controls.Add(this.radioButton1);
+            this.gbxSexoFuncionario.Controls.Add(this.rbtFeminino);
+            this.gbxSexoFuncionario.Controls.Add(this.rbtMasculino);
             this.gbxSexoFuncionario.Location = new System.Drawing.Point(267, 23);
             this.gbxSexoFuncionario.Name = "gbxSexoFuncionario";
             this.gbxSexoFuncionario.Size = new System.Drawing.Size(104, 64);
@@ -351,73 +351,73 @@
             this.gbxSexoFuncionario.TabStop = false;
             this.gbxSexoFuncionario.Text = "Sexo";
             // 
-            // radioButton2
+            // rbtFeminino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(10, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 18);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Feminino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtFeminino.AutoSize = true;
+            this.rbtFeminino.Location = new System.Drawing.Point(10, 39);
+            this.rbtFeminino.Name = "rbtFeminino";
+            this.rbtFeminino.Size = new System.Drawing.Size(85, 18);
+            this.rbtFeminino.TabIndex = 5;
+            this.rbtFeminino.TabStop = true;
+            this.rbtFeminino.Text = "Feminino";
+            this.rbtFeminino.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtMasculino
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 17);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 18);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtMasculino.AutoSize = true;
+            this.rbtMasculino.Location = new System.Drawing.Point(10, 17);
+            this.rbtMasculino.Name = "rbtMasculino";
+            this.rbtMasculino.Size = new System.Drawing.Size(90, 18);
+            this.rbtMasculino.TabIndex = 4;
+            this.rbtMasculino.TabStop = true;
+            this.rbtMasculino.Text = "Masculino";
+            this.rbtMasculino.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtNomeFuncionario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(57, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtNomeFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeFuncionario.Location = new System.Drawing.Point(57, 123);
+            this.txtNomeFuncionario.Name = "txtNomeFuncionario";
+            this.txtNomeFuncionario.Size = new System.Drawing.Size(299, 23);
+            this.txtNomeFuncionario.TabIndex = 3;
             // 
-            // maskedTextBox4
+            // mtbRGFuncionario
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(146, 62);
-            this.maskedTextBox4.Mask = "99,999,999-99";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(115, 23);
-            this.maskedTextBox4.TabIndex = 2;
+            this.mtbRGFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbRGFuncionario.Location = new System.Drawing.Point(146, 62);
+            this.mtbRGFuncionario.Mask = "99,999,999-99";
+            this.mtbRGFuncionario.Name = "mtbRGFuncionario";
+            this.mtbRGFuncionario.Size = new System.Drawing.Size(115, 23);
+            this.mtbRGFuncionario.TabIndex = 2;
             // 
-            // maskedTextBox3
+            // mtbCPFFuncionario
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(146, 30);
-            this.maskedTextBox3.Mask = "999,999,999-99";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(115, 23);
-            this.maskedTextBox3.TabIndex = 1;
+            this.mtbCPFFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCPFFuncionario.Location = new System.Drawing.Point(146, 30);
+            this.mtbCPFFuncionario.Mask = "999,999,999-99";
+            this.mtbCPFFuncionario.Name = "mtbCPFFuncionario";
+            this.mtbCPFFuncionario.Size = new System.Drawing.Size(115, 23);
+            this.mtbCPFFuncionario.TabIndex = 1;
             // 
-            // label3
+            // lbNomeFuncionario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nome";
+            this.lbNomeFuncionario.AutoSize = true;
+            this.lbNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(6, 126);
+            this.lbNomeFuncionario.Name = "lbNomeFuncionario";
+            this.lbNomeFuncionario.Size = new System.Drawing.Size(45, 15);
+            this.lbNomeFuncionario.TabIndex = 2;
+            this.lbNomeFuncionario.Text = "Nome";
             // 
-            // label2
+            // lbRGFuncionario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 14);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "RG do Funcionário";
+            this.lbRGFuncionario.AutoSize = true;
+            this.lbRGFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRGFuncionario.Location = new System.Drawing.Point(7, 66);
+            this.lbRGFuncionario.Name = "lbRGFuncionario";
+            this.lbRGFuncionario.Size = new System.Drawing.Size(127, 14);
+            this.lbRGFuncionario.TabIndex = 1;
+            this.lbRGFuncionario.Text = "RG do Funcionário";
             // 
             // lbCpfFuncionario
             // 
@@ -454,15 +454,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 475);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.imgLogo);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcClienteFuncionario);
             this.Name = "telaBuscarExibir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar e Exibir";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaBuscarExibir_FormClosing);
-            this.tabControl1.ResumeLayout(false);
+            this.tcClienteFuncionario.ResumeLayout(false);
             this.tabExibeBuscaCliente.ResumeLayout(false);
             this.gbxExibirClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtxExibiClientes)).EndInit();
@@ -471,10 +472,10 @@
             this.gbxSexoCliente.ResumeLayout(false);
             this.gbxSexoCliente.PerformLayout();
             this.tabExibeBuscaFunc.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpbExibirFuncionario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibirFuncionario)).EndInit();
+            this.gpbBuscaFuncionario.ResumeLayout(false);
+            this.gpbBuscaFuncionario.PerformLayout();
             this.gbxSexoFuncionario.ResumeLayout(false);
             this.gbxSexoFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
@@ -484,7 +485,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcClienteFuncionario;
         private System.Windows.Forms.TabPage tabExibeBuscaCliente;
         private System.Windows.Forms.TabPage tabExibeBuscaFunc;
         private System.Windows.Forms.PictureBox imgLogo;
@@ -493,31 +494,31 @@
         private System.Windows.Forms.GroupBox gbxBuscarClientes;
         private System.Windows.Forms.GroupBox gbxExibirClientes;
         private System.Windows.Forms.DataGridView dtxExibiClientes;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.GroupBox gbxSexoCliente;
         private System.Windows.Forms.RadioButton rbFemininoCliente;
         private System.Windows.Forms.RadioButton rbMasculinoCliente;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label lbCpf;
-        private System.Windows.Forms.Label lbRg;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox mtbCPFCliente;
+        private System.Windows.Forms.Label lbCPFCliente;
+        private System.Windows.Forms.Label lbRGCliente;
+        private System.Windows.Forms.MaskedTextBox mtbRGCliente;
+        private System.Windows.Forms.GroupBox gpbExibirFuncionario;
+        private System.Windows.Forms.DataGridView dgvExibirFuncionario;
+        private System.Windows.Forms.GroupBox gpbBuscaFuncionario;
+        private System.Windows.Forms.Button btnBuscarFuncionario;
         private System.Windows.Forms.GroupBox gbxSexoFuncionario;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNomeFuncionario;
+        private System.Windows.Forms.MaskedTextBox mtbRGFuncionario;
+        private System.Windows.Forms.MaskedTextBox mtbCPFFuncionario;
+        private System.Windows.Forms.Label lbNomeFuncionario;
+        private System.Windows.Forms.Label lbRGFuncionario;
         private System.Windows.Forms.Label lbCpfFuncionario;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditarCliente;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btnExcluirFuncionario;
+        private System.Windows.Forms.Button btnEditarFuncionario;
+        private System.Windows.Forms.RadioButton rbtFeminino;
+        private System.Windows.Forms.RadioButton rbtMasculino;
     }
 }

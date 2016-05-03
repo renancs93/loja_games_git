@@ -43,7 +43,7 @@
             // 
             // btnJogos
             // 
-            this.btnJogos.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnJogos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnJogos.BackColor = System.Drawing.Color.Black;
             this.btnJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,14 +75,14 @@
             this.btnLogarUsuario.Location = new System.Drawing.Point(653, 2);
             this.btnLogarUsuario.Name = "btnLogarUsuario";
             this.btnLogarUsuario.Size = new System.Drawing.Size(80, 22);
-            this.btnLogarUsuario.TabIndex = 1;
+            this.btnLogarUsuario.TabIndex = 7;
             this.btnLogarUsuario.Text = "Logar";
             this.btnLogarUsuario.UseVisualStyleBackColor = false;
             this.btnLogarUsuario.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // btnCadastroCliente
             // 
-            this.btnCadastroCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCadastroCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastroCliente.BackColor = System.Drawing.Color.Black;
             this.btnCadastroCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +90,7 @@
             this.btnCadastroCliente.Location = new System.Drawing.Point(545, 95);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Size = new System.Drawing.Size(119, 45);
-            this.btnCadastroCliente.TabIndex = 1;
+            this.btnCadastroCliente.TabIndex = 2;
             this.btnCadastroCliente.Text = "Cadastrar Cliente";
             this.btnCadastroCliente.UseVisualStyleBackColor = false;
             this.btnCadastroCliente.Visible = false;
@@ -100,7 +100,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.BackColor = System.Drawing.Color.Black;
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,7 +108,7 @@
             this.btnSair.Location = new System.Drawing.Point(590, 365);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(93, 28);
-            this.btnSair.TabIndex = 4;
+            this.btnSair.TabIndex = 9;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -117,7 +117,7 @@
             // 
             // btnVenda
             // 
-            this.btnVenda.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVenda.BackColor = System.Drawing.Color.Black;
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
@@ -125,7 +125,7 @@
             this.btnVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(119, 35);
-            this.btnVenda.TabIndex = 1;
+            this.btnVenda.TabIndex = 4;
             this.btnVenda.Text = "Venda / Aluga";
             this.btnVenda.UseVisualStyleBackColor = false;
             this.btnVenda.Visible = false;
@@ -135,13 +135,14 @@
             // 
             // btnCadastrarFuncionario
             // 
+            this.btnCadastrarFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.Black;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.Red;
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(545, 146);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(119, 45);
-            this.btnCadastrarFuncionario.TabIndex = 1;
+            this.btnCadastrarFuncionario.TabIndex = 3;
             this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
             this.btnCadastrarFuncionario.Visible = false;
@@ -156,21 +157,21 @@
             this.btnLogoff.Location = new System.Drawing.Point(679, 24);
             this.btnLogoff.Name = "btnLogoff";
             this.btnLogoff.Size = new System.Drawing.Size(53, 21);
-            this.btnLogoff.TabIndex = 1;
+            this.btnLogoff.TabIndex = 8;
             this.btnLogoff.Text = "Logoff";
             this.btnLogoff.UseVisualStyleBackColor = true;
             this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
             // 
             // btnBuscaExibir
             // 
-            this.btnBuscaExibir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBuscaExibir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscaExibir.BackColor = System.Drawing.Color.Black;
             this.btnBuscaExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaExibir.ForeColor = System.Drawing.Color.Red;
             this.btnBuscaExibir.Location = new System.Drawing.Point(448, 123);
             this.btnBuscaExibir.Name = "btnBuscaExibir";
             this.btnBuscaExibir.Size = new System.Drawing.Size(102, 39);
-            this.btnBuscaExibir.TabIndex = 8;
+            this.btnBuscaExibir.TabIndex = 5;
             this.btnBuscaExibir.Text = "Busca / Exibir";
             this.btnBuscaExibir.UseVisualStyleBackColor = false;
             this.btnBuscaExibir.Visible = false;
@@ -180,14 +181,14 @@
             // 
             // btnRelatorios
             // 
-            this.btnRelatorios.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRelatorios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRelatorios.BackColor = System.Drawing.Color.Black;
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
             this.btnRelatorios.Location = new System.Drawing.Point(545, 294);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Size = new System.Drawing.Size(119, 35);
-            this.btnRelatorios.TabIndex = 9;
+            this.btnRelatorios.TabIndex = 6;
             this.btnRelatorios.Text = "Relatórios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
             this.btnRelatorios.Visible = false;

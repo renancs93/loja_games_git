@@ -35,5 +35,20 @@ namespace LojaGames
             Dispose();
             telaP.Show();
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

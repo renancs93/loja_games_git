@@ -148,6 +148,7 @@
             this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditarCliente
             // 
@@ -158,6 +159,7 @@
             this.btnEditarCliente.TabIndex = 8;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = true;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // mtbRGCliente
             // 
@@ -242,6 +244,7 @@
             this.btnBuscarCliente.TabIndex = 6;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtNomeCliente
             // 

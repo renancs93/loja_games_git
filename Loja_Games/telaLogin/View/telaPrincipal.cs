@@ -15,6 +15,17 @@ namespace LojaGames
 
         }
 
+        private void CarregamentoBarraProgresso()
+        {
+            barraProgresso.Value = 0;
+            while (barraProgresso.Value < 100)
+            {
+                Thread.Sleep(tempoCarregamento);
+                barraProgresso.Value = barraProgresso.Value + 1;
+            }
+
+        }
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
             telaLogin login = new telaLogin();
@@ -31,12 +42,8 @@ namespace LojaGames
 
         private void btnJogos_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso(); //chama o metodo que carrega a barra de progresso
+
             telaJogos jogos = new telaJogos();
             //jogos.MdiParent = this;
             jogos.getTelaPrincipal(this);
@@ -47,12 +54,8 @@ namespace LojaGames
 
         private void btnCadastroCliente_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso();
+
             telaCadastroCliente cadCliente = new telaCadastroCliente();
             cadCliente.setTelaPrincipal(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
             cadCliente.Show();
@@ -61,12 +64,8 @@ namespace LojaGames
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso();
+
             telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
             novoFunc.getTelaPrincipal(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
             Hide();
@@ -75,12 +74,8 @@ namespace LojaGames
 
         private void btnVenda_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso();
+
             telaVenda venda = new telaVenda();
             venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
             venda.Show();
@@ -89,12 +84,8 @@ namespace LojaGames
 
         private void btnBuscaExibir_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso();
+
             //exibição da tela BuscaExibir
             telaBuscarExibir telaBuscaExibir = new telaBuscarExibir();
             telaBuscaExibir.getTelaPrincipal(this);
@@ -104,12 +95,8 @@ namespace LojaGames
 
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
-            barraProgresso.Value = 0;
-            while (barraProgresso.Value < 100)
-            {
-                Thread.Sleep(tempoCarregamento);
-                barraProgresso.Value = barraProgresso.Value + 1;
-            }
+            CarregamentoBarraProgresso();
+
             telaRelatorios telaRelatorios = new telaRelatorios();
             telaRelatorios.getTelaPrincipal(this);
             Hide();
@@ -122,12 +109,7 @@ namespace LojaGames
 
             if (SairApp == DialogResult.Yes)
             {
-                MessageBox.Show("O programa será fechado", "", MessageBoxButtons.OK, MessageBoxIcon.None);
                 Application.Exit();
-            }
-            else if (SairApp == DialogResult.No)
-            {
-                //não faz nada apenas volta ao programa
             }
         }
 

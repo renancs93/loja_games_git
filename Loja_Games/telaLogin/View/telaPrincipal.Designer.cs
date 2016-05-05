@@ -121,6 +121,7 @@
             this.btnVenda.BackColor = System.Drawing.Color.Black;
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
+            this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVenda.Location = new System.Drawing.Point(545, 196);
             this.btnVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnVenda.Name = "btnVenda";
@@ -168,9 +169,9 @@
             this.btnBuscaExibir.BackColor = System.Drawing.Color.Black;
             this.btnBuscaExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaExibir.ForeColor = System.Drawing.Color.Red;
-            this.btnBuscaExibir.Location = new System.Drawing.Point(448, 123);
+            this.btnBuscaExibir.Location = new System.Drawing.Point(454, 127);
             this.btnBuscaExibir.Name = "btnBuscaExibir";
-            this.btnBuscaExibir.Size = new System.Drawing.Size(102, 39);
+            this.btnBuscaExibir.Size = new System.Drawing.Size(95, 33);
             this.btnBuscaExibir.TabIndex = 5;
             this.btnBuscaExibir.Text = "Busca / Exibir";
             this.btnBuscaExibir.UseVisualStyleBackColor = false;
@@ -185,9 +186,10 @@
             this.btnRelatorios.BackColor = System.Drawing.Color.Black;
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
-            this.btnRelatorios.Location = new System.Drawing.Point(545, 294);
+            this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRelatorios.Location = new System.Drawing.Point(545, 236);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(119, 35);
+            this.btnRelatorios.Size = new System.Drawing.Size(119, 36);
             this.btnRelatorios.TabIndex = 6;
             this.btnRelatorios.Text = "Relatórios";
             this.btnRelatorios.UseVisualStyleBackColor = false;

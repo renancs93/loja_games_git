@@ -8,6 +8,7 @@ namespace LojaGames
 {
     class Cliente
     {
+        //Declaração das Variáveis
         private int codigo_cliente;
 
         private string nome;
@@ -25,10 +26,24 @@ namespace LojaGames
         private string cep; 
         private string cidade;
 
+
+        //Propriedades
+        public int Codigo_Cliente
+        {
+            get
+            {
+                return codigo_cliente;
+            }
+
+            set
+            {
+                codigo_cliente = value >= 0 ? value : 0;
+            }
+        }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
-        public DateTime Data { get; set; }
+        public DateTime Data_Nascimento { get; set; }
         public string Telefone { get; set; }
         public string Sexo { get; set; }
         public string Status { get; set; }

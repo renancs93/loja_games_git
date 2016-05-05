@@ -8,9 +8,11 @@ namespace LojaGames.Classes
 {
     class Pagamento
     {
+        //Declaração das Variáveis
         private int codigo;
         private string tipo;
 
+        //Declaração das Propriedades
         public int Codigo
         {
             get
@@ -24,17 +26,7 @@ namespace LojaGames.Classes
             }
         }
 
-        public string Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-
-            set
-            {
-                tipo = value;
-            }
-        }
+        public string Tipo { get; set; }
+        
     }
 }

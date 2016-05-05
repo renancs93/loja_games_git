@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
+            this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
@@ -64,7 +65,6 @@
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.lbCodigoNumero = new System.Windows.Forms.Label();
-            this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroCliente)).BeginInit();
@@ -100,6 +100,15 @@
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
+            // mtbRG
+            // 
+            this.mtbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbRG.Location = new System.Drawing.Point(397, 67);
+            this.mtbRG.Mask = "99,999,999-99";
+            this.mtbRG.Name = "mtbRG";
+            this.mtbRG.Size = new System.Drawing.Size(172, 23);
+            this.mtbRG.TabIndex = 16;
+            // 
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.CustomFormat = "dd/mm/yyyy";
@@ -109,7 +118,7 @@
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(139, 23);
             this.dtpDataNascimento.TabIndex = 15;
-            this.dtpDataNascimento.Value = new System.DateTime(2016, 4, 30, 15, 27, 56, 0);
+            this.dtpDataNascimento.Value = new System.DateTime(2016, 5, 5, 0, 0, 0, 0);
             // 
             // mtbTelefone
             // 
@@ -501,15 +510,6 @@
             this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
             this.lbCodigoNumero.TabIndex = 16;
             this.lbCodigoNumero.Text = "1";
-            // 
-            // mtbRG
-            // 
-            this.mtbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbRG.Location = new System.Drawing.Point(397, 67);
-            this.mtbRG.Mask = "99,999,999-99";
-            this.mtbRG.Name = "mtbRG";
-            this.mtbRG.Size = new System.Drawing.Size(172, 23);
-            this.mtbRG.TabIndex = 16;
             // 
             // telaCadastroCliente
             // 

@@ -32,7 +32,6 @@
             this.pcbLogoGame = new System.Windows.Forms.PictureBox();
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
             this.mtbRG = new System.Windows.Forms.MaskedTextBox();
-            this.mtbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.lbCodigoNumero = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadastroFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             this.gpbDadosPessoais.SuspendLayout();
@@ -101,8 +101,8 @@
             // 
             // gpbDadosPessoais
             // 
+            this.gpbDadosPessoais.Controls.Add(this.dateTimePicker1);
             this.gpbDadosPessoais.Controls.Add(this.mtbRG);
-            this.gpbDadosPessoais.Controls.Add(this.mtbDataNascimento);
             this.gpbDadosPessoais.Controls.Add(this.mtbTelefone);
             this.gpbDadosPessoais.Controls.Add(this.mtbCPF);
             this.gpbDadosPessoais.Controls.Add(this.txtEmail);
@@ -134,15 +134,6 @@
             this.mtbRG.Name = "mtbRG";
             this.mtbRG.Size = new System.Drawing.Size(162, 23);
             this.mtbRG.TabIndex = 3;
-            // 
-            // mtbDataNascimento
-            // 
-            this.mtbDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbDataNascimento.Location = new System.Drawing.Point(166, 101);
-            this.mtbDataNascimento.Mask = "99/99/9999";
-            this.mtbDataNascimento.Name = "mtbDataNascimento";
-            this.mtbDataNascimento.Size = new System.Drawing.Size(126, 23);
-            this.mtbDataNascimento.TabIndex = 4;
             // 
             // mtbTelefone
             // 
@@ -590,6 +581,16 @@
             this.lbCodigoNumero.TabIndex = 22;
             this.lbCodigoNumero.Text = "1";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(148, 99);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(144, 23);
+            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 5, 5, 0, 0, 0, 0);
+            // 
             // telaCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,12 +664,12 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
-        private System.Windows.Forms.MaskedTextBox mtbDataNascimento;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.MaskedTextBox mtbDataInicio;
         private System.Windows.Forms.MaskedTextBox mtbRG;
         private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.Label lbCodigoNumero;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

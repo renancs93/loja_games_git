@@ -84,6 +84,6 @@ namespace LojaGames.Classes
             }
         }
 
-        public DateTime Data_Inicio { get; set; };
+        public DateTime Data_Inicio { get; set; }
     }
 }

@@ -11,10 +11,10 @@ namespace LojaGames.Classes
         private int codigo_funcionario;
 
         private string nome;
-        private string cpf; //verificar o tipo da variável
-        private string rg; //verificar o tipo da variável
+        private string cpf; 
+        private string rg; 
         private string data_nascimento; //verificar o tipo da variável
-        private string telefone; //verificar o tipo da variável
+        private string telefone;
         private string sexo;
         private string status;
         private string email;
@@ -23,7 +23,7 @@ namespace LojaGames.Classes
         private int numero;
         private string bairro;
         private string estado;
-        private string cep; //verificar o tipo da variável
+        private string cep;
         private string cidade;
 
         private string cargo;

@@ -53,7 +53,6 @@
             this.txtCodAlug = new System.Windows.Forms.TextBox();
             this.txtFuncAlug = new System.Windows.Forms.TextBox();
             this.txtProdAlug = new System.Windows.Forms.TextBox();
-            this.txtCpfCliAlug = new System.Windows.Forms.TextBox();
             this.lbCodAlug = new System.Windows.Forms.Label();
             this.lbDias = new System.Windows.Forms.Label();
             this.lbFuncAlug = new System.Windows.Forms.Label();
@@ -86,11 +85,12 @@
             this.dgvtbcQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).BeginInit();
@@ -120,6 +120,7 @@
             // 
             // gpbAlug
             // 
+            this.gpbAlug.Controls.Add(this.maskedTextBox2);
             this.gpbAlug.Controls.Add(this.lbNumParcelasAluguel);
             this.gpbAlug.Controls.Add(this.lbFormasPagamentoAluguel);
             this.gpbAlug.Controls.Add(this.cbxFormasPagamentoAluguel);
@@ -136,7 +137,6 @@
             this.gpbAlug.Controls.Add(this.txtCodAlug);
             this.gpbAlug.Controls.Add(this.txtFuncAlug);
             this.gpbAlug.Controls.Add(this.txtProdAlug);
-            this.gpbAlug.Controls.Add(this.txtCpfCliAlug);
             this.gpbAlug.Controls.Add(this.lbCodAlug);
             this.gpbAlug.Controls.Add(this.lbDias);
             this.gpbAlug.Controls.Add(this.lbFuncAlug);
@@ -330,7 +330,7 @@
             // txtFuncAlug
             // 
             this.txtFuncAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFuncAlug.Location = new System.Drawing.Point(373, 36);
+            this.txtFuncAlug.Location = new System.Drawing.Point(373, 40);
             this.txtFuncAlug.Name = "txtFuncAlug";
             this.txtFuncAlug.Size = new System.Drawing.Size(122, 23);
             this.txtFuncAlug.TabIndex = 7;
@@ -340,17 +340,9 @@
             this.txtProdAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProdAlug.Location = new System.Drawing.Point(128, 81);
             this.txtProdAlug.Name = "txtProdAlug";
-            this.txtProdAlug.Size = new System.Drawing.Size(122, 23);
+            this.txtProdAlug.Size = new System.Drawing.Size(131, 23);
             this.txtProdAlug.TabIndex = 6;
             this.txtProdAlug.TextChanged += new System.EventHandler(this.txtProdAlug_TextChanged);
-            // 
-            // txtCpfCliAlug
-            // 
-            this.txtCpfCliAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpfCliAlug.Location = new System.Drawing.Point(128, 36);
-            this.txtCpfCliAlug.Name = "txtCpfCliAlug";
-            this.txtCpfCliAlug.Size = new System.Drawing.Size(122, 23);
-            this.txtCpfCliAlug.TabIndex = 5;
             // 
             // lbCodAlug
             // 
@@ -415,6 +407,7 @@
             this.gbpDadoVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbpDadoVenda.Controls.Add(this.maskedTextBox1);
             this.gbpDadoVenda.Controls.Add(this.numParcelas_Venda);
             this.gbpDadoVenda.Controls.Add(this.cbxFormasPagamentosCompra);
             this.gbpDadoVenda.Controls.Add(this.lbNumeroParcelas);
@@ -435,7 +428,6 @@
             this.gbpDadoVenda.Controls.Add(this.txtCodigoProduto);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoProduto);
             this.gbpDadoVenda.Controls.Add(this.dgvProdutosVenda);
-            this.gbpDadoVenda.Controls.Add(this.txtCpf);
             this.gbpDadoVenda.Controls.Add(this.lbCpfCliente);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoVenda);
@@ -532,7 +524,7 @@
             // lbQuantidade
             // 
             this.lbQuantidade.AutoSize = true;
-            this.lbQuantidade.Location = new System.Drawing.Point(264, 81);
+            this.lbQuantidade.Location = new System.Drawing.Point(276, 78);
             this.lbQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbQuantidade.Name = "lbQuantidade";
             this.lbQuantidade.Size = new System.Drawing.Size(105, 16);
@@ -585,7 +577,7 @@
             // lbCodigoFuncionario
             // 
             this.lbCodigoFuncionario.AutoSize = true;
-            this.lbCodigoFuncionario.Location = new System.Drawing.Point(264, 40);
+            this.lbCodigoFuncionario.Location = new System.Drawing.Point(276, 40);
             this.lbCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoFuncionario.Name = "lbCodigoFuncionario";
             this.lbCodigoFuncionario.Size = new System.Drawing.Size(106, 16);
@@ -628,16 +620,16 @@
             // txtCodigoProduto
             // 
             this.txtCodigoProduto.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProduto.Location = new System.Drawing.Point(125, 79);
+            this.txtCodigoProduto.Location = new System.Drawing.Point(126, 75);
             this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
-            this.txtCodigoProduto.Size = new System.Drawing.Size(122, 23);
+            this.txtCodigoProduto.Size = new System.Drawing.Size(134, 23);
             this.txtCodigoProduto.TabIndex = 6;
             // 
             // lbCodigoProduto
             // 
             this.lbCodigoProduto.AutoSize = true;
-            this.lbCodigoProduto.Location = new System.Drawing.Point(43, 83);
+            this.lbCodigoProduto.Location = new System.Drawing.Point(43, 78);
             this.lbCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoProduto.Name = "lbCodigoProduto";
             this.lbCodigoProduto.Size = new System.Drawing.Size(78, 16);
@@ -704,15 +696,6 @@
             this.dgvtbcValorTotalItem.HeaderText = "Valor Total Item";
             this.dgvtbcValorTotalItem.Name = "dgvtbcValorTotalItem";
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(125, 37);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(122, 23);
-            this.txtCpf.TabIndex = 3;
-            // 
             // lbCpfCliente
             // 
             this.lbCpfCliente.AutoSize = true;
@@ -757,6 +740,22 @@
             this.tcVendaAluguel.SelectedIndex = 0;
             this.tcVendaAluguel.Size = new System.Drawing.Size(772, 482);
             this.tcVendaAluguel.TabIndex = 0;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(125, 37);
+            this.maskedTextBox1.Mask = "999,999,999-99";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(134, 23);
+            this.maskedTextBox1.TabIndex = 30;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(128, 37);
+            this.maskedTextBox2.Mask = "999,999,999-99";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(131, 23);
+            this.maskedTextBox2.TabIndex = 26;
             // 
             // telaVenda
             // 
@@ -813,7 +812,6 @@
         private System.Windows.Forms.TextBox txtCodAlug;
         private System.Windows.Forms.TextBox txtFuncAlug;
         private System.Windows.Forms.TextBox txtProdAlug;
-        private System.Windows.Forms.TextBox txtCpfCliAlug;
         private System.Windows.Forms.Label lbCodAlug;
         private System.Windows.Forms.Label lbDias;
         private System.Windows.Forms.Label lbFuncAlug;
@@ -840,7 +838,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcQuantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcValorTotalItem;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label lbCpfCliente;
         private System.Windows.Forms.TextBox txtCodigoVenda;
         private System.Windows.Forms.Label lbCodigoVenda;
@@ -855,5 +852,7 @@
         private System.Windows.Forms.NumericUpDown numParcelas_Venda;
         private System.Windows.Forms.Label lbNumParcelasAluguel;
         private System.Windows.Forms.Label lbFormasPagamentoAluguel;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

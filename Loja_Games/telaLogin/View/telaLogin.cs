@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaLogin : Form
+    public partial class telaLogin : System.Windows.Forms.Form
     {
-        private telaPrincipal telaP = null;//variável que declara a tela principal
+        private System.Windows.Forms.Form telaP = null;//variável que declara a tela principal
 
         public telaLogin()
         {
@@ -82,7 +82,7 @@ namespace LojaGames
                 telaP.Show();
 
                 //Ativa a visibilidade dos botões da tela Principal
-                telaP.habilitarBotoes(true);
+                ((telaPrincipal)telaP).habilitarBotoes(true);
                 
                 //necessário fechar ou esconder a tela Login ao abrir a outra
                 Dispose();
@@ -101,7 +101,7 @@ namespace LojaGames
 
         }
 
-        public void setTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(Form t)
         {
             telaP = t;
 

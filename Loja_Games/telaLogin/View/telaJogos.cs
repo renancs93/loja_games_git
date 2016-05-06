@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaJogos : Form
+    public partial class telaJogos : System.Windows.Forms.Form
     {
-        private telaPrincipal TelaP = null; 
+        private System.Windows.Forms.Form TelaP = null; 
 
         public telaJogos()
         {
@@ -78,7 +78,7 @@ namespace LojaGames
 
         }
 
-        public void getTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(System.Windows.Forms.Form t)
         {
             TelaP = t;
         }

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaBuscarExibir : Form
+    public partial class telaBuscarExibir : System.Windows.Forms.Form
     {
-        private telaPrincipal telaP = null;
+        private System.Windows.Forms.Form telaP = null;
 
         public telaBuscarExibir()
         {
             InitializeComponent();
         }
 
-        public void getTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(System.Windows.Forms.Form t)
         {
             telaP = t;
         }
@@ -63,7 +63,11 @@ namespace LojaGames
             if (edit == DialogResult.Yes)
             {
                 telaCadastroCliente editarCliente = new telaCadastroCliente();
-                editarCliente.ShowDialog();
+                editarCliente.setTelaAnterior(this);
+
+                editarCliente.Show();
+
+                Hide();
             }
 
 
@@ -119,7 +123,10 @@ namespace LojaGames
 
             if (edit == DialogResult.Yes)
             {
-                
+                telaCadastroFuncionario editarFunc = new telaCadastroFuncionario();
+                editarFunc.setTelaAnterior(this);
+                editarFunc.Show();
+                Hide();
             }
 
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaCadastroFuncionario : Form
+    public partial class telaCadastroFuncionario : System.Windows.Forms.Form
     {
-        private telaPrincipal telaP = null;
+        private System.Windows.Forms.Form telaP = null;
 
         public telaCadastroFuncionario()
         {
@@ -35,7 +35,7 @@ namespace LojaGames
             telaP.Show();
         }
 
-        public void getTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(System.Windows.Forms.Form t)
         {
             telaP = t;
         }

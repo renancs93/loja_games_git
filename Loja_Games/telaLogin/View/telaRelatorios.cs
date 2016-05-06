@@ -5,7 +5,7 @@ namespace LojaGames
 {
     public partial class telaRelatorios : Form
     {
-        telaPrincipal telaP = null;
+        private Form telaP = null;
 
         public telaRelatorios()
         {
@@ -18,7 +18,7 @@ namespace LojaGames
             telaP.Show();
         }
 
-        public void getTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(Form t)
         {
             telaP = t;
         }

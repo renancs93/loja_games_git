@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaPrincipal : Form
+    public partial class telaPrincipal : System.Windows.Forms.Form
     {
         int tempoCarregamento = 30; //tempo de sleep ao clicar nos botões de telas
 
@@ -29,7 +29,7 @@ namespace LojaGames
         private void btnLogar_Click(object sender, EventArgs e)
         {
             telaLogin login = new telaLogin();
-            login.setTelaPrincipal(this);
+            login.setTelaAnterior(this);
             Hide(); //esconde a telaPrincipal
             login.Show();
         }
@@ -46,7 +46,7 @@ namespace LojaGames
 
             telaJogos jogos = new telaJogos();
             //jogos.MdiParent = this;
-            jogos.getTelaPrincipal(this);
+            jogos.setTelaAnterior(this);
             Hide();
             jogos.Show();
             
@@ -57,7 +57,7 @@ namespace LojaGames
             CarregamentoBarraProgresso();
 
             telaCadastroCliente cadCliente = new telaCadastroCliente();
-            cadCliente.setTelaPrincipal(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
+            cadCliente.setTelaAnterior(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
             cadCliente.Show();
             Hide();
         }
@@ -67,7 +67,7 @@ namespace LojaGames
             CarregamentoBarraProgresso();
 
             telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
-            novoFunc.getTelaPrincipal(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
+            novoFunc.setTelaAnterior(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
             Hide();
             novoFunc.Show();
         }
@@ -77,7 +77,7 @@ namespace LojaGames
             CarregamentoBarraProgresso();
 
             telaVenda venda = new telaVenda();
-            venda.getTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
+            venda.setTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
             venda.Show();
             Hide();
         }
@@ -88,7 +88,7 @@ namespace LojaGames
 
             //exibição da tela BuscaExibir
             telaBuscarExibir telaBuscaExibir = new telaBuscarExibir();
-            telaBuscaExibir.getTelaPrincipal(this);
+            telaBuscaExibir.setTelaAnterior(this);
             Hide();
             telaBuscaExibir.Show();
         }
@@ -98,7 +98,7 @@ namespace LojaGames
             CarregamentoBarraProgresso();
 
             telaRelatorios telaRelatorios = new telaRelatorios();
-            telaRelatorios.getTelaPrincipal(this);
+            telaRelatorios.setTelaAnterior(this);
             Hide();
             telaRelatorios.Show();
         }

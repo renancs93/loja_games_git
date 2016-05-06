@@ -5,7 +5,7 @@ namespace LojaGames
 {
     public partial class telaVenda : Form
     {
-        private telaPrincipal telaP = null;
+        private Form telaP = null;
 
         public telaVenda()
         {
@@ -39,7 +39,7 @@ namespace LojaGames
         }
 
         //Metodo para a TelaPrincipal
-        public void getTelaPrincipal(telaPrincipal t)
+        public void setTelaPrincipal(Form t)
         {
             telaP = t;
         }

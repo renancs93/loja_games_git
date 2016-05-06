@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaCadastroCliente : Form
+    public partial class telaCadastroCliente : System.Windows.Forms.Form
     {
-        private telaPrincipal telaP = null;
+        private System.Windows.Forms.Form telaP = null;
 
         public telaCadastroCliente()
         {
@@ -35,17 +35,17 @@ namespace LojaGames
         {
             DialogResult sair = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Sair?", "Sair" ,MessageBoxButtons.YesNo ,MessageBoxIcon.Question);
 
-            /*
+            
             if(sair == DialogResult.Yes)
             {
                 telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
                 Close();//fecha esse form
             }
-            */
+            
 
         }
 
-        public void setTelaPrincipal(telaPrincipal t)
+        public void setTelaAnterior(System.Windows.Forms.Form t)
         {
             telaP = t;
         }

@@ -41,15 +41,13 @@ namespace LojaGames
                 {
                     bool r = CampoVazio((TextBox)controle);
                     
-                    if (r)
+                    if(r)
                     {
                         // escrever a mensagem
                         String nomeDoCampo = ((TextBox)controle).Name.Remove(0, 3);
                         mensagem = mensagem + string.Format("\nO campo {0} deve ser preenchido!", nomeDoCampo);
                     }
                 }
-
-
             }
 
             return mensagem;

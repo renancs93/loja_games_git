@@ -35,13 +35,8 @@
             this.gbxBuscarClientes = new System.Windows.Forms.GroupBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.mtbRGCliente = new System.Windows.Forms.MaskedTextBox();
-            this.lbRGCliente = new System.Windows.Forms.Label();
             this.mtbCPFCliente = new System.Windows.Forms.MaskedTextBox();
             this.lbCPFCliente = new System.Windows.Forms.Label();
-            this.gbxSexoCliente = new System.Windows.Forms.GroupBox();
-            this.rbFemininoCliente = new System.Windows.Forms.RadioButton();
-            this.rbMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.lbNomeCliente = new System.Windows.Forms.Label();
@@ -52,14 +47,9 @@
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnBuscarFuncionario = new System.Windows.Forms.Button();
-            this.gbxSexoFuncionario = new System.Windows.Forms.GroupBox();
-            this.rbtFeminino = new System.Windows.Forms.RadioButton();
-            this.rbtMasculino = new System.Windows.Forms.RadioButton();
             this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
-            this.mtbRGFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.mtbCPFFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.lbNomeFuncionario = new System.Windows.Forms.Label();
-            this.lbRGFuncionario = new System.Windows.Forms.Label();
             this.lbCpfFuncionario = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
@@ -68,12 +58,10 @@
             this.gbxExibirClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtxExibiClientes)).BeginInit();
             this.gbxBuscarClientes.SuspendLayout();
-            this.gbxSexoCliente.SuspendLayout();
             this.tabExibeBuscaFunc.SuspendLayout();
             this.gpbExibirFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibirFuncionario)).BeginInit();
             this.gpbBuscaFuncionario.SuspendLayout();
-            this.gbxSexoFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,9 +92,9 @@
             // 
             this.gbxExibirClientes.Controls.Add(this.dtxExibiClientes);
             this.gbxExibirClientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxExibirClientes.Location = new System.Drawing.Point(9, 175);
+            this.gbxExibirClientes.Location = new System.Drawing.Point(9, 141);
             this.gbxExibirClientes.Name = "gbxExibirClientes";
-            this.gbxExibirClientes.Size = new System.Drawing.Size(456, 226);
+            this.gbxExibirClientes.Size = new System.Drawing.Size(456, 260);
             this.gbxExibirClientes.TabIndex = 2;
             this.gbxExibirClientes.TabStop = false;
             this.gbxExibirClientes.Text = "Exibir Clientes";
@@ -116,25 +104,22 @@
             this.dtxExibiClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtxExibiClientes.Location = new System.Drawing.Point(6, 19);
             this.dtxExibiClientes.Name = "dtxExibiClientes";
-            this.dtxExibiClientes.Size = new System.Drawing.Size(444, 201);
+            this.dtxExibiClientes.Size = new System.Drawing.Size(444, 235);
             this.dtxExibiClientes.TabIndex = 0;
             // 
             // gbxBuscarClientes
             // 
             this.gbxBuscarClientes.Controls.Add(this.btnExcluir);
             this.gbxBuscarClientes.Controls.Add(this.btnEditarCliente);
-            this.gbxBuscarClientes.Controls.Add(this.mtbRGCliente);
-            this.gbxBuscarClientes.Controls.Add(this.lbRGCliente);
             this.gbxBuscarClientes.Controls.Add(this.mtbCPFCliente);
             this.gbxBuscarClientes.Controls.Add(this.lbCPFCliente);
-            this.gbxBuscarClientes.Controls.Add(this.gbxSexoCliente);
             this.gbxBuscarClientes.Controls.Add(this.btnBuscarCliente);
             this.gbxBuscarClientes.Controls.Add(this.txtNomeCliente);
             this.gbxBuscarClientes.Controls.Add(this.lbNomeCliente);
             this.gbxBuscarClientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxBuscarClientes.Location = new System.Drawing.Point(9, 7);
             this.gbxBuscarClientes.Name = "gbxBuscarClientes";
-            this.gbxBuscarClientes.Size = new System.Drawing.Size(456, 162);
+            this.gbxBuscarClientes.Size = new System.Drawing.Size(456, 128);
             this.gbxBuscarClientes.TabIndex = 1;
             this.gbxBuscarClientes.TabStop = false;
             this.gbxBuscarClientes.Text = "Buscar Cliente";
@@ -142,7 +127,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(383, 20);
+            this.btnExcluir.Location = new System.Drawing.Point(285, 21);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(67, 24);
             this.btnExcluir.TabIndex = 7;
@@ -153,7 +138,7 @@
             // btnEditarCliente
             // 
             this.btnEditarCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.Location = new System.Drawing.Point(383, 50);
+            this.btnEditarCliente.Location = new System.Drawing.Point(285, 51);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(67, 24);
             this.btnEditarCliente.TabIndex = 8;
@@ -161,29 +146,10 @@
             this.btnEditarCliente.UseVisualStyleBackColor = true;
             this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
-            // mtbRGCliente
-            // 
-            this.mtbRGCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbRGCliente.Location = new System.Drawing.Point(115, 62);
-            this.mtbRGCliente.Mask = "99,999,999-99";
-            this.mtbRGCliente.Name = "mtbRGCliente";
-            this.mtbRGCliente.Size = new System.Drawing.Size(123, 23);
-            this.mtbRGCliente.TabIndex = 2;
-            // 
-            // lbRGCliente
-            // 
-            this.lbRGCliente.AutoSize = true;
-            this.lbRGCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRGCliente.Location = new System.Drawing.Point(6, 65);
-            this.lbRGCliente.Name = "lbRGCliente";
-            this.lbRGCliente.Size = new System.Drawing.Size(96, 14);
-            this.lbRGCliente.TabIndex = 7;
-            this.lbRGCliente.Text = "RG do Cliente";
-            // 
             // mtbCPFCliente
             // 
             this.mtbCPFCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCPFCliente.Location = new System.Drawing.Point(115, 30);
+            this.mtbCPFCliente.Location = new System.Drawing.Point(119, 33);
             this.mtbCPFCliente.Mask = "999,999,999-99";
             this.mtbCPFCliente.Name = "mtbCPFCliente";
             this.mtbCPFCliente.Size = new System.Drawing.Size(123, 23);
@@ -193,54 +159,20 @@
             // 
             this.lbCPFCliente.AutoSize = true;
             this.lbCPFCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCPFCliente.Location = new System.Drawing.Point(6, 30);
+            this.lbCPFCliente.Location = new System.Drawing.Point(10, 33);
             this.lbCPFCliente.Name = "lbCPFCliente";
             this.lbCPFCliente.Size = new System.Drawing.Size(103, 14);
             this.lbCPFCliente.TabIndex = 5;
             this.lbCPFCliente.Text = "CPF do Cliente";
             // 
-            // gbxSexoCliente
-            // 
-            this.gbxSexoCliente.Controls.Add(this.rbFemininoCliente);
-            this.gbxSexoCliente.Controls.Add(this.rbMasculinoCliente);
-            this.gbxSexoCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSexoCliente.Location = new System.Drawing.Point(244, 21);
-            this.gbxSexoCliente.Name = "gbxSexoCliente";
-            this.gbxSexoCliente.Size = new System.Drawing.Size(101, 67);
-            this.gbxSexoCliente.TabIndex = 4;
-            this.gbxSexoCliente.TabStop = false;
-            this.gbxSexoCliente.Text = "Sexo";
-            // 
-            // rbFemininoCliente
-            // 
-            this.rbFemininoCliente.AutoSize = true;
-            this.rbFemininoCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemininoCliente.Location = new System.Drawing.Point(7, 44);
-            this.rbFemininoCliente.Name = "rbFemininoCliente";
-            this.rbFemininoCliente.Size = new System.Drawing.Size(85, 18);
-            this.rbFemininoCliente.TabIndex = 5;
-            this.rbFemininoCliente.TabStop = true;
-            this.rbFemininoCliente.Text = "Feminino";
-            this.rbFemininoCliente.UseVisualStyleBackColor = true;
-            // 
-            // rbMasculinoCliente
-            // 
-            this.rbMasculinoCliente.AutoSize = true;
-            this.rbMasculinoCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMasculinoCliente.Location = new System.Drawing.Point(7, 19);
-            this.rbMasculinoCliente.Name = "rbMasculinoCliente";
-            this.rbMasculinoCliente.Size = new System.Drawing.Size(90, 18);
-            this.rbMasculinoCliente.TabIndex = 4;
-            this.rbMasculinoCliente.TabStop = true;
-            this.rbMasculinoCliente.Text = "Masculino";
-            this.rbMasculinoCliente.UseVisualStyleBackColor = true;
-            // 
             // btnBuscarCliente
             // 
+            this.btnBuscarCliente.AccessibleDescription = "Teste";
+            this.btnBuscarCliente.AccessibleName = "Teste";
             this.btnBuscarCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCliente.Location = new System.Drawing.Point(362, 80);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(362, 21);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(88, 52);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(88, 54);
             this.btnBuscarCliente.TabIndex = 6;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
@@ -249,16 +181,16 @@
             // txtNomeCliente
             // 
             this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeCliente.Location = new System.Drawing.Point(58, 108);
+            this.txtNomeCliente.Location = new System.Drawing.Point(58, 92);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(287, 23);
+            this.txtNomeCliente.Size = new System.Drawing.Size(294, 23);
             this.txtNomeCliente.TabIndex = 3;
             // 
             // lbNomeCliente
             // 
             this.lbNomeCliente.AutoSize = true;
             this.lbNomeCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeCliente.Location = new System.Drawing.Point(6, 109);
+            this.lbNomeCliente.Location = new System.Drawing.Point(6, 93);
             this.lbNomeCliente.Name = "lbNomeCliente";
             this.lbNomeCliente.Size = new System.Drawing.Size(45, 14);
             this.lbNomeCliente.TabIndex = 0;
@@ -280,9 +212,9 @@
             // 
             this.gpbExibirFuncionario.Controls.Add(this.dgvExibirFuncionario);
             this.gpbExibirFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbExibirFuncionario.Location = new System.Drawing.Point(9, 175);
+            this.gpbExibirFuncionario.Location = new System.Drawing.Point(9, 145);
             this.gpbExibirFuncionario.Name = "gpbExibirFuncionario";
-            this.gpbExibirFuncionario.Size = new System.Drawing.Size(456, 226);
+            this.gpbExibirFuncionario.Size = new System.Drawing.Size(456, 256);
             this.gpbExibirFuncionario.TabIndex = 1;
             this.gpbExibirFuncionario.TabStop = false;
             this.gpbExibirFuncionario.Text = "Exibir Funcionários";
@@ -292,7 +224,7 @@
             this.dgvExibirFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExibirFuncionario.Location = new System.Drawing.Point(6, 19);
             this.dgvExibirFuncionario.Name = "dgvExibirFuncionario";
-            this.dgvExibirFuncionario.Size = new System.Drawing.Size(444, 201);
+            this.dgvExibirFuncionario.Size = new System.Drawing.Size(444, 231);
             this.dgvExibirFuncionario.TabIndex = 0;
             // 
             // gpbBuscaFuncionario
@@ -300,24 +232,21 @@
             this.gpbBuscaFuncionario.Controls.Add(this.btnExcluirFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.btnEditarFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.btnBuscarFuncionario);
-            this.gpbBuscaFuncionario.Controls.Add(this.gbxSexoFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.txtNomeFuncionario);
-            this.gpbBuscaFuncionario.Controls.Add(this.mtbRGFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.mtbCPFFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.lbNomeFuncionario);
-            this.gpbBuscaFuncionario.Controls.Add(this.lbRGFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.lbCpfFuncionario);
             this.gpbBuscaFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbBuscaFuncionario.Location = new System.Drawing.Point(9, 7);
             this.gpbBuscaFuncionario.Name = "gpbBuscaFuncionario";
-            this.gpbBuscaFuncionario.Size = new System.Drawing.Size(456, 162);
+            this.gpbBuscaFuncionario.Size = new System.Drawing.Size(456, 132);
             this.gpbBuscaFuncionario.TabIndex = 0;
             this.gpbBuscaFuncionario.TabStop = false;
             this.gpbBuscaFuncionario.Text = "Buscar Funcionário";
             // 
             // btnExcluirFuncionario
             // 
-            this.btnExcluirFuncionario.Location = new System.Drawing.Point(375, 31);
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(281, 29);
             this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
             this.btnExcluirFuncionario.Size = new System.Drawing.Size(75, 24);
             this.btnExcluirFuncionario.TabIndex = 7;
@@ -326,7 +255,7 @@
             // 
             // btnEditarFuncionario
             // 
-            this.btnEditarFuncionario.Location = new System.Drawing.Point(375, 59);
+            this.btnEditarFuncionario.Location = new System.Drawing.Point(281, 57);
             this.btnEditarFuncionario.Name = "btnEditarFuncionario";
             this.btnEditarFuncionario.Size = new System.Drawing.Size(75, 28);
             this.btnEditarFuncionario.TabIndex = 8;
@@ -336,67 +265,25 @@
             // btnBuscarFuncionario
             // 
             this.btnBuscarFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarFuncionario.Location = new System.Drawing.Point(362, 93);
+            this.btnBuscarFuncionario.Location = new System.Drawing.Point(362, 29);
             this.btnBuscarFuncionario.Name = "btnBuscarFuncionario";
-            this.btnBuscarFuncionario.Size = new System.Drawing.Size(88, 52);
+            this.btnBuscarFuncionario.Size = new System.Drawing.Size(88, 56);
             this.btnBuscarFuncionario.TabIndex = 6;
             this.btnBuscarFuncionario.Text = "Buscar";
             this.btnBuscarFuncionario.UseVisualStyleBackColor = true;
             // 
-            // gbxSexoFuncionario
-            // 
-            this.gbxSexoFuncionario.Controls.Add(this.rbtFeminino);
-            this.gbxSexoFuncionario.Controls.Add(this.rbtMasculino);
-            this.gbxSexoFuncionario.Location = new System.Drawing.Point(267, 23);
-            this.gbxSexoFuncionario.Name = "gbxSexoFuncionario";
-            this.gbxSexoFuncionario.Size = new System.Drawing.Size(104, 64);
-            this.gbxSexoFuncionario.TabIndex = 6;
-            this.gbxSexoFuncionario.TabStop = false;
-            this.gbxSexoFuncionario.Text = "Sexo";
-            // 
-            // rbtFeminino
-            // 
-            this.rbtFeminino.AutoSize = true;
-            this.rbtFeminino.Location = new System.Drawing.Point(10, 39);
-            this.rbtFeminino.Name = "rbtFeminino";
-            this.rbtFeminino.Size = new System.Drawing.Size(85, 18);
-            this.rbtFeminino.TabIndex = 5;
-            this.rbtFeminino.TabStop = true;
-            this.rbtFeminino.Text = "Feminino";
-            this.rbtFeminino.UseVisualStyleBackColor = true;
-            // 
-            // rbtMasculino
-            // 
-            this.rbtMasculino.AutoSize = true;
-            this.rbtMasculino.Location = new System.Drawing.Point(10, 17);
-            this.rbtMasculino.Name = "rbtMasculino";
-            this.rbtMasculino.Size = new System.Drawing.Size(90, 18);
-            this.rbtMasculino.TabIndex = 4;
-            this.rbtMasculino.TabStop = true;
-            this.rbtMasculino.Text = "Masculino";
-            this.rbtMasculino.UseVisualStyleBackColor = true;
-            // 
             // txtNomeFuncionario
             // 
             this.txtNomeFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeFuncionario.Location = new System.Drawing.Point(57, 123);
+            this.txtNomeFuncionario.Location = new System.Drawing.Point(57, 96);
             this.txtNomeFuncionario.Name = "txtNomeFuncionario";
             this.txtNomeFuncionario.Size = new System.Drawing.Size(299, 23);
             this.txtNomeFuncionario.TabIndex = 3;
             // 
-            // mtbRGFuncionario
-            // 
-            this.mtbRGFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbRGFuncionario.Location = new System.Drawing.Point(146, 62);
-            this.mtbRGFuncionario.Mask = "99,999,999-99";
-            this.mtbRGFuncionario.Name = "mtbRGFuncionario";
-            this.mtbRGFuncionario.Size = new System.Drawing.Size(115, 23);
-            this.mtbRGFuncionario.TabIndex = 2;
-            // 
             // mtbCPFFuncionario
             // 
             this.mtbCPFFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCPFFuncionario.Location = new System.Drawing.Point(146, 30);
+            this.mtbCPFFuncionario.Location = new System.Drawing.Point(147, 32);
             this.mtbCPFFuncionario.Mask = "999,999,999-99";
             this.mtbCPFFuncionario.Name = "mtbCPFFuncionario";
             this.mtbCPFFuncionario.Size = new System.Drawing.Size(115, 23);
@@ -406,27 +293,17 @@
             // 
             this.lbNomeFuncionario.AutoSize = true;
             this.lbNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeFuncionario.Location = new System.Drawing.Point(6, 126);
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(6, 99);
             this.lbNomeFuncionario.Name = "lbNomeFuncionario";
             this.lbNomeFuncionario.Size = new System.Drawing.Size(45, 15);
             this.lbNomeFuncionario.TabIndex = 2;
             this.lbNomeFuncionario.Text = "Nome";
             // 
-            // lbRGFuncionario
-            // 
-            this.lbRGFuncionario.AutoSize = true;
-            this.lbRGFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRGFuncionario.Location = new System.Drawing.Point(7, 66);
-            this.lbRGFuncionario.Name = "lbRGFuncionario";
-            this.lbRGFuncionario.Size = new System.Drawing.Size(127, 14);
-            this.lbRGFuncionario.TabIndex = 1;
-            this.lbRGFuncionario.Text = "RG do Funcionário";
-            // 
             // lbCpfFuncionario
             // 
             this.lbCpfFuncionario.AutoSize = true;
             this.lbCpfFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCpfFuncionario.Location = new System.Drawing.Point(7, 34);
+            this.lbCpfFuncionario.Location = new System.Drawing.Point(8, 36);
             this.lbCpfFuncionario.Name = "lbCpfFuncionario";
             this.lbCpfFuncionario.Size = new System.Drawing.Size(134, 14);
             this.lbCpfFuncionario.TabIndex = 0;
@@ -472,15 +349,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtxExibiClientes)).EndInit();
             this.gbxBuscarClientes.ResumeLayout(false);
             this.gbxBuscarClientes.PerformLayout();
-            this.gbxSexoCliente.ResumeLayout(false);
-            this.gbxSexoCliente.PerformLayout();
             this.tabExibeBuscaFunc.ResumeLayout(false);
             this.gpbExibirFuncionario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibirFuncionario)).EndInit();
             this.gpbBuscaFuncionario.ResumeLayout(false);
             this.gpbBuscaFuncionario.PerformLayout();
-            this.gbxSexoFuncionario.ResumeLayout(false);
-            this.gbxSexoFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -499,29 +372,19 @@
         private System.Windows.Forms.DataGridView dtxExibiClientes;
         private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.GroupBox gbxSexoCliente;
-        private System.Windows.Forms.RadioButton rbFemininoCliente;
-        private System.Windows.Forms.RadioButton rbMasculinoCliente;
         private System.Windows.Forms.MaskedTextBox mtbCPFCliente;
         private System.Windows.Forms.Label lbCPFCliente;
-        private System.Windows.Forms.Label lbRGCliente;
-        private System.Windows.Forms.MaskedTextBox mtbRGCliente;
         private System.Windows.Forms.GroupBox gpbExibirFuncionario;
         private System.Windows.Forms.DataGridView dgvExibirFuncionario;
         private System.Windows.Forms.GroupBox gpbBuscaFuncionario;
         private System.Windows.Forms.Button btnBuscarFuncionario;
-        private System.Windows.Forms.GroupBox gbxSexoFuncionario;
         private System.Windows.Forms.TextBox txtNomeFuncionario;
-        private System.Windows.Forms.MaskedTextBox mtbRGFuncionario;
         private System.Windows.Forms.MaskedTextBox mtbCPFFuncionario;
         private System.Windows.Forms.Label lbNomeFuncionario;
-        private System.Windows.Forms.Label lbRGFuncionario;
         private System.Windows.Forms.Label lbCpfFuncionario;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnExcluirFuncionario;
         private System.Windows.Forms.Button btnEditarFuncionario;
-        private System.Windows.Forms.RadioButton rbtFeminino;
-        private System.Windows.Forms.RadioButton rbtMasculino;
     }
 }

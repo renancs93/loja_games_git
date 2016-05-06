@@ -20,13 +20,24 @@ namespace LojaGames
         private void btnAdicionarItem_Click(object sender, EventArgs e)
         {
             //Este metodo add os item de compra no dataView
+
+            MessageBox.Show("Produto adicionado na lista!", "Venda");
         }
 
         private void btnRemoverItem_Click(object sender, EventArgs e)
         {
             //Esse botão terá que remover um item da lista de compra do cliente
+
+            DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Venda", MessageBoxButtons.YesNo);
+
+            if (RmItem == DialogResult.Yes)
+            {
+                MessageBox.Show("Item Removido!");
+            }
+
+
         }
-        
+
         //Metodo para a TelaPrincipal
         public void getTelaPrincipal(telaPrincipal t)
         {
@@ -42,8 +53,15 @@ namespace LojaGames
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
-            telaP.Show();
+            DialogResult Sair = MessageBox.Show("Os dados serão Perdidos!\nDeseja realmente Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Sair == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
+
+            
         }
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
@@ -70,8 +88,14 @@ namespace LojaGames
 
         private void btnCancAlug_Click(object sender, EventArgs e)
         {
-            Close();
-            telaP.Show();
+            DialogResult Sair = MessageBox.Show("Os dados serão Perdidos!\nDeseja realmente Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(Sair == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
+            
         }
 
         private void btnFinAlug_Click(object sender, EventArgs e)
@@ -87,6 +111,23 @@ namespace LojaGames
                 Close();
                 telaP.Show();
             }
+        }
+
+        private void btnAddAlug_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Produto adicionado na lista!", "Aluguel");
+
+        }
+
+        private void btnRemAlug_Click(object sender, EventArgs e)
+        {
+            DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Aluguel", MessageBoxButtons.YesNo);
+
+            if (RmItem == DialogResult.Yes)
+            {
+                MessageBox.Show("Item Removido!");
+            }
+
         }
     }
 }

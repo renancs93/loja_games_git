@@ -96,7 +96,7 @@
             this.gpbDadosPessoais.Location = new System.Drawing.Point(12, 63);
             this.gpbDadosPessoais.Name = "gpbDadosPessoais";
             this.gpbDadosPessoais.Size = new System.Drawing.Size(604, 206);
-            this.gpbDadosPessoais.TabIndex = 1;
+            this.gpbDadosPessoais.TabIndex = 3;
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
@@ -107,7 +107,7 @@
             this.mtbRG.Mask = "99,999,999-99";
             this.mtbRG.Name = "mtbRG";
             this.mtbRG.Size = new System.Drawing.Size(172, 23);
-            this.mtbRG.TabIndex = 16;
+            this.mtbRG.TabIndex = 9;
             // 
             // dtpDataNascimento
             // 
@@ -117,7 +117,7 @@
             this.dtpDataNascimento.Location = new System.Drawing.Point(172, 109);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(139, 23);
-            this.dtpDataNascimento.TabIndex = 15;
+            this.dtpDataNascimento.TabIndex = 11;
             this.dtpDataNascimento.Value = new System.DateTime(2016, 5, 5, 0, 0, 0, 0);
             // 
             // mtbTelefone
@@ -127,7 +127,7 @@
             this.mtbTelefone.Mask = "(99)9999-9999";
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(134, 23);
-            this.mtbTelefone.TabIndex = 5;
+            this.mtbTelefone.TabIndex = 13;
             // 
             // mtbCPF
             // 
@@ -136,7 +136,7 @@
             this.mtbCPF.Mask = "999,999,999,99";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(237, 23);
-            this.mtbCPF.TabIndex = 2;
+            this.mtbCPF.TabIndex = 7;
             // 
             // cbxStatus
             // 
@@ -152,7 +152,7 @@
             this.cbxStatus.Location = new System.Drawing.Point(435, 139);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(134, 24);
-            this.cbxStatus.TabIndex = 8;
+            this.cbxStatus.TabIndex = 18;
             // 
             // txtEmail
             // 
@@ -162,7 +162,7 @@
             this.txtEmail.Location = new System.Drawing.Point(74, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(495, 23);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 20;
             // 
             // lbEmail
             // 
@@ -171,7 +171,7 @@
             this.lbEmail.Location = new System.Drawing.Point(6, 178);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(53, 16);
-            this.lbEmail.TabIndex = 14;
+            this.lbEmail.TabIndex = 19;
             this.lbEmail.Text = "Email:";
             // 
             // lbStatus
@@ -181,7 +181,7 @@
             this.lbStatus.Location = new System.Drawing.Point(345, 143);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(60, 16);
-            this.lbStatus.TabIndex = 12;
+            this.lbStatus.TabIndex = 17;
             this.lbStatus.Text = "Status:";
             // 
             // rbntFeminino
@@ -191,7 +191,7 @@
             this.rbntFeminino.Location = new System.Drawing.Point(211, 141);
             this.rbntFeminino.Name = "rbntFeminino";
             this.rbntFeminino.Size = new System.Drawing.Size(83, 20);
-            this.rbntFeminino.TabIndex = 7;
+            this.rbntFeminino.TabIndex = 16;
             this.rbntFeminino.TabStop = true;
             this.rbntFeminino.Text = "Feminino";
             this.rbntFeminino.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.rbntMasculino.Location = new System.Drawing.Point(67, 141);
             this.rbntMasculino.Name = "rbntMasculino";
             this.rbntMasculino.Size = new System.Drawing.Size(90, 20);
-            this.rbntMasculino.TabIndex = 6;
+            this.rbntMasculino.TabIndex = 15;
             this.rbntMasculino.TabStop = true;
             this.rbntMasculino.Text = "Masculino";
             this.rbntMasculino.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             this.lbSexo.Location = new System.Drawing.Point(6, 143);
             this.lbSexo.Name = "lbSexo";
             this.lbSexo.Size = new System.Drawing.Size(49, 16);
-            this.lbSexo.TabIndex = 10;
+            this.lbSexo.TabIndex = 14;
             this.lbSexo.Text = "Sexo:";
             // 
             // lbTelefone
@@ -225,7 +225,7 @@
             this.lbTelefone.Location = new System.Drawing.Point(345, 110);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(75, 16);
-            this.lbTelefone.TabIndex = 8;
+            this.lbTelefone.TabIndex = 12;
             this.lbTelefone.Text = "Telefone:";
             // 
             // lbDataNascimento
@@ -235,7 +235,7 @@
             this.lbDataNascimento.Location = new System.Drawing.Point(6, 110);
             this.lbDataNascimento.Name = "lbDataNascimento";
             this.lbDataNascimento.Size = new System.Drawing.Size(159, 16);
-            this.lbDataNascimento.TabIndex = 6;
+            this.lbDataNascimento.TabIndex = 10;
             this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
             // lbRG
@@ -245,7 +245,7 @@
             this.lbRG.Location = new System.Drawing.Point(345, 73);
             this.lbRG.Name = "lbRG";
             this.lbRG.Size = new System.Drawing.Size(32, 16);
-            this.lbRG.TabIndex = 4;
+            this.lbRG.TabIndex = 8;
             this.lbRG.Text = "RG:";
             // 
             // lbCPF
@@ -255,7 +255,7 @@
             this.lbCPF.Location = new System.Drawing.Point(6, 73);
             this.lbCPF.Name = "lbCPF";
             this.lbCPF.Size = new System.Drawing.Size(41, 16);
-            this.lbCPF.TabIndex = 2;
+            this.lbCPF.TabIndex = 6;
             this.lbCPF.Text = "CPF:";
             // 
             // txtNome
@@ -266,7 +266,7 @@
             this.txtNome.Location = new System.Drawing.Point(74, 31);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(495, 23);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 5;
             // 
             // lbNome
             // 
@@ -275,7 +275,7 @@
             this.lbNome.Location = new System.Drawing.Point(6, 34);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(55, 16);
-            this.lbNome.TabIndex = 0;
+            this.lbNome.TabIndex = 4;
             this.lbNome.Text = "Nome:";
             // 
             // gpbEndereco
@@ -297,7 +297,7 @@
             this.gpbEndereco.Location = new System.Drawing.Point(12, 276);
             this.gpbEndereco.Name = "gpbEndereco";
             this.gpbEndereco.Size = new System.Drawing.Size(604, 171);
-            this.gpbEndereco.TabIndex = 2;
+            this.gpbEndereco.TabIndex = 21;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
             // 
@@ -308,7 +308,7 @@
             this.mtbCEP.Mask = "00000-000";
             this.mtbCEP.Name = "mtbCEP";
             this.mtbCEP.Size = new System.Drawing.Size(172, 23);
-            this.mtbCEP.TabIndex = 14;
+            this.mtbCEP.TabIndex = 31;
             // 
             // cbxEstado
             // 
@@ -348,7 +348,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(74, 93);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(237, 24);
-            this.cbxEstado.TabIndex = 13;
+            this.cbxEstado.TabIndex = 29;
             // 
             // lbCEP
             // 
@@ -357,7 +357,7 @@
             this.lbCEP.Location = new System.Drawing.Point(345, 96);
             this.lbCEP.Name = "lbCEP";
             this.lbCEP.Size = new System.Drawing.Size(41, 16);
-            this.lbCEP.TabIndex = 10;
+            this.lbCEP.TabIndex = 30;
             this.lbCEP.Text = "CEP:";
             // 
             // txtCidade
@@ -368,7 +368,7 @@
             this.txtCidade.Location = new System.Drawing.Point(74, 126);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(495, 23);
-            this.txtCidade.TabIndex = 15;
+            this.txtCidade.TabIndex = 33;
             // 
             // txtBairro
             // 
@@ -378,7 +378,7 @@
             this.txtBairro.Location = new System.Drawing.Point(211, 61);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(358, 23);
-            this.txtBairro.TabIndex = 12;
+            this.txtBairro.TabIndex = 27;
             // 
             // txtNumero
             // 
@@ -388,7 +388,7 @@
             this.txtNumero.Location = new System.Drawing.Point(74, 61);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(64, 23);
-            this.txtNumero.TabIndex = 11;
+            this.txtNumero.TabIndex = 25;
             // 
             // lbCidade
             // 
@@ -397,7 +397,7 @@
             this.lbCidade.Location = new System.Drawing.Point(6, 129);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(63, 16);
-            this.lbCidade.TabIndex = 2;
+            this.lbCidade.TabIndex = 32;
             this.lbCidade.Text = "Cidade:";
             // 
             // txtRua
@@ -408,7 +408,7 @@
             this.txtRua.Location = new System.Drawing.Point(74, 28);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(495, 23);
-            this.txtRua.TabIndex = 10;
+            this.txtRua.TabIndex = 23;
             // 
             // lbBairro
             // 
@@ -417,7 +417,7 @@
             this.lbBairro.Location = new System.Drawing.Point(144, 64);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(57, 16);
-            this.lbBairro.TabIndex = 4;
+            this.lbBairro.TabIndex = 26;
             this.lbBairro.Text = "Bairro:";
             // 
             // lbEstado
@@ -427,7 +427,7 @@
             this.lbEstado.Location = new System.Drawing.Point(6, 96);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(63, 16);
-            this.lbEstado.TabIndex = 3;
+            this.lbEstado.TabIndex = 28;
             this.lbEstado.Text = "Estado:";
             // 
             // lbNumero
@@ -437,7 +437,7 @@
             this.lbNumero.Location = new System.Drawing.Point(6, 64);
             this.lbNumero.Name = "lbNumero";
             this.lbNumero.Size = new System.Drawing.Size(31, 16);
-            this.lbNumero.TabIndex = 1;
+            this.lbNumero.TabIndex = 24;
             this.lbNumero.Text = "Nº:";
             // 
             // lbRua
@@ -447,7 +447,7 @@
             this.lbRua.Location = new System.Drawing.Point(6, 31);
             this.lbRua.Name = "lbRua";
             this.lbRua.Size = new System.Drawing.Size(40, 16);
-            this.lbRua.TabIndex = 0;
+            this.lbRua.TabIndex = 22;
             this.lbRua.Text = "Rua:";
             // 
             // btnCadastrarCliente
@@ -456,7 +456,7 @@
             this.btnCadastrarCliente.Location = new System.Drawing.Point(86, 454);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(197, 58);
-            this.btnCadastrarCliente.TabIndex = 16;
+            this.btnCadastrarCliente.TabIndex = 34;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
             this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
@@ -467,7 +467,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(360, 455);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(197, 58);
-            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -498,7 +498,7 @@
             this.lbCodigo.Location = new System.Drawing.Point(510, 28);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(63, 16);
-            this.lbCodigo.TabIndex = 18;
+            this.lbCodigo.TabIndex = 0;
             this.lbCodigo.Text = "Código:";
             // 
             // lbCodigoNumero
@@ -508,7 +508,7 @@
             this.lbCodigoNumero.Location = new System.Drawing.Point(579, 28);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
             this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
-            this.lbCodigoNumero.TabIndex = 16;
+            this.lbCodigoNumero.TabIndex = 1;
             this.lbCodigoNumero.Text = "1";
             // 
             // telaCadastroCliente

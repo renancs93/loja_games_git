@@ -14,22 +14,33 @@ namespace LojaGames
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
+            string MensagemErro = "";
+
+            MensagemErro = ClasseUtil.ValidaCampos(Controls);
             
-
-            string MensagemErro = ClasseUtil.ValidaCampos(this.Controls);
+            if(MensagemErro == "")
+            {
+                MessageBox.Show("Cliente Cadastrado com Sucesso!");
+                telaP.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(MensagemErro);
+            }
             
-            MessageBox.Show(MensagemErro);
-
-
-            MessageBox.Show("Cliente Cadastrado com Sucesso!");
-            telaP.Show();
-            Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
-            Close();//fecha esse form
+            DialogResult sair = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Sair?", "Sair" ,MessageBoxButtons.YesNo ,MessageBoxIcon.Question);
+
+            if(sair == DialogResult.Yes)
+            {
+                telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
+                Close();//fecha esse form
+            }
+
         }
 
         public void setTelaPrincipal(telaPrincipal t)

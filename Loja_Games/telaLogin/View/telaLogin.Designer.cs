@@ -102,7 +102,7 @@
             this.txtCampoUsuario.Name = "txtCampoUsuario";
             this.txtCampoUsuario.Size = new System.Drawing.Size(184, 20);
             this.txtCampoUsuario.TabIndex = 2;
-            this.txtCampoUsuario.Leave += new System.EventHandler(this.txtCampoUsuario_Leave);
+            this.txtCampoUsuario.TextChanged += new System.EventHandler(this.txtCampoUsuario_TextChanged);
             // 
             // txtCampoSenha
             // 
@@ -111,7 +111,7 @@
             this.txtCampoSenha.Size = new System.Drawing.Size(184, 20);
             this.txtCampoSenha.TabIndex = 4;
             this.txtCampoSenha.UseSystemPasswordChar = true;
-            this.txtCampoSenha.Leave += new System.EventHandler(this.txtCampoSenha_Leave);
+            this.txtCampoSenha.TextChanged += new System.EventHandler(this.txtCampoSenha_TextChanged);
             // 
             // btnLogar
             // 

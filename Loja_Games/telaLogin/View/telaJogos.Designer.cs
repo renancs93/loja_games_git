@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaJogos));
             this.paginaAbasJogos = new System.Windows.Forms.TabControl();
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
+            this.pbGameLogo = new System.Windows.Forms.PictureBox();
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.dtpDataLancamento = new System.Windows.Forms.DateTimePicker();
@@ -88,9 +89,9 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
-            this.pbGameLogo = new System.Windows.Forms.PictureBox();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             this.gpbTipoJogo.SuspendLayout();
             this.gpbGeneroCadastra.SuspendLayout();
@@ -102,7 +103,6 @@
             this.gpbGenero.SuspendLayout();
             this.gpbConsole.SuspendLayout();
             this.gbxBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // paginaAbasJogos
@@ -141,11 +141,21 @@
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
             this.abaCadastraJogos.UseVisualStyleBackColor = true;
             // 
+            // pbGameLogo
+            // 
+            this.pbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pbGameLogo.Location = new System.Drawing.Point(11, 407);
+            this.pbGameLogo.Name = "pbGameLogo";
+            this.pbGameLogo.Size = new System.Drawing.Size(115, 50);
+            this.pbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGameLogo.TabIndex = 14;
+            this.pbGameLogo.TabStop = false;
+            // 
             // lbCodigoNumero
             // 
             this.lbCodigoNumero.AutoSize = true;
             this.lbCodigoNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigoNumero.Location = new System.Drawing.Point(696, 28);
+            this.lbCodigoNumero.Location = new System.Drawing.Point(730, 22);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
             this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
             this.lbCodigoNumero.TabIndex = 13;
@@ -155,7 +165,7 @@
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(627, 28);
+            this.lbCodigo.Location = new System.Drawing.Point(661, 22);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(63, 16);
             this.lbCodigo.TabIndex = 12;
@@ -164,9 +174,10 @@
             // dtpDataLancamento
             // 
             this.dtpDataLancamento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataLancamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataLancamento.Location = new System.Drawing.Point(379, 86);
             this.dtpDataLancamento.Name = "dtpDataLancamento";
-            this.dtpDataLancamento.Size = new System.Drawing.Size(325, 23);
+            this.dtpDataLancamento.Size = new System.Drawing.Size(127, 23);
             this.dtpDataLancamento.TabIndex = 11;
             // 
             // lbDataLancamento
@@ -411,11 +422,10 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.Location = new System.Drawing.Point(515, 22);
+            this.txtPreco.Location = new System.Drawing.Point(542, 22);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(97, 23);
             this.txtPreco.TabIndex = 3;
-            this.txtPreco.Text = "R$";
             // 
             // lbPreco
             // 
@@ -423,9 +433,9 @@
             this.lbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPreco.Location = new System.Drawing.Point(452, 25);
             this.lbPreco.Name = "lbPreco";
-            this.lbPreco.Size = new System.Drawing.Size(54, 16);
+            this.lbPreco.Size = new System.Drawing.Size(90, 16);
             this.lbPreco.TabIndex = 2;
-            this.lbPreco.Text = "Preço:";
+            this.lbPreco.Text = "Preço (R$):";
             // 
             // txtNome
             // 
@@ -793,16 +803,6 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
-            // pbGameLogo
-            // 
-            this.pbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pbGameLogo.Location = new System.Drawing.Point(11, 407);
-            this.pbGameLogo.Name = "pbGameLogo";
-            this.pbGameLogo.Size = new System.Drawing.Size(115, 50);
-            this.pbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbGameLogo.TabIndex = 14;
-            this.pbGameLogo.TabStop = false;
-            // 
             // telaJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,6 +811,8 @@
             this.ClientSize = new System.Drawing.Size(774, 492);
             this.Controls.Add(this.paginaAbasJogos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "telaJogos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -819,6 +821,7 @@
             this.paginaAbasJogos.ResumeLayout(false);
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             this.gpbTipoJogo.ResumeLayout(false);
             this.gpbGeneroCadastra.ResumeLayout(false);
@@ -835,7 +838,6 @@
             this.gpbConsole.PerformLayout();
             this.gbxBuscar.ResumeLayout(false);
             this.gbxBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

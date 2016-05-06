@@ -18,10 +18,10 @@ namespace LojaGames
             
         }
 
-        private void txtCampoUsuario_Leave(object sender, EventArgs e)
+        private void txtCampoUsuario_TextChanged(object sender, EventArgs e)
         {
             //evento "Leave" do campo de texto usuário, onde verifica se o campo está vazio ao sair dele
-            if(txtCampoUsuario.Text != string.Empty)
+            if (txtCampoUsuario.Text != string.Empty)
             {
                 imgOK_usuario.Visible = true;
             }
@@ -29,13 +29,12 @@ namespace LojaGames
             {
                 imgOK_usuario.Visible = false;
             }
-            
         }
 
-        private void txtCampoSenha_Leave(object sender, EventArgs e)
+        private void txtCampoSenha_TextChanged(object sender, EventArgs e)
         {
             //evento "Leave" do campo de texto senha, onde verifica se o campo está vazio ao sair dele
-            if(txtCampoSenha.Text != string.Empty)
+            if (txtCampoSenha.Text != string.Empty)
             {
                 imgOK_senha.Visible = true;
             }
@@ -45,7 +44,7 @@ namespace LojaGames
             }
 
             //ativar botão "Login" caso os campos usuario e senha estiver OK
-            if((imgOK_usuario.Visible && imgOK_senha.Visible) == true)
+            if ((imgOK_usuario.Visible && imgOK_senha.Visible) == true)
             {
                 btnLogar.Enabled = true;
             }
@@ -53,7 +52,6 @@ namespace LojaGames
             {
                 btnLogar.Enabled = false;
             }
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -108,7 +106,7 @@ namespace LojaGames
             telaP = t;
 
         }
+
         
-       
     }
 }

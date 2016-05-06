@@ -67,5 +67,21 @@ namespace LojaGames
         public string Estado { get; set; }
         public string CEP { get; set; }
         public string Cidade { get; set; }
+
+        //Declaração dos métodos
+        public void AdicionarCliente()
+        {
+
+        }
+
+        public void RemoverCliente()
+        {
+
+        }
+
+        public void EditarDadosCliente()
+        {
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace LojaGames.Classes
         private Jogos jogos;
         private Funcionario funcionario;
         private int quantidade;
-        private Pagamento pagamento;
+        private string pagamento;
         private int numeroParcelas;
         private float valorParcelas;
         private float total;
@@ -49,7 +49,7 @@ namespace LojaGames.Classes
             }
         }
 
-        public Pagamento Pagamento { get; set; }
+        public string Pagamento { get; set; }
 
         public int NumeroParcelas
         {
@@ -85,6 +85,22 @@ namespace LojaGames.Classes
             {
                 total = value >= 0 ? value : 0;
             }
+        }
+
+        //Declaração dos métodos
+        public void AdicionarVenda()
+        {
+
+        }
+
+        public void RemoverVenda()
+        {
+
+        }
+
+        public void EditarDadosVenda()
+        {
+
         }
     }
 }

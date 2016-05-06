@@ -61,5 +61,21 @@ namespace LojaGames.Classes
                 qnt_estoque = value >= 0 ? value : 0;
             }
         }
+
+        //Declaração dos métodos
+        public void AdicionarJogos()
+        {
+
+        }
+
+        public void RemoverJogos()
+        {
+
+        }
+
+        public void EditarDadosJogos()
+        {
+
+        }
     }
 }

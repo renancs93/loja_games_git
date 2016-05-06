@@ -28,5 +28,20 @@ namespace LojaGames.Classes
 
         public string Tipo { get; set; }
         
+        //Declaração dos métodos
+        public void AdicionarPagamento()
+        {
+
+        }
+
+        public void RemoverPagamento()
+        {
+
+        }
+
+        public void EditarDadosPagamento()
+        {
+
+        }
     }
 }

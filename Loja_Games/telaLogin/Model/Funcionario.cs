@@ -85,5 +85,21 @@ namespace LojaGames.Classes
         }
 
         public DateTime Data_Inicio { get; set; }
+
+        //Declaração dos métodos
+        public void AdicionarFuncionario()
+        {
+
+        }
+
+        public void RemoverFuncionario()
+        {
+
+        }
+
+        public void EditarDadosFuncionario()
+        {
+
+        }
     }
 }

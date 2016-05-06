@@ -35,11 +35,13 @@ namespace LojaGames
         {
             DialogResult sair = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Sair?", "Sair" ,MessageBoxButtons.YesNo ,MessageBoxIcon.Question);
 
+            /*
             if(sair == DialogResult.Yes)
             {
                 telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
                 Close();//fecha esse form
             }
+            */
 
         }
 

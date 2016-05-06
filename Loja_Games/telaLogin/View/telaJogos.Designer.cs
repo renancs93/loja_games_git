@@ -217,6 +217,7 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAlteracoes
             // 
@@ -228,6 +229,7 @@
             this.btnAlteracoes.TabIndex = 6;
             this.btnAlteracoes.Text = "Salvar Alterações";
             this.btnAlteracoes.UseVisualStyleBackColor = true;
+            this.btnAlteracoes.Click += new System.EventHandler(this.btnAlteracoes_Click);
             // 
             // btnCadastrar
             // 
@@ -238,6 +240,7 @@
             this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // gpbTipoJogo
             // 
@@ -482,6 +485,7 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dGridResultado
             // 
@@ -563,6 +567,7 @@
             this.btnBuscarTipo.TabIndex = 4;
             this.btnBuscarTipo.Text = "Buscar";
             this.btnBuscarTipo.UseVisualStyleBackColor = true;
+            this.btnBuscarTipo.Click += new System.EventHandler(this.btnBuscarTipo_Click);
             // 
             // gpbGenero
             // 
@@ -818,6 +823,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jogos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaJogos_FormClosing);
+            this.Load += new System.EventHandler(this.telaJogos_Load);
             this.paginaAbasJogos.ResumeLayout(false);
             this.abaCadastraJogos.ResumeLayout(false);
             this.abaCadastraJogos.PerformLayout();

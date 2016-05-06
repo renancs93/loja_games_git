@@ -38,16 +38,90 @@ namespace LojaGames
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            string nome = txtNomeCliente.Text;
+            string cpf = mtbCPFCliente.ToString();
+
+            if((nome == string.Empty)||(cpf == string.Empty))
+            {
+                MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
+            }
+            else
+            {
+                //irá realizar a busca de acordo com os dados fornecido em uns dos campos
+                //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
+                
+            }
 
         }
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
+            //pega a linha no dataGrid selecionada e abre a telaCadastro de cliente já setados para alteração
+
+            DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (edit == DialogResult.Yes)
+            {
+                telaCadastroCliente editarCliente = new telaCadastroCliente();
+                editarCliente.ShowDialog();
+            }
+
 
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rm == DialogResult.Yes)
+            {
+                MessageBox.Show("Cliente removido com Sucesso");
+            }
+
+        }
+
+        private void btnBuscarFuncionario_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeFuncionario.Text;
+            string cpf = mtbCPFFuncionario.ToString();
+
+            if ((nome == string.Empty) || (cpf == string.Empty))
+            {
+                MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
+            }
+            else
+            {
+                //irá realizar a busca de acordo com os dados fornecido em uns dos campos
+                //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
+
+            }
+
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, EventArgs e)
+        {
+            //Deve confirmar e remover o funcionário na qual a linha no dataGrid está selecionada
+            DialogResult rm = MessageBox.Show("Deseja remover o Funcionário selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(rm == DialogResult.Yes)
+            {
+                MessageBox.Show("Funcionário removido com Sucesso");
+            }
+
+
+        }
+
+        private void btnEditarFuncionario_Click(object sender, EventArgs e)
+        {
+            //pega a linha no dataGrid selecionada e abre a telaCadastro de funcionário já setados para alteração
+
+            DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (edit == DialogResult.Yes)
+            {
+                
+            }
+
 
         }
     }

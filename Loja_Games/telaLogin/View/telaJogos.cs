@@ -16,7 +16,7 @@ namespace LojaGames
 
         private void btnBuscarNome_Click(object sender, EventArgs e)
         {
-            if (txtCampoBusca.Text == String.Empty)
+            if (txtCampoBusca.Text == string.Empty)
             {
                 MessageBox.Show("Campo de Nome vazio");
             }
@@ -41,8 +41,15 @@ namespace LojaGames
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            TelaP.Show();
-            Close();
+            DialogResult sair = MessageBox.Show("Deseja Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(sair == DialogResult.Yes)
+            {
+                Close();
+                TelaP.Show();
+            }
+            
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -80,6 +87,99 @@ namespace LojaGames
         {
             Dispose();
             TelaP.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult Cancelar = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Cancelar?","Cancelar",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if(Cancelar == DialogResult.Yes)
+            {
+                Close();
+                TelaP.Show();
+            }
+                        
+        }
+
+        private void btnAlteracoes_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmar = MessageBox.Show("As informações do Jogo serão alteradas!\nDeseja realmente salvar?", "Confirmar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if(Confirmar == DialogResult.Yes)
+            {
+                //salvar as aterações no jogo e voltar para aba de exibição de jogos
+                btnCadastrar.Enabled = true;
+                MessageBox.Show("Jogo alterado com Sucesso!");
+            
+                paginaAbasJogos.SelectTab(abaExibeJogos);
+
+            }
+            else if(Confirmar == DialogResult.No)
+            {
+                //Não fazer nada e voltar para aba de exibição de jogos
+                btnCadastrar.Enabled = true;
+                MessageBox.Show("Nenhuma informação do jogo foi alterada!");
+
+                paginaAbasJogos.SelectTab(abaExibeJogos);
+
+                
+            }
+
+
+        }
+
+        private void btnBuscarTipo_Click(object sender, EventArgs e)
+        {
+            
+            if((rbtnPS4.Checked || rbtnXbox.Checked || rbtnPc.Checked)== true)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Você deve escolher qual é o Tipo de Video-Game");
+            }
+            
+            
+
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            DialogResult salvar = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            
+            if(salvar == DialogResult.Yes)
+            {
+                MessageBox.Show("Cadastrado com Sucesso!");
+            }
+            else if(salvar == DialogResult.No)
+            {
+                MessageBox.Show("Jogo não salvo!");
+            }
+
+            
+
+        }
+
+        //irá setar abrir a aba de cadastro jogo com os dados setados nos campos do jogo na qual a linha no dataGrid estiver selecionada.
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            btnAlteracoes.Enabled = true;
+            btnCadastrar.Enabled = false;
+    
+            //muda para outra aba de cadastra jogo
+            paginaAbasJogos.SelectTab(abaCadastraJogos);
+            
+            
+
+
+        }
+
+        private void telaJogos_Load(object sender, EventArgs e)
+        {
+            //padroniza a ativação dos botões ao carregar a tela
+            btnCadastrar.Enabled = true;
+            btnAlteracoes.Enabled = false;
         }
     }
     

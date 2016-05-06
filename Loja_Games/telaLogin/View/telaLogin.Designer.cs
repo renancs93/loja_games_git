@@ -103,6 +103,7 @@
             this.txtCampoUsuario.Size = new System.Drawing.Size(184, 20);
             this.txtCampoUsuario.TabIndex = 2;
             this.txtCampoUsuario.TextChanged += new System.EventHandler(this.txtCampoUsuario_TextChanged);
+            this.txtCampoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCampoUsuario_KeyPress);
             // 
             // txtCampoSenha
             // 
@@ -112,6 +113,7 @@
             this.txtCampoSenha.TabIndex = 4;
             this.txtCampoSenha.UseSystemPasswordChar = true;
             this.txtCampoSenha.TextChanged += new System.EventHandler(this.txtCampoSenha_TextChanged);
+            this.txtCampoSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCampoSenha_KeyPress);
             // 
             // btnLogar
             // 

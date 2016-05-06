@@ -107,6 +107,20 @@ namespace LojaGames
 
         }
 
-        
+        private void txtCampoSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnLogar_Click(sender, e);
+            }
+        }
+
+        private void txtCampoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnLogar_Click(sender, e);
+            }
+        }
     }
 }

@@ -21,8 +21,14 @@ namespace LojaGames
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
-            telaP.Show();
+            DialogResult cancel = MessageBox.Show("Os dados serão perdidos! \n Deseja mesmo sair da tela de cadastro? ", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if(cancel == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
+            
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

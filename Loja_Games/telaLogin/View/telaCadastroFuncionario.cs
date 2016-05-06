@@ -34,11 +34,23 @@ namespace LojaGames
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //realizar as verificações dos campos antes de cadastrar
+            string MensagemErro = "";
 
+            MensagemErro = ClasseUtil.ValidaCampos(Controls);
 
-            MessageBox.Show("Funcionário cadastrado com sucesso!");
-            Close();
-            telaP.Show();
+            if(MensagemErro == "")
+            {
+                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                Close();
+                telaP.Show();
+            }
+            else
+            {
+                MessageBox.Show(MensagemErro);
+            }
+
+            
+            
         }
 
         public void setTelaAnterior(System.Windows.Forms.Form t)

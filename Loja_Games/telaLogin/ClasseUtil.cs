@@ -39,6 +39,26 @@ namespace LojaGames
             return retorno;
         }
 
+        //limpa Campos
+        public static void LimparCampo(object e)
+        {
+            if(e.GetType() == typeof(TextBox))
+            {
+                ((TextBox)e).Text = string.Empty;
+            }
+            else if(e.GetType() == typeof(RadioButton))
+            {
+                ((RadioButton)e).Checked = false;
+            }
+            else if (e.GetType() == typeof(MaskedTextBox))
+            {
+                ((MaskedTextBox)e).Text = string.Empty;
+            }
+
+
+
+        }
+
         //validas diversos campos das telas de acordo com o tipo
         public static string ValidaCampos(Control.ControlCollection componentes)
         {

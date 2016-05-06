@@ -72,6 +72,7 @@
             // 
             this.btnLogarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogarUsuario.BackColor = System.Drawing.Color.Gold;
+            this.btnLogarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogarUsuario.Location = new System.Drawing.Point(653, 2);
             this.btnLogarUsuario.Name = "btnLogarUsuario";
             this.btnLogarUsuario.Size = new System.Drawing.Size(80, 22);
@@ -119,6 +120,7 @@
             // 
             this.btnVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVenda.BackColor = System.Drawing.Color.Black;
+            this.btnVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,6 +140,7 @@
             // 
             this.btnCadastrarFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.Black;
+            this.btnCadastrarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.Red;
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(545, 146);
@@ -154,6 +157,7 @@
             // btnLogoff
             // 
             this.btnLogoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogoff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogoff.Enabled = false;
             this.btnLogoff.Location = new System.Drawing.Point(679, 24);
             this.btnLogoff.Name = "btnLogoff";
@@ -167,6 +171,7 @@
             // 
             this.btnBuscaExibir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscaExibir.BackColor = System.Drawing.Color.Black;
+            this.btnBuscaExibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscaExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaExibir.ForeColor = System.Drawing.Color.Red;
             this.btnBuscaExibir.Location = new System.Drawing.Point(454, 127);
@@ -184,6 +189,7 @@
             // 
             this.btnRelatorios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRelatorios.BackColor = System.Drawing.Color.Black;
+            this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,6 +201,8 @@
             this.btnRelatorios.UseVisualStyleBackColor = false;
             this.btnRelatorios.Visible = false;
             this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
+            this.btnRelatorios.MouseEnter += new System.EventHandler(this.btnRelatorios_MouseEnter);
+            this.btnRelatorios.MouseLeave += new System.EventHandler(this.btnRelatorios_MouseLeave);
             // 
             // telaPrincipal
             // 
@@ -222,6 +230,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.telaPrincipal_Load);
             this.ResumeLayout(false);
 
         }

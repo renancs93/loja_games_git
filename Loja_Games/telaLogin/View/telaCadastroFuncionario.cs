@@ -64,5 +64,10 @@ namespace LojaGames
             Dispose();
             telaP.Show();
         }
+
+        private void telaCadastroFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

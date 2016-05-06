@@ -7,8 +7,7 @@ namespace LojaGames
 {
     public partial class telaPrincipal : System.Windows.Forms.Form
     {
-        int tempoCarregamento = 30; //tempo de sleep ao clicar nos botões de telas
-
+        
         public telaPrincipal()
         {
             InitializeComponent();
@@ -18,6 +17,9 @@ namespace LojaGames
         private void CarregamentoBarraProgresso()
         {
             barraProgresso.Value = 0;
+
+            int tempoCarregamento = 25; //tempo (milissegundo) do sleep ao clicar nos botões de telas
+
             while (barraProgresso.Value < 100)
             {
                 Thread.Sleep(tempoCarregamento);
@@ -178,6 +180,16 @@ namespace LojaGames
             btnBuscaExibir.ForeColor = Color.Red;
         }
 
+        private void btnRelatorios_MouseEnter(object sender, EventArgs e)
+        {
+            btnRelatorios.ForeColor = Color.Blue;
+        }
+
+        private void btnRelatorios_MouseLeave(object sender, EventArgs e)
+        {
+            btnRelatorios.ForeColor = Color.Red;
+        }
+
         public void habilitarBotoes(bool ativarBotoes)
         {
             btnJogos.Visible = ativarBotoes;
@@ -199,6 +211,11 @@ namespace LojaGames
                 btnLogarUsuario.BackColor = Color.Gold;
                 btnLogoff.Enabled = ativarBotoes;
             }
+        }
+
+        private void telaPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
 
 

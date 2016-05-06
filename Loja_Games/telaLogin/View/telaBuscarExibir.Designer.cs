@@ -33,6 +33,7 @@
             this.gbxExibirClientes = new System.Windows.Forms.GroupBox();
             this.dtxExibiClientes = new System.Windows.Forms.DataGridView();
             this.gbxBuscarClientes = new System.Windows.Forms.GroupBox();
+            this.lbOU_cli = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.gpbExibirFuncionario = new System.Windows.Forms.GroupBox();
             this.dgvExibirFuncionario = new System.Windows.Forms.DataGridView();
             this.gpbBuscaFuncionario = new System.Windows.Forms.GroupBox();
+            this.lbOu_func = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.lbCpfFuncionario = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.lbOU_cli = new System.Windows.Forms.Label();
-            this.lbOu_func = new System.Windows.Forms.Label();
             this.tcClienteFuncionario.SuspendLayout();
             this.tabExibeBuscaCliente.SuspendLayout();
             this.gbxExibirClientes.SuspendLayout();
@@ -129,6 +129,15 @@
             this.gbxBuscarClientes.TabIndex = 1;
             this.gbxBuscarClientes.TabStop = false;
             this.gbxBuscarClientes.Text = "Buscar Cliente";
+            // 
+            // lbOU_cli
+            // 
+            this.lbOU_cli.AutoSize = true;
+            this.lbOU_cli.Location = new System.Drawing.Point(158, 66);
+            this.lbOU_cli.Name = "lbOU_cli";
+            this.lbOU_cli.Size = new System.Drawing.Size(28, 14);
+            this.lbOU_cli.TabIndex = 10;
+            this.lbOU_cli.Text = "OU";
             // 
             // button1
             // 
@@ -261,6 +270,15 @@
             this.gpbBuscaFuncionario.TabStop = false;
             this.gpbBuscaFuncionario.Text = "Buscar Funcionário";
             // 
+            // lbOu_func
+            // 
+            this.lbOu_func.AutoSize = true;
+            this.lbOu_func.Location = new System.Drawing.Point(170, 70);
+            this.lbOu_func.Name = "lbOu_func";
+            this.lbOu_func.Size = new System.Drawing.Size(28, 14);
+            this.lbOu_func.TabIndex = 10;
+            this.lbOu_func.Text = "OU";
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(363, 83);
@@ -359,24 +377,6 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // lbOU_cli
-            // 
-            this.lbOU_cli.AutoSize = true;
-            this.lbOU_cli.Location = new System.Drawing.Point(158, 66);
-            this.lbOU_cli.Name = "lbOU_cli";
-            this.lbOU_cli.Size = new System.Drawing.Size(28, 14);
-            this.lbOU_cli.TabIndex = 10;
-            this.lbOU_cli.Text = "OU";
-            // 
-            // lbOu_func
-            // 
-            this.lbOu_func.AutoSize = true;
-            this.lbOu_func.Location = new System.Drawing.Point(170, 70);
-            this.lbOu_func.Name = "lbOu_func";
-            this.lbOu_func.Size = new System.Drawing.Size(28, 14);
-            this.lbOu_func.TabIndex = 10;
-            this.lbOu_func.Text = "OU";
-            // 
             // telaBuscarExibir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +390,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar e Exibir";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaBuscarExibir_FormClosing);
+            this.Load += new System.EventHandler(this.telaBuscarExibir_Load);
             this.tcClienteFuncionario.ResumeLayout(false);
             this.tabExibeBuscaCliente.ResumeLayout(false);
             this.gbxExibirClientes.ResumeLayout(false);

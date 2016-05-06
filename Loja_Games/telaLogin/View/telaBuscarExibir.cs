@@ -131,5 +131,10 @@ namespace LojaGames
 
 
         }
+
+        private void telaBuscarExibir_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

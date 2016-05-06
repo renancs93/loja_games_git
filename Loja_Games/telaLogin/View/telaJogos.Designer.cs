@@ -144,9 +144,9 @@
             // pbGameLogo
             // 
             this.pbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pbGameLogo.Location = new System.Drawing.Point(11, 407);
+            this.pbGameLogo.Location = new System.Drawing.Point(11, 245);
             this.pbGameLogo.Name = "pbGameLogo";
-            this.pbGameLogo.Size = new System.Drawing.Size(115, 50);
+            this.pbGameLogo.Size = new System.Drawing.Size(438, 212);
             this.pbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGameLogo.TabIndex = 14;
             this.pbGameLogo.TabStop = false;
@@ -220,6 +220,7 @@
             // 
             // btnAlteracoes
             // 
+            this.btnAlteracoes.Enabled = false;
             this.btnAlteracoes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlteracoes.Location = new System.Drawing.Point(576, 415);
             this.btnAlteracoes.Name = "btnAlteracoes";
@@ -485,7 +486,6 @@
             // dGridResultado
             // 
             this.dGridResultado.AllowUserToOrderColumns = true;
-            this.dGridResultado.BackgroundColor = System.Drawing.Color.White;
             this.dGridResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridResultado.Location = new System.Drawing.Point(9, 183);
             this.dGridResultado.Name = "dGridResultado";
@@ -495,10 +495,10 @@
             // imgLogo
             // 
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(9, 422);
+            this.imgLogo.Location = new System.Drawing.Point(9, 412);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(115, 38);
-            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgLogo.Size = new System.Drawing.Size(115, 48);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
             // 

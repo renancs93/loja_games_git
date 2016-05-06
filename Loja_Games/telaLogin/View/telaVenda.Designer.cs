@@ -33,12 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
+            this.lbNumParcelasAluguel = new System.Windows.Forms.Label();
+            this.lbFormasPagamentoAluguel = new System.Windows.Forms.Label();
+            this.cbxFormasPagamentoAluguel = new System.Windows.Forms.ComboBox();
+            this.numParcelasAluguel = new System.Windows.Forms.NumericUpDown();
             this.pcbLogoAlug = new System.Windows.Forms.PictureBox();
             this.btnFinAlug = new System.Windows.Forms.Button();
             this.btnCancAlug = new System.Windows.Forms.Button();
             this.txtTotalAluguel = new System.Windows.Forms.TextBox();
             this.lbTotalAlug = new System.Windows.Forms.Label();
-            this.dgvAlug = new System.Windows.Forms.DataGridView();
+            this.dgvProdutosAluga = new System.Windows.Forms.DataGridView();
             this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +61,8 @@
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
             this.abaVenda = new System.Windows.Forms.TabPage();
             this.gbpDadoVenda = new System.Windows.Forms.GroupBox();
+            this.numParcelas_Venda = new System.Windows.Forms.NumericUpDown();
+            this.cbxFormasPagamentosCompra = new System.Windows.Forms.ComboBox();
             this.lbNumeroParcelas = new System.Windows.Forms.Label();
             this.txtValorParcela = new System.Windows.Forms.TextBox();
             this.lbValorParcela = new System.Windows.Forms.Label();
@@ -74,7 +80,7 @@
             this.btnFinalizarVenda = new System.Windows.Forms.Button();
             this.txtCodigoProduto = new System.Windows.Forms.TextBox();
             this.lbCodigoProduto = new System.Windows.Forms.Label();
-            this.dgvDescreveProdutos = new System.Windows.Forms.DataGridView();
+            this.dgvProdutosVenda = new System.Windows.Forms.DataGridView();
             this.dgvtbcCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbcQuantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,25 +91,19 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
-            this.cbxFormasPagamentosCompra = new System.Windows.Forms.ComboBox();
-            this.numParcelas_Venda = new System.Windows.Forms.NumericUpDown();
-            this.numParcelasAluguel = new System.Windows.Forms.NumericUpDown();
-            this.cbxFormasPagamentoAluguel = new System.Windows.Forms.ComboBox();
-            this.lbFormasPagamentoAluguel = new System.Windows.Forms.Label();
-            this.lbNumParcelasAluguel = new System.Windows.Forms.Label();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoAlug)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlug)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosAluga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDiasAlug)).BeginInit();
             this.abaVenda.SuspendLayout();
             this.gbpDadoVenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numParcelas_Venda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosVenda)).BeginInit();
             this.tcVendaAluguel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numParcelas_Venda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).BeginInit();
             this.SuspendLayout();
             // 
             // abaAluguel
@@ -129,7 +129,7 @@
             this.gpbAlug.Controls.Add(this.btnCancAlug);
             this.gpbAlug.Controls.Add(this.txtTotalAluguel);
             this.gpbAlug.Controls.Add(this.lbTotalAlug);
-            this.gpbAlug.Controls.Add(this.dgvAlug);
+            this.gpbAlug.Controls.Add(this.dgvProdutosAluga);
             this.gpbAlug.Controls.Add(this.btnRemAlug);
             this.gpbAlug.Controls.Add(this.btnAddAlug);
             this.gpbAlug.Controls.Add(this.numDiasAlug);
@@ -149,6 +149,51 @@
             this.gpbAlug.TabIndex = 0;
             this.gpbAlug.TabStop = false;
             this.gpbAlug.Text = "Dados Aluguel";
+            // 
+            // lbNumParcelasAluguel
+            // 
+            this.lbNumParcelasAluguel.AutoSize = true;
+            this.lbNumParcelasAluguel.Location = new System.Drawing.Point(117, 407);
+            this.lbNumParcelasAluguel.Name = "lbNumParcelasAluguel";
+            this.lbNumParcelasAluguel.Size = new System.Drawing.Size(166, 16);
+            this.lbNumParcelasAluguel.TabIndex = 25;
+            this.lbNumParcelasAluguel.Text = "Números de Parcelas:";
+            // 
+            // lbFormasPagamentoAluguel
+            // 
+            this.lbFormasPagamentoAluguel.AutoSize = true;
+            this.lbFormasPagamentoAluguel.Location = new System.Drawing.Point(113, 365);
+            this.lbFormasPagamentoAluguel.Name = "lbFormasPagamentoAluguel";
+            this.lbFormasPagamentoAluguel.Size = new System.Drawing.Size(177, 16);
+            this.lbFormasPagamentoAluguel.TabIndex = 24;
+            this.lbFormasPagamentoAluguel.Text = "Formas de Pagamento:";
+            // 
+            // cbxFormasPagamentoAluguel
+            // 
+            this.cbxFormasPagamentoAluguel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFormasPagamentoAluguel.FormattingEnabled = true;
+            this.cbxFormasPagamentoAluguel.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cheque",
+            "Débito",
+            "Crédito",
+            "Boleto"});
+            this.cbxFormasPagamentoAluguel.Location = new System.Drawing.Point(291, 362);
+            this.cbxFormasPagamentoAluguel.Name = "cbxFormasPagamentoAluguel";
+            this.cbxFormasPagamentoAluguel.Size = new System.Drawing.Size(91, 24);
+            this.cbxFormasPagamentoAluguel.TabIndex = 23;
+            // 
+            // numParcelasAluguel
+            // 
+            this.numParcelasAluguel.Location = new System.Drawing.Point(291, 404);
+            this.numParcelasAluguel.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numParcelasAluguel.Name = "numParcelasAluguel";
+            this.numParcelasAluguel.Size = new System.Drawing.Size(60, 23);
+            this.numParcelasAluguel.TabIndex = 22;
             // 
             // pcbLogoAlug
             // 
@@ -201,11 +246,11 @@
             this.lbTotalAlug.TabIndex = 15;
             this.lbTotalAlug.Text = "Total Aluguel :";
             // 
-            // dgvAlug
+            // dgvProdutosAluga
             // 
-            this.dgvAlug.AllowUserToAddRows = false;
-            this.dgvAlug.AllowUserToDeleteRows = false;
-            this.dgvAlug.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProdutosAluga.AllowUserToAddRows = false;
+            this.dgvProdutosAluga.AllowUserToDeleteRows = false;
+            this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,17 +258,17 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlug.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAlug.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
             this.dgvDiasAlug,
             this.dvgValorAlug});
-            this.dgvAlug.Location = new System.Drawing.Point(6, 139);
-            this.dgvAlug.Name = "dgvAlug";
-            this.dgvAlug.RowHeadersWidth = 50;
-            this.dgvAlug.Size = new System.Drawing.Size(745, 209);
-            this.dgvAlug.TabIndex = 12;
+            this.dgvProdutosAluga.Location = new System.Drawing.Point(6, 139);
+            this.dgvProdutosAluga.Name = "dgvProdutosAluga";
+            this.dgvProdutosAluga.RowHeadersWidth = 50;
+            this.dgvProdutosAluga.Size = new System.Drawing.Size(745, 209);
+            this.dgvProdutosAluga.TabIndex = 12;
             // 
             // dgvCodAlug
             // 
@@ -389,7 +434,7 @@
             this.gbpDadoVenda.Controls.Add(this.btnFinalizarVenda);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoProduto);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoProduto);
-            this.gbpDadoVenda.Controls.Add(this.dgvDescreveProdutos);
+            this.gbpDadoVenda.Controls.Add(this.dgvProdutosVenda);
             this.gbpDadoVenda.Controls.Add(this.txtCpf);
             this.gbpDadoVenda.Controls.Add(this.lbCpfCliente);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
@@ -403,6 +448,33 @@
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
             this.gbpDadoVenda.Text = "Dados Venda";
+            // 
+            // numParcelas_Venda
+            // 
+            this.numParcelas_Venda.Location = new System.Drawing.Point(285, 401);
+            this.numParcelas_Venda.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numParcelas_Venda.Name = "numParcelas_Venda";
+            this.numParcelas_Venda.Size = new System.Drawing.Size(60, 23);
+            this.numParcelas_Venda.TabIndex = 29;
+            // 
+            // cbxFormasPagamentosCompra
+            // 
+            this.cbxFormasPagamentosCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFormasPagamentosCompra.FormattingEnabled = true;
+            this.cbxFormasPagamentosCompra.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cheque",
+            "Débito",
+            "Crédito",
+            "Boleto"});
+            this.cbxFormasPagamentosCompra.Location = new System.Drawing.Point(285, 362);
+            this.cbxFormasPagamentosCompra.Name = "cbxFormasPagamentosCompra";
+            this.cbxFormasPagamentosCompra.Size = new System.Drawing.Size(97, 24);
+            this.cbxFormasPagamentosCompra.TabIndex = 28;
             // 
             // lbNumeroParcelas
             // 
@@ -572,11 +644,11 @@
             this.lbCodigoProduto.TabIndex = 5;
             this.lbCodigoProduto.Text = "Produto : ";
             // 
-            // dgvDescreveProdutos
+            // dgvProdutosVenda
             // 
-            this.dgvDescreveProdutos.AllowUserToAddRows = false;
-            this.dgvDescreveProdutos.AllowUserToDeleteRows = false;
-            this.dgvDescreveProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProdutosVenda.AllowUserToAddRows = false;
+            this.dgvProdutosVenda.AllowUserToDeleteRows = false;
+            this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -584,8 +656,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDescreveProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDescreveProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
             this.dgvtbcDescricao,
             this.dgvtbcQuantidade,
@@ -598,14 +670,14 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDescreveProdutos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDescreveProdutos.Location = new System.Drawing.Point(8, 144);
-            this.dgvDescreveProdutos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDescreveProdutos.Name = "dgvDescreveProdutos";
-            this.dgvDescreveProdutos.RowHeadersWidth = 50;
-            this.dgvDescreveProdutos.RowTemplate.Height = 24;
-            this.dgvDescreveProdutos.Size = new System.Drawing.Size(745, 206);
-            this.dgvDescreveProdutos.TabIndex = 4;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProdutosVenda.Location = new System.Drawing.Point(8, 144);
+            this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProdutosVenda.Name = "dgvProdutosVenda";
+            this.dgvProdutosVenda.RowHeadersWidth = 50;
+            this.dgvProdutosVenda.RowTemplate.Height = 24;
+            this.dgvProdutosVenda.Size = new System.Drawing.Size(745, 206);
+            this.dgvProdutosVenda.TabIndex = 4;
             // 
             // dgvtbcCodigo
             // 
@@ -686,78 +758,6 @@
             this.tcVendaAluguel.Size = new System.Drawing.Size(772, 482);
             this.tcVendaAluguel.TabIndex = 0;
             // 
-            // cbxFormasPagamentosCompra
-            // 
-            this.cbxFormasPagamentosCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFormasPagamentosCompra.FormattingEnabled = true;
-            this.cbxFormasPagamentosCompra.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Cheque",
-            "Débito",
-            "Crédito",
-            "Boleto"});
-            this.cbxFormasPagamentosCompra.Location = new System.Drawing.Point(285, 362);
-            this.cbxFormasPagamentosCompra.Name = "cbxFormasPagamentosCompra";
-            this.cbxFormasPagamentosCompra.Size = new System.Drawing.Size(97, 24);
-            this.cbxFormasPagamentosCompra.TabIndex = 28;
-            // 
-            // numParcelas_Venda
-            // 
-            this.numParcelas_Venda.Location = new System.Drawing.Point(285, 401);
-            this.numParcelas_Venda.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numParcelas_Venda.Name = "numParcelas_Venda";
-            this.numParcelas_Venda.Size = new System.Drawing.Size(60, 23);
-            this.numParcelas_Venda.TabIndex = 29;
-            // 
-            // numParcelasAluguel
-            // 
-            this.numParcelasAluguel.Location = new System.Drawing.Point(291, 404);
-            this.numParcelasAluguel.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numParcelasAluguel.Name = "numParcelasAluguel";
-            this.numParcelasAluguel.Size = new System.Drawing.Size(60, 23);
-            this.numParcelasAluguel.TabIndex = 22;
-            // 
-            // cbxFormasPagamentoAluguel
-            // 
-            this.cbxFormasPagamentoAluguel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFormasPagamentoAluguel.FormattingEnabled = true;
-            this.cbxFormasPagamentoAluguel.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Cheque",
-            "Débito",
-            "Crédito",
-            "Boleto"});
-            this.cbxFormasPagamentoAluguel.Location = new System.Drawing.Point(291, 362);
-            this.cbxFormasPagamentoAluguel.Name = "cbxFormasPagamentoAluguel";
-            this.cbxFormasPagamentoAluguel.Size = new System.Drawing.Size(91, 24);
-            this.cbxFormasPagamentoAluguel.TabIndex = 23;
-            // 
-            // lbFormasPagamentoAluguel
-            // 
-            this.lbFormasPagamentoAluguel.AutoSize = true;
-            this.lbFormasPagamentoAluguel.Location = new System.Drawing.Point(113, 365);
-            this.lbFormasPagamentoAluguel.Name = "lbFormasPagamentoAluguel";
-            this.lbFormasPagamentoAluguel.Size = new System.Drawing.Size(177, 16);
-            this.lbFormasPagamentoAluguel.TabIndex = 24;
-            this.lbFormasPagamentoAluguel.Text = "Formas de Pagamento:";
-            // 
-            // lbNumParcelasAluguel
-            // 
-            this.lbNumParcelasAluguel.AutoSize = true;
-            this.lbNumParcelasAluguel.Location = new System.Drawing.Point(117, 407);
-            this.lbNumParcelasAluguel.Name = "lbNumParcelasAluguel";
-            this.lbNumParcelasAluguel.Size = new System.Drawing.Size(166, 16);
-            this.lbNumParcelasAluguel.TabIndex = 25;
-            this.lbNumParcelasAluguel.Text = "Números de Parcelas:";
-            // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,18 +777,18 @@
             this.abaAluguel.ResumeLayout(false);
             this.gpbAlug.ResumeLayout(false);
             this.gpbAlug.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoAlug)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlug)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosAluga)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDiasAlug)).EndInit();
             this.abaVenda.ResumeLayout(false);
             this.gbpDadoVenda.ResumeLayout(false);
             this.gbpDadoVenda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numParcelas_Venda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDescreveProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosVenda)).EndInit();
             this.tcVendaAluguel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numParcelas_Venda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -802,7 +802,7 @@
         private System.Windows.Forms.Button btnCancAlug;
         private System.Windows.Forms.TextBox txtTotalAluguel;
         private System.Windows.Forms.Label lbTotalAlug;
-        private System.Windows.Forms.DataGridView dgvAlug;
+        private System.Windows.Forms.DataGridView dgvProdutosAluga;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodAlug;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDescAlug;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiasAlug;
@@ -834,7 +834,7 @@
         private System.Windows.Forms.Button btnFinalizarVenda;
         private System.Windows.Forms.TextBox txtCodigoProduto;
         private System.Windows.Forms.Label lbCodigoProduto;
-        private System.Windows.Forms.DataGridView dgvDescreveProdutos;
+        private System.Windows.Forms.DataGridView dgvProdutosVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcQuantidade;

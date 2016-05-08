@@ -28,5 +28,11 @@ namespace LojaGames
             Dispose();
             telaP.Show();
         }
+
+        private void mtbCpfCliente_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
+             "Você está tentando inserir um caractere inválido ");
+        }
     }
 }

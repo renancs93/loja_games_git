@@ -93,9 +93,11 @@
             this.gpbDadosPessoais.Controls.Add(this.lbNome);
             this.gpbDadosPessoais.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbDadosPessoais.ForeColor = System.Drawing.Color.Black;
-            this.gpbDadosPessoais.Location = new System.Drawing.Point(12, 63);
+            this.gpbDadosPessoais.Location = new System.Drawing.Point(16, 78);
+            this.gpbDadosPessoais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gpbDadosPessoais.Name = "gpbDadosPessoais";
-            this.gpbDadosPessoais.Size = new System.Drawing.Size(604, 206);
+            this.gpbDadosPessoais.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDadosPessoais.Size = new System.Drawing.Size(805, 254);
             this.gpbDadosPessoais.TabIndex = 3;
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
@@ -103,10 +105,11 @@
             // mtbRG
             // 
             this.mtbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbRG.Location = new System.Drawing.Point(397, 67);
+            this.mtbRG.Location = new System.Drawing.Point(529, 82);
+            this.mtbRG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbRG.Mask = "99,999,999-99";
             this.mtbRG.Name = "mtbRG";
-            this.mtbRG.Size = new System.Drawing.Size(172, 23);
+            this.mtbRG.Size = new System.Drawing.Size(228, 27);
             this.mtbRG.TabIndex = 9;
             // 
             // dtpDataNascimento
@@ -114,29 +117,34 @@
             this.dtpDataNascimento.CustomFormat = "dd/mm/yyyy";
             this.dtpDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascimento.Location = new System.Drawing.Point(172, 109);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(229, 134);
+            this.dtpDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(139, 23);
+            this.dtpDataNascimento.Size = new System.Drawing.Size(184, 27);
             this.dtpDataNascimento.TabIndex = 11;
             this.dtpDataNascimento.Value = new System.DateTime(2016, 5, 5, 0, 0, 0, 0);
             // 
             // mtbTelefone
             // 
             this.mtbTelefone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefone.Location = new System.Drawing.Point(435, 107);
+            this.mtbTelefone.Location = new System.Drawing.Point(580, 132);
+            this.mtbTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbTelefone.Mask = "(99)9999-9999";
             this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(134, 23);
+            this.mtbTelefone.Size = new System.Drawing.Size(177, 27);
             this.mtbTelefone.TabIndex = 13;
+            this.mtbTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbTelefone_MaskInputRejected);
             // 
             // mtbCPF
             // 
             this.mtbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCPF.Location = new System.Drawing.Point(74, 70);
+            this.mtbCPF.Location = new System.Drawing.Point(99, 86);
+            this.mtbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbCPF.Mask = "999,999,999,99";
             this.mtbCPF.Name = "mtbCPF";
-            this.mtbCPF.Size = new System.Drawing.Size(237, 23);
+            this.mtbCPF.Size = new System.Drawing.Size(315, 27);
             this.mtbCPF.TabIndex = 7;
+            this.mtbCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPF_MaskInputRejected);
             // 
             // cbxStatus
             // 
@@ -149,9 +157,10 @@
             "Casado/a\t",
             "Solteiro/a",
             "Viúvo/a"});
-            this.cbxStatus.Location = new System.Drawing.Point(435, 139);
+            this.cbxStatus.Location = new System.Drawing.Point(580, 171);
+            this.cbxStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(134, 24);
+            this.cbxStatus.Size = new System.Drawing.Size(177, 26);
             this.cbxStatus.TabIndex = 18;
             // 
             // txtEmail
@@ -159,18 +168,20 @@
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(74, 175);
+            this.txtEmail.Location = new System.Drawing.Point(99, 215);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(495, 23);
+            this.txtEmail.Size = new System.Drawing.Size(659, 27);
             this.txtEmail.TabIndex = 20;
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Location = new System.Drawing.Point(6, 178);
+            this.lbEmail.Location = new System.Drawing.Point(8, 219);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(53, 16);
+            this.lbEmail.Size = new System.Drawing.Size(69, 20);
             this.lbEmail.TabIndex = 19;
             this.lbEmail.Text = "Email:";
             // 
@@ -178,9 +189,10 @@
             // 
             this.lbStatus.AutoSize = true;
             this.lbStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStatus.Location = new System.Drawing.Point(345, 143);
+            this.lbStatus.Location = new System.Drawing.Point(460, 176);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(60, 16);
+            this.lbStatus.Size = new System.Drawing.Size(77, 20);
             this.lbStatus.TabIndex = 17;
             this.lbStatus.Text = "Status:";
             // 
@@ -188,9 +200,10 @@
             // 
             this.rbntFeminino.AutoSize = true;
             this.rbntFeminino.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbntFeminino.Location = new System.Drawing.Point(211, 141);
+            this.rbntFeminino.Location = new System.Drawing.Point(281, 174);
+            this.rbntFeminino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbntFeminino.Name = "rbntFeminino";
-            this.rbntFeminino.Size = new System.Drawing.Size(83, 20);
+            this.rbntFeminino.Size = new System.Drawing.Size(109, 24);
             this.rbntFeminino.TabIndex = 16;
             this.rbntFeminino.TabStop = true;
             this.rbntFeminino.Text = "Feminino";
@@ -200,9 +213,10 @@
             // 
             this.rbntMasculino.AutoSize = true;
             this.rbntMasculino.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbntMasculino.Location = new System.Drawing.Point(67, 141);
+            this.rbntMasculino.Location = new System.Drawing.Point(89, 174);
+            this.rbntMasculino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbntMasculino.Name = "rbntMasculino";
-            this.rbntMasculino.Size = new System.Drawing.Size(90, 20);
+            this.rbntMasculino.Size = new System.Drawing.Size(114, 24);
             this.rbntMasculino.TabIndex = 15;
             this.rbntMasculino.TabStop = true;
             this.rbntMasculino.Text = "Masculino";
@@ -212,9 +226,10 @@
             // 
             this.lbSexo.AutoSize = true;
             this.lbSexo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSexo.Location = new System.Drawing.Point(6, 143);
+            this.lbSexo.Location = new System.Drawing.Point(8, 176);
+            this.lbSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSexo.Name = "lbSexo";
-            this.lbSexo.Size = new System.Drawing.Size(49, 16);
+            this.lbSexo.Size = new System.Drawing.Size(62, 20);
             this.lbSexo.TabIndex = 14;
             this.lbSexo.Text = "Sexo:";
             // 
@@ -222,9 +237,10 @@
             // 
             this.lbTelefone.AutoSize = true;
             this.lbTelefone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTelefone.Location = new System.Drawing.Point(345, 110);
+            this.lbTelefone.Location = new System.Drawing.Point(460, 135);
+            this.lbTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTelefone.Name = "lbTelefone";
-            this.lbTelefone.Size = new System.Drawing.Size(75, 16);
+            this.lbTelefone.Size = new System.Drawing.Size(98, 20);
             this.lbTelefone.TabIndex = 12;
             this.lbTelefone.Text = "Telefone:";
             // 
@@ -232,9 +248,10 @@
             // 
             this.lbDataNascimento.AutoSize = true;
             this.lbDataNascimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDataNascimento.Location = new System.Drawing.Point(6, 110);
+            this.lbDataNascimento.Location = new System.Drawing.Point(8, 135);
+            this.lbDataNascimento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDataNascimento.Name = "lbDataNascimento";
-            this.lbDataNascimento.Size = new System.Drawing.Size(159, 16);
+            this.lbDataNascimento.Size = new System.Drawing.Size(207, 20);
             this.lbDataNascimento.TabIndex = 10;
             this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
@@ -242,9 +259,10 @@
             // 
             this.lbRG.AutoSize = true;
             this.lbRG.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRG.Location = new System.Drawing.Point(345, 73);
+            this.lbRG.Location = new System.Drawing.Point(460, 90);
+            this.lbRG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRG.Name = "lbRG";
-            this.lbRG.Size = new System.Drawing.Size(32, 16);
+            this.lbRG.Size = new System.Drawing.Size(43, 20);
             this.lbRG.TabIndex = 8;
             this.lbRG.Text = "RG:";
             // 
@@ -252,9 +270,10 @@
             // 
             this.lbCPF.AutoSize = true;
             this.lbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCPF.Location = new System.Drawing.Point(6, 73);
+            this.lbCPF.Location = new System.Drawing.Point(8, 90);
+            this.lbCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCPF.Name = "lbCPF";
-            this.lbCPF.Size = new System.Drawing.Size(41, 16);
+            this.lbCPF.Size = new System.Drawing.Size(51, 20);
             this.lbCPF.TabIndex = 6;
             this.lbCPF.Text = "CPF:";
             // 
@@ -263,18 +282,20 @@
             this.txtNome.BackColor = System.Drawing.Color.White;
             this.txtNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.Black;
-            this.txtNome.Location = new System.Drawing.Point(74, 31);
+            this.txtNome.Location = new System.Drawing.Point(99, 38);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(495, 23);
+            this.txtNome.Size = new System.Drawing.Size(659, 27);
             this.txtNome.TabIndex = 5;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(6, 34);
+            this.lbNome.Location = new System.Drawing.Point(8, 42);
+            this.lbNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(55, 16);
+            this.lbNome.Size = new System.Drawing.Size(71, 20);
             this.lbNome.TabIndex = 4;
             this.lbNome.Text = "Nome:";
             // 
@@ -294,9 +315,11 @@
             this.gpbEndereco.Controls.Add(this.lbNumero);
             this.gpbEndereco.Controls.Add(this.lbRua);
             this.gpbEndereco.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbEndereco.Location = new System.Drawing.Point(12, 276);
+            this.gpbEndereco.Location = new System.Drawing.Point(16, 340);
+            this.gpbEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gpbEndereco.Name = "gpbEndereco";
-            this.gpbEndereco.Size = new System.Drawing.Size(604, 171);
+            this.gpbEndereco.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbEndereco.Size = new System.Drawing.Size(805, 210);
             this.gpbEndereco.TabIndex = 21;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
@@ -304,11 +327,13 @@
             // mtbCEP
             // 
             this.mtbCEP.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCEP.Location = new System.Drawing.Point(397, 93);
+            this.mtbCEP.Location = new System.Drawing.Point(529, 114);
+            this.mtbCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtbCEP.Mask = "00000-000";
             this.mtbCEP.Name = "mtbCEP";
-            this.mtbCEP.Size = new System.Drawing.Size(172, 23);
+            this.mtbCEP.Size = new System.Drawing.Size(228, 27);
             this.mtbCEP.TabIndex = 31;
+            this.mtbCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCEP_MaskInputRejected);
             // 
             // cbxEstado
             // 
@@ -345,18 +370,20 @@
             "São Paulo (SP)",
             "Sergipe (SE)",
             "Tocantins (TO)"});
-            this.cbxEstado.Location = new System.Drawing.Point(74, 93);
+            this.cbxEstado.Location = new System.Drawing.Point(99, 114);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(237, 24);
+            this.cbxEstado.Size = new System.Drawing.Size(315, 26);
             this.cbxEstado.TabIndex = 29;
             // 
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
             this.lbCEP.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCEP.Location = new System.Drawing.Point(345, 96);
+            this.lbCEP.Location = new System.Drawing.Point(460, 118);
+            this.lbCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCEP.Name = "lbCEP";
-            this.lbCEP.Size = new System.Drawing.Size(41, 16);
+            this.lbCEP.Size = new System.Drawing.Size(52, 20);
             this.lbCEP.TabIndex = 30;
             this.lbCEP.Text = "CEP:";
             // 
@@ -365,9 +392,10 @@
             this.txtCidade.BackColor = System.Drawing.Color.White;
             this.txtCidade.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.ForeColor = System.Drawing.Color.Black;
-            this.txtCidade.Location = new System.Drawing.Point(74, 126);
+            this.txtCidade.Location = new System.Drawing.Point(99, 155);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(495, 23);
+            this.txtCidade.Size = new System.Drawing.Size(659, 27);
             this.txtCidade.TabIndex = 33;
             // 
             // txtBairro
@@ -375,9 +403,10 @@
             this.txtBairro.BackColor = System.Drawing.Color.White;
             this.txtBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.ForeColor = System.Drawing.Color.Black;
-            this.txtBairro.Location = new System.Drawing.Point(211, 61);
+            this.txtBairro.Location = new System.Drawing.Point(281, 75);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(358, 23);
+            this.txtBairro.Size = new System.Drawing.Size(476, 27);
             this.txtBairro.TabIndex = 27;
             // 
             // txtNumero
@@ -385,18 +414,20 @@
             this.txtNumero.BackColor = System.Drawing.Color.White;
             this.txtNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
-            this.txtNumero.Location = new System.Drawing.Point(74, 61);
+            this.txtNumero.Location = new System.Drawing.Point(99, 75);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(64, 23);
+            this.txtNumero.Size = new System.Drawing.Size(84, 27);
             this.txtNumero.TabIndex = 25;
             // 
             // lbCidade
             // 
             this.lbCidade.AutoSize = true;
             this.lbCidade.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.Location = new System.Drawing.Point(6, 129);
+            this.lbCidade.Location = new System.Drawing.Point(8, 159);
+            this.lbCidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(63, 16);
+            this.lbCidade.Size = new System.Drawing.Size(80, 20);
             this.lbCidade.TabIndex = 32;
             this.lbCidade.Text = "Cidade:";
             // 
@@ -405,18 +436,20 @@
             this.txtRua.BackColor = System.Drawing.Color.White;
             this.txtRua.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRua.ForeColor = System.Drawing.Color.Black;
-            this.txtRua.Location = new System.Drawing.Point(74, 28);
+            this.txtRua.Location = new System.Drawing.Point(99, 34);
+            this.txtRua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(495, 23);
+            this.txtRua.Size = new System.Drawing.Size(659, 27);
             this.txtRua.TabIndex = 23;
             // 
             // lbBairro
             // 
             this.lbBairro.AutoSize = true;
             this.lbBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBairro.Location = new System.Drawing.Point(144, 64);
+            this.lbBairro.Location = new System.Drawing.Point(192, 79);
+            this.lbBairro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBairro.Name = "lbBairro";
-            this.lbBairro.Size = new System.Drawing.Size(57, 16);
+            this.lbBairro.Size = new System.Drawing.Size(74, 20);
             this.lbBairro.TabIndex = 26;
             this.lbBairro.Text = "Bairro:";
             // 
@@ -424,9 +457,10 @@
             // 
             this.lbEstado.AutoSize = true;
             this.lbEstado.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(6, 96);
+            this.lbEstado.Location = new System.Drawing.Point(8, 118);
+            this.lbEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(63, 16);
+            this.lbEstado.Size = new System.Drawing.Size(81, 20);
             this.lbEstado.TabIndex = 28;
             this.lbEstado.Text = "Estado:";
             // 
@@ -434,9 +468,10 @@
             // 
             this.lbNumero.AutoSize = true;
             this.lbNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNumero.Location = new System.Drawing.Point(6, 64);
+            this.lbNumero.Location = new System.Drawing.Point(8, 79);
+            this.lbNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNumero.Name = "lbNumero";
-            this.lbNumero.Size = new System.Drawing.Size(31, 16);
+            this.lbNumero.Size = new System.Drawing.Size(40, 20);
             this.lbNumero.TabIndex = 24;
             this.lbNumero.Text = "Nº:";
             // 
@@ -444,18 +479,20 @@
             // 
             this.lbRua.AutoSize = true;
             this.lbRua.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRua.Location = new System.Drawing.Point(6, 31);
+            this.lbRua.Location = new System.Drawing.Point(8, 38);
+            this.lbRua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRua.Name = "lbRua";
-            this.lbRua.Size = new System.Drawing.Size(40, 16);
+            this.lbRua.Size = new System.Drawing.Size(52, 20);
             this.lbRua.TabIndex = 22;
             this.lbRua.Text = "Rua:";
             // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(86, 454);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(115, 559);
+            this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(197, 58);
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(263, 71);
             this.btnCadastrarCliente.TabIndex = 34;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
@@ -464,9 +501,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(360, 455);
+            this.btnCancelar.Location = new System.Drawing.Point(480, 560);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(197, 58);
+            this.btnCancelar.Size = new System.Drawing.Size(263, 71);
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -475,18 +513,20 @@
             // pcbCadastroCliente
             // 
             this.pcbCadastroCliente.Image = global::LojaGames.Properties.Resources.img_cadastro_cliente;
-            this.pcbCadastroCliente.Location = new System.Drawing.Point(184, 12);
+            this.pcbCadastroCliente.Location = new System.Drawing.Point(245, 15);
+            this.pcbCadastroCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbCadastroCliente.Name = "pcbCadastroCliente";
-            this.pcbCadastroCliente.Size = new System.Drawing.Size(288, 40);
+            this.pcbCadastroCliente.Size = new System.Drawing.Size(384, 49);
             this.pcbCadastroCliente.TabIndex = 6;
             this.pcbCadastroCliente.TabStop = false;
             // 
             // pcbLogoGame
             // 
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoGame.Location = new System.Drawing.Point(12, 12);
+            this.pcbLogoGame.Location = new System.Drawing.Point(16, 15);
+            this.pcbLogoGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbLogoGame.Name = "pcbLogoGame";
-            this.pcbLogoGame.Size = new System.Drawing.Size(130, 40);
+            this.pcbLogoGame.Size = new System.Drawing.Size(173, 49);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoGame.TabIndex = 5;
             this.pcbLogoGame.TabStop = false;
@@ -495,9 +535,10 @@
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(510, 28);
+            this.lbCodigo.Location = new System.Drawing.Point(680, 34);
+            this.lbCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(63, 16);
+            this.lbCodigo.Size = new System.Drawing.Size(82, 20);
             this.lbCodigo.TabIndex = 0;
             this.lbCodigo.Text = "Código:";
             // 
@@ -505,18 +546,19 @@
             // 
             this.lbCodigoNumero.AutoSize = true;
             this.lbCodigoNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigoNumero.Location = new System.Drawing.Point(579, 28);
+            this.lbCodigoNumero.Location = new System.Drawing.Point(772, 34);
+            this.lbCodigoNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
-            this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
+            this.lbCodigoNumero.Size = new System.Drawing.Size(21, 20);
             this.lbCodigoNumero.TabIndex = 1;
             this.lbCodigoNumero.Text = "1";
             // 
             // telaCadastroCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(634, 532);
+            this.ClientSize = new System.Drawing.Size(845, 655);
             this.Controls.Add(this.lbCodigoNumero);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.pcbCadastroCliente);
@@ -526,6 +568,7 @@
             this.Controls.Add(this.gpbEndereco);
             this.Controls.Add(this.gpbDadosPessoais);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaCadastroCliente";

@@ -33,12 +33,12 @@
             this.gbxResultado = new System.Windows.Forms.GroupBox();
             this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.gbxDadosVendaAluga = new System.Windows.Forms.GroupBox();
-            this.gpbPeriodo = new System.Windows.Forms.GroupBox();
+            this.gbxPeriodo = new System.Windows.Forms.GroupBox();
             this.dtpAte = new System.Windows.Forms.DateTimePicker();
             this.lbAte = new System.Windows.Forms.Label();
             this.lbDe = new System.Windows.Forms.Label();
             this.dtpDe = new System.Windows.Forms.DateTimePicker();
-            this.btnEncontrar = new System.Windows.Forms.Button();
+            this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.gbxTipo = new System.Windows.Forms.GroupBox();
             this.ckbAluguel = new System.Windows.Forms.CheckBox();
             this.ckbVenda = new System.Windows.Forms.CheckBox();
@@ -55,7 +55,7 @@
             this.gbxResultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.gbxDadosVendaAluga.SuspendLayout();
-            this.gpbPeriodo.SuspendLayout();
+            this.gbxPeriodo.SuspendLayout();
             this.gbxTipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +73,10 @@
             // 
             this.abaRelatorioVendaAluga.Controls.Add(this.gbxResultado);
             this.abaRelatorioVendaAluga.Controls.Add(this.gbxDadosVendaAluga);
-            this.abaRelatorioVendaAluga.Location = new System.Drawing.Point(4, 22);
+            this.abaRelatorioVendaAluga.Location = new System.Drawing.Point(4, 26);
             this.abaRelatorioVendaAluga.Name = "abaRelatorioVendaAluga";
             this.abaRelatorioVendaAluga.Padding = new System.Windows.Forms.Padding(3);
-            this.abaRelatorioVendaAluga.Size = new System.Drawing.Size(554, 476);
+            this.abaRelatorioVendaAluga.Size = new System.Drawing.Size(554, 472);
             this.abaRelatorioVendaAluga.TabIndex = 0;
             this.abaRelatorioVendaAluga.Text = "Venda / Aluguel";
             this.abaRelatorioVendaAluga.UseVisualStyleBackColor = true;
@@ -102,8 +102,8 @@
             // 
             // gbxDadosVendaAluga
             // 
-            this.gbxDadosVendaAluga.Controls.Add(this.gpbPeriodo);
-            this.gbxDadosVendaAluga.Controls.Add(this.btnEncontrar);
+            this.gbxDadosVendaAluga.Controls.Add(this.gbxPeriodo);
+            this.gbxDadosVendaAluga.Controls.Add(this.btnGerarRelatorio);
             this.gbxDadosVendaAluga.Controls.Add(this.gbxTipo);
             this.gbxDadosVendaAluga.Controls.Add(this.mtbCpfCliente);
             this.gbxDadosVendaAluga.Controls.Add(this.lbCpfCliente);
@@ -119,25 +119,25 @@
             this.gbxDadosVendaAluga.TabStop = false;
             this.gbxDadosVendaAluga.Text = "Dados";
             // 
-            // gpbPeriodo
+            // gbxPeriodo
             // 
-            this.gpbPeriodo.Controls.Add(this.dtpAte);
-            this.gpbPeriodo.Controls.Add(this.lbAte);
-            this.gpbPeriodo.Controls.Add(this.lbDe);
-            this.gpbPeriodo.Controls.Add(this.dtpDe);
-            this.gpbPeriodo.Location = new System.Drawing.Point(107, 71);
-            this.gpbPeriodo.Name = "gpbPeriodo";
-            this.gpbPeriodo.Size = new System.Drawing.Size(190, 76);
-            this.gpbPeriodo.TabIndex = 8;
-            this.gpbPeriodo.TabStop = false;
-            this.gpbPeriodo.Text = "Período";
+            this.gbxPeriodo.Controls.Add(this.dtpAte);
+            this.gbxPeriodo.Controls.Add(this.lbAte);
+            this.gbxPeriodo.Controls.Add(this.lbDe);
+            this.gbxPeriodo.Controls.Add(this.dtpDe);
+            this.gbxPeriodo.Location = new System.Drawing.Point(107, 71);
+            this.gbxPeriodo.Name = "gbxPeriodo";
+            this.gbxPeriodo.Size = new System.Drawing.Size(190, 76);
+            this.gbxPeriodo.TabIndex = 8;
+            this.gbxPeriodo.TabStop = false;
+            this.gbxPeriodo.Text = "Período";
             // 
             // dtpAte
             // 
             this.dtpAte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpAte.Location = new System.Drawing.Point(56, 43);
             this.dtpAte.Name = "dtpAte";
-            this.dtpAte.Size = new System.Drawing.Size(117, 23);
+            this.dtpAte.Size = new System.Drawing.Size(117, 27);
             this.dtpAte.TabIndex = 3;
             this.dtpAte.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
@@ -146,7 +146,7 @@
             this.lbAte.AutoSize = true;
             this.lbAte.Location = new System.Drawing.Point(9, 48);
             this.lbAte.Name = "lbAte";
-            this.lbAte.Size = new System.Drawing.Size(38, 16);
+            this.lbAte.Size = new System.Drawing.Size(48, 20);
             this.lbAte.TabIndex = 2;
             this.lbAte.Text = "Até:";
             // 
@@ -155,7 +155,7 @@
             this.lbDe.AutoSize = true;
             this.lbDe.Location = new System.Drawing.Point(9, 22);
             this.lbDe.Name = "lbDe";
-            this.lbDe.Size = new System.Drawing.Size(32, 16);
+            this.lbDe.Size = new System.Drawing.Size(41, 20);
             this.lbDe.TabIndex = 1;
             this.lbDe.Text = "De:";
             // 
@@ -164,18 +164,18 @@
             this.dtpDe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDe.Location = new System.Drawing.Point(57, 16);
             this.dtpDe.Name = "dtpDe";
-            this.dtpDe.Size = new System.Drawing.Size(116, 23);
+            this.dtpDe.Size = new System.Drawing.Size(116, 27);
             this.dtpDe.TabIndex = 0;
             this.dtpDe.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
-            // btnEncontrar
+            // btnGerarRelatorio
             // 
-            this.btnEncontrar.Location = new System.Drawing.Point(418, 115);
-            this.btnEncontrar.Name = "btnEncontrar";
-            this.btnEncontrar.Size = new System.Drawing.Size(87, 23);
-            this.btnEncontrar.TabIndex = 7;
-            this.btnEncontrar.Text = "Encontrar";
-            this.btnEncontrar.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(317, 87);
+            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(87, 23);
+            this.btnGerarRelatorio.TabIndex = 7;
+            this.btnGerarRelatorio.Text = "Gerar Relatorio";
+            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
             // 
             // gbxTipo
             // 
@@ -193,7 +193,7 @@
             this.ckbAluguel.AutoSize = true;
             this.ckbAluguel.Location = new System.Drawing.Point(8, 48);
             this.ckbAluguel.Name = "ckbAluguel";
-            this.ckbAluguel.Size = new System.Drawing.Size(81, 20);
+            this.ckbAluguel.Size = new System.Drawing.Size(103, 24);
             this.ckbAluguel.TabIndex = 1;
             this.ckbAluguel.Text = "Aluguel";
             this.ckbAluguel.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.ckbVenda.AutoSize = true;
             this.ckbVenda.Location = new System.Drawing.Point(8, 21);
             this.ckbVenda.Name = "ckbVenda";
-            this.ckbVenda.Size = new System.Drawing.Size(73, 20);
+            this.ckbVenda.Size = new System.Drawing.Size(90, 24);
             this.ckbVenda.TabIndex = 0;
             this.ckbVenda.Text = "Venda";
             this.ckbVenda.UseVisualStyleBackColor = true;
@@ -214,15 +214,16 @@
             this.mtbCpfCliente.Location = new System.Drawing.Point(377, 14);
             this.mtbCpfCliente.Mask = "999,999,999-99";
             this.mtbCpfCliente.Name = "mtbCpfCliente";
-            this.mtbCpfCliente.Size = new System.Drawing.Size(128, 23);
+            this.mtbCpfCliente.Size = new System.Drawing.Size(128, 27);
             this.mtbCpfCliente.TabIndex = 5;
+            this.mtbCpfCliente.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCpfCliente_MaskInputRejected);
             // 
             // lbCpfCliente
             // 
             this.lbCpfCliente.AutoSize = true;
             this.lbCpfCliente.Location = new System.Drawing.Point(258, 17);
             this.lbCpfCliente.Name = "lbCpfCliente";
-            this.lbCpfCliente.Size = new System.Drawing.Size(113, 16);
+            this.lbCpfCliente.Size = new System.Drawing.Size(146, 20);
             this.lbCpfCliente.TabIndex = 4;
             this.lbCpfCliente.Text = "CPF do Cliente";
             // 
@@ -231,7 +232,7 @@
             this.txtCodVendaAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodVendaAluga.Location = new System.Drawing.Point(206, 14);
             this.txtCodVendaAluga.Name = "txtCodVendaAluga";
-            this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 23);
+            this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 27);
             this.txtCodVendaAluga.TabIndex = 3;
             // 
             // lbCodigoVendaAluguel
@@ -239,7 +240,7 @@
             this.lbCodigoVendaAluguel.AutoSize = true;
             this.lbCodigoVendaAluguel.Location = new System.Drawing.Point(7, 17);
             this.lbCodigoVendaAluguel.Name = "lbCodigoVendaAluguel";
-            this.lbCodigoVendaAluguel.Size = new System.Drawing.Size(193, 16);
+            this.lbCodigoVendaAluguel.Size = new System.Drawing.Size(253, 20);
             this.lbCodigoVendaAluguel.TabIndex = 2;
             this.lbCodigoVendaAluguel.Text = "Código de Venda/Aluguel";
             // 
@@ -248,7 +249,7 @@
             this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCliente.Location = new System.Drawing.Point(118, 44);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(387, 23);
+            this.txtNomeCliente.Size = new System.Drawing.Size(387, 27);
             this.txtNomeCliente.TabIndex = 1;
             // 
             // lbNomeCliente
@@ -256,7 +257,7 @@
             this.lbNomeCliente.AutoSize = true;
             this.lbNomeCliente.Location = new System.Drawing.Point(7, 44);
             this.lbNomeCliente.Name = "lbNomeCliente";
-            this.lbNomeCliente.Size = new System.Drawing.Size(105, 16);
+            this.lbNomeCliente.Size = new System.Drawing.Size(136, 20);
             this.lbNomeCliente.TabIndex = 0;
             this.lbNomeCliente.Text = "Nome Cliente";
             // 
@@ -283,10 +284,10 @@
             // 
             // telaRelatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(570, 553);
+            this.ClientSize = new System.Drawing.Size(573, 553);
             this.Controls.Add(this.pcbGameLogo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.tcVendaAluguel);
@@ -301,8 +302,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.gbxDadosVendaAluga.ResumeLayout(false);
             this.gbxDadosVendaAluga.PerformLayout();
-            this.gpbPeriodo.ResumeLayout(false);
-            this.gpbPeriodo.PerformLayout();
+            this.gbxPeriodo.ResumeLayout(false);
+            this.gbxPeriodo.PerformLayout();
             this.gbxTipo.ResumeLayout(false);
             this.gbxTipo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).EndInit();
@@ -328,8 +329,8 @@
         private System.Windows.Forms.CheckBox ckbVenda;
         private System.Windows.Forms.GroupBox gbxResultado;
         private System.Windows.Forms.DataGridView dgvResultado;
-        private System.Windows.Forms.Button btnEncontrar;
-        private System.Windows.Forms.GroupBox gpbPeriodo;
+        private System.Windows.Forms.Button btnGerarRelatorio;
+        private System.Windows.Forms.GroupBox gbxPeriodo;
         private System.Windows.Forms.DateTimePicker dtpDe;
         private System.Windows.Forms.Label lbAte;
         private System.Windows.Forms.Label lbDe;

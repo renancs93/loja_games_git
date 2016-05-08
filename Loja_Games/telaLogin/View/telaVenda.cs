@@ -129,5 +129,17 @@ namespace LojaGames
             }
 
         }
+
+        private void mtbCPFVenda_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
+             "Você está tentando inserir um caractere inválido ");
+        }
+
+        private void mtbCPFAluguel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
+             "Você está tentando inserir um caractere inválido ");
+        }
     }
 }

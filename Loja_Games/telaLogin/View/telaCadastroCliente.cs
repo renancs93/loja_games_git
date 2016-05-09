@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LojaGames
@@ -17,8 +18,8 @@ namespace LojaGames
             string MensagemErro = "";
 
             MensagemErro = ClasseUtil.ValidaCampos(Controls);
-            
-            if(MensagemErro == "")
+
+            if (MensagemErro == "")
             {
                 MessageBox.Show("Cliente Cadastrado com Sucesso!");
                 telaP.Show();
@@ -28,20 +29,20 @@ namespace LojaGames
             {
                 MessageBox.Show(MensagemErro);
             }
-            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult sair = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Sair?", "Sair" ,MessageBoxButtons.YesNo ,MessageBoxIcon.Question);
+            DialogResult sair = MessageBox.Show("Os dados serão perdidos!\nDeseja realmente Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            
-            if(sair == DialogResult.Yes)
+
+            if (sair == DialogResult.Yes)
             {
                 telaP.Show();//exibi a telaPrincipal setada no metodo setTelaPrincipal desse form
                 Close();//fecha esse form
             }
-            
+
 
         }
 
@@ -78,6 +79,30 @@ namespace LojaGames
         {
             MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
              "Você está tentando inserir um caractere inválido ");
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtNumero.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
         }
     }
 }

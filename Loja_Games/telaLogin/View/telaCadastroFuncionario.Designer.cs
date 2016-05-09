@@ -446,6 +446,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(56, 23);
             this.txtNumero.TabIndex = 11;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // lbNumero
             // 
@@ -521,6 +522,7 @@
             this.txtSalarioBase.Name = "txtSalarioBase";
             this.txtSalarioBase.Size = new System.Drawing.Size(149, 23);
             this.txtSalarioBase.TabIndex = 17;
+            this.txtSalarioBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioBase_KeyPress);
             // 
             // lbSalarioBase
             // 

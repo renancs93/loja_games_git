@@ -234,6 +234,7 @@
             this.txtCodVendaAluga.Name = "txtCodVendaAluga";
             this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 23);
             this.txtCodVendaAluga.TabIndex = 3;
+            this.txtCodVendaAluga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodVendaAluga_KeyPress);
             // 
             // lbCodigoVendaAluguel
             // 

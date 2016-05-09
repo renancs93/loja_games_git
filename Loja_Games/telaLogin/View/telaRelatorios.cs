@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LojaGames
@@ -33,6 +34,30 @@ namespace LojaGames
         {
             MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
              "Você está tentando inserir um caractere inválido ");
+        }
+
+        private void txtCodVendaAluga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtCodVendaAluga.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
         }
     }
 }

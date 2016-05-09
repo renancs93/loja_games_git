@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaJogos));
             this.paginaAbasJogos = new System.Windows.Forms.TabControl();
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
-            this.mtbPreco = new System.Windows.Forms.MaskedTextBox();
             this.pbGameLogo = new System.Windows.Forms.PictureBox();
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
@@ -89,6 +88,7 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGameLogo)).BeginInit();
@@ -118,7 +118,7 @@
             // 
             // abaCadastraJogos
             // 
-            this.abaCadastraJogos.Controls.Add(this.mtbPreco);
+            this.abaCadastraJogos.Controls.Add(this.txtPreco);
             this.abaCadastraJogos.Controls.Add(this.pbGameLogo);
             this.abaCadastraJogos.Controls.Add(this.lbCodigoNumero);
             this.abaCadastraJogos.Controls.Add(this.lbCodigo);
@@ -140,15 +140,6 @@
             this.abaCadastraJogos.TabIndex = 0;
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
             this.abaCadastraJogos.UseVisualStyleBackColor = true;
-            // 
-            // mtbPreco
-            // 
-            this.mtbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbPreco.Location = new System.Drawing.Point(549, 22);
-            this.mtbPreco.Name = "mtbPreco";
-            this.mtbPreco.Size = new System.Drawing.Size(106, 23);
-            this.mtbPreco.TabIndex = 15;
-            this.mtbPreco.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbPreco_MaskInputRejected);
             // 
             // pbGameLogo
             // 
@@ -809,6 +800,15 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
+            // txtPreco
+            // 
+            this.txtPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(548, 23);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 23);
+            this.txtPreco.TabIndex = 15;
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
+            // 
             // telaJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -910,6 +910,6 @@
         private System.Windows.Forms.DateTimePicker dtpDataLancamento;
         private System.Windows.Forms.Label lbDataLancamento;
         private System.Windows.Forms.PictureBox pbGameLogo;
-        private System.Windows.Forms.MaskedTextBox mtbPreco;
+        private System.Windows.Forms.TextBox txtPreco;
     }
 }

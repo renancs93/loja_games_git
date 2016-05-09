@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LojaGames
 {
     public partial class telaJogos : System.Windows.Forms.Form
     {
-        private System.Windows.Forms.Form TelaP = null; 
+        private System.Windows.Forms.Form TelaP = null;
+        double valor;
 
         public telaJogos()
         {
@@ -189,6 +190,30 @@ namespace LojaGames
         {
             MessageBox.Show("Apenas digitos de 0 a 9 são aceitos neste campo. \n\n" +
                 "Você está tentando inserir um caractere inválido. ");
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtPreco.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
         }
     }
     

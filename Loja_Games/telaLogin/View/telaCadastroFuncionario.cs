@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LojaGames
@@ -86,6 +80,54 @@ namespace LojaGames
         {
             MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
              "Você está tentando inserir um caractere inválido ");
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtNumero.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
+
+        private void txtSalarioBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtSalarioBase.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
         }
     }
 }

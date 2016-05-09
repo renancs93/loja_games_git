@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
             this.mtbCPFAluguel = new System.Windows.Forms.MaskedTextBox();
@@ -110,9 +110,9 @@
             // 
             this.abaAluguel.Controls.Add(this.gpbAlug);
             this.abaAluguel.Location = new System.Drawing.Point(4, 25);
-            this.abaAluguel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Name = "abaAluguel";
-            this.abaAluguel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaAluguel.Padding = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Size = new System.Drawing.Size(764, 453);
             this.abaAluguel.TabIndex = 1;
             this.abaAluguel.Text = "Aluguel";
@@ -243,6 +243,7 @@
             this.txtTotalAluguel.Name = "txtTotalAluguel";
             this.txtTotalAluguel.Size = new System.Drawing.Size(93, 27);
             this.txtTotalAluguel.TabIndex = 18;
+            this.txtTotalAluguel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalAluguel_KeyPress);
             // 
             // lbTotalAlug
             // 
@@ -260,14 +261,14 @@
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
@@ -335,6 +336,7 @@
             this.txtCodAlug.Name = "txtCodAlug";
             this.txtCodAlug.Size = new System.Drawing.Size(87, 23);
             this.txtCodAlug.TabIndex = 8;
+            this.txtCodAlug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodAlug_KeyPress);
             // 
             // txtFuncAlug
             // 
@@ -402,9 +404,9 @@
             // 
             this.abaVenda.Controls.Add(this.gbpDadoVenda);
             this.abaVenda.Location = new System.Drawing.Point(4, 25);
-            this.abaVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaVenda.Margin = new System.Windows.Forms.Padding(2);
             this.abaVenda.Name = "abaVenda";
-            this.abaVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.abaVenda.Padding = new System.Windows.Forms.Padding(2);
             this.abaVenda.Size = new System.Drawing.Size(764, 453);
             this.abaVenda.TabIndex = 0;
             this.abaVenda.Text = "Venda";
@@ -442,9 +444,9 @@
             this.gbpDadoVenda.Controls.Add(this.lbCodigoVenda);
             this.gbpDadoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbpDadoVenda.Location = new System.Drawing.Point(4, 4);
-            this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Name = "gbpDadoVenda";
-            this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Size = new System.Drawing.Size(756, 442);
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
@@ -502,6 +504,7 @@
             this.txtValorParcela.Name = "txtValorParcela";
             this.txtValorParcela.Size = new System.Drawing.Size(92, 26);
             this.txtValorParcela.TabIndex = 26;
+            this.txtValorParcela.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorParcela_KeyPress);
             // 
             // lbValorParcela
             // 
@@ -567,15 +570,16 @@
             this.txtTotalCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalCompra.ForeColor = System.Drawing.Color.Red;
             this.txtTotalCompra.Location = new System.Drawing.Point(501, 394);
-            this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(92, 27);
             this.txtTotalCompra.TabIndex = 15;
+            this.txtTotalCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalCompra_KeyPress);
             // 
             // btnAdicionarItem
             // 
             this.btnAdicionarItem.Location = new System.Drawing.Point(612, 90);
-            this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionarItem.Name = "btnAdicionarItem";
             this.btnAdicionarItem.Size = new System.Drawing.Size(137, 50);
             this.btnAdicionarItem.TabIndex = 12;
@@ -587,7 +591,7 @@
             // 
             this.txtCodigoFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoFuncionario.Location = new System.Drawing.Point(386, 40);
-            this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
             this.txtCodigoFuncionario.Size = new System.Drawing.Size(122, 23);
             this.txtCodigoFuncionario.TabIndex = 11;
@@ -605,7 +609,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(649, 354);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 37);
             this.btnCancelar.TabIndex = 9;
@@ -616,7 +620,7 @@
             // btnRemoverItem
             // 
             this.btnRemoverItem.Location = new System.Drawing.Point(612, 52);
-            this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverItem.Name = "btnRemoverItem";
             this.btnRemoverItem.Size = new System.Drawing.Size(137, 34);
             this.btnRemoverItem.TabIndex = 8;
@@ -627,7 +631,7 @@
             // btnFinalizarVenda
             // 
             this.btnFinalizarVenda.Location = new System.Drawing.Point(607, 394);
-            this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(142, 43);
             this.btnFinalizarVenda.TabIndex = 7;
@@ -639,7 +643,7 @@
             // 
             this.txtCodigoProduto.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoProduto.Location = new System.Drawing.Point(126, 75);
-            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(134, 23);
             this.txtCodigoProduto.TabIndex = 6;
@@ -659,30 +663,30 @@
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
             this.dgvtbcDescricao,
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvProdutosVenda.Location = new System.Drawing.Point(8, 144);
-            this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProdutosVenda.Name = "dgvProdutosVenda";
             this.dgvProdutosVenda.RowHeadersWidth = 50;
             this.dgvProdutosVenda.RowTemplate.Height = 24;
@@ -729,10 +733,11 @@
             this.txtCodigoVenda.Enabled = false;
             this.txtCodigoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoVenda.Location = new System.Drawing.Point(668, 14);
-            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoVenda.Name = "txtCodigoVenda";
             this.txtCodigoVenda.Size = new System.Drawing.Size(81, 23);
             this.txtCodigoVenda.TabIndex = 1;
+            this.txtCodigoVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoVenda_KeyPress);
             // 
             // lbCodigoVenda
             // 
@@ -753,7 +758,7 @@
             this.tcVendaAluguel.Controls.Add(this.abaAluguel);
             this.tcVendaAluguel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcVendaAluguel.Location = new System.Drawing.Point(-2, 0);
-            this.tcVendaAluguel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcVendaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.tcVendaAluguel.Name = "tcVendaAluguel";
             this.tcVendaAluguel.SelectedIndex = 0;
             this.tcVendaAluguel.Size = new System.Drawing.Size(772, 482);
@@ -767,7 +772,7 @@
             this.ClientSize = new System.Drawing.Size(770, 482);
             this.Controls.Add(this.tcVendaAluguel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaVenda";

@@ -95,7 +95,7 @@ namespace LojaGames
                 {
                     if (!txtNumero.Text.Contains(','))
                     {
-                        e.KeyChar = ',';
+                        e.KeyChar = (Char)0;
                     }
                     else
                     {

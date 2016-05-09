@@ -143,30 +143,6 @@ namespace LojaGames
              "Você está tentando inserir um caractere inválido ");
         }
 
-        private void txtCodigoVenda_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
-              (e.KeyChar != ',' && e.KeyChar != '.' &&
-               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
-            {
-                e.KeyChar = (Char)0;
-            }
-            else
-            {
-                if (e.KeyChar == '.' || e.KeyChar == ',')
-                {
-                    if (!txtCodigoVenda.Text.Contains(','))
-                    {
-                        e.KeyChar = ',';
-                    }
-                    else
-                    {
-                        e.KeyChar = (Char)0;
-                    }
-                }
-            }
-        }
-
         private void txtValorParcela_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') &&
@@ -215,30 +191,6 @@ namespace LojaGames
             }
         }
 
-        private void txtCodAlug_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
-              (e.KeyChar != ',' && e.KeyChar != '.' &&
-               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
-            {
-                e.KeyChar = (Char)0;
-            }
-            else
-            {
-                if (e.KeyChar == '.' || e.KeyChar == ',')
-                {
-                    if (!txtCodAlug.Text.Contains(','))
-                    {
-                        e.KeyChar = ',';
-                    }
-                    else
-                    {
-                        e.KeyChar = (Char)0;
-                    }
-                }
-            }
-        }
-
         private void txtTotalAluguel_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') &&
@@ -254,6 +206,102 @@ namespace LojaGames
                     if (!txtTotalAluguel.Text.Contains(','))
                     {
                         e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
+
+        private void txtCodigoFuncionario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtCodigoFuncionario.Text.Contains(','))
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
+
+        private void txtCodigoProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtCodigoProduto.Text.Contains(','))
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
+
+        private void txtProdAlug_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtProdAlug.Text.Contains(','))
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
+
+        private void txtFuncAlug_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtFuncAlug.Text.Contains(','))
+                    {
+                        e.KeyChar = (Char)0;
                     }
                     else
                     {

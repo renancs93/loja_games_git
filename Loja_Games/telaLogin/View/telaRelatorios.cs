@@ -50,7 +50,7 @@ namespace LojaGames
                 {
                     if (!txtCodVendaAluga.Text.Contains(','))
                     {
-                        e.KeyChar = ',';
+                        e.KeyChar = (Char)0;
                     }
                     else
                     {

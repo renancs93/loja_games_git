@@ -145,7 +145,6 @@
             // 
             this.mtbPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPreco.Location = new System.Drawing.Point(549, 22);
-            this.mtbPreco.Mask = "$000,00";
             this.mtbPreco.Name = "mtbPreco";
             this.mtbPreco.Size = new System.Drawing.Size(106, 23);
             this.mtbPreco.TabIndex = 15;

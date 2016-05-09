@@ -39,9 +39,9 @@ namespace LojaGames
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             string nome = txtNomeCliente.Text;
-            string cpf = mtbCPFCliente.ToString();
+            string cpf = mtbCPFCliente.Text;
 
-            if((nome == string.Empty)||(cpf == string.Empty))
+            if((nome == string.Empty)&&(cpf == string.Empty))
             {
                 MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
             }

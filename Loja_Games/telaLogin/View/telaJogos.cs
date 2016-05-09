@@ -144,21 +144,24 @@ namespace LojaGames
 
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e) //mostrar para o grupo
         {
+            string mensagemErro = ClasseUtil.ValidaCampos(Controls);
+
+
             DialogResult salvar = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             
             if(salvar == DialogResult.Yes)
             {
-                MessageBox.Show("Cadastrado com Sucesso!");
+                if(mensagemErro == "")
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                else
+                    MessageBox.Show(mensagemErro);
             }
             else if(salvar == DialogResult.No)
             {
                 MessageBox.Show("Jogo não salvo!");
             }
-
-            
-
         }
 
         //irá setar abrir a aba de cadastro jogo com os dados setados nos campos do jogo na qual a linha no dataGrid estiver selecionada.
@@ -180,6 +183,12 @@ namespace LojaGames
             //padroniza a ativação dos botões ao carregar a tela
             btnCadastrar.Enabled = true;
             btnAlteracoes.Enabled = false;
+        }
+
+        private void mtbPreco_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Apenas digitos de 0 a 9 são aceitos neste campo. \n\n" +
+                "Você está tentando inserir um caractere inválido. ");
         }
     }
     

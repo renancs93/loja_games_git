@@ -86,7 +86,7 @@
             this.tabExibeBuscaCliente.Controls.Add(this.gbxBuscarClientes);
             this.tabExibeBuscaCliente.Location = new System.Drawing.Point(4, 24);
             this.tabExibeBuscaCliente.Name = "tabExibeBuscaCliente";
-            this.tabExibeBuscaCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabExibeBuscaCliente.Padding = new System.Windows.Forms.Padding(3);
             this.tabExibeBuscaCliente.Size = new System.Drawing.Size(473, 405);
             this.tabExibeBuscaCliente.TabIndex = 0;
             this.tabExibeBuscaCliente.Text = "Clientes";
@@ -174,7 +174,7 @@
             // 
             this.mtbCPFCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPFCliente.Location = new System.Drawing.Point(119, 33);
-            this.mtbCPFCliente.Mask = "999,999,999-99";
+            this.mtbCPFCliente.Mask = "000,000,000-00";
             this.mtbCPFCliente.Name = "mtbCPFCliente";
             this.mtbCPFCliente.Size = new System.Drawing.Size(123, 23);
             this.mtbCPFCliente.TabIndex = 1;
@@ -228,7 +228,7 @@
             this.tabExibeBuscaFunc.Controls.Add(this.gpbBuscaFuncionario);
             this.tabExibeBuscaFunc.Location = new System.Drawing.Point(4, 24);
             this.tabExibeBuscaFunc.Name = "tabExibeBuscaFunc";
-            this.tabExibeBuscaFunc.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabExibeBuscaFunc.Padding = new System.Windows.Forms.Padding(3);
             this.tabExibeBuscaFunc.Size = new System.Drawing.Size(473, 405);
             this.tabExibeBuscaFunc.TabIndex = 1;
             this.tabExibeBuscaFunc.Text = "Funcionários";
@@ -333,7 +333,7 @@
             // 
             this.mtbCPFFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPFFuncionario.Location = new System.Drawing.Point(147, 32);
-            this.mtbCPFFuncionario.Mask = "999,999,999-99";
+            this.mtbCPFFuncionario.Mask = "000,000,000-00";
             this.mtbCPFFuncionario.Name = "mtbCPFFuncionario";
             this.mtbCPFFuncionario.Size = new System.Drawing.Size(115, 23);
             this.mtbCPFFuncionario.TabIndex = 1;

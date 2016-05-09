@@ -159,7 +159,7 @@
             // 
             this.mtbCPF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPF.Location = new System.Drawing.Point(74, 63);
-            this.mtbCPF.Mask = "999,999,999,99";
+            this.mtbCPF.Mask = "000,000,000-00";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(218, 23);
             this.mtbCPF.TabIndex = 2;

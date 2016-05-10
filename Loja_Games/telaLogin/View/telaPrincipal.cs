@@ -204,10 +204,12 @@ namespace LojaGames
             if (ativarBotoes == true)
             {
                 btnLogarUsuario.BackColor = Color.Green;
+                btnLogarUsuario.Enabled = false;
                 btnLogoff.Enabled = ativarBotoes;
             }
             else
             {
+                btnLogarUsuario.Enabled = true;
                 btnLogarUsuario.BackColor = Color.Gold;
                 btnLogoff.Enabled = ativarBotoes;
             }

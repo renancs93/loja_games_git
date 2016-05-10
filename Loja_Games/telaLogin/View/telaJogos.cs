@@ -106,13 +106,25 @@ namespace LojaGames
         {
             DialogResult Confirmar = MessageBox.Show("As informações do Jogo serão alteradas!\nDeseja realmente salvar?", "Confirmar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-            if(Confirmar == DialogResult.Yes)
+            //chama o metodo da classe útil e valida se os campos (textBox) estão preenchido
+            string mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+
+            if (Confirmar == DialogResult.Yes)
             {
-                //salvar as aterações no jogo e voltar para aba de exibição de jogos
-                btnCadastrar.Enabled = true;
-                MessageBox.Show("Jogo alterado com Sucesso!");
-            
-                paginaAbasJogos.SelectTab(abaExibeJogos);
+                if(mensagemErro == "")
+                {
+                    //salvar as aterações no jogo e voltar para aba de exibição de jogos
+                    btnCadastrar.Enabled = true;
+                    MessageBox.Show("Jogo alterado com Sucesso!");
+
+                    paginaAbasJogos.SelectTab(abaExibeJogos);
+
+                    
+                }
+                else
+                {
+                    MessageBox.Show(mensagemErro);
+                }
 
             }
             else if(Confirmar == DialogResult.No)
@@ -147,9 +159,8 @@ namespace LojaGames
 
         private void btnCadastrar_Click(object sender, EventArgs e) //mostrar para o grupo
         {
-            string mensagemErro = ClasseUtil.ValidaCampos(Controls);
-
-
+            string mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+            
             DialogResult salvar = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             
             if(salvar == DialogResult.Yes)
@@ -170,7 +181,7 @@ namespace LojaGames
         {
             btnAlteracoes.Enabled = true;
             btnCadastrar.Enabled = false;
-    
+            
             //muda para outra aba de cadastra jogo
             paginaAbasJogos.SelectTab(abaCadastraJogos);
             

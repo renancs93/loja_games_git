@@ -59,5 +59,11 @@ namespace LojaGames
                 }
             }
         }
+
+        private void btnGerarRelatorio_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Relatório Gerado");
+
+        }
     }
 }

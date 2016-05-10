@@ -176,6 +176,7 @@
             this.btnGerarRelatorio.TabIndex = 7;
             this.btnGerarRelatorio.Text = "Gerar Relatorio";
             this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
             // 
             // gbxTipo
             // 

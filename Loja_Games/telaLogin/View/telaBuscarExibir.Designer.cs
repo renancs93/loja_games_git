@@ -144,7 +144,7 @@
             this.button1.Location = new System.Drawing.Point(362, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 37);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Exibir Todos";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -154,7 +154,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(289, 21);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(67, 24);
-            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -165,7 +165,7 @@
             this.btnEditarCliente.Location = new System.Drawing.Point(289, 51);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(67, 24);
-            this.btnEditarCliente.TabIndex = 8;
+            this.btnEditarCliente.TabIndex = 6;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = true;
             this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
@@ -199,7 +199,7 @@
             this.btnBuscarCliente.Location = new System.Drawing.Point(362, 21);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(88, 54);
-            this.btnBuscarCliente.TabIndex = 6;
+            this.btnBuscarCliente.TabIndex = 3;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
@@ -210,7 +210,7 @@
             this.txtNomeCliente.Location = new System.Drawing.Point(58, 88);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(298, 23);
-            this.txtNomeCliente.TabIndex = 3;
+            this.txtNomeCliente.TabIndex = 2;
             // 
             // lbNomeCliente
             // 
@@ -286,7 +286,7 @@
             this.button2.Location = new System.Drawing.Point(363, 83);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 43);
-            this.button2.TabIndex = 9;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Exibir Todos";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -295,7 +295,7 @@
             this.btnExcluirFuncionario.Location = new System.Drawing.Point(289, 21);
             this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
             this.btnExcluirFuncionario.Size = new System.Drawing.Size(67, 24);
-            this.btnExcluirFuncionario.TabIndex = 7;
+            this.btnExcluirFuncionario.TabIndex = 5;
             this.btnExcluirFuncionario.Text = "Excluir";
             this.btnExcluirFuncionario.UseVisualStyleBackColor = true;
             this.btnExcluirFuncionario.Click += new System.EventHandler(this.btnExcluirFuncionario_Click);
@@ -305,7 +305,7 @@
             this.btnEditarFuncionario.Location = new System.Drawing.Point(289, 51);
             this.btnEditarFuncionario.Name = "btnEditarFuncionario";
             this.btnEditarFuncionario.Size = new System.Drawing.Size(67, 24);
-            this.btnEditarFuncionario.TabIndex = 8;
+            this.btnEditarFuncionario.TabIndex = 6;
             this.btnEditarFuncionario.Text = "Editar";
             this.btnEditarFuncionario.UseVisualStyleBackColor = true;
             this.btnEditarFuncionario.Click += new System.EventHandler(this.btnEditarFuncionario_Click);
@@ -316,7 +316,7 @@
             this.btnBuscarFuncionario.Location = new System.Drawing.Point(362, 21);
             this.btnBuscarFuncionario.Name = "btnBuscarFuncionario";
             this.btnBuscarFuncionario.Size = new System.Drawing.Size(88, 54);
-            this.btnBuscarFuncionario.TabIndex = 6;
+            this.btnBuscarFuncionario.TabIndex = 3;
             this.btnBuscarFuncionario.Text = "Buscar";
             this.btnBuscarFuncionario.UseVisualStyleBackColor = true;
             this.btnBuscarFuncionario.Click += new System.EventHandler(this.btnBuscarFuncionario_Click);
@@ -327,7 +327,7 @@
             this.txtNomeFuncionario.Location = new System.Drawing.Point(57, 96);
             this.txtNomeFuncionario.Name = "txtNomeFuncionario";
             this.txtNomeFuncionario.Size = new System.Drawing.Size(299, 23);
-            this.txtNomeFuncionario.TabIndex = 3;
+            this.txtNomeFuncionario.TabIndex = 2;
             // 
             // mtbCPFFuncionario
             // 
@@ -374,7 +374,7 @@
             this.btnSair.Location = new System.Drawing.Point(388, 440);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 9;
+            this.btnSair.TabIndex = 7;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

@@ -299,7 +299,7 @@
             this.gpbEndereco.Location = new System.Drawing.Point(12, 276);
             this.gpbEndereco.Name = "gpbEndereco";
             this.gpbEndereco.Size = new System.Drawing.Size(604, 171);
-            this.gpbEndereco.TabIndex = 21;
+            this.gpbEndereco.TabIndex = 4;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
             // 
@@ -502,7 +502,7 @@
             this.lbCodigo.Location = new System.Drawing.Point(510, 28);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(63, 16);
-            this.lbCodigo.TabIndex = 18;
+            this.lbCodigo.TabIndex = 1;
             this.lbCodigo.Text = "Código:";
             // 
             // lbCodigoNumero
@@ -512,7 +512,7 @@
             this.lbCodigoNumero.Location = new System.Drawing.Point(579, 28);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
             this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
-            this.lbCodigoNumero.TabIndex = 19;
+            this.lbCodigoNumero.TabIndex = 2;
             this.lbCodigoNumero.Text = "1";
             // 
             // telaCadastroCliente

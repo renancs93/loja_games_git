@@ -15,8 +15,13 @@ namespace LojaGames
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
-            telaP.Show();
+            DialogResult sair = MessageBox.Show("Os dados serão perdidos! \n Deseja realmente sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(sair == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
+            
         }
 
         public void setTelaAnterior(Form t)

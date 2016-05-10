@@ -21,13 +21,13 @@ namespace LojaGames
 
             if (MensagemErro == "")
             {
-                MessageBox.Show("Cliente Cadastrado com Sucesso!");
+                DialogResult cadastro = MessageBox.Show("Cliente Cadastrado com Sucesso!", "Cadastrado!", MessageBoxButtons.OK,MessageBoxIcon.None);
                 telaP.Show();
                 Close();
             }
             else
             {
-                MessageBox.Show(MensagemErro);
+                DialogResult alerta = MessageBox.Show(MensagemErro,"Atenção!",MessageBoxButtons.OK,MessageBoxIcon.None);
             }
 
         }

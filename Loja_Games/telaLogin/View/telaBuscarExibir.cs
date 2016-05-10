@@ -26,8 +26,13 @@ namespace LojaGames
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
-            telaP.Show();
+            DialogResult sair = MessageBox.Show("Os dados serão perdidos! \n Deseja realmente sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(sair == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
+           
         }
 
         private void telaBuscarExibir_FormClosing(object sender, FormClosingEventArgs e)
@@ -58,7 +63,7 @@ namespace LojaGames
         {
             //pega a linha no dataGrid selecionada e abre a telaCadastro de cliente já setados para alteração
 
-            DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult edit = MessageBox.Show("Deseja editar o Cliente selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (edit == DialogResult.Yes)
             {

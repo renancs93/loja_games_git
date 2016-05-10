@@ -428,7 +428,6 @@
             this.rbPS4.Name = "rbPS4";
             this.rbPS4.Size = new System.Drawing.Size(53, 20);
             this.rbPS4.TabIndex = 5;
-            this.rbPS4.TabStop = true;
             this.rbPS4.Text = "PS4";
             this.rbPS4.UseVisualStyleBackColor = true;
             // 

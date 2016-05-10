@@ -19,7 +19,7 @@ namespace LojaGames
         {
             if (txtCampoBusca.Text == string.Empty)
             {
-                MessageBox.Show("Campo de Nome vazio");
+                DialogResult busca = MessageBox.Show("Campo de nome vazio!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -116,6 +116,21 @@ namespace LojaGames
                     //salvar as aterações no jogo e voltar para aba de exibição de jogos
                     btnCadastrar.Enabled = true;
                     MessageBox.Show("Jogo alterado com Sucesso!");
+                    txtNome.Text = "";
+                    txtPreco.Text = "";
+                    numQuantidade.Value = 0;
+                    rbPS4.Checked = false;
+                    rbXBOX.Checked = false;
+                    rbPC.Checked = false;
+                    ckbAcao.Checked = false;
+                    ckbEsportes.Checked = false;
+                    ckbEstrategia.Checked = false;
+                    ckbLuta.Checked = false;
+                    ckbMusical.Checked = false;
+                    ckbPlataforma.Checked = false;
+                    ckbPuzzle.Checked = false;
+                    ckbRPG.Checked = false;
+                    ckbTiro.Checked = false;
 
                     paginaAbasJogos.SelectTab(abaExibeJogos);
 
@@ -150,7 +165,7 @@ namespace LojaGames
             }
             else
             {
-                MessageBox.Show("Você deve escolher qual é o Tipo de Video-Game");
+                DialogResult buscar = MessageBox.Show("Você deve escolher qual é o tipo de Vídeo Game!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
             
@@ -165,8 +180,25 @@ namespace LojaGames
             
             if(salvar == DialogResult.Yes)
             {
-                if(mensagemErro == "")
+                if (mensagemErro == "")
+                {
                     MessageBox.Show("Cadastrado com Sucesso!");
+                    txtNome.Text = "";
+                    txtPreco.Text = "";
+                    numQuantidade.Value = 0;
+                    rbPS4.Checked = false;
+                    rbXBOX.Checked = false;
+                    rbPC.Checked = false;
+                    ckbAcao.Checked = false;
+                    ckbEsportes.Checked = false;
+                    ckbEstrategia.Checked = false;
+                    ckbLuta.Checked = false;
+                    ckbMusical.Checked = false;
+                    ckbPlataforma.Checked = false;
+                    ckbPuzzle.Checked = false;
+                    ckbRPG.Checked = false;
+                    ckbTiro.Checked = false;
+                }
                 else
                     MessageBox.Show(mensagemErro);
             }

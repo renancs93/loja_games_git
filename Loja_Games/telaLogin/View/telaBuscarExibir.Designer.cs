@@ -34,7 +34,7 @@
             this.dtxExibiClientes = new System.Windows.Forms.DataGridView();
             this.gbxBuscarClientes = new System.Windows.Forms.GroupBox();
             this.lbOU_cli = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExibirTodosClientes = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.mtbCPFCliente = new System.Windows.Forms.MaskedTextBox();
@@ -47,7 +47,7 @@
             this.dgvExibirFuncionario = new System.Windows.Forms.DataGridView();
             this.gpbBuscaFuncionario = new System.Windows.Forms.GroupBox();
             this.lbOu_func = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExibirTodosFuncionarios = new System.Windows.Forms.Button();
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnBuscarFuncionario = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@
             this.tcClienteFuncionario.Controls.Add(this.tabExibeBuscaFunc);
             this.tcClienteFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcClienteFuncionario.Location = new System.Drawing.Point(0, 2);
-            this.tcClienteFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcClienteFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.tcClienteFuncionario.Name = "tcClienteFuncionario";
             this.tcClienteFuncionario.SelectedIndex = 0;
             this.tcClienteFuncionario.Size = new System.Drawing.Size(641, 533);
@@ -86,9 +86,9 @@
             this.tabExibeBuscaCliente.Controls.Add(this.gbxExibirClientes);
             this.tabExibeBuscaCliente.Controls.Add(this.gbxBuscarClientes);
             this.tabExibeBuscaCliente.Location = new System.Drawing.Point(4, 27);
-            this.tabExibeBuscaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabExibeBuscaCliente.Margin = new System.Windows.Forms.Padding(4);
             this.tabExibeBuscaCliente.Name = "tabExibeBuscaCliente";
-            this.tabExibeBuscaCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabExibeBuscaCliente.Padding = new System.Windows.Forms.Padding(4);
             this.tabExibeBuscaCliente.Size = new System.Drawing.Size(633, 502);
             this.tabExibeBuscaCliente.TabIndex = 0;
             this.tabExibeBuscaCliente.Text = "Clientes";
@@ -99,9 +99,9 @@
             this.gbxExibirClientes.Controls.Add(this.dtxExibiClientes);
             this.gbxExibirClientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxExibirClientes.Location = new System.Drawing.Point(12, 174);
-            this.gbxExibirClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxExibirClientes.Margin = new System.Windows.Forms.Padding(4);
             this.gbxExibirClientes.Name = "gbxExibirClientes";
-            this.gbxExibirClientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxExibirClientes.Padding = new System.Windows.Forms.Padding(4);
             this.gbxExibirClientes.Size = new System.Drawing.Size(608, 320);
             this.gbxExibirClientes.TabIndex = 2;
             this.gbxExibirClientes.TabStop = false;
@@ -111,7 +111,7 @@
             // 
             this.dtxExibiClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtxExibiClientes.Location = new System.Drawing.Point(8, 23);
-            this.dtxExibiClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtxExibiClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dtxExibiClientes.Name = "dtxExibiClientes";
             this.dtxExibiClientes.Size = new System.Drawing.Size(592, 289);
             this.dtxExibiClientes.TabIndex = 0;
@@ -119,7 +119,7 @@
             // gbxBuscarClientes
             // 
             this.gbxBuscarClientes.Controls.Add(this.lbOU_cli);
-            this.gbxBuscarClientes.Controls.Add(this.button1);
+            this.gbxBuscarClientes.Controls.Add(this.btnExibirTodosClientes);
             this.gbxBuscarClientes.Controls.Add(this.btnExcluir);
             this.gbxBuscarClientes.Controls.Add(this.btnEditarCliente);
             this.gbxBuscarClientes.Controls.Add(this.mtbCPFCliente);
@@ -129,9 +129,9 @@
             this.gbxBuscarClientes.Controls.Add(this.lbNomeCliente);
             this.gbxBuscarClientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxBuscarClientes.Location = new System.Drawing.Point(12, 9);
-            this.gbxBuscarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxBuscarClientes.Margin = new System.Windows.Forms.Padding(4);
             this.gbxBuscarClientes.Name = "gbxBuscarClientes";
-            this.gbxBuscarClientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxBuscarClientes.Padding = new System.Windows.Forms.Padding(4);
             this.gbxBuscarClientes.Size = new System.Drawing.Size(608, 158);
             this.gbxBuscarClientes.TabIndex = 1;
             this.gbxBuscarClientes.TabStop = false;
@@ -147,21 +147,21 @@
             this.lbOU_cli.TabIndex = 10;
             this.lbOU_cli.Text = "OU";
             // 
-            // button1
+            // btnExibirTodosClientes
             // 
-            this.button1.Location = new System.Drawing.Point(483, 100);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Exibir Todos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExibirTodosClientes.Location = new System.Drawing.Point(483, 100);
+            this.btnExibirTodosClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExibirTodosClientes.Name = "btnExibirTodosClientes";
+            this.btnExibirTodosClientes.Size = new System.Drawing.Size(117, 46);
+            this.btnExibirTodosClientes.TabIndex = 4;
+            this.btnExibirTodosClientes.Text = "Exibir Todos";
+            this.btnExibirTodosClientes.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(385, 26);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(89, 30);
             this.btnExcluir.TabIndex = 5;
@@ -173,7 +173,7 @@
             // 
             this.btnEditarCliente.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCliente.Location = new System.Drawing.Point(385, 63);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(89, 30);
             this.btnEditarCliente.TabIndex = 6;
@@ -185,7 +185,7 @@
             // 
             this.mtbCPFCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPFCliente.Location = new System.Drawing.Point(159, 41);
-            this.mtbCPFCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCPFCliente.Margin = new System.Windows.Forms.Padding(4);
             this.mtbCPFCliente.Mask = "000,000,000-00";
             this.mtbCPFCliente.Name = "mtbCPFCliente";
             this.mtbCPFCliente.Size = new System.Drawing.Size(163, 27);
@@ -210,7 +210,7 @@
             this.btnBuscarCliente.AccessibleName = "Teste";
             this.btnBuscarCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCliente.Location = new System.Drawing.Point(483, 26);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(117, 66);
             this.btnBuscarCliente.TabIndex = 3;
@@ -222,7 +222,7 @@
             // 
             this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCliente.Location = new System.Drawing.Point(77, 108);
-            this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(396, 27);
             this.txtNomeCliente.TabIndex = 2;
@@ -243,9 +243,9 @@
             this.tabExibeBuscaFunc.Controls.Add(this.gpbExibirFuncionario);
             this.tabExibeBuscaFunc.Controls.Add(this.gpbBuscaFuncionario);
             this.tabExibeBuscaFunc.Location = new System.Drawing.Point(4, 27);
-            this.tabExibeBuscaFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabExibeBuscaFunc.Margin = new System.Windows.Forms.Padding(4);
             this.tabExibeBuscaFunc.Name = "tabExibeBuscaFunc";
-            this.tabExibeBuscaFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabExibeBuscaFunc.Padding = new System.Windows.Forms.Padding(4);
             this.tabExibeBuscaFunc.Size = new System.Drawing.Size(633, 502);
             this.tabExibeBuscaFunc.TabIndex = 1;
             this.tabExibeBuscaFunc.Text = "Funcionários";
@@ -256,9 +256,9 @@
             this.gpbExibirFuncionario.Controls.Add(this.dgvExibirFuncionario);
             this.gpbExibirFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbExibirFuncionario.Location = new System.Drawing.Point(12, 178);
-            this.gpbExibirFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbExibirFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.gpbExibirFuncionario.Name = "gpbExibirFuncionario";
-            this.gpbExibirFuncionario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbExibirFuncionario.Padding = new System.Windows.Forms.Padding(4);
             this.gpbExibirFuncionario.Size = new System.Drawing.Size(608, 315);
             this.gpbExibirFuncionario.TabIndex = 1;
             this.gpbExibirFuncionario.TabStop = false;
@@ -268,7 +268,7 @@
             // 
             this.dgvExibirFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExibirFuncionario.Location = new System.Drawing.Point(8, 23);
-            this.dgvExibirFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvExibirFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.dgvExibirFuncionario.Name = "dgvExibirFuncionario";
             this.dgvExibirFuncionario.Size = new System.Drawing.Size(592, 284);
             this.dgvExibirFuncionario.TabIndex = 0;
@@ -276,7 +276,7 @@
             // gpbBuscaFuncionario
             // 
             this.gpbBuscaFuncionario.Controls.Add(this.lbOu_func);
-            this.gpbBuscaFuncionario.Controls.Add(this.button2);
+            this.gpbBuscaFuncionario.Controls.Add(this.btnExibirTodosFuncionarios);
             this.gpbBuscaFuncionario.Controls.Add(this.btnExcluirFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.btnEditarFuncionario);
             this.gpbBuscaFuncionario.Controls.Add(this.btnBuscarFuncionario);
@@ -286,9 +286,9 @@
             this.gpbBuscaFuncionario.Controls.Add(this.lbCpfFuncionario);
             this.gpbBuscaFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbBuscaFuncionario.Location = new System.Drawing.Point(12, 9);
-            this.gpbBuscaFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbBuscaFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.gpbBuscaFuncionario.Name = "gpbBuscaFuncionario";
-            this.gpbBuscaFuncionario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbBuscaFuncionario.Padding = new System.Windows.Forms.Padding(4);
             this.gpbBuscaFuncionario.Size = new System.Drawing.Size(608, 162);
             this.gpbBuscaFuncionario.TabIndex = 0;
             this.gpbBuscaFuncionario.TabStop = false;
@@ -304,20 +304,20 @@
             this.lbOu_func.TabIndex = 10;
             this.lbOu_func.Text = "OU";
             // 
-            // button2
+            // btnExibirTodosFuncionarios
             // 
-            this.button2.Location = new System.Drawing.Point(484, 102);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 53);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Exibir Todos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExibirTodosFuncionarios.Location = new System.Drawing.Point(484, 102);
+            this.btnExibirTodosFuncionarios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExibirTodosFuncionarios.Name = "btnExibirTodosFuncionarios";
+            this.btnExibirTodosFuncionarios.Size = new System.Drawing.Size(116, 53);
+            this.btnExibirTodosFuncionarios.TabIndex = 4;
+            this.btnExibirTodosFuncionarios.Text = "Exibir Todos";
+            this.btnExibirTodosFuncionarios.UseVisualStyleBackColor = true;
             // 
             // btnExcluirFuncionario
             // 
             this.btnExcluirFuncionario.Location = new System.Drawing.Point(385, 26);
-            this.btnExcluirFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
             this.btnExcluirFuncionario.Size = new System.Drawing.Size(89, 30);
             this.btnExcluirFuncionario.TabIndex = 5;
@@ -328,7 +328,7 @@
             // btnEditarFuncionario
             // 
             this.btnEditarFuncionario.Location = new System.Drawing.Point(385, 63);
-            this.btnEditarFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarFuncionario.Name = "btnEditarFuncionario";
             this.btnEditarFuncionario.Size = new System.Drawing.Size(89, 30);
             this.btnEditarFuncionario.TabIndex = 6;
@@ -340,7 +340,7 @@
             // 
             this.btnBuscarFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarFuncionario.Location = new System.Drawing.Point(483, 26);
-            this.btnBuscarFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarFuncionario.Name = "btnBuscarFuncionario";
             this.btnBuscarFuncionario.Size = new System.Drawing.Size(117, 66);
             this.btnBuscarFuncionario.TabIndex = 3;
@@ -352,7 +352,7 @@
             // 
             this.txtNomeFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeFuncionario.Location = new System.Drawing.Point(76, 118);
-            this.txtNomeFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeFuncionario.Name = "txtNomeFuncionario";
             this.txtNomeFuncionario.Size = new System.Drawing.Size(397, 27);
             this.txtNomeFuncionario.TabIndex = 2;
@@ -361,7 +361,7 @@
             // 
             this.mtbCPFFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCPFFuncionario.Location = new System.Drawing.Point(196, 39);
-            this.mtbCPFFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCPFFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.mtbCPFFuncionario.Mask = "000,000,000-00";
             this.mtbCPFFuncionario.Name = "mtbCPFFuncionario";
             this.mtbCPFFuncionario.Size = new System.Drawing.Size(152, 27);
@@ -394,7 +394,7 @@
             // 
             this.imgLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
             this.imgLogo.Location = new System.Drawing.Point(5, 538);
-            this.imgLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(156, 44);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -405,7 +405,7 @@
             // 
             this.btnSair.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Location = new System.Drawing.Point(517, 542);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 28);
             this.btnSair.TabIndex = 7;
@@ -422,7 +422,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.tcClienteFuncionario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "telaBuscarExibir";
@@ -473,8 +473,8 @@
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnExcluirFuncionario;
         private System.Windows.Forms.Button btnEditarFuncionario;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExibirTodosClientes;
+        private System.Windows.Forms.Button btnExibirTodosFuncionarios;
         private System.Windows.Forms.Label lbOU_cli;
         private System.Windows.Forms.Label lbOu_func;
     }

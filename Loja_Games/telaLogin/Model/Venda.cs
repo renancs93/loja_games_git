@@ -14,7 +14,7 @@ namespace LojaGames.Classes
         private Jogos jogos;
         private Funcionario funcionario;
         private int quantidade;
-        private string pagamento;
+        private Pagamento pagamento;
         private int numeroParcelas;
         private float valorParcelas;
         private float total;

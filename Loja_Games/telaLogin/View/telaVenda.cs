@@ -43,7 +43,7 @@ namespace LojaGames
         {
             telaP = t;
         }
-
+        
         //evento ao clicar no X da tela
         private void telaVenda_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -61,14 +61,14 @@ namespace LojaGames
                 telaP.Show();
             }
 
-
+            
         }
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
             DialogResult FecharCompra = MessageBox.Show("Deseja realmente finalizar a venda?", "Finalizar Compra", MessageBoxButtons.YesNo);
 
-            if (FecharCompra == DialogResult.Yes)
+            if(FecharCompra == DialogResult.Yes)
             {
                 //codigo que verifica a venda e faz a baixa do estoque
 
@@ -90,12 +90,12 @@ namespace LojaGames
         {
             DialogResult Sair = MessageBox.Show("Os dados serão Perdidos!\nDeseja realmente Sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (Sair == DialogResult.Yes)
+            if(Sair == DialogResult.Yes)
             {
                 Close();
                 telaP.Show();
             }
-
+            
         }
 
         private void btnFinAlug_Click(object sender, EventArgs e)
@@ -140,34 +140,6 @@ namespace LojaGames
         {
             MessageBox.Show("Apenas dígitos de 0 a 9 são aceitos neste campo.\n\n" +
              "Você está tentando inserir um caractere inválido ");
-        }
-
-        private void btnBuscaCliente_Click(object sender, EventArgs e)
-        {
-            telaBuscarExibir BuscaCliente = new telaBuscarExibir();
-            BuscaCliente.setTelaAnterior(this);//chama o metodo dentro da telaBuscaExibir passado essa tela como referencia
-            BuscaCliente.Show();
-        }
-
-        private void btnBuscaProduto_Click(object sender, EventArgs e)
-        {
-            telaJogos BuscaJogos = new telaJogos();
-            BuscaJogos.setTelaAnterior(this);//chama o metodo dentro da telaJogos passado essa tela como referencia
-            BuscaJogos.Show();
-        }
-
-        private void btnBuscaCliente_2_Click(object sender, EventArgs e)
-        {
-            telaBuscarExibir BuscaCliente_2 = new telaBuscarExibir();
-            BuscaCliente_2.setTelaAnterior(this);//chama o metodo dentro da telaBuscaExibir passado essa tela como referencia
-            BuscaCliente_2.Show();
-        }
-
-        private void btnBuscaProduto_2_Click(object sender, EventArgs e)
-        {
-            telaJogos BuscaJogos_2 = new telaJogos();
-            BuscaJogos_2.setTelaAnterior(this);//chama o metodo dentro da telaJogos passado essa tela como referencia
-            BuscaJogos_2.Show();
         }
     }
 }

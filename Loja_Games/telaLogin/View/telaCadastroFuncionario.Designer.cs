@@ -133,7 +133,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(148, 99);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(144, 23);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.TabIndex = 4;
             this.dateTimePicker1.Value = new System.DateTime(2016, 5, 5, 0, 0, 0, 0);
             // 
             // mtbRG

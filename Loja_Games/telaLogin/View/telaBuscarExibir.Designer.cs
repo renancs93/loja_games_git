@@ -388,6 +388,8 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.tcClienteFuncionario);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "telaBuscarExibir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar e Exibir";

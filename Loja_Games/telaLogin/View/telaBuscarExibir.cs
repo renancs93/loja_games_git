@@ -48,7 +48,7 @@ namespace LojaGames
 
             if((nome == string.Empty) && (cpf == string.Empty))
             {
-                MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
+                DialogResult busca = MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!", "Busca", MessageBoxButtons.OK,MessageBoxIcon.None);
             }
             else
             {
@@ -96,7 +96,7 @@ namespace LojaGames
 
             if ((nome == string.Empty) && (cpf == string.Empty))
             {
-                MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
+                DialogResult busca = MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!", "Busca!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {

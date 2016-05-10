@@ -67,7 +67,7 @@ namespace LojaGames
 
         private void btnGerarRelatorio_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Relatório Gerado");
+            DialogResult relatorio = MessageBox.Show("Relatório Gerado", "Relatório!", MessageBoxButtons.OK, MessageBoxIcon.None);
 
         }
     }

@@ -101,7 +101,7 @@
             this.txtCampoUsuario.Location = new System.Drawing.Point(91, 263);
             this.txtCampoUsuario.Name = "txtCampoUsuario";
             this.txtCampoUsuario.Size = new System.Drawing.Size(184, 20);
-            this.txtCampoUsuario.TabIndex = 2;
+            this.txtCampoUsuario.TabIndex = 1;
             this.txtCampoUsuario.TextChanged += new System.EventHandler(this.txtCampoUsuario_TextChanged);
             this.txtCampoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCampoUsuario_KeyPress);
             // 
@@ -110,7 +110,7 @@
             this.txtCampoSenha.Location = new System.Drawing.Point(91, 297);
             this.txtCampoSenha.Name = "txtCampoSenha";
             this.txtCampoSenha.Size = new System.Drawing.Size(184, 20);
-            this.txtCampoSenha.TabIndex = 4;
+            this.txtCampoSenha.TabIndex = 2;
             this.txtCampoSenha.UseSystemPasswordChar = true;
             this.txtCampoSenha.TextChanged += new System.EventHandler(this.txtCampoSenha_TextChanged);
             this.txtCampoSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCampoSenha_KeyPress);
@@ -124,7 +124,7 @@
             this.btnLogar.Location = new System.Drawing.Point(53, 363);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(93, 38);
-            this.btnLogar.TabIndex = 5;
+            this.btnLogar.TabIndex = 4;
             this.btnLogar.Text = "Logar";
             this.btnLogar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -139,7 +139,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(196, 363);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 38);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -158,7 +158,7 @@
             this.txtObservacoes.Location = new System.Drawing.Point(53, 330);
             this.txtObservacoes.Name = "txtObservacoes";
             this.txtObservacoes.Size = new System.Drawing.Size(235, 20);
-            this.txtObservacoes.TabIndex = 7;
+            this.txtObservacoes.TabIndex = 3;
             this.txtObservacoes.Visible = false;
             // 
             // imgOK_usuario

@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LojaGames
 {
     public partial class telaJogos : System.Windows.Forms.Form
     {
-        private System.Windows.Forms.Form TelaP = null; 
+        private System.Windows.Forms.Form TelaP = null;
+        double valor;
 
         public telaJogos()
         {
@@ -105,13 +106,25 @@ namespace LojaGames
         {
             DialogResult Confirmar = MessageBox.Show("As informações do Jogo serão alteradas!\nDeseja realmente salvar?", "Confirmar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-            if(Confirmar == DialogResult.Yes)
+            //chama o metodo da classe útil e valida se os campos (textBox) estão preenchido
+            string mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+
+            if (Confirmar == DialogResult.Yes)
             {
-                //salvar as aterações no jogo e voltar para aba de exibição de jogos
-                btnCadastrar.Enabled = true;
-                MessageBox.Show("Jogo alterado com Sucesso!");
-            
-                paginaAbasJogos.SelectTab(abaExibeJogos);
+                if(mensagemErro == "")
+                {
+                    //salvar as aterações no jogo e voltar para aba de exibição de jogos
+                    btnCadastrar.Enabled = true;
+                    MessageBox.Show("Jogo alterado com Sucesso!");
+
+                    paginaAbasJogos.SelectTab(abaExibeJogos);
+
+                    
+                }
+                else
+                {
+                    MessageBox.Show(mensagemErro);
+                }
 
             }
             else if(Confirmar == DialogResult.No)
@@ -144,21 +157,23 @@ namespace LojaGames
 
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e) //mostrar para o grupo
         {
+            string mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+            
             DialogResult salvar = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar",MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             
             if(salvar == DialogResult.Yes)
             {
-                MessageBox.Show("Cadastrado com Sucesso!");
+                if(mensagemErro == "")
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                else
+                    MessageBox.Show(mensagemErro);
             }
             else if(salvar == DialogResult.No)
             {
                 MessageBox.Show("Jogo não salvo!");
             }
-
-            
-
         }
 
         //irá setar abrir a aba de cadastro jogo com os dados setados nos campos do jogo na qual a linha no dataGrid estiver selecionada.
@@ -166,7 +181,7 @@ namespace LojaGames
         {
             btnAlteracoes.Enabled = true;
             btnCadastrar.Enabled = false;
-    
+            
             //muda para outra aba de cadastra jogo
             paginaAbasJogos.SelectTab(abaCadastraJogos);
             
@@ -180,6 +195,36 @@ namespace LojaGames
             //padroniza a ativação dos botões ao carregar a tela
             btnCadastrar.Enabled = true;
             btnAlteracoes.Enabled = false;
+        }
+
+        private void mtbPreco_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Apenas digitos de 0 a 9 são aceitos neste campo. \n\n" +
+                "Você está tentando inserir um caractere inválido. ");
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtPreco.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
         }
     }
     

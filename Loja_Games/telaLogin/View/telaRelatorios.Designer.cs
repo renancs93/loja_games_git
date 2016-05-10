@@ -73,10 +73,10 @@
             // 
             this.abaRelatorioVendaAluga.Controls.Add(this.gbxResultado);
             this.abaRelatorioVendaAluga.Controls.Add(this.gbxDadosVendaAluga);
-            this.abaRelatorioVendaAluga.Location = new System.Drawing.Point(4, 26);
+            this.abaRelatorioVendaAluga.Location = new System.Drawing.Point(4, 22);
             this.abaRelatorioVendaAluga.Name = "abaRelatorioVendaAluga";
             this.abaRelatorioVendaAluga.Padding = new System.Windows.Forms.Padding(3);
-            this.abaRelatorioVendaAluga.Size = new System.Drawing.Size(554, 472);
+            this.abaRelatorioVendaAluga.Size = new System.Drawing.Size(554, 476);
             this.abaRelatorioVendaAluga.TabIndex = 0;
             this.abaRelatorioVendaAluga.Text = "Venda / Aluguel";
             this.abaRelatorioVendaAluga.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.dtpAte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpAte.Location = new System.Drawing.Point(56, 43);
             this.dtpAte.Name = "dtpAte";
-            this.dtpAte.Size = new System.Drawing.Size(117, 27);
+            this.dtpAte.Size = new System.Drawing.Size(117, 23);
             this.dtpAte.TabIndex = 3;
             this.dtpAte.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
@@ -146,7 +146,7 @@
             this.lbAte.AutoSize = true;
             this.lbAte.Location = new System.Drawing.Point(9, 48);
             this.lbAte.Name = "lbAte";
-            this.lbAte.Size = new System.Drawing.Size(48, 20);
+            this.lbAte.Size = new System.Drawing.Size(38, 16);
             this.lbAte.TabIndex = 2;
             this.lbAte.Text = "Até:";
             // 
@@ -155,7 +155,7 @@
             this.lbDe.AutoSize = true;
             this.lbDe.Location = new System.Drawing.Point(9, 22);
             this.lbDe.Name = "lbDe";
-            this.lbDe.Size = new System.Drawing.Size(41, 20);
+            this.lbDe.Size = new System.Drawing.Size(32, 16);
             this.lbDe.TabIndex = 1;
             this.lbDe.Text = "De:";
             // 
@@ -164,7 +164,7 @@
             this.dtpDe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDe.Location = new System.Drawing.Point(57, 16);
             this.dtpDe.Name = "dtpDe";
-            this.dtpDe.Size = new System.Drawing.Size(116, 27);
+            this.dtpDe.Size = new System.Drawing.Size(116, 23);
             this.dtpDe.TabIndex = 0;
             this.dtpDe.Value = new System.DateTime(2016, 4, 30, 0, 0, 0, 0);
             // 
@@ -176,6 +176,7 @@
             this.btnGerarRelatorio.TabIndex = 7;
             this.btnGerarRelatorio.Text = "Gerar Relatorio";
             this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
             // 
             // gbxTipo
             // 
@@ -193,7 +194,7 @@
             this.ckbAluguel.AutoSize = true;
             this.ckbAluguel.Location = new System.Drawing.Point(8, 48);
             this.ckbAluguel.Name = "ckbAluguel";
-            this.ckbAluguel.Size = new System.Drawing.Size(103, 24);
+            this.ckbAluguel.Size = new System.Drawing.Size(81, 20);
             this.ckbAluguel.TabIndex = 1;
             this.ckbAluguel.Text = "Aluguel";
             this.ckbAluguel.UseVisualStyleBackColor = true;
@@ -203,7 +204,7 @@
             this.ckbVenda.AutoSize = true;
             this.ckbVenda.Location = new System.Drawing.Point(8, 21);
             this.ckbVenda.Name = "ckbVenda";
-            this.ckbVenda.Size = new System.Drawing.Size(90, 24);
+            this.ckbVenda.Size = new System.Drawing.Size(73, 20);
             this.ckbVenda.TabIndex = 0;
             this.ckbVenda.Text = "Venda";
             this.ckbVenda.UseVisualStyleBackColor = true;
@@ -212,9 +213,9 @@
             // 
             this.mtbCpfCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCpfCliente.Location = new System.Drawing.Point(377, 14);
-            this.mtbCpfCliente.Mask = "999,999,999-99";
+            this.mtbCpfCliente.Mask = "000,000,000-00";
             this.mtbCpfCliente.Name = "mtbCpfCliente";
-            this.mtbCpfCliente.Size = new System.Drawing.Size(128, 27);
+            this.mtbCpfCliente.Size = new System.Drawing.Size(128, 23);
             this.mtbCpfCliente.TabIndex = 5;
             this.mtbCpfCliente.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCpfCliente_MaskInputRejected);
             // 
@@ -223,7 +224,7 @@
             this.lbCpfCliente.AutoSize = true;
             this.lbCpfCliente.Location = new System.Drawing.Point(258, 17);
             this.lbCpfCliente.Name = "lbCpfCliente";
-            this.lbCpfCliente.Size = new System.Drawing.Size(146, 20);
+            this.lbCpfCliente.Size = new System.Drawing.Size(113, 16);
             this.lbCpfCliente.TabIndex = 4;
             this.lbCpfCliente.Text = "CPF do Cliente";
             // 
@@ -232,15 +233,16 @@
             this.txtCodVendaAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodVendaAluga.Location = new System.Drawing.Point(206, 14);
             this.txtCodVendaAluga.Name = "txtCodVendaAluga";
-            this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 27);
+            this.txtCodVendaAluga.Size = new System.Drawing.Size(46, 23);
             this.txtCodVendaAluga.TabIndex = 3;
+            this.txtCodVendaAluga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodVendaAluga_KeyPress);
             // 
             // lbCodigoVendaAluguel
             // 
             this.lbCodigoVendaAluguel.AutoSize = true;
             this.lbCodigoVendaAluguel.Location = new System.Drawing.Point(7, 17);
             this.lbCodigoVendaAluguel.Name = "lbCodigoVendaAluguel";
-            this.lbCodigoVendaAluguel.Size = new System.Drawing.Size(253, 20);
+            this.lbCodigoVendaAluguel.Size = new System.Drawing.Size(193, 16);
             this.lbCodigoVendaAluguel.TabIndex = 2;
             this.lbCodigoVendaAluguel.Text = "Código de Venda/Aluguel";
             // 
@@ -249,7 +251,7 @@
             this.txtNomeCliente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCliente.Location = new System.Drawing.Point(118, 44);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(387, 27);
+            this.txtNomeCliente.Size = new System.Drawing.Size(387, 23);
             this.txtNomeCliente.TabIndex = 1;
             // 
             // lbNomeCliente
@@ -257,7 +259,7 @@
             this.lbNomeCliente.AutoSize = true;
             this.lbNomeCliente.Location = new System.Drawing.Point(7, 44);
             this.lbNomeCliente.Name = "lbNomeCliente";
-            this.lbNomeCliente.Size = new System.Drawing.Size(136, 20);
+            this.lbNomeCliente.Size = new System.Drawing.Size(105, 16);
             this.lbNomeCliente.TabIndex = 0;
             this.lbNomeCliente.Text = "Nome Cliente";
             // 
@@ -284,7 +286,7 @@
             // 
             // telaRelatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(573, 553);
@@ -292,6 +294,8 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.tcVendaAluguel);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "telaRelatorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorios";

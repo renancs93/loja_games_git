@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaJogos));
             this.paginaAbasJogos = new System.Windows.Forms.TabControl();
             this.abaCadastraJogos = new System.Windows.Forms.TabPage();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.pbGameLogo = new System.Windows.Forms.PictureBox();
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.rbPC = new System.Windows.Forms.RadioButton();
             this.rbXBOX = new System.Windows.Forms.RadioButton();
             this.rbPS4 = new System.Windows.Forms.RadioButton();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.lbPreco = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
@@ -118,6 +118,7 @@
             // 
             // abaCadastraJogos
             // 
+            this.abaCadastraJogos.Controls.Add(this.txtPreco);
             this.abaCadastraJogos.Controls.Add(this.pbGameLogo);
             this.abaCadastraJogos.Controls.Add(this.lbCodigoNumero);
             this.abaCadastraJogos.Controls.Add(this.lbCodigo);
@@ -129,7 +130,6 @@
             this.abaCadastraJogos.Controls.Add(this.btnAlteracoes);
             this.abaCadastraJogos.Controls.Add(this.btnCadastrar);
             this.abaCadastraJogos.Controls.Add(this.gpbTipoJogo);
-            this.abaCadastraJogos.Controls.Add(this.txtPreco);
             this.abaCadastraJogos.Controls.Add(this.lbPreco);
             this.abaCadastraJogos.Controls.Add(this.txtNome);
             this.abaCadastraJogos.Controls.Add(this.lbNome);
@@ -140,6 +140,15 @@
             this.abaCadastraJogos.TabIndex = 0;
             this.abaCadastraJogos.Text = "Cadastrar Jogo";
             this.abaCadastraJogos.UseVisualStyleBackColor = true;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(548, 23);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 23);
+            this.txtPreco.TabIndex = 2;
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // pbGameLogo
             // 
@@ -155,7 +164,7 @@
             // 
             this.lbCodigoNumero.AutoSize = true;
             this.lbCodigoNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigoNumero.Location = new System.Drawing.Point(730, 22);
+            this.lbCodigoNumero.Location = new System.Drawing.Point(730, 25);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
             this.lbCodigoNumero.Size = new System.Drawing.Size(17, 16);
             this.lbCodigoNumero.TabIndex = 13;
@@ -165,7 +174,7 @@
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(661, 22);
+            this.lbCodigo.Location = new System.Drawing.Point(661, 25);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(63, 16);
             this.lbCodigo.TabIndex = 12;
@@ -178,7 +187,7 @@
             this.dtpDataLancamento.Location = new System.Drawing.Point(379, 86);
             this.dtpDataLancamento.Name = "dtpDataLancamento";
             this.dtpDataLancamento.Size = new System.Drawing.Size(127, 23);
-            this.dtpDataLancamento.TabIndex = 11;
+            this.dtpDataLancamento.TabIndex = 4;
             // 
             // lbDataLancamento
             // 
@@ -196,7 +205,7 @@
             this.numQuantidade.Location = new System.Drawing.Point(111, 84);
             this.numQuantidade.Name = "numQuantidade";
             this.numQuantidade.Size = new System.Drawing.Size(74, 23);
-            this.numQuantidade.TabIndex = 9;
+            this.numQuantidade.TabIndex = 3;
             // 
             // lbQuantidade
             // 
@@ -214,7 +223,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(668, 415);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 42);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -226,7 +235,7 @@
             this.btnAlteracoes.Location = new System.Drawing.Point(576, 415);
             this.btnAlteracoes.Name = "btnAlteracoes";
             this.btnAlteracoes.Size = new System.Drawing.Size(86, 42);
-            this.btnAlteracoes.TabIndex = 6;
+            this.btnAlteracoes.TabIndex = 19;
             this.btnAlteracoes.Text = "Salvar Alterações";
             this.btnAlteracoes.UseVisualStyleBackColor = true;
             this.btnAlteracoes.Click += new System.EventHandler(this.btnAlteracoes_Click);
@@ -237,7 +246,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(484, 415);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(86, 42);
-            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.TabIndex = 18;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -280,7 +289,7 @@
             this.ckbPuzzle.Location = new System.Drawing.Point(452, 47);
             this.ckbPuzzle.Name = "ckbPuzzle";
             this.ckbPuzzle.Size = new System.Drawing.Size(74, 20);
-            this.ckbPuzzle.TabIndex = 8;
+            this.ckbPuzzle.TabIndex = 17;
             this.ckbPuzzle.Text = "Puzzle";
             this.ckbPuzzle.UseVisualStyleBackColor = true;
             // 
@@ -290,7 +299,7 @@
             this.ckbTiro.Location = new System.Drawing.Point(452, 22);
             this.ckbTiro.Name = "ckbTiro";
             this.ckbTiro.Size = new System.Drawing.Size(54, 20);
-            this.ckbTiro.TabIndex = 5;
+            this.ckbTiro.TabIndex = 12;
             this.ckbTiro.Text = "Tiro";
             this.ckbTiro.UseVisualStyleBackColor = true;
             // 
@@ -300,7 +309,7 @@
             this.ckbMusical.Location = new System.Drawing.Point(370, 47);
             this.ckbMusical.Name = "ckbMusical";
             this.ckbMusical.Size = new System.Drawing.Size(81, 20);
-            this.ckbMusical.TabIndex = 7;
+            this.ckbMusical.TabIndex = 16;
             this.ckbMusical.Text = "Musical";
             this.ckbMusical.UseVisualStyleBackColor = true;
             // 
@@ -310,7 +319,7 @@
             this.ckbLuta.Location = new System.Drawing.Point(370, 22);
             this.ckbLuta.Name = "ckbLuta";
             this.ckbLuta.Size = new System.Drawing.Size(59, 20);
-            this.ckbLuta.TabIndex = 6;
+            this.ckbLuta.TabIndex = 11;
             this.ckbLuta.Text = "Luta";
             this.ckbLuta.UseVisualStyleBackColor = true;
             // 
@@ -320,7 +329,7 @@
             this.ckbEstrategia.Location = new System.Drawing.Point(257, 47);
             this.ckbEstrategia.Name = "ckbEstrategia";
             this.ckbEstrategia.Size = new System.Drawing.Size(102, 20);
-            this.ckbEstrategia.TabIndex = 5;
+            this.ckbEstrategia.TabIndex = 15;
             this.ckbEstrategia.Text = "Estratégia";
             this.ckbEstrategia.UseVisualStyleBackColor = true;
             // 
@@ -330,7 +339,7 @@
             this.ckbPlataforma.Location = new System.Drawing.Point(257, 22);
             this.ckbPlataforma.Name = "ckbPlataforma";
             this.ckbPlataforma.Size = new System.Drawing.Size(107, 20);
-            this.ckbPlataforma.TabIndex = 4;
+            this.ckbPlataforma.TabIndex = 10;
             this.ckbPlataforma.Text = "Plataforma";
             this.ckbPlataforma.UseVisualStyleBackColor = true;
             // 
@@ -340,7 +349,7 @@
             this.cknCorrida.Location = new System.Drawing.Point(160, 47);
             this.cknCorrida.Name = "cknCorrida";
             this.cknCorrida.Size = new System.Drawing.Size(80, 20);
-            this.cknCorrida.TabIndex = 3;
+            this.cknCorrida.TabIndex = 14;
             this.cknCorrida.Text = "Corrida";
             this.cknCorrida.UseVisualStyleBackColor = true;
             // 
@@ -350,7 +359,7 @@
             this.ckbEsportes.Location = new System.Drawing.Point(160, 22);
             this.ckbEsportes.Name = "ckbEsportes";
             this.ckbEsportes.Size = new System.Drawing.Size(91, 20);
-            this.ckbEsportes.TabIndex = 2;
+            this.ckbEsportes.TabIndex = 9;
             this.ckbEsportes.Text = "Esportes";
             this.ckbEsportes.UseVisualStyleBackColor = true;
             // 
@@ -360,7 +369,7 @@
             this.ckbRPG.Location = new System.Drawing.Point(15, 47);
             this.ckbRPG.Name = "ckbRPG";
             this.ckbRPG.Size = new System.Drawing.Size(55, 20);
-            this.ckbRPG.TabIndex = 1;
+            this.ckbRPG.TabIndex = 13;
             this.ckbRPG.Text = "RPG";
             this.ckbRPG.UseVisualStyleBackColor = true;
             // 
@@ -370,7 +379,7 @@
             this.ckbAcao.Location = new System.Drawing.Point(15, 22);
             this.ckbAcao.Name = "ckbAcao";
             this.ckbAcao.Size = new System.Drawing.Size(139, 20);
-            this.ckbAcao.TabIndex = 0;
+            this.ckbAcao.TabIndex = 8;
             this.ckbAcao.Text = "Ação/Aventura";
             this.ckbAcao.UseVisualStyleBackColor = true;
             // 
@@ -394,7 +403,7 @@
             this.rbPC.Location = new System.Drawing.Point(129, 28);
             this.rbPC.Name = "rbPC";
             this.rbPC.Size = new System.Drawing.Size(45, 20);
-            this.rbPC.TabIndex = 5;
+            this.rbPC.TabIndex = 7;
             this.rbPC.TabStop = true;
             this.rbPC.Text = "PC";
             this.rbPC.UseVisualStyleBackColor = true;
@@ -406,7 +415,7 @@
             this.rbXBOX.Location = new System.Drawing.Point(61, 28);
             this.rbXBOX.Name = "rbXBOX";
             this.rbXBOX.Size = new System.Drawing.Size(65, 20);
-            this.rbXBOX.TabIndex = 5;
+            this.rbXBOX.TabIndex = 6;
             this.rbXBOX.TabStop = true;
             this.rbXBOX.Text = "XOne";
             this.rbXBOX.UseVisualStyleBackColor = true;
@@ -418,18 +427,10 @@
             this.rbPS4.Location = new System.Drawing.Point(4, 28);
             this.rbPS4.Name = "rbPS4";
             this.rbPS4.Size = new System.Drawing.Size(53, 20);
-            this.rbPS4.TabIndex = 1;
+            this.rbPS4.TabIndex = 5;
             this.rbPS4.TabStop = true;
             this.rbPS4.Text = "PS4";
             this.rbPS4.UseVisualStyleBackColor = true;
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.Location = new System.Drawing.Point(542, 22);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(97, 23);
-            this.txtPreco.TabIndex = 3;
             // 
             // lbPreco
             // 
@@ -482,7 +483,7 @@
             this.btnEditar.Location = new System.Drawing.Point(575, 437);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 23);
-            this.btnEditar.TabIndex = 6;
+            this.btnEditar.TabIndex = 19;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -513,7 +514,7 @@
             this.btnExibirTodos.Location = new System.Drawing.Point(461, 437);
             this.btnExibirTodos.Name = "btnExibirTodos";
             this.btnExibirTodos.Size = new System.Drawing.Size(108, 23);
-            this.btnExibirTodos.TabIndex = 4;
+            this.btnExibirTodos.TabIndex = 18;
             this.btnExibirTodos.Text = "Exibir Todos";
             this.btnExibirTodos.UseVisualStyleBackColor = true;
             this.btnExibirTodos.Click += new System.EventHandler(this.btnExibirTodos_Click);
@@ -525,7 +526,7 @@
             this.btnSair.Location = new System.Drawing.Point(666, 437);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 23);
-            this.btnSair.TabIndex = 3;
+            this.btnSair.TabIndex = 20;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -552,7 +553,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(668, 60);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 27);
-            this.btnLimpar.TabIndex = 13;
+            this.btnLimpar.TabIndex = 17;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -564,7 +565,7 @@
             this.btnBuscarTipo.Location = new System.Drawing.Point(668, 25);
             this.btnBuscarTipo.Name = "btnBuscarTipo";
             this.btnBuscarTipo.Size = new System.Drawing.Size(75, 27);
-            this.btnBuscarTipo.TabIndex = 4;
+            this.btnBuscarTipo.TabIndex = 16;
             this.btnBuscarTipo.Text = "Buscar";
             this.btnBuscarTipo.UseVisualStyleBackColor = true;
             this.btnBuscarTipo.Click += new System.EventHandler(this.btnBuscarTipo_Click);
@@ -598,7 +599,7 @@
             this.cboxPuzzle.Location = new System.Drawing.Point(395, 42);
             this.cboxPuzzle.Name = "cboxPuzzle";
             this.cboxPuzzle.Size = new System.Drawing.Size(69, 18);
-            this.cboxPuzzle.TabIndex = 12;
+            this.cboxPuzzle.TabIndex = 15;
             this.cboxPuzzle.Text = "Puzzle";
             this.cboxPuzzle.UseVisualStyleBackColor = true;
             // 
@@ -610,7 +611,7 @@
             this.cboxTiro.Location = new System.Drawing.Point(395, 20);
             this.cboxTiro.Name = "cboxTiro";
             this.cboxTiro.Size = new System.Drawing.Size(52, 18);
-            this.cboxTiro.TabIndex = 11;
+            this.cboxTiro.TabIndex = 10;
             this.cboxTiro.Text = "Tiro";
             this.cboxTiro.UseVisualStyleBackColor = true;
             // 
@@ -622,7 +623,7 @@
             this.cboxEstrategia.Location = new System.Drawing.Point(210, 42);
             this.cboxEstrategia.Name = "cboxEstrategia";
             this.cboxEstrategia.Size = new System.Drawing.Size(93, 18);
-            this.cboxEstrategia.TabIndex = 10;
+            this.cboxEstrategia.TabIndex = 13;
             this.cboxEstrategia.Text = "Estratégia";
             this.cboxEstrategia.UseVisualStyleBackColor = true;
             // 
@@ -634,7 +635,7 @@
             this.cboxMusicalRitmico.Location = new System.Drawing.Point(312, 42);
             this.cboxMusicalRitmico.Name = "cboxMusicalRitmico";
             this.cboxMusicalRitmico.Size = new System.Drawing.Size(75, 18);
-            this.cboxMusicalRitmico.TabIndex = 9;
+            this.cboxMusicalRitmico.TabIndex = 14;
             this.cboxMusicalRitmico.Text = "Musical";
             this.cboxMusicalRitmico.UseVisualStyleBackColor = true;
             // 
@@ -646,7 +647,7 @@
             this.cboxLuta.Location = new System.Drawing.Point(312, 20);
             this.cboxLuta.Name = "cboxLuta";
             this.cboxLuta.Size = new System.Drawing.Size(55, 18);
-            this.cboxLuta.TabIndex = 8;
+            this.cboxLuta.TabIndex = 9;
             this.cboxLuta.Text = "Luta";
             this.cboxLuta.UseVisualStyleBackColor = true;
             // 
@@ -658,7 +659,7 @@
             this.cboxPlataforma.Location = new System.Drawing.Point(210, 20);
             this.cboxPlataforma.Name = "cboxPlataforma";
             this.cboxPlataforma.Size = new System.Drawing.Size(99, 18);
-            this.cboxPlataforma.TabIndex = 7;
+            this.cboxPlataforma.TabIndex = 8;
             this.cboxPlataforma.Text = "Plataforma";
             this.cboxPlataforma.UseVisualStyleBackColor = true;
             // 
@@ -670,7 +671,7 @@
             this.cboxCorrida.Location = new System.Drawing.Point(129, 42);
             this.cboxCorrida.Name = "cboxCorrida";
             this.cboxCorrida.Size = new System.Drawing.Size(75, 18);
-            this.cboxCorrida.TabIndex = 6;
+            this.cboxCorrida.TabIndex = 12;
             this.cboxCorrida.Text = "Corrida";
             this.cboxCorrida.UseVisualStyleBackColor = true;
             // 
@@ -682,7 +683,7 @@
             this.cboxEsportes.Location = new System.Drawing.Point(129, 20);
             this.cboxEsportes.Name = "cboxEsportes";
             this.cboxEsportes.Size = new System.Drawing.Size(83, 18);
-            this.cboxEsportes.TabIndex = 5;
+            this.cboxEsportes.TabIndex = 7;
             this.cboxEsportes.Text = "Esportes";
             this.cboxEsportes.UseVisualStyleBackColor = true;
             // 
@@ -694,7 +695,7 @@
             this.cboxRpg.Location = new System.Drawing.Point(6, 42);
             this.cboxRpg.Name = "cboxRpg";
             this.cboxRpg.Size = new System.Drawing.Size(54, 18);
-            this.cboxRpg.TabIndex = 4;
+            this.cboxRpg.TabIndex = 11;
             this.cboxRpg.Text = "RPG";
             this.cboxRpg.UseVisualStyleBackColor = true;
             // 
@@ -706,7 +707,7 @@
             this.cboxAcaoAventura.Location = new System.Drawing.Point(6, 20);
             this.cboxAcaoAventura.Name = "cboxAcaoAventura";
             this.cboxAcaoAventura.Size = new System.Drawing.Size(126, 18);
-            this.cboxAcaoAventura.TabIndex = 3;
+            this.cboxAcaoAventura.TabIndex = 6;
             this.cboxAcaoAventura.Text = "Ação/Aventura";
             this.cboxAcaoAventura.UseVisualStyleBackColor = true;
             // 
@@ -732,7 +733,7 @@
             this.rbtnPc.Location = new System.Drawing.Point(122, 26);
             this.rbtnPc.Name = "rbtnPc";
             this.rbtnPc.Size = new System.Drawing.Size(45, 20);
-            this.rbtnPc.TabIndex = 2;
+            this.rbtnPc.TabIndex = 5;
             this.rbtnPc.TabStop = true;
             this.rbtnPc.Text = "PC";
             this.rbtnPc.UseVisualStyleBackColor = true;
@@ -745,7 +746,7 @@
             this.rbtnPS4.Location = new System.Drawing.Point(3, 26);
             this.rbtnPS4.Name = "rbtnPS4";
             this.rbtnPS4.Size = new System.Drawing.Size(53, 20);
-            this.rbtnPS4.TabIndex = 0;
+            this.rbtnPS4.TabIndex = 3;
             this.rbtnPS4.TabStop = true;
             this.rbtnPS4.Text = "PS4";
             this.rbtnPS4.UseVisualStyleBackColor = true;
@@ -758,7 +759,7 @@
             this.rbtnXbox.Location = new System.Drawing.Point(58, 26);
             this.rbtnXbox.Name = "rbtnXbox";
             this.rbtnXbox.Size = new System.Drawing.Size(65, 20);
-            this.rbtnXbox.TabIndex = 1;
+            this.rbtnXbox.TabIndex = 4;
             this.rbtnXbox.TabStop = true;
             this.rbtnXbox.Text = "XOne";
             this.rbtnXbox.UseVisualStyleBackColor = true;
@@ -784,7 +785,7 @@
             this.txtCampoBusca.Location = new System.Drawing.Point(122, 25);
             this.txtCampoBusca.Name = "txtCampoBusca";
             this.txtCampoBusca.Size = new System.Drawing.Size(531, 23);
-            this.txtCampoBusca.TabIndex = 2;
+            this.txtCampoBusca.TabIndex = 1;
             // 
             // btnBuscarNome
             // 
@@ -793,7 +794,7 @@
             this.btnBuscarNome.Location = new System.Drawing.Point(669, 22);
             this.btnBuscarNome.Name = "btnBuscarNome";
             this.btnBuscarNome.Size = new System.Drawing.Size(75, 26);
-            this.btnBuscarNome.TabIndex = 1;
+            this.btnBuscarNome.TabIndex = 2;
             this.btnBuscarNome.Text = "Buscar";
             this.btnBuscarNome.UseVisualStyleBackColor = true;
             this.btnBuscarNome.Click += new System.EventHandler(this.btnBuscarNome_Click);
@@ -883,7 +884,6 @@
         private System.Windows.Forms.Label lbPreco;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.GroupBox gpbTipoJogo;
         private System.Windows.Forms.GroupBox gpbConsoleCadastra;
         private System.Windows.Forms.RadioButton rbPC;
@@ -910,5 +910,6 @@
         private System.Windows.Forms.DateTimePicker dtpDataLancamento;
         private System.Windows.Forms.Label lbDataLancamento;
         private System.Windows.Forms.PictureBox pbGameLogo;
+        private System.Windows.Forms.TextBox txtPreco;
     }
 }

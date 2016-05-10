@@ -41,7 +41,7 @@ namespace LojaGames
             string nome = txtNomeCliente.Text;
             string cpf = mtbCPFCliente.Text;
 
-            if((nome == string.Empty)&&(cpf == string.Empty))
+            if((nome == string.Empty) && (cpf == string.Empty))
             {
                 MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
             }
@@ -87,9 +87,9 @@ namespace LojaGames
         private void btnBuscarFuncionario_Click(object sender, EventArgs e)
         {
             string nome = txtNomeFuncionario.Text;
-            string cpf = mtbCPFFuncionario.ToString();
+            string cpf = mtbCPFFuncionario.Text;
 
-            if ((nome == string.Empty) || (cpf == string.Empty))
+            if ((nome == string.Empty) && (cpf == string.Empty))
             {
                 MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!");
             }

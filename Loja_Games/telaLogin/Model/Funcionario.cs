@@ -12,6 +12,8 @@ namespace LojaGames.Classes
         //Declaração das Variáveis
         private int codigo_funcionario;
 
+        private string username;
+        private string senha;
         private string cargo;
         private float salario_base;
         private DateTime data_inicio;
@@ -46,6 +48,8 @@ namespace LojaGames.Classes
         }
 
         public DateTime Data_Inicio { get; set; }
+        public string Username { get; set; }
+        public string Senha { get; set; }
 
         //Declaração dos métodos
         public void AdicionarFuncionario()

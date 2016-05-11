@@ -11,6 +11,7 @@ namespace LojaGames.Classes
         //Declaração das Variáveis
         private int codigo;
         private string tipo;
+        //criar um enum
 
         //Declaração das Propriedades
         public int Codigo

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LojaGames
 {
-    public partial class telaBuscarExibir : System.Windows.Forms.Form
+    public partial class telaBuscarExibir : Form
     {
-        private System.Windows.Forms.Form telaP = null;
+        private Form telaP = null;
 
         public telaBuscarExibir()
         {

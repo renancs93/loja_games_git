@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace LojaGames
+namespace LojaGames.View
 {
     public partial class telaRelatorios : Form
     {

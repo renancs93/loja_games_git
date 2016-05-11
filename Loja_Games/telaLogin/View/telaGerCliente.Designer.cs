@@ -42,7 +42,7 @@
             this.abasGerCliente.Location = new System.Drawing.Point(0, 0);
             this.abasGerCliente.Name = "abasGerCliente";
             this.abasGerCliente.SelectedIndex = 0;
-            this.abasGerCliente.Size = new System.Drawing.Size(984, 512);
+            this.abasGerCliente.Size = new System.Drawing.Size(821, 467);
             this.abasGerCliente.TabIndex = 0;
             // 
             // abaCadCliente
@@ -50,7 +50,7 @@
             this.abaCadCliente.Location = new System.Drawing.Point(4, 22);
             this.abaCadCliente.Name = "abaCadCliente";
             this.abaCadCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.abaCadCliente.Size = new System.Drawing.Size(976, 486);
+            this.abaCadCliente.Size = new System.Drawing.Size(813, 441);
             this.abaCadCliente.TabIndex = 0;
             this.abaCadCliente.Text = "Cadastrar Cliente";
             this.abaCadCliente.UseVisualStyleBackColor = true;
@@ -69,13 +69,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 512);
+            this.ClientSize = new System.Drawing.Size(821, 467);
             this.Controls.Add(this.abasGerCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "telaGerCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciamento de Cliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaGerCliente_FormClosing);
             this.abasGerCliente.ResumeLayout(false);
             this.ResumeLayout(false);
 

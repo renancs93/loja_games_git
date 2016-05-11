@@ -1,4 +1,4 @@
-﻿namespace LojaGames
+﻿namespace LojaGames.View
 {
     partial class telaRelatorios
     {

@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LojaGames.View
 {
     public partial class telaGerFuncionario : Form
     {
+        private Form telaP = null;
+
         public telaGerFuncionario()
         {
             InitializeComponent();
+        }
+
+        public void setTelaAnterior(Form t)
+        {
+            telaP = t;
+        }
+
+        private void telaGerFuncionario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+            telaP.Show();
+
         }
     }
 }

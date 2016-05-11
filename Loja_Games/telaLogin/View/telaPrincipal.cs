@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using LojaGames.View;
 
 namespace LojaGames
 {
@@ -115,6 +116,30 @@ namespace LojaGames
             }
         }
 
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            CarregamentoBarraProgresso();
+
+            telaGerCliente clientes = new telaGerCliente();
+            clientes.setTelaAnterior(this);
+            clientes.Show();
+            Hide();
+
+        }
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            CarregamentoBarraProgresso();
+
+            telaGerFuncionario funcionario = new telaGerFuncionario();
+            funcionario.setTelaAnterior(this);
+            funcionario.Show();
+            Hide();
+
+
+        }
+
+
         private void btnJogos_MouseEnter(object sender, EventArgs e)
         {
             btnJogos.ForeColor =  Color.Blue;
@@ -197,6 +222,8 @@ namespace LojaGames
             btnCadastrarFuncionario.Visible = ativarBotoes;
             btnVenda.Visible = ativarBotoes;
             btnBuscaExibir.Visible = ativarBotoes;
+            btnClientes.Visible = ativarBotoes;
+            btnFuncionarios.Visible = ativarBotoes;
 
             //habilitar botões para determinado tipo de login (pendente implantar)
             btnRelatorios.Visible = ativarBotoes;
@@ -220,6 +247,7 @@ namespace LojaGames
 
         }
 
+        
 
 
 

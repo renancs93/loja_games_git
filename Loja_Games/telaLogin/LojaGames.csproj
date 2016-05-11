@@ -97,6 +97,18 @@
     <Compile Include="View\telaCadastroFuncionario.Designer.cs">
       <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\telaGerCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\telaGerCliente.Designer.cs">
+      <DependentUpon>telaGerCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\telaGerFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\telaGerFuncionario.Designer.cs">
+      <DependentUpon>telaGerFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\telaJogos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\telaCadastroFuncionario.resx">
       <DependentUpon>telaCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\telaGerCliente.resx">
+      <DependentUpon>telaGerCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\telaGerFuncionario.resx">
+      <DependentUpon>telaGerFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\telaJogos.resx">
       <DependentUpon>telaJogos.cs</DependentUpon>

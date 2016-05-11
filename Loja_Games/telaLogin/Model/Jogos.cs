@@ -15,7 +15,7 @@ namespace LojaGames.Classes
         private float preco;
         private string console;
         private string genero;
-        private int qnt_estoque;
+        private int qntEstoque;
 
 
         //Declaração das Propriedades
@@ -50,15 +50,15 @@ namespace LojaGames.Classes
         public string Console { get; set; }
         public string Genero { get; set; }
         
-        public int Qnt_Estoque
+        public int QntEstoque
         {
             get
             {
-                return qnt_estoque;
+                return qntEstoque;
             }
             set
             {
-                qnt_estoque = value >= 0 ? value : 0;
+                qntEstoque = value >= 0 ? value : 0;
             }
         }
 

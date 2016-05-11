@@ -39,6 +39,8 @@
             this.btnLogoff = new System.Windows.Forms.Button();
             this.btnBuscaExibir = new System.Windows.Forms.Button();
             this.btnRelatorios = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJogos
@@ -48,7 +50,7 @@
             this.btnJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJogos.ForeColor = System.Drawing.Color.Red;
-            this.btnJogos.Location = new System.Drawing.Point(545, 54);
+            this.btnJogos.Location = new System.Drawing.Point(545, 48);
             this.btnJogos.Name = "btnJogos";
             this.btnJogos.Size = new System.Drawing.Size(119, 35);
             this.btnJogos.TabIndex = 1;
@@ -88,7 +90,7 @@
             this.btnCadastroCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastroCliente.ForeColor = System.Drawing.Color.Red;
-            this.btnCadastroCliente.Location = new System.Drawing.Point(545, 95);
+            this.btnCadastroCliente.Location = new System.Drawing.Point(545, 89);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Size = new System.Drawing.Size(119, 45);
             this.btnCadastroCliente.TabIndex = 2;
@@ -101,12 +103,12 @@
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSair.BackColor = System.Drawing.Color.Black;
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Silver;
-            this.btnSair.Location = new System.Drawing.Point(590, 365);
+            this.btnSair.Location = new System.Drawing.Point(571, 369);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(93, 28);
             this.btnSair.TabIndex = 9;
@@ -124,7 +126,7 @@
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenda.Location = new System.Drawing.Point(545, 196);
+            this.btnVenda.Location = new System.Drawing.Point(545, 190);
             this.btnVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(119, 35);
@@ -143,7 +145,7 @@
             this.btnCadastrarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.Red;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(545, 146);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(545, 140);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(119, 45);
             this.btnCadastrarFuncionario.TabIndex = 3;
@@ -174,7 +176,7 @@
             this.btnBuscaExibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscaExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaExibir.ForeColor = System.Drawing.Color.Red;
-            this.btnBuscaExibir.Location = new System.Drawing.Point(454, 127);
+            this.btnBuscaExibir.Location = new System.Drawing.Point(454, 121);
             this.btnBuscaExibir.Name = "btnBuscaExibir";
             this.btnBuscaExibir.Size = new System.Drawing.Size(95, 33);
             this.btnBuscaExibir.TabIndex = 5;
@@ -193,7 +195,7 @@
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(545, 236);
+            this.btnRelatorios.Location = new System.Drawing.Point(545, 230);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Size = new System.Drawing.Size(119, 36);
             this.btnRelatorios.TabIndex = 6;
@@ -204,6 +206,34 @@
             this.btnRelatorios.MouseEnter += new System.EventHandler(this.btnRelatorios_MouseEnter);
             this.btnRelatorios.MouseLeave += new System.EventHandler(this.btnRelatorios_MouseLeave);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(545, 274);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 36);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Clientes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(545, 316);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 36);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Funcionários";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            // 
             // telaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +243,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(734, 497);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRelatorios);
             this.Controls.Add(this.btnLogoff);
             this.Controls.Add(this.btnCadastrarFuncionario);
@@ -229,6 +261,7 @@
             this.Name = "telaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.telaPrincipal_Load);
             this.ResumeLayout(false);
@@ -247,5 +280,7 @@
         private System.Windows.Forms.Button btnLogoff;
         private System.Windows.Forms.Button btnBuscaExibir;
         private System.Windows.Forms.Button btnRelatorios;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

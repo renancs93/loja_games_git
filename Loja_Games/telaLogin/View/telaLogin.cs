@@ -20,6 +20,7 @@ namespace LojaGames
 
         private void txtCampoUsuario_TextChanged(object sender, EventArgs e)
         {
+            lbObservações.Visible = false;
             //evento "Leave" do campo de texto usuário, onde verifica se o campo está vazio ao sair dele
             if (txtCampoUsuario.Text != string.Empty)
             {
@@ -33,6 +34,7 @@ namespace LojaGames
 
         private void txtCampoSenha_TextChanged(object sender, EventArgs e)
         {
+            lbObservações.Visible = false;
             //evento "Leave" do campo de texto senha, onde verifica se o campo está vazio ao sair dele
             if (txtCampoSenha.Text != string.Empty)
             {
@@ -90,16 +92,8 @@ namespace LojaGames
             else
             {
                 ClasseUtil.LimparCampos(Controls);
-
-                TextBox obs = txtObservacoes;
-                obs.Visible = true;
-                obs.Text = "Usuário não encontrado!";
-                obs.TextAlign = HorizontalAlignment.Center ;
+                lbObservações.Visible = true;
                 
-                //ClasseUtil.LimparCampos((TextBox)txtCampoUsuario);
-                //ClasseUtil.LimparCampos((TextBox)txtCampoSenha);
-                //txtCampoSenha.Text = string.Empty;
-                //txtCampoUsuario.Text = string.Empty;
             }
 
             

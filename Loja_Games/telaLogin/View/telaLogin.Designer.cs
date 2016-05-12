@@ -37,9 +37,9 @@
             this.txtCampoSenha = new System.Windows.Forms.TextBox();
             this.btnLogar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtObservacoes = new System.Windows.Forms.TextBox();
             this.imgOK_usuario = new System.Windows.Forms.PictureBox();
             this.imgOK_senha = new System.Windows.Forms.PictureBox();
+            this.lbObservações = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK_senha)).BeginInit();
@@ -77,7 +77,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.Color.White;
-            this.lbUsuario.Location = new System.Drawing.Point(18, 263);
+            this.lbUsuario.Location = new System.Drawing.Point(18, 269);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(67, 18);
             this.lbUsuario.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.lbSenha.AutoSize = true;
             this.lbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenha.ForeColor = System.Drawing.Color.White;
-            this.lbSenha.Location = new System.Drawing.Point(18, 299);
+            this.lbSenha.Location = new System.Drawing.Point(30, 303);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(55, 18);
             this.lbSenha.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             // txtCampoUsuario
             // 
-            this.txtCampoUsuario.Location = new System.Drawing.Point(91, 263);
+            this.txtCampoUsuario.Location = new System.Drawing.Point(91, 270);
             this.txtCampoUsuario.Name = "txtCampoUsuario";
             this.txtCampoUsuario.Size = new System.Drawing.Size(184, 20);
             this.txtCampoUsuario.TabIndex = 1;
@@ -107,7 +107,7 @@
             // 
             // txtCampoSenha
             // 
-            this.txtCampoSenha.Location = new System.Drawing.Point(91, 297);
+            this.txtCampoSenha.Location = new System.Drawing.Point(91, 304);
             this.txtCampoSenha.Name = "txtCampoSenha";
             this.txtCampoSenha.Size = new System.Drawing.Size(184, 20);
             this.txtCampoSenha.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.btnLogar.Enabled = false;
             this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogar.Image = ((System.Drawing.Image)(resources.GetObject("btnLogar.Image")));
-            this.btnLogar.Location = new System.Drawing.Point(53, 363);
+            this.btnLogar.Location = new System.Drawing.Point(53, 387);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(93, 38);
             this.btnLogar.TabIndex = 4;
@@ -136,7 +136,7 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(196, 363);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 387);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 38);
             this.btnCancelar.TabIndex = 5;
@@ -146,26 +146,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtObservacoes
-            // 
-            this.txtObservacoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObservacoes.BackColor = System.Drawing.SystemColors.Window;
-            this.txtObservacoes.Cursor = System.Windows.Forms.Cursors.Help;
-            this.txtObservacoes.Enabled = false;
-            this.txtObservacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacoes.ForeColor = System.Drawing.Color.Red;
-            this.txtObservacoes.Location = new System.Drawing.Point(53, 330);
-            this.txtObservacoes.Name = "txtObservacoes";
-            this.txtObservacoes.Size = new System.Drawing.Size(235, 20);
-            this.txtObservacoes.TabIndex = 3;
-            this.txtObservacoes.Visible = false;
-            // 
             // imgOK_usuario
             // 
             this.imgOK_usuario.Enabled = false;
             this.imgOK_usuario.Image = ((System.Drawing.Image)(resources.GetObject("imgOK_usuario.Image")));
-            this.imgOK_usuario.Location = new System.Drawing.Point(282, 265);
+            this.imgOK_usuario.Location = new System.Drawing.Point(282, 272);
             this.imgOK_usuario.Name = "imgOK_usuario";
             this.imgOK_usuario.Size = new System.Drawing.Size(16, 16);
             this.imgOK_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -177,13 +162,25 @@
             // 
             this.imgOK_senha.Enabled = false;
             this.imgOK_senha.Image = ((System.Drawing.Image)(resources.GetObject("imgOK_senha.Image")));
-            this.imgOK_senha.Location = new System.Drawing.Point(282, 299);
+            this.imgOK_senha.Location = new System.Drawing.Point(282, 306);
             this.imgOK_senha.Name = "imgOK_senha";
             this.imgOK_senha.Size = new System.Drawing.Size(16, 16);
             this.imgOK_senha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgOK_senha.TabIndex = 10;
             this.imgOK_senha.TabStop = false;
             this.imgOK_senha.Visible = false;
+            // 
+            // lbObservações
+            // 
+            this.lbObservações.AutoSize = true;
+            this.lbObservações.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbObservações.ForeColor = System.Drawing.Color.Red;
+            this.lbObservações.Location = new System.Drawing.Point(88, 341);
+            this.lbObservações.Name = "lbObservações";
+            this.lbObservações.Size = new System.Drawing.Size(179, 16);
+            this.lbObservações.TabIndex = 11;
+            this.lbObservações.Text = "Usuário não Encontrado!";
+            this.lbObservações.Visible = false;
             // 
             // telaLogin
             // 
@@ -192,9 +189,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(345, 436);
+            this.Controls.Add(this.lbObservações);
             this.Controls.Add(this.imgOK_senha);
             this.Controls.Add(this.imgOK_usuario);
-            this.Controls.Add(this.txtObservacoes);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtCampoSenha);
@@ -230,9 +227,9 @@
         private System.Windows.Forms.TextBox txtCampoSenha;
         private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtObservacoes;
         private System.Windows.Forms.PictureBox imgOK_usuario;
         private System.Windows.Forms.PictureBox imgOK_senha;
+        private System.Windows.Forms.Label lbObservações;
     }
 }
 

@@ -51,6 +51,7 @@
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.gpbSexo = new System.Windows.Forms.GroupBox();
+            this.rbtnNInformado = new System.Windows.Forms.RadioButton();
             this.rbtnFeminino = new System.Windows.Forms.RadioButton();
             this.rbtnMasculino = new System.Windows.Forms.RadioButton();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
@@ -64,12 +65,19 @@
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.abaExibiFuncionario = new System.Windows.Forms.TabPage();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbCargo = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lbSalarioBase = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lbDataInicio = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gpbDadosCadastrais.SuspendLayout();
             this.gpbSexo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // abasGerFuncionario
@@ -85,6 +93,7 @@
             // 
             // abaCadFuncionario
             // 
+            this.abaCadFuncionario.Controls.Add(this.groupBox2);
             this.abaCadFuncionario.Controls.Add(this.groupBox1);
             this.abaCadFuncionario.Controls.Add(this.gpbDadosCadastrais);
             this.abaCadFuncionario.Location = new System.Drawing.Point(4, 22);
@@ -243,7 +252,7 @@
             this.gpbDadosCadastrais.Size = new System.Drawing.Size(776, 232);
             this.gpbDadosCadastrais.TabIndex = 0;
             this.gpbDadosCadastrais.TabStop = false;
-            this.gpbDadosCadastrais.Text = "Dados Cadastrais";
+            this.gpbDadosCadastrais.Text = "Dados Pessoais";
             // 
             // txtEmail
             // 
@@ -305,7 +314,7 @@
             // 
             // gpbSexo
             // 
-            this.gpbSexo.Controls.Add(this.radioButton1);
+            this.gpbSexo.Controls.Add(this.rbtnNInformado);
             this.gpbSexo.Controls.Add(this.rbtnFeminino);
             this.gpbSexo.Controls.Add(this.rbtnMasculino);
             this.gpbSexo.Location = new System.Drawing.Point(36, 123);
@@ -314,6 +323,18 @@
             this.gpbSexo.TabIndex = 10;
             this.gpbSexo.TabStop = false;
             this.gpbSexo.Text = "Sexo";
+            // 
+            // rbtnNInformado
+            // 
+            this.rbtnNInformado.AutoSize = true;
+            this.rbtnNInformado.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNInformado.Location = new System.Drawing.Point(26, 68);
+            this.rbtnNInformado.Name = "rbtnNInformado";
+            this.rbtnNInformado.Size = new System.Drawing.Size(119, 18);
+            this.rbtnNInformado.TabIndex = 12;
+            this.rbtnNInformado.TabStop = true;
+            this.rbtnNInformado.Text = "Não Informado";
+            this.rbtnNInformado.UseVisualStyleBackColor = true;
             // 
             // rbtnFeminino
             // 
@@ -433,22 +454,76 @@
             this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaExibiFuncionario.Name = "abaExibiFuncionario";
             this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(3);
-            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 441);
+            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 550);
             this.abaExibiFuncionario.TabIndex = 1;
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // groupBox2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(26, 68);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(119, 18);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Não Informado";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.lbDataInicio);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.lbSalarioBase);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.lbCargo);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(18, 433);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(776, 100);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dados Cadastrais";
+            // 
+            // lbCargo
+            // 
+            this.lbCargo.AutoSize = true;
+            this.lbCargo.Location = new System.Drawing.Point(33, 33);
+            this.lbCargo.Name = "lbCargo";
+            this.lbCargo.Size = new System.Drawing.Size(51, 14);
+            this.lbCargo.TabIndex = 0;
+            this.lbCargo.Text = "Cargo:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(92, 30);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(282, 22);
+            this.textBox5.TabIndex = 1;
+            // 
+            // lbSalarioBase
+            // 
+            this.lbSalarioBase.AutoSize = true;
+            this.lbSalarioBase.Location = new System.Drawing.Point(33, 70);
+            this.lbSalarioBase.Name = "lbSalarioBase";
+            this.lbSalarioBase.Size = new System.Drawing.Size(95, 14);
+            this.lbSalarioBase.TabIndex = 2;
+            this.lbSalarioBase.Text = "Salário Base:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(135, 67);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(144, 22);
+            this.textBox6.TabIndex = 3;
+            // 
+            // lbDataInicio
+            // 
+            this.lbDataInicio.AutoSize = true;
+            this.lbDataInicio.Location = new System.Drawing.Point(392, 70);
+            this.lbDataInicio.Name = "lbDataInicio";
+            this.lbDataInicio.Size = new System.Drawing.Size(104, 14);
+            this.lbDataInicio.TabIndex = 4;
+            this.lbDataInicio.Text = "Data de Início:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(502, 67);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(149, 22);
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // telaGerFuncionario
             // 
@@ -469,6 +544,8 @@
             this.gpbDadosCadastrais.PerformLayout();
             this.gpbSexo.ResumeLayout(false);
             this.gpbSexo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -511,6 +588,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtnNInformado;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lbCargo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbDataInicio;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label lbSalarioBase;
     }
 }

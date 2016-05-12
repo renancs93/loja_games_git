@@ -21,8 +21,10 @@ namespace LojaGames
         private void btnAdicionarItem_Click(object sender, EventArgs e)
         {
             //Este metodo add os item de compra no dataView
-
             MessageBox.Show("Produto adicionado na lista!", "Venda");
+            txtCodigoProduto.Text = string.Empty;
+            numQuantidade.Value = 0;
+
         }
 
         private void btnRemoverItem_Click(object sender, EventArgs e)
@@ -34,6 +36,8 @@ namespace LojaGames
             if (RmItem == DialogResult.Yes)
             {
                 MessageBox.Show("Item Removido!");
+                txtCodigoProduto.Text = string.Empty;
+                numQuantidade.Value = 0;
             }
 
 

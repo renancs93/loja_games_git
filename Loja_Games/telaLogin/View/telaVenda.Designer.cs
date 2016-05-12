@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
             this.mtbCPFAluguel = new System.Windows.Forms.MaskedTextBox();
@@ -91,6 +91,10 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
+            this.txtConfirmaNomeCliente = new System.Windows.Forms.TextBox();
+            this.txtConfirmaNomeProduto = new System.Windows.Forms.TextBox();
+            this.txtConfirmaNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numParcelasAluguel)).BeginInit();
@@ -104,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosVenda)).BeginInit();
             this.tcVendaAluguel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // abaAluguel
@@ -113,7 +118,7 @@
             this.abaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.abaAluguel.Name = "abaAluguel";
             this.abaAluguel.Padding = new System.Windows.Forms.Padding(2);
-            this.abaAluguel.Size = new System.Drawing.Size(764, 453);
+            this.abaAluguel.Size = new System.Drawing.Size(774, 527);
             this.abaAluguel.TabIndex = 1;
             this.abaAluguel.Text = "Aluguel";
             this.abaAluguel.UseVisualStyleBackColor = true;
@@ -142,10 +147,11 @@
             this.gpbAlug.Controls.Add(this.lbFuncAlug);
             this.gpbAlug.Controls.Add(this.lbProdAlug);
             this.gpbAlug.Controls.Add(this.lbCpfCliAlug);
+            this.gpbAlug.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpbAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbAlug.Location = new System.Drawing.Point(5, 5);
+            this.gpbAlug.Location = new System.Drawing.Point(2, 2);
             this.gpbAlug.Name = "gpbAlug";
-            this.gpbAlug.Size = new System.Drawing.Size(756, 440);
+            this.gpbAlug.Size = new System.Drawing.Size(770, 523);
             this.gpbAlug.TabIndex = 0;
             this.gpbAlug.TabStop = false;
             this.gpbAlug.Text = "Dados Aluguel";
@@ -261,14 +267,14 @@
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
@@ -408,7 +414,7 @@
             this.abaVenda.Margin = new System.Windows.Forms.Padding(2);
             this.abaVenda.Name = "abaVenda";
             this.abaVenda.Padding = new System.Windows.Forms.Padding(2);
-            this.abaVenda.Size = new System.Drawing.Size(764, 453);
+            this.abaVenda.Size = new System.Drawing.Size(774, 527);
             this.abaVenda.TabIndex = 0;
             this.abaVenda.Text = "Venda";
             this.abaVenda.UseVisualStyleBackColor = true;
@@ -416,9 +422,9 @@
             // 
             // gbpDadoVenda
             // 
-            this.gbpDadoVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbpDadoVenda.Controls.Add(this.groupBox1);
+            this.gbpDadoVenda.Controls.Add(this.txtConfirmaNomeFuncionario);
+            this.gbpDadoVenda.Controls.Add(this.txtConfirmaNomeCliente);
             this.gbpDadoVenda.Controls.Add(this.mtbCPFVenda);
             this.gbpDadoVenda.Controls.Add(this.numParcelas_Venda);
             this.gbpDadoVenda.Controls.Add(this.cbxFormasPagamentosCompra);
@@ -426,36 +432,30 @@
             this.gbpDadoVenda.Controls.Add(this.txtValorParcela);
             this.gbpDadoVenda.Controls.Add(this.lbValorParcela);
             this.gbpDadoVenda.Controls.Add(this.lbTipoPagamento);
-            this.gbpDadoVenda.Controls.Add(this.numQuantidade);
             this.gbpDadoVenda.Controls.Add(this.pcbLogoGame);
-            this.gbpDadoVenda.Controls.Add(this.lbQuantidade);
             this.gbpDadoVenda.Controls.Add(this.lbTotalCompra);
             this.gbpDadoVenda.Controls.Add(this.txtTotalCompra);
-            this.gbpDadoVenda.Controls.Add(this.btnAdicionarItem);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoFuncionario);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoFuncionario);
             this.gbpDadoVenda.Controls.Add(this.btnCancelar);
-            this.gbpDadoVenda.Controls.Add(this.btnRemoverItem);
             this.gbpDadoVenda.Controls.Add(this.btnFinalizarVenda);
-            this.gbpDadoVenda.Controls.Add(this.txtCodigoProduto);
-            this.gbpDadoVenda.Controls.Add(this.lbCodigoProduto);
-            this.gbpDadoVenda.Controls.Add(this.dgvProdutosVenda);
             this.gbpDadoVenda.Controls.Add(this.lbCpfCliente);
             this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoVenda);
+            this.gbpDadoVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbpDadoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbpDadoVenda.Location = new System.Drawing.Point(4, 4);
+            this.gbpDadoVenda.Location = new System.Drawing.Point(2, 2);
             this.gbpDadoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.gbpDadoVenda.Name = "gbpDadoVenda";
             this.gbpDadoVenda.Padding = new System.Windows.Forms.Padding(2);
-            this.gbpDadoVenda.Size = new System.Drawing.Size(756, 442);
+            this.gbpDadoVenda.Size = new System.Drawing.Size(770, 523);
             this.gbpDadoVenda.TabIndex = 9;
             this.gbpDadoVenda.TabStop = false;
             this.gbpDadoVenda.Text = "Dados Venda";
             // 
             // mtbCPFVenda
             // 
-            this.mtbCPFVenda.Location = new System.Drawing.Point(116, 37);
+            this.mtbCPFVenda.Location = new System.Drawing.Point(115, 30);
             this.mtbCPFVenda.Mask = "000,000,000-00";
             this.mtbCPFVenda.Name = "mtbCPFVenda";
             this.mtbCPFVenda.Size = new System.Drawing.Size(134, 23);
@@ -464,7 +464,7 @@
             // 
             // numParcelas_Venda
             // 
-            this.numParcelas_Venda.Location = new System.Drawing.Point(285, 401);
+            this.numParcelas_Venda.Location = new System.Drawing.Point(283, 477);
             this.numParcelas_Venda.Maximum = new decimal(new int[] {
             10,
             0,
@@ -484,7 +484,7 @@
             "Débito",
             "Crédito",
             "Boleto"});
-            this.cbxFormasPagamentosCompra.Location = new System.Drawing.Point(285, 362);
+            this.cbxFormasPagamentosCompra.Location = new System.Drawing.Point(281, 437);
             this.cbxFormasPagamentosCompra.Name = "cbxFormasPagamentosCompra";
             this.cbxFormasPagamentosCompra.Size = new System.Drawing.Size(97, 24);
             this.cbxFormasPagamentosCompra.TabIndex = 6;
@@ -492,7 +492,7 @@
             // lbNumeroParcelas
             // 
             this.lbNumeroParcelas.AutoSize = true;
-            this.lbNumeroParcelas.Location = new System.Drawing.Point(123, 404);
+            this.lbNumeroParcelas.Location = new System.Drawing.Point(119, 480);
             this.lbNumeroParcelas.Name = "lbNumeroParcelas";
             this.lbNumeroParcelas.Size = new System.Drawing.Size(158, 16);
             this.lbNumeroParcelas.TabIndex = 27;
@@ -502,7 +502,7 @@
             // 
             this.txtValorParcela.Enabled = false;
             this.txtValorParcela.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorParcela.Location = new System.Drawing.Point(501, 361);
+            this.txtValorParcela.Location = new System.Drawing.Point(497, 436);
             this.txtValorParcela.Name = "txtValorParcela";
             this.txtValorParcela.Size = new System.Drawing.Size(92, 26);
             this.txtValorParcela.TabIndex = 11;
@@ -511,7 +511,7 @@
             // lbValorParcela
             // 
             this.lbValorParcela.AutoSize = true;
-            this.lbValorParcela.Location = new System.Drawing.Point(388, 366);
+            this.lbValorParcela.Location = new System.Drawing.Point(384, 441);
             this.lbValorParcela.Name = "lbValorParcela";
             this.lbValorParcela.Size = new System.Drawing.Size(109, 16);
             this.lbValorParcela.TabIndex = 25;
@@ -520,7 +520,7 @@
             // lbTipoPagamento
             // 
             this.lbTipoPagamento.AutoSize = true;
-            this.lbTipoPagamento.Location = new System.Drawing.Point(112, 367);
+            this.lbTipoPagamento.Location = new System.Drawing.Point(108, 442);
             this.lbTipoPagamento.Name = "lbTipoPagamento";
             this.lbTipoPagamento.Size = new System.Drawing.Size(169, 16);
             this.lbTipoPagamento.TabIndex = 23;
@@ -529,15 +529,15 @@
             // numQuantidade
             // 
             this.numQuantidade.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numQuantidade.Location = new System.Drawing.Point(414, 76);
+            this.numQuantidade.Location = new System.Drawing.Point(126, 57);
             this.numQuantidade.Name = "numQuantidade";
-            this.numQuantidade.Size = new System.Drawing.Size(77, 23);
+            this.numQuantidade.Size = new System.Drawing.Size(46, 23);
             this.numQuantidade.TabIndex = 4;
             // 
             // pcbLogoGame
             // 
             this.pcbLogoGame.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoGame.Location = new System.Drawing.Point(8, 355);
+            this.pcbLogoGame.Location = new System.Drawing.Point(4, 431);
             this.pcbLogoGame.Name = "pcbLogoGame";
             this.pcbLogoGame.Size = new System.Drawing.Size(101, 80);
             this.pcbLogoGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -547,19 +547,19 @@
             // lbQuantidade
             // 
             this.lbQuantidade.AutoSize = true;
-            this.lbQuantidade.Location = new System.Drawing.Point(304, 78);
+            this.lbQuantidade.Location = new System.Drawing.Point(24, 59);
             this.lbQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbQuantidade.Name = "lbQuantidade";
-            this.lbQuantidade.Size = new System.Drawing.Size(105, 16);
+            this.lbQuantidade.Size = new System.Drawing.Size(97, 16);
             this.lbQuantidade.TabIndex = 20;
-            this.lbQuantidade.Text = "Quantidade : ";
+            this.lbQuantidade.Text = "Quantidade:";
             // 
             // lbTotalCompra
             // 
             this.lbTotalCompra.AutoSize = true;
             this.lbTotalCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalCompra.ForeColor = System.Drawing.Color.Red;
-            this.lbTotalCompra.Location = new System.Drawing.Point(359, 401);
+            this.lbTotalCompra.Location = new System.Drawing.Point(355, 477);
             this.lbTotalCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalCompra.Name = "lbTotalCompra";
             this.lbTotalCompra.Size = new System.Drawing.Size(138, 18);
@@ -571,7 +571,7 @@
             this.txtTotalCompra.Enabled = false;
             this.txtTotalCompra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalCompra.ForeColor = System.Drawing.Color.Red;
-            this.txtTotalCompra.Location = new System.Drawing.Point(501, 394);
+            this.txtTotalCompra.Location = new System.Drawing.Point(497, 470);
             this.txtTotalCompra.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(92, 27);
@@ -580,10 +580,11 @@
             // 
             // btnAdicionarItem
             // 
-            this.btnAdicionarItem.Location = new System.Drawing.Point(612, 90);
+            this.btnAdicionarItem.ForeColor = System.Drawing.Color.Green;
+            this.btnAdicionarItem.Location = new System.Drawing.Point(602, 18);
             this.btnAdicionarItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionarItem.Name = "btnAdicionarItem";
-            this.btnAdicionarItem.Size = new System.Drawing.Size(137, 50);
+            this.btnAdicionarItem.Size = new System.Drawing.Size(136, 37);
             this.btnAdicionarItem.TabIndex = 5;
             this.btnAdicionarItem.Text = "Adicionar Item";
             this.btnAdicionarItem.UseVisualStyleBackColor = true;
@@ -592,26 +593,27 @@
             // txtCodigoFuncionario
             // 
             this.txtCodigoFuncionario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoFuncionario.Location = new System.Drawing.Point(414, 36);
+            this.txtCodigoFuncionario.Location = new System.Drawing.Point(116, 63);
             this.txtCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
-            this.txtCodigoFuncionario.Size = new System.Drawing.Size(77, 23);
+            this.txtCodigoFuncionario.Size = new System.Drawing.Size(134, 23);
             this.txtCodigoFuncionario.TabIndex = 2;
             this.txtCodigoFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoFuncionario_KeyPress);
             // 
             // lbCodigoFuncionario
             // 
             this.lbCodigoFuncionario.AutoSize = true;
-            this.lbCodigoFuncionario.Location = new System.Drawing.Point(304, 40);
+            this.lbCodigoFuncionario.Location = new System.Drawing.Point(13, 66);
             this.lbCodigoFuncionario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoFuncionario.Name = "lbCodigoFuncionario";
-            this.lbCodigoFuncionario.Size = new System.Drawing.Size(106, 16);
+            this.lbCodigoFuncionario.Size = new System.Drawing.Size(98, 16);
             this.lbCodigoFuncionario.TabIndex = 10;
-            this.lbCodigoFuncionario.Text = "Funcionario : ";
+            this.lbCodigoFuncionario.Text = "Funcionario:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(649, 354);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(661, 425);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 37);
@@ -622,10 +624,11 @@
             // 
             // btnRemoverItem
             // 
-            this.btnRemoverItem.Location = new System.Drawing.Point(612, 52);
+            this.btnRemoverItem.ForeColor = System.Drawing.Color.Red;
+            this.btnRemoverItem.Location = new System.Drawing.Point(601, 59);
             this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverItem.Name = "btnRemoverItem";
-            this.btnRemoverItem.Size = new System.Drawing.Size(137, 34);
+            this.btnRemoverItem.Size = new System.Drawing.Size(137, 30);
             this.btnRemoverItem.TabIndex = 9;
             this.btnRemoverItem.Text = "Remover Item";
             this.btnRemoverItem.UseVisualStyleBackColor = true;
@@ -633,7 +636,8 @@
             // 
             // btnFinalizarVenda
             // 
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(607, 394);
+            this.btnFinalizarVenda.ForeColor = System.Drawing.Color.Blue;
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(619, 466);
             this.btnFinalizarVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(142, 43);
@@ -645,56 +649,57 @@
             // txtCodigoProduto
             // 
             this.txtCodigoProduto.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProduto.Location = new System.Drawing.Point(116, 75);
+            this.txtCodigoProduto.Location = new System.Drawing.Point(111, 23);
             this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoProduto.Name = "txtCodigoProduto";
-            this.txtCodigoProduto.Size = new System.Drawing.Size(134, 23);
+            this.txtCodigoProduto.Size = new System.Drawing.Size(133, 23);
             this.txtCodigoProduto.TabIndex = 3;
             this.txtCodigoProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoProduto_KeyPress);
             // 
             // lbCodigoProduto
             // 
             this.lbCodigoProduto.AutoSize = true;
-            this.lbCodigoProduto.Location = new System.Drawing.Point(34, 78);
+            this.lbCodigoProduto.Location = new System.Drawing.Point(24, 23);
             this.lbCodigoProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoProduto.Name = "lbCodigoProduto";
-            this.lbCodigoProduto.Size = new System.Drawing.Size(78, 16);
+            this.lbCodigoProduto.Size = new System.Drawing.Size(63, 16);
             this.lbCodigoProduto.TabIndex = 5;
-            this.lbCodigoProduto.Text = "Produto : ";
+            this.lbCodigoProduto.Text = "Código:";
             // 
             // dgvProdutosVenda
             // 
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
             this.dgvtbcDescricao,
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvProdutosVenda.Location = new System.Drawing.Point(8, 144);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProdutosVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvProdutosVenda.Location = new System.Drawing.Point(3, 98);
             this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProdutosVenda.Name = "dgvProdutosVenda";
             this.dgvProdutosVenda.RowHeadersWidth = 50;
             this.dgvProdutosVenda.RowTemplate.Height = 24;
-            this.dgvProdutosVenda.Size = new System.Drawing.Size(745, 206);
+            this.dgvProdutosVenda.Size = new System.Drawing.Size(753, 218);
             this.dgvProdutosVenda.TabIndex = 4;
             // 
             // dgvtbcCodigo
@@ -725,18 +730,18 @@
             // lbCpfCliente
             // 
             this.lbCpfCliente.AutoSize = true;
-            this.lbCpfCliente.Location = new System.Drawing.Point(8, 40);
+            this.lbCpfCliente.Location = new System.Drawing.Point(15, 33);
             this.lbCpfCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCpfCliente.Name = "lbCpfCliente";
-            this.lbCpfCliente.Size = new System.Drawing.Size(104, 16);
+            this.lbCpfCliente.Size = new System.Drawing.Size(96, 16);
             this.lbCpfCliente.TabIndex = 2;
-            this.lbCpfCliente.Text = "CPF Cliente : ";
+            this.lbCpfCliente.Text = "CPF Cliente:";
             // 
             // txtCodigoVenda
             // 
             this.txtCodigoVenda.Enabled = false;
             this.txtCodigoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoVenda.Location = new System.Drawing.Point(668, 14);
+            this.txtCodigoVenda.Location = new System.Drawing.Point(651, 36);
             this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoVenda.Name = "txtCodigoVenda";
             this.txtCodigoVenda.Size = new System.Drawing.Size(81, 23);
@@ -745,34 +750,76 @@
             // lbCodigoVenda
             // 
             this.lbCodigoVenda.AutoSize = true;
-            this.lbCodigoVenda.Location = new System.Drawing.Point(543, 18);
+            this.lbCodigoVenda.Location = new System.Drawing.Point(635, 18);
             this.lbCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoVenda.Name = "lbCodigoVenda";
-            this.lbCodigoVenda.Size = new System.Drawing.Size(121, 16);
+            this.lbCodigoVenda.Size = new System.Drawing.Size(108, 16);
             this.lbCodigoVenda.TabIndex = 0;
-            this.lbCodigoVenda.Text = "Código Venda : ";
+            this.lbCodigoVenda.Text = "Código Venda";
             // 
             // tcVendaAluguel
             // 
-            this.tcVendaAluguel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tcVendaAluguel.Controls.Add(this.abaVenda);
             this.tcVendaAluguel.Controls.Add(this.abaAluguel);
+            this.tcVendaAluguel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcVendaAluguel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcVendaAluguel.Location = new System.Drawing.Point(-2, 0);
+            this.tcVendaAluguel.Location = new System.Drawing.Point(0, 0);
             this.tcVendaAluguel.Margin = new System.Windows.Forms.Padding(2);
             this.tcVendaAluguel.Name = "tcVendaAluguel";
             this.tcVendaAluguel.SelectedIndex = 0;
-            this.tcVendaAluguel.Size = new System.Drawing.Size(772, 482);
+            this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
+            // 
+            // txtConfirmaNomeCliente
+            // 
+            this.txtConfirmaNomeCliente.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtConfirmaNomeCliente.Enabled = false;
+            this.txtConfirmaNomeCliente.Location = new System.Drawing.Point(255, 30);
+            this.txtConfirmaNomeCliente.Name = "txtConfirmaNomeCliente";
+            this.txtConfirmaNomeCliente.Size = new System.Drawing.Size(291, 23);
+            this.txtConfirmaNomeCliente.TabIndex = 28;
+            // 
+            // txtConfirmaNomeProduto
+            // 
+            this.txtConfirmaNomeProduto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConfirmaNomeProduto.Enabled = false;
+            this.txtConfirmaNomeProduto.Location = new System.Drawing.Point(250, 22);
+            this.txtConfirmaNomeProduto.Name = "txtConfirmaNomeProduto";
+            this.txtConfirmaNomeProduto.Size = new System.Drawing.Size(291, 23);
+            this.txtConfirmaNomeProduto.TabIndex = 29;
+            // 
+            // txtConfirmaNomeFuncionario
+            // 
+            this.txtConfirmaNomeFuncionario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConfirmaNomeFuncionario.Enabled = false;
+            this.txtConfirmaNomeFuncionario.Location = new System.Drawing.Point(255, 63);
+            this.txtConfirmaNomeFuncionario.Name = "txtConfirmaNomeFuncionario";
+            this.txtConfirmaNomeFuncionario.Size = new System.Drawing.Size(291, 23);
+            this.txtConfirmaNomeFuncionario.TabIndex = 30;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtConfirmaNomeProduto);
+            this.groupBox1.Controls.Add(this.lbCodigoProduto);
+            this.groupBox1.Controls.Add(this.txtCodigoProduto);
+            this.groupBox1.Controls.Add(this.lbQuantidade);
+            this.groupBox1.Controls.Add(this.numQuantidade);
+            this.groupBox1.Controls.Add(this.btnRemoverItem);
+            this.groupBox1.Controls.Add(this.btnAdicionarItem);
+            this.groupBox1.Controls.Add(this.dgvProdutosVenda);
+            this.groupBox1.Location = new System.Drawing.Point(5, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(759, 319);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Produtos";
             // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(770, 482);
+            this.ClientSize = new System.Drawing.Size(782, 556);
             this.Controls.Add(this.tcVendaAluguel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -798,6 +845,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosVenda)).EndInit();
             this.tcVendaAluguel.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -864,5 +913,9 @@
         private System.Windows.Forms.Label lbFormasPagamentoAluguel;
         private System.Windows.Forms.MaskedTextBox mtbCPFAluguel;
         private System.Windows.Forms.MaskedTextBox mtbCPFVenda;
+        private System.Windows.Forms.TextBox txtConfirmaNomeCliente;
+        private System.Windows.Forms.TextBox txtConfirmaNomeFuncionario;
+        private System.Windows.Forms.TextBox txtConfirmaNomeProduto;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -8,27 +8,18 @@ namespace LojaGames.Classes
 {
     class Pagamento
     {
-        //Declaração das Variáveis
-        private int codigo;
-        private string tipo;
-        //criar um enum
-
-        //Declaração das Propriedades
-        public int Codigo
+        //Declaração das Variáveis       
+        public enum tipoPagamento
         {
-            get
-            {
-                return codigo;
-            }
-
-            set
-            {
-                codigo = value > 0? value : 0;
-            }
+            Dinheiro = 1,
+            Cheque = 2,
+            Debito = 3,
+            Credito = 4,
+            Boleto = 5
         }
-
-        public string Tipo { get; set; }
         
+        //Declaração das Propriedades
+
         //Declaração dos métodos
         public void AdicionarPagamento()
         {

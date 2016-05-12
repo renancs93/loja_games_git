@@ -40,7 +40,6 @@
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lbQuantidade = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAlteracoes = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.gpbTipoJogo = new System.Windows.Forms.GroupBox();
             this.gpbGeneroCadastra = new System.Windows.Forms.GroupBox();
@@ -127,7 +126,6 @@
             this.abaCadastraJogos.Controls.Add(this.numQuantidade);
             this.abaCadastraJogos.Controls.Add(this.lbQuantidade);
             this.abaCadastraJogos.Controls.Add(this.btnCancelar);
-            this.abaCadastraJogos.Controls.Add(this.btnAlteracoes);
             this.abaCadastraJogos.Controls.Add(this.btnCadastrar);
             this.abaCadastraJogos.Controls.Add(this.gpbTipoJogo);
             this.abaCadastraJogos.Controls.Add(this.lbPreco);
@@ -228,22 +226,10 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAlteracoes
-            // 
-            this.btnAlteracoes.Enabled = false;
-            this.btnAlteracoes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlteracoes.Location = new System.Drawing.Point(576, 415);
-            this.btnAlteracoes.Name = "btnAlteracoes";
-            this.btnAlteracoes.Size = new System.Drawing.Size(86, 42);
-            this.btnAlteracoes.TabIndex = 19;
-            this.btnAlteracoes.Text = "Salvar Alterações";
-            this.btnAlteracoes.UseVisualStyleBackColor = true;
-            this.btnAlteracoes.Click += new System.EventHandler(this.btnAlteracoes_Click);
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(484, 415);
+            this.btnCadastrar.Location = new System.Drawing.Point(576, 415);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(86, 42);
             this.btnCadastrar.TabIndex = 18;
@@ -902,7 +888,6 @@
         private System.Windows.Forms.NumericUpDown numQuantidade;
         private System.Windows.Forms.Label lbQuantidade;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAlteracoes;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lbCodigoNumero;
         private System.Windows.Forms.Label lbCodigo;

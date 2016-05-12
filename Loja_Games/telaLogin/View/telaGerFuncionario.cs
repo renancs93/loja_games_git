@@ -22,5 +22,11 @@ namespace LojaGames.View
             telaP.Show();
 
         }
+
+        private void btnCadastro_Click(object sender, System.EventArgs e)
+        {
+            DadosLoginFuncionario telaLoginSenha = new DadosLoginFuncionario();
+            telaLoginSenha.Show();
+        }
     }
 }

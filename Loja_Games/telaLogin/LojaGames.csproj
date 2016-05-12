@@ -81,6 +81,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="View\DadosLoginFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DadosLoginFuncionario.Designer.cs">
+      <DependentUpon>DadosLoginFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\telaBuscarExibir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="View\telaVenda.Designer.cs">
       <DependentUpon>telaVenda.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\DadosLoginFuncionario.resx">
+      <DependentUpon>DadosLoginFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\telaBuscarExibir.resx">
       <DependentUpon>telaBuscarExibir.cs</DependentUpon>
     </EmbeddedResource>

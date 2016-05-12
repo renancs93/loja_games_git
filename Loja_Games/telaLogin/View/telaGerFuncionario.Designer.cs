@@ -72,6 +72,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lbDataInicio = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -122,7 +123,7 @@
             this.groupBox1.Location = new System.Drawing.Point(18, 264);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 153);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Endereço";
             // 
@@ -133,7 +134,7 @@
             this.comboBox1.Location = new System.Drawing.Point(688, 106);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(64, 22);
-            this.comboBox1.TabIndex = 11;
+            this.comboBox1.TabIndex = 16;
             // 
             // label6
             // 
@@ -149,7 +150,7 @@
             this.textBox4.Location = new System.Drawing.Point(455, 106);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(143, 22);
-            this.textBox4.TabIndex = 9;
+            this.textBox4.TabIndex = 15;
             // 
             // label5
             // 
@@ -165,7 +166,7 @@
             this.textBox3.Location = new System.Drawing.Point(92, 106);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(282, 22);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 14;
             // 
             // label4
             // 
@@ -181,7 +182,7 @@
             this.textBox2.Location = new System.Drawing.Point(688, 66);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(64, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBox2.TabIndex = 13;
             // 
             // label3
             // 
@@ -198,7 +199,7 @@
             this.textBox1.Location = new System.Drawing.Point(92, 66);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(506, 22);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 12;
             // 
             // label2
             // 
@@ -216,7 +217,7 @@
             this.maskedTextBox1.Mask = "00000-000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(90, 22);
-            this.maskedTextBox1.TabIndex = 1;
+            this.maskedTextBox1.TabIndex = 11;
             // 
             // label1
             // 
@@ -250,7 +251,7 @@
             this.gpbDadosCadastrais.Location = new System.Drawing.Point(18, 17);
             this.gpbDadosCadastrais.Name = "gpbDadosCadastrais";
             this.gpbDadosCadastrais.Size = new System.Drawing.Size(776, 232);
-            this.gpbDadosCadastrais.TabIndex = 0;
+            this.gpbDadosCadastrais.TabIndex = 1;
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Pessoais";
             // 
@@ -260,7 +261,7 @@
             this.txtEmail.Location = new System.Drawing.Point(308, 173);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(444, 22);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 10;
             // 
             // lbEmail
             // 
@@ -283,7 +284,7 @@
             this.cbxStatus.Location = new System.Drawing.Point(347, 123);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(121, 22);
-            this.cbxStatus.TabIndex = 14;
+            this.cbxStatus.TabIndex = 8;
             // 
             // lbEstadoCivil
             // 
@@ -301,7 +302,7 @@
             this.mtbTelefone.Mask = "(00)00000-0000";
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(142, 22);
-            this.mtbTelefone.TabIndex = 12;
+            this.mtbTelefone.TabIndex = 9;
             // 
             // lbTelefone
             // 
@@ -331,7 +332,7 @@
             this.rbtnNInformado.Location = new System.Drawing.Point(26, 68);
             this.rbtnNInformado.Name = "rbtnNInformado";
             this.rbtnNInformado.Size = new System.Drawing.Size(119, 18);
-            this.rbtnNInformado.TabIndex = 12;
+            this.rbtnNInformado.TabIndex = 7;
             this.rbtnNInformado.TabStop = true;
             this.rbtnNInformado.Text = "Não Informado";
             this.rbtnNInformado.UseVisualStyleBackColor = true;
@@ -343,7 +344,7 @@
             this.rbtnFeminino.Location = new System.Drawing.Point(26, 44);
             this.rbtnFeminino.Name = "rbtnFeminino";
             this.rbtnFeminino.Size = new System.Drawing.Size(81, 18);
-            this.rbtnFeminino.TabIndex = 11;
+            this.rbtnFeminino.TabIndex = 6;
             this.rbtnFeminino.TabStop = true;
             this.rbtnFeminino.Text = "Feminino";
             this.rbtnFeminino.UseVisualStyleBackColor = true;
@@ -355,7 +356,7 @@
             this.rbtnMasculino.Location = new System.Drawing.Point(26, 20);
             this.rbtnMasculino.Name = "rbtnMasculino";
             this.rbtnMasculino.Size = new System.Drawing.Size(86, 18);
-            this.rbtnMasculino.TabIndex = 11;
+            this.rbtnMasculino.TabIndex = 5;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
@@ -366,7 +367,7 @@
             this.dtpDataNascimento.Location = new System.Drawing.Point(610, 75);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(142, 22);
-            this.dtpDataNascimento.TabIndex = 9;
+            this.dtpDataNascimento.TabIndex = 4;
             this.dtpDataNascimento.Value = new System.DateTime(2016, 5, 11, 0, 0, 0, 0);
             // 
             // lbDataNascimento
@@ -385,7 +386,7 @@
             this.mtbRG.Mask = "00,000,000-00";
             this.mtbRG.Name = "mtbRG";
             this.mtbRG.Size = new System.Drawing.Size(117, 22);
-            this.mtbRG.TabIndex = 7;
+            this.mtbRG.TabIndex = 3;
             // 
             // lbRG
             // 
@@ -403,7 +404,7 @@
             this.mtbCPF.Mask = "000,000,000-00";
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(122, 22);
-            this.mtbCPF.TabIndex = 5;
+            this.mtbCPF.TabIndex = 2;
             // 
             // lbCPF
             // 
@@ -420,7 +421,7 @@
             this.txtNome.Location = new System.Drawing.Point(92, 32);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(433, 22);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 1;
             // 
             // lbNome
             // 
@@ -461,6 +462,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCadastro);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.lbDataInicio);
             this.groupBox2.Controls.Add(this.textBox6);
@@ -471,7 +473,7 @@
             this.groupBox2.Location = new System.Drawing.Point(18, 433);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(776, 100);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Cadastrais";
             // 
@@ -490,7 +492,7 @@
             this.textBox5.Location = new System.Drawing.Point(92, 30);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(282, 22);
-            this.textBox5.TabIndex = 1;
+            this.textBox5.TabIndex = 17;
             // 
             // lbSalarioBase
             // 
@@ -506,12 +508,12 @@
             this.textBox6.Location = new System.Drawing.Point(135, 67);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(144, 22);
-            this.textBox6.TabIndex = 3;
+            this.textBox6.TabIndex = 19;
             // 
             // lbDataInicio
             // 
             this.lbDataInicio.AutoSize = true;
-            this.lbDataInicio.Location = new System.Drawing.Point(392, 70);
+            this.lbDataInicio.Location = new System.Drawing.Point(392, 33);
             this.lbDataInicio.Name = "lbDataInicio";
             this.lbDataInicio.Size = new System.Drawing.Size(104, 14);
             this.lbDataInicio.TabIndex = 4;
@@ -520,10 +522,20 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(502, 67);
+            this.dateTimePicker1.Location = new System.Drawing.Point(502, 30);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(149, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.TabIndex = 18;
+            // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Location = new System.Drawing.Point(485, 66);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastro.TabIndex = 20;
+            this.btnCadastro.Text = "Cadastro";
+            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // telaGerFuncionario
             // 
@@ -596,5 +608,6 @@
         private System.Windows.Forms.Label lbDataInicio;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label lbSalarioBase;
+        private System.Windows.Forms.Button btnCadastro;
     }
 }

@@ -89,12 +89,14 @@ namespace LojaGames
             }
             else
             {
+                ClasseUtil.LimparCampos(Controls);
+
                 TextBox obs = txtObservacoes;
                 obs.Visible = true;
                 obs.Text = "Usuário não encontrado!";
                 obs.TextAlign = HorizontalAlignment.Center ;
-
-               // ClasseUtil.LimparCampos((TextBox)txtCampoUsuario);
+                
+                //ClasseUtil.LimparCampos((TextBox)txtCampoUsuario);
                 //ClasseUtil.LimparCampos((TextBox)txtCampoSenha);
                 //txtCampoSenha.Text = string.Empty;
                 //txtCampoUsuario.Text = string.Empty;

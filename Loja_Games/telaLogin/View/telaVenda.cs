@@ -121,6 +121,8 @@ namespace LojaGames
         private void btnAddAlug_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Produto adicionado na lista!", "Aluguel");
+            txtProdAlug.Text = string.Empty;
+            numDiasAlug.Value = 0;
 
         }
 
@@ -131,6 +133,8 @@ namespace LojaGames
             if (RmItem == DialogResult.Yes)
             {
                 MessageBox.Show("Item Removido!");
+                txtProdAlug.Text = string.Empty;
+                numDiasAlug.Value = 0;
             }
 
         }

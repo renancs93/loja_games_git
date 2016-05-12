@@ -47,7 +47,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
-            this.lbStatus = new System.Windows.Forms.Label();
+            this.lbEstadoCivil = new System.Windows.Forms.Label();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.gpbSexo = new System.Windows.Forms.GroupBox();
@@ -64,6 +64,7 @@
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.abaExibiFuncionario = new System.Windows.Forms.TabPage();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,7 +80,7 @@
             this.abasGerFuncionario.Location = new System.Drawing.Point(0, 0);
             this.abasGerFuncionario.Name = "abasGerFuncionario";
             this.abasGerFuncionario.SelectedIndex = 0;
-            this.abasGerFuncionario.Size = new System.Drawing.Size(821, 467);
+            this.abasGerFuncionario.Size = new System.Drawing.Size(821, 576);
             this.abasGerFuncionario.TabIndex = 0;
             // 
             // abaCadFuncionario
@@ -89,7 +90,7 @@
             this.abaCadFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaCadFuncionario.Name = "abaCadFuncionario";
             this.abaCadFuncionario.Padding = new System.Windows.Forms.Padding(3);
-            this.abaCadFuncionario.Size = new System.Drawing.Size(813, 441);
+            this.abaCadFuncionario.Size = new System.Drawing.Size(813, 550);
             this.abaCadFuncionario.TabIndex = 0;
             this.abaCadFuncionario.Text = "Cadastro de Funcionário";
             this.abaCadFuncionario.UseVisualStyleBackColor = true;
@@ -222,7 +223,7 @@
             this.gpbDadosCadastrais.Controls.Add(this.txtEmail);
             this.gpbDadosCadastrais.Controls.Add(this.lbEmail);
             this.gpbDadosCadastrais.Controls.Add(this.cbxStatus);
-            this.gpbDadosCadastrais.Controls.Add(this.lbStatus);
+            this.gpbDadosCadastrais.Controls.Add(this.lbEstadoCivil);
             this.gpbDadosCadastrais.Controls.Add(this.mtbTelefone);
             this.gpbDadosCadastrais.Controls.Add(this.lbTelefone);
             this.gpbDadosCadastrais.Controls.Add(this.gpbSexo);
@@ -270,24 +271,24 @@
             "Solteiro/a",
             "Casado/a",
             "Viúvo/a"});
-            this.cbxStatus.Location = new System.Drawing.Point(308, 142);
+            this.cbxStatus.Location = new System.Drawing.Point(347, 123);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(121, 22);
             this.cbxStatus.TabIndex = 14;
             // 
-            // lbStatus
+            // lbEstadoCivil
             // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.Location = new System.Drawing.Point(248, 145);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(54, 14);
-            this.lbStatus.TabIndex = 13;
-            this.lbStatus.Text = "Status:";
+            this.lbEstadoCivil.AutoSize = true;
+            this.lbEstadoCivil.Location = new System.Drawing.Point(248, 126);
+            this.lbEstadoCivil.Name = "lbEstadoCivil";
+            this.lbEstadoCivil.Size = new System.Drawing.Size(89, 14);
+            this.lbEstadoCivil.TabIndex = 13;
+            this.lbEstadoCivil.Text = "Estado Civil:";
             // 
             // mtbTelefone
             // 
             this.mtbTelefone.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefone.Location = new System.Drawing.Point(535, 142);
+            this.mtbTelefone.Location = new System.Drawing.Point(566, 123);
             this.mtbTelefone.Mask = "(00)00000-0000";
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(142, 22);
@@ -296,7 +297,7 @@
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(460, 145);
+            this.lbTelefone.Location = new System.Drawing.Point(491, 126);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(69, 14);
             this.lbTelefone.TabIndex = 11;
@@ -304,11 +305,12 @@
             // 
             // gpbSexo
             // 
+            this.gpbSexo.Controls.Add(this.radioButton1);
             this.gpbSexo.Controls.Add(this.rbtnFeminino);
             this.gpbSexo.Controls.Add(this.rbtnMasculino);
             this.gpbSexo.Location = new System.Drawing.Point(36, 123);
             this.gpbSexo.Name = "gpbSexo";
-            this.gpbSexo.Size = new System.Drawing.Size(175, 81);
+            this.gpbSexo.Size = new System.Drawing.Size(158, 92);
             this.gpbSexo.TabIndex = 10;
             this.gpbSexo.TabStop = false;
             this.gpbSexo.Text = "Sexo";
@@ -317,7 +319,7 @@
             // 
             this.rbtnFeminino.AutoSize = true;
             this.rbtnFeminino.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFeminino.Location = new System.Drawing.Point(26, 51);
+            this.rbtnFeminino.Location = new System.Drawing.Point(26, 44);
             this.rbtnFeminino.Name = "rbtnFeminino";
             this.rbtnFeminino.Size = new System.Drawing.Size(81, 18);
             this.rbtnFeminino.TabIndex = 11;
@@ -361,7 +363,7 @@
             this.mtbRG.Location = new System.Drawing.Point(285, 75);
             this.mtbRG.Mask = "00,000,000-00";
             this.mtbRG.Name = "mtbRG";
-            this.mtbRG.Size = new System.Drawing.Size(144, 22);
+            this.mtbRG.Size = new System.Drawing.Size(117, 22);
             this.mtbRG.TabIndex = 7;
             // 
             // lbRG
@@ -376,16 +378,16 @@
             // mtbCPF
             // 
             this.mtbCPF.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCPF.Location = new System.Drawing.Point(77, 75);
+            this.mtbCPF.Location = new System.Drawing.Point(92, 75);
             this.mtbCPF.Mask = "000,000,000-00";
             this.mtbCPF.Name = "mtbCPF";
-            this.mtbCPF.Size = new System.Drawing.Size(134, 22);
+            this.mtbCPF.Size = new System.Drawing.Size(122, 22);
             this.mtbCPF.TabIndex = 5;
             // 
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
-            this.lbCPF.Location = new System.Drawing.Point(33, 78);
+            this.lbCPF.Location = new System.Drawing.Point(45, 78);
             this.lbCPF.Name = "lbCPF";
             this.lbCPF.Size = new System.Drawing.Size(38, 14);
             this.lbCPF.TabIndex = 4;
@@ -394,15 +396,15 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(206, 32);
+            this.txtNome.Location = new System.Drawing.Point(92, 32);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(546, 22);
+            this.txtNome.Size = new System.Drawing.Size(433, 22);
             this.txtNome.TabIndex = 3;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(150, 35);
+            this.lbNome.Location = new System.Drawing.Point(33, 35);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(50, 14);
             this.lbNome.TabIndex = 2;
@@ -411,7 +413,7 @@
             // lbCodigoNumero
             // 
             this.lbCodigoNumero.AutoSize = true;
-            this.lbCodigoNumero.Location = new System.Drawing.Point(96, 35);
+            this.lbCodigoNumero.Location = new System.Drawing.Point(725, 35);
             this.lbCodigoNumero.Name = "lbCodigoNumero";
             this.lbCodigoNumero.Size = new System.Drawing.Size(16, 14);
             this.lbCodigoNumero.TabIndex = 1;
@@ -420,7 +422,7 @@
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Location = new System.Drawing.Point(33, 35);
+            this.lbCodigo.Location = new System.Drawing.Point(662, 35);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(57, 14);
             this.lbCodigo.TabIndex = 0;
@@ -436,11 +438,23 @@
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(26, 68);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(119, 18);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Não Informado";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // telaGerFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 467);
+            this.ClientSize = new System.Drawing.Size(821, 576);
             this.Controls.Add(this.abasGerFuncionario);
             this.MaximizeBox = false;
             this.Name = "telaGerFuncionario";
@@ -481,7 +495,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.ComboBox cbxStatus;
-        private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.Label lbEstadoCivil;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -497,5 +511,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

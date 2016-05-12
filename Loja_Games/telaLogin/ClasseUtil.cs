@@ -40,23 +40,40 @@ namespace LojaGames
         }
 
         //limpa Campos
-        public static void LimparCampo(object e)
+        public static void LimparCampos(Control.ControlCollection tela)
         {
-            if(e.GetType() == typeof(TextBox))
+            
+            foreach(Control campo in tela)
             {
-                ((TextBox)e).Text = string.Empty;
-            }
-            else if(e.GetType() == typeof(RadioButton))
-            {
-                ((RadioButton)e).Checked = false;
-            }
-            else if (e.GetType() == typeof(MaskedTextBox))
-            {
-                ((MaskedTextBox)e).Text = string.Empty;
-            }
+                if (campo.HasChildren)
+                {
+                    LimparCampos(campo.Controls);
+                }
+
+                if (campo.GetType() == typeof(TextBox))
+                {
+                    ((TextBox)campo).Text = string.Empty;
+                }
+                else if (campo.GetType() == typeof(RadioButton))
+                {
+                    ((RadioButton)campo).Checked = false;
+                }
+                else if (campo.GetType() == typeof(MaskedTextBox))
+                {
+                    ((MaskedTextBox)campo).Text = string.Empty;
+                }
+                else if(campo.GetType() == typeof(CheckBox))
+                {
+                    ((CheckBox)campo).Checked = false;
+                }
+                else if(campo.GetType() == typeof(ComboBox))
+                {
+                    ((ComboBox)campo).SelectedItem = -1;
+                }
 
 
-
+            }
+            
         }
 
         //validas diversos campos das telas de acordo com o tipo
@@ -64,7 +81,13 @@ namespace LojaGames
         {
             string mensagem = "";
 
-            foreach(Control controle in componentes)
+            Control[] a = new Control[componentes.Count];
+
+            componentes.CopyTo(a, 0);
+
+            List<Control> controles = a.OrderBy(x => x.TabIndex).ToList();            
+
+            foreach (Control controle in controles)
             {
                 if (controle.HasChildren)
                 {
@@ -84,23 +107,7 @@ namespace LojaGames
                         mensagem += string.Format("\nO campo {0} deve ser preenchido!", nomeDoCampo);
                     }
                 }
-
-                /*
-                //Verifica os radiosButons
-                if (controle.GetType() == typeof(RadioButton))
-                {
-                    bool r = RadioSelecionado((RadioButton)controle);
-                    int cont = 0;
-
-                    if (r)
-                    {
-                        cont++;
-                    }
-
-                    return cont;
-                }
-                */  
-
+                
 
             }
 
@@ -111,6 +118,6 @@ namespace LojaGames
 
 
 
-
+    //fim da classe útil
     }
 }

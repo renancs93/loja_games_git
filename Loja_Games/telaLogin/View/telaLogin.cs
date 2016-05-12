@@ -94,8 +94,8 @@ namespace LojaGames
                 obs.Text = "Usuário não encontrado!";
                 obs.TextAlign = HorizontalAlignment.Center ;
 
-                ClasseUtil.LimparCampo((TextBox)txtCampoUsuario);
-                ClasseUtil.LimparCampo((TextBox)txtCampoSenha);
+               // ClasseUtil.LimparCampos((TextBox)txtCampoUsuario);
+                //ClasseUtil.LimparCampos((TextBox)txtCampoSenha);
                 //txtCampoSenha.Text = string.Empty;
                 //txtCampoUsuario.Text = string.Empty;
             }

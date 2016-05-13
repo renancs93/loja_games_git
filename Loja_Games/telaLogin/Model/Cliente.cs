@@ -30,7 +30,8 @@ namespace LojaGames
         //Declaração dos métodos
         public void AdicionarCliente()
         {
-
+            
+                
         }
 
         public void RemoverCliente()

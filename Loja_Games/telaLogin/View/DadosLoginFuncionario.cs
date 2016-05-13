@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LojaGames.View
 {
     public partial class DadosLoginFuncionario : Form
     {
-        public DadosLoginFuncionario()
+        private PictureBox img = null;
+        public DadosLoginFuncionario(PictureBox imagemOK)
         {
             InitializeComponent();
+            img = imagemOK;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -24,13 +19,23 @@ namespace LojaGames.View
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if(mtbConfirmarSenha.Text == "" || txtUsuario.Text == "" || mtbSenha.Text == "")
+            string user = txtUsuario.Text;
+            string senha = mtbSenha.Text;
+            string confirmSenha = mtbConfirmarSenha.Text;
+
+            if(user == string.Empty || senha == string.Empty || confirmSenha == string.Empty)
             {
                 DialogResult alerta = MessageBox.Show("Todos os campos devem ser preenchidos.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else if(senha != confirmSenha)
+            {
+                MessageBox.Show("Os campos de senha não coincidem", "Atenção", MessageBoxButtons.OK ,MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Dados cadastrados com sucesso!");
+                //acessaVariavel(true);
+                img.Visible = true;
                 Close();
             }
         }

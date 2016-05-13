@@ -9,6 +9,9 @@ namespace LojaGames.Classes
 {
     class Funcionario : Pessoa
     {
+        public Dictionary<long, Funcionario> dicFunc = new Dictionary<long, Funcionario>();
+        int totalFunc = 0; //incrementa o código dos funcionarios
+        
         //Declaração das Variáveis
         private int codigo_funcionario;
 
@@ -17,6 +20,11 @@ namespace LojaGames.Classes
         private string cargo;
         private float salario_base;
         private DateTime data_inicio;
+
+        public Funcionario()
+        {
+            
+        }
 
         //Propriedades
         public int Codigo_Funcionario
@@ -52,9 +60,9 @@ namespace LojaGames.Classes
         public string Senha { get; set; }
 
         //Declaração dos métodos
-        public void AdicionarFuncionario()
+        public void AdicionarFuncionario(long cpfFunc, Funcionario func)
         {
-            
+            dicFunc.Add(cpfFunc, func);
         }
 
         public void RemoverFuncionario()
@@ -66,5 +74,7 @@ namespace LojaGames.Classes
         {
 
         }
+
+       
     }
 }

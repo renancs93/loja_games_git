@@ -30,6 +30,8 @@
         {
             this.abasGerFuncionario = new System.Windows.Forms.TabControl();
             this.abaCadFuncionario = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
@@ -73,14 +75,24 @@
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.abaExibiFuncionario = new System.Windows.Forms.TabPage();
-            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgUserSenhaOK = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvExibeFuncionarios = new System.Windows.Forms.DataGridView();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExibirTodosFunc = new System.Windows.Forms.Button();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
             this.gpbDadosCadastrais.SuspendLayout();
             this.gpbEndereco.SuspendLayout();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbSexo.SuspendLayout();
+            this.abaExibiFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibeFuncionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // abasGerFuncionario
@@ -96,6 +108,7 @@
             // 
             // abaCadFuncionario
             // 
+            this.abaCadFuncionario.Controls.Add(this.pictureBox1);
             this.abaCadFuncionario.Controls.Add(this.btnCancelar);
             this.abaCadFuncionario.Controls.Add(this.btnCadastrarFuncionario);
             this.abaCadFuncionario.Controls.Add(this.gpbDadosCadastrais);
@@ -109,8 +122,31 @@
             this.abaCadFuncionario.Text = "Cadastro de Funcionário";
             this.abaCadFuncionario.UseVisualStyleBackColor = true;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(699, 553);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(95, 45);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnCadastrarFuncionario
+            // 
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(584, 553);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(95, 45);
+            this.btnCadastrarFuncionario.TabIndex = 4;
+            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            // 
             // gpbDadosCadastrais
             // 
+            this.gpbDadosCadastrais.Controls.Add(this.imgUserSenhaOK);
             this.gpbDadosCadastrais.Controls.Add(this.btnCadastro);
             this.gpbDadosCadastrais.Controls.Add(this.dtpDataInicio);
             this.gpbDadosCadastrais.Controls.Add(this.lbDataInicio);
@@ -132,7 +168,7 @@
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(148, 23);
             this.btnCadastro.TabIndex = 20;
-            this.btnCadastro.Text = "Cadastrar Senha:";
+            this.btnCadastro.Text = "Cadastrar Senha";
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
@@ -327,6 +363,7 @@
             this.mtbCEP.Name = "mtbCEP";
             this.mtbCEP.Size = new System.Drawing.Size(90, 22);
             this.mtbCEP.TabIndex = 11;
+            this.mtbCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbCEP
             // 
@@ -412,6 +449,7 @@
             this.mtbTelefone.Name = "mtbTelefone";
             this.mtbTelefone.Size = new System.Drawing.Size(142, 22);
             this.mtbTelefone.TabIndex = 9;
+            this.mtbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbTelefone
             // 
@@ -496,6 +534,7 @@
             this.mtbRG.Name = "mtbRG";
             this.mtbRG.Size = new System.Drawing.Size(117, 22);
             this.mtbRG.TabIndex = 3;
+            this.mtbRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbRG
             // 
@@ -514,6 +553,7 @@
             this.mtbCPF.Name = "mtbCPF";
             this.mtbCPF.Size = new System.Drawing.Size(122, 22);
             this.mtbCPF.TabIndex = 2;
+            this.mtbCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbCPF
             // 
@@ -561,33 +601,79 @@
             // 
             // abaExibiFuncionario
             // 
+            this.abaExibiFuncionario.Controls.Add(this.btnExibirTodosFunc);
+            this.abaExibiFuncionario.Controls.Add(this.groupBox1);
             this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaExibiFuncionario.Name = "abaExibiFuncionario";
             this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(3);
-            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 550);
+            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 617);
             this.abaExibiFuncionario.TabIndex = 1;
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
             // 
-            // btnCadastrarFuncionario
+            // pictureBox1
             // 
-            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(584, 553);
-            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(95, 45);
-            this.btnCadastrarFuncionario.TabIndex = 4;
-            this.btnCadastrarFuncionario.Text = "Cadastrar Funcionário";
-            this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 539);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnCancelar
+            // imgUserSenhaOK
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(699, 553);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 45);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.imgUserSenhaOK.Image = global::LojaGames.Properties.Resources.icon_ok;
+            this.imgUserSenhaOK.Location = new System.Drawing.Point(657, 70);
+            this.imgUserSenhaOK.Name = "imgUserSenhaOK";
+            this.imgUserSenhaOK.Size = new System.Drawing.Size(16, 16);
+            this.imgUserSenhaOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUserSenhaOK.TabIndex = 21;
+            this.imgUserSenhaOK.TabStop = false;
+            this.imgUserSenhaOK.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvExibeFuncionarios);
+            this.groupBox1.Location = new System.Drawing.Point(27, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(754, 329);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados Funcionarios";
+            // 
+            // dgvExibeFuncionarios
+            // 
+            this.dgvExibeFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExibeFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExibeFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPF,
+            this.Nome});
+            this.dgvExibeFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExibeFuncionarios.Location = new System.Drawing.Point(3, 16);
+            this.dgvExibeFuncionarios.Name = "dgvExibeFuncionarios";
+            this.dgvExibeFuncionarios.Size = new System.Drawing.Size(748, 310);
+            this.dgvExibeFuncionarios.TabIndex = 0;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // btnExibirTodosFunc
+            // 
+            this.btnExibirTodosFunc.Location = new System.Drawing.Point(620, 429);
+            this.btnExibirTodosFunc.Name = "btnExibirTodosFunc";
+            this.btnExibirTodosFunc.Size = new System.Drawing.Size(108, 42);
+            this.btnExibirTodosFunc.TabIndex = 1;
+            this.btnExibirTodosFunc.Text = "Exibir Todos";
+            this.btnExibirTodosFunc.UseVisualStyleBackColor = true;
+            this.btnExibirTodosFunc.Click += new System.EventHandler(this.btnExibirTodosFunc_Click);
             // 
             // telaGerFuncionario
             // 
@@ -610,6 +696,11 @@
             this.gpbDadosPessoais.PerformLayout();
             this.gpbSexo.ResumeLayout(false);
             this.gpbSexo.PerformLayout();
+            this.abaExibiFuncionario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibeFuncionarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,5 +754,12 @@
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCadastrarFuncionario;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgUserSenhaOK;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvExibeFuncionarios;
+        private System.Windows.Forms.Button btnExibirTodosFunc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsuario.Location = new System.Drawing.Point(71, 57);
+            this.lbUsuario.Location = new System.Drawing.Point(81, 68);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(63, 14);
             this.lbUsuario.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.lbSenha.AutoSize = true;
             this.lbSenha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSenha.Location = new System.Drawing.Point(81, 98);
+            this.lbSenha.Location = new System.Drawing.Point(91, 109);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(53, 14);
             this.lbSenha.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.lbConfirmarSenha.AutoSize = true;
             this.lbConfirmarSenha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbConfirmarSenha.Location = new System.Drawing.Point(11, 135);
+            this.lbConfirmarSenha.Location = new System.Drawing.Point(21, 146);
             this.lbConfirmarSenha.Name = "lbConfirmarSenha";
             this.lbConfirmarSenha.Size = new System.Drawing.Size(123, 14);
             this.lbConfirmarSenha.TabIndex = 2;
@@ -71,7 +71,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(140, 54);
+            this.txtUsuario.Location = new System.Drawing.Point(150, 65);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 22);
             this.txtUsuario.TabIndex = 1;
@@ -79,7 +79,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(57, 181);
+            this.btnConfirmar.Location = new System.Drawing.Point(67, 192);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(100, 23);
             this.btnConfirmar.TabIndex = 4;
@@ -90,7 +90,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(198, 181);
+            this.btnCancelar.Location = new System.Drawing.Point(208, 192);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 23);
             this.btnCancelar.TabIndex = 5;
@@ -101,7 +101,7 @@
             // mtbSenha
             // 
             this.mtbSenha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbSenha.Location = new System.Drawing.Point(140, 95);
+            this.mtbSenha.Location = new System.Drawing.Point(150, 106);
             this.mtbSenha.Name = "mtbSenha";
             this.mtbSenha.PasswordChar = '*';
             this.mtbSenha.Size = new System.Drawing.Size(100, 22);
@@ -110,7 +110,7 @@
             // mtbConfirmarSenha
             // 
             this.mtbConfirmarSenha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbConfirmarSenha.Location = new System.Drawing.Point(140, 132);
+            this.mtbConfirmarSenha.Location = new System.Drawing.Point(150, 143);
             this.mtbConfirmarSenha.Name = "mtbConfirmarSenha";
             this.mtbConfirmarSenha.PasswordChar = '*';
             this.mtbConfirmarSenha.Size = new System.Drawing.Size(100, 22);
@@ -121,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(358, 262);
+            this.ClientSize = new System.Drawing.Size(358, 239);
             this.Controls.Add(this.mtbConfirmarSenha);
             this.Controls.Add(this.mtbSenha);
             this.Controls.Add(this.btnCancelar);
@@ -133,7 +133,7 @@
             this.MaximizeBox = false;
             this.Name = "DadosLoginFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DadosLoginFuncionario";
+            this.Text = "Login do Funcionário";
             this.ResumeLayout(false);
             this.PerformLayout();
 

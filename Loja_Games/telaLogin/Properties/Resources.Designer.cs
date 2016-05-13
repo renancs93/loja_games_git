@@ -73,6 +73,16 @@ namespace LojaGames.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_ok {
+            get {
+                object obj = ResourceManager.GetObject("icon_ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_shop {
             get {
                 object obj = ResourceManager.GetObject("icon_shop", resourceCulture);

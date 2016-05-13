@@ -67,11 +67,13 @@
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.abaExibiCliente = new System.Windows.Forms.TabPage();
+            this.pbLogoCli = new System.Windows.Forms.PictureBox();
             this.abasGerCliente.SuspendLayout();
             this.abaCadCliente.SuspendLayout();
             this.gpbEnderecoCli.SuspendLayout();
             this.gbpDadosPessoaisCli.SuspendLayout();
             this.gbpSexo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).BeginInit();
             this.SuspendLayout();
             // 
             // abasGerCliente
@@ -83,11 +85,12 @@
             this.abasGerCliente.Margin = new System.Windows.Forms.Padding(4);
             this.abasGerCliente.Name = "abasGerCliente";
             this.abasGerCliente.SelectedIndex = 0;
-            this.abasGerCliente.Size = new System.Drawing.Size(1095, 619);
+            this.abasGerCliente.Size = new System.Drawing.Size(1095, 639);
             this.abasGerCliente.TabIndex = 0;
             // 
             // abaCadCliente
             // 
+            this.abaCadCliente.Controls.Add(this.pbLogoCli);
             this.abaCadCliente.Controls.Add(this.btnCancelarCli);
             this.abaCadCliente.Controls.Add(this.btnCadastrarCli);
             this.abaCadCliente.Controls.Add(this.gpbEnderecoCli);
@@ -96,7 +99,7 @@
             this.abaCadCliente.Margin = new System.Windows.Forms.Padding(4);
             this.abaCadCliente.Name = "abaCadCliente";
             this.abaCadCliente.Padding = new System.Windows.Forms.Padding(4);
-            this.abaCadCliente.Size = new System.Drawing.Size(1087, 590);
+            this.abaCadCliente.Size = new System.Drawing.Size(1087, 610);
             this.abaCadCliente.TabIndex = 0;
             this.abaCadCliente.Text = "Cadastrar Cliente";
             this.abaCadCliente.UseVisualStyleBackColor = true;
@@ -104,7 +107,7 @@
             // btnCancelarCli
             // 
             this.btnCancelarCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCancelarCli.Location = new System.Drawing.Point(932, 526);
+            this.btnCancelarCli.Location = new System.Drawing.Point(932, 535);
             this.btnCancelarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelarCli.Name = "btnCancelarCli";
             this.btnCancelarCli.Size = new System.Drawing.Size(127, 55);
@@ -115,7 +118,7 @@
             // btnCadastrarCli
             // 
             this.btnCadastrarCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrarCli.Location = new System.Drawing.Point(779, 526);
+            this.btnCadastrarCli.Location = new System.Drawing.Point(779, 535);
             this.btnCadastrarCli.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrarCli.Name = "btnCadastrarCli";
             this.btnCadastrarCli.Size = new System.Drawing.Size(127, 55);
@@ -545,11 +548,22 @@
             this.abaExibiCliente.Text = "Exibir Clientes";
             this.abaExibiCliente.UseVisualStyleBackColor = true;
             // 
+            // pbLogoCli
+            // 
+            this.pbLogoCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pbLogoCli.Location = new System.Drawing.Point(24, 517);
+            this.pbLogoCli.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogoCli.Name = "pbLogoCli";
+            this.pbLogoCli.Size = new System.Drawing.Size(171, 85);
+            this.pbLogoCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoCli.TabIndex = 6;
+            this.pbLogoCli.TabStop = false;
+            // 
             // telaGerCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 619);
+            this.ClientSize = new System.Drawing.Size(1095, 639);
             this.Controls.Add(this.abasGerCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -566,6 +580,7 @@
             this.gbpDadosPessoaisCli.PerformLayout();
             this.gbpSexo.ResumeLayout(false);
             this.gbpSexo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,5 +626,6 @@
         private System.Windows.Forms.RadioButton rbtnMasculinoCli;
         private System.Windows.Forms.Button btnCancelarCli;
         private System.Windows.Forms.Button btnCadastrarCli;
+        private System.Windows.Forms.PictureBox pbLogoCli;
     }
 }

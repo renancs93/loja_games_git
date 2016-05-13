@@ -30,9 +30,11 @@
         {
             this.abasGerFuncionario = new System.Windows.Forms.TabControl();
             this.abaCadFuncionario = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.gpbDadosCadastrais = new System.Windows.Forms.GroupBox();
+            this.imgUserSenhaOK = new System.Windows.Forms.PictureBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
             this.lbDataInicio = new System.Windows.Forms.Label();
@@ -75,24 +77,35 @@
             this.lbCodigoNumero = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.abaExibiFuncionario = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imgUserSenhaOK = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExibirTodosFunc = new System.Windows.Forms.Button();
+            this.gpbDadosFuncionarios = new System.Windows.Forms.GroupBox();
             this.dgvExibeFuncionarios = new System.Windows.Forms.DataGridView();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExibirTodosFunc = new System.Windows.Forms.Button();
+            this.gpbBuscarFuncionario = new System.Windows.Forms.GroupBox();
+            this.lbCpfFuncionario = new System.Windows.Forms.Label();
+            this.mtbCpfFuncionario = new System.Windows.Forms.MaskedTextBox();
+            this.lbOU = new System.Windows.Forms.Label();
+            this.lbNomeFuncionario = new System.Windows.Forms.Label();
+            this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.btnCancelarBuscaFunc = new System.Windows.Forms.Button();
+            this.btnBuscarFuncionario = new System.Windows.Forms.Button();
+            this.btnEditarFuncionario = new System.Windows.Forms.Button();
+            this.btnExcluirFuncionario = new System.Windows.Forms.Button();
+            this.pcbGameStore = new System.Windows.Forms.PictureBox();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbDadosCadastrais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).BeginInit();
             this.gpbEndereco.SuspendLayout();
             this.gpbDadosPessoais.SuspendLayout();
             this.gpbSexo.SuspendLayout();
             this.abaExibiFuncionario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gpbDadosFuncionarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibeFuncionarios)).BeginInit();
+            this.gpbBuscarFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbGameStore)).BeginInit();
             this.SuspendLayout();
             // 
             // abasGerFuncionario
@@ -121,6 +134,16 @@
             this.abaCadFuncionario.TabIndex = 0;
             this.abaCadFuncionario.Text = "Cadastro de Funcionário";
             this.abaCadFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 539);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCancelar
             // 
@@ -161,6 +184,17 @@
             this.gpbDadosCadastrais.TabIndex = 3;
             this.gpbDadosCadastrais.TabStop = false;
             this.gpbDadosCadastrais.Text = "Dados Cadastrais";
+            // 
+            // imgUserSenhaOK
+            // 
+            this.imgUserSenhaOK.Image = global::LojaGames.Properties.Resources.icon_ok;
+            this.imgUserSenhaOK.Location = new System.Drawing.Point(657, 70);
+            this.imgUserSenhaOK.Name = "imgUserSenhaOK";
+            this.imgUserSenhaOK.Size = new System.Drawing.Size(16, 16);
+            this.imgUserSenhaOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUserSenhaOK.TabIndex = 21;
+            this.imgUserSenhaOK.TabStop = false;
+            this.imgUserSenhaOK.Visible = false;
             // 
             // btnCadastro
             // 
@@ -601,8 +635,10 @@
             // 
             // abaExibiFuncionario
             // 
-            this.abaExibiFuncionario.Controls.Add(this.btnExibirTodosFunc);
-            this.abaExibiFuncionario.Controls.Add(this.groupBox1);
+            this.abaExibiFuncionario.Controls.Add(this.pcbGameStore);
+            this.abaExibiFuncionario.Controls.Add(this.btnCancelarBuscaFunc);
+            this.abaExibiFuncionario.Controls.Add(this.gpbBuscarFuncionario);
+            this.abaExibiFuncionario.Controls.Add(this.gpbDadosFuncionarios);
             this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaExibiFuncionario.Name = "abaExibiFuncionario";
             this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(3);
@@ -611,36 +647,27 @@
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnExibirTodosFunc
             // 
-            this.pictureBox1.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 539);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.btnExibirTodosFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExibirTodosFunc.Location = new System.Drawing.Point(640, 89);
+            this.btnExibirTodosFunc.Name = "btnExibirTodosFunc";
+            this.btnExibirTodosFunc.Size = new System.Drawing.Size(108, 42);
+            this.btnExibirTodosFunc.TabIndex = 1;
+            this.btnExibirTodosFunc.Text = "Exibir Todos";
+            this.btnExibirTodosFunc.UseVisualStyleBackColor = true;
+            this.btnExibirTodosFunc.Click += new System.EventHandler(this.btnExibirTodosFunc_Click);
             // 
-            // imgUserSenhaOK
+            // gpbDadosFuncionarios
             // 
-            this.imgUserSenhaOK.Image = global::LojaGames.Properties.Resources.icon_ok;
-            this.imgUserSenhaOK.Location = new System.Drawing.Point(657, 70);
-            this.imgUserSenhaOK.Name = "imgUserSenhaOK";
-            this.imgUserSenhaOK.Size = new System.Drawing.Size(16, 16);
-            this.imgUserSenhaOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgUserSenhaOK.TabIndex = 21;
-            this.imgUserSenhaOK.TabStop = false;
-            this.imgUserSenhaOK.Visible = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvExibeFuncionarios);
-            this.groupBox1.Location = new System.Drawing.Point(27, 43);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(754, 329);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados Funcionarios";
+            this.gpbDadosFuncionarios.Controls.Add(this.dgvExibeFuncionarios);
+            this.gpbDadosFuncionarios.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbDadosFuncionarios.Location = new System.Drawing.Point(18, 232);
+            this.gpbDadosFuncionarios.Name = "gpbDadosFuncionarios";
+            this.gpbDadosFuncionarios.Size = new System.Drawing.Size(772, 299);
+            this.gpbDadosFuncionarios.TabIndex = 0;
+            this.gpbDadosFuncionarios.TabStop = false;
+            this.gpbDadosFuncionarios.Text = "Dados Funcionarios";
             // 
             // dgvExibeFuncionarios
             // 
@@ -650,9 +677,9 @@
             this.CPF,
             this.Nome});
             this.dgvExibeFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExibeFuncionarios.Location = new System.Drawing.Point(3, 16);
+            this.dgvExibeFuncionarios.Location = new System.Drawing.Point(3, 18);
             this.dgvExibeFuncionarios.Name = "dgvExibeFuncionarios";
-            this.dgvExibeFuncionarios.Size = new System.Drawing.Size(748, 310);
+            this.dgvExibeFuncionarios.Size = new System.Drawing.Size(766, 278);
             this.dgvExibeFuncionarios.TabIndex = 0;
             // 
             // CPF
@@ -665,15 +692,115 @@
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             // 
-            // btnExibirTodosFunc
+            // gpbBuscarFuncionario
             // 
-            this.btnExibirTodosFunc.Location = new System.Drawing.Point(620, 429);
-            this.btnExibirTodosFunc.Name = "btnExibirTodosFunc";
-            this.btnExibirTodosFunc.Size = new System.Drawing.Size(108, 42);
-            this.btnExibirTodosFunc.TabIndex = 1;
-            this.btnExibirTodosFunc.Text = "Exibir Todos";
-            this.btnExibirTodosFunc.UseVisualStyleBackColor = true;
-            this.btnExibirTodosFunc.Click += new System.EventHandler(this.btnExibirTodosFunc_Click);
+            this.gpbBuscarFuncionario.Controls.Add(this.btnExcluirFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.btnEditarFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.btnBuscarFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.txtNomeFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.lbNomeFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.btnExibirTodosFunc);
+            this.gpbBuscarFuncionario.Controls.Add(this.lbOU);
+            this.gpbBuscarFuncionario.Controls.Add(this.mtbCpfFuncionario);
+            this.gpbBuscarFuncionario.Controls.Add(this.lbCpfFuncionario);
+            this.gpbBuscarFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbBuscarFuncionario.Location = new System.Drawing.Point(18, 23);
+            this.gpbBuscarFuncionario.Name = "gpbBuscarFuncionario";
+            this.gpbBuscarFuncionario.Size = new System.Drawing.Size(772, 194);
+            this.gpbBuscarFuncionario.TabIndex = 2;
+            this.gpbBuscarFuncionario.TabStop = false;
+            this.gpbBuscarFuncionario.Text = "Buscar Funcionário";
+            // 
+            // lbCpfFuncionario
+            // 
+            this.lbCpfFuncionario.AutoSize = true;
+            this.lbCpfFuncionario.Location = new System.Drawing.Point(28, 39);
+            this.lbCpfFuncionario.Name = "lbCpfFuncionario";
+            this.lbCpfFuncionario.Size = new System.Drawing.Size(139, 14);
+            this.lbCpfFuncionario.TabIndex = 0;
+            this.lbCpfFuncionario.Text = "CPF do Funcionário:";
+            // 
+            // mtbCpfFuncionario
+            // 
+            this.mtbCpfFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCpfFuncionario.Location = new System.Drawing.Point(186, 36);
+            this.mtbCpfFuncionario.Mask = "000,000,000-00";
+            this.mtbCpfFuncionario.Name = "mtbCpfFuncionario";
+            this.mtbCpfFuncionario.Size = new System.Drawing.Size(126, 22);
+            this.mtbCpfFuncionario.TabIndex = 1;
+            // 
+            // lbOU
+            // 
+            this.lbOU.AutoSize = true;
+            this.lbOU.Location = new System.Drawing.Point(119, 79);
+            this.lbOU.Name = "lbOU";
+            this.lbOU.Size = new System.Drawing.Size(28, 14);
+            this.lbOU.TabIndex = 2;
+            this.lbOU.Text = "OU";
+            // 
+            // lbNomeFuncionario
+            // 
+            this.lbNomeFuncionario.AutoSize = true;
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(28, 112);
+            this.lbNomeFuncionario.Name = "lbNomeFuncionario";
+            this.lbNomeFuncionario.Size = new System.Drawing.Size(151, 14);
+            this.lbNomeFuncionario.TabIndex = 3;
+            this.lbNomeFuncionario.Text = "Nome do Funcionário:";
+            // 
+            // txtNomeFuncionario
+            // 
+            this.txtNomeFuncionario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeFuncionario.Location = new System.Drawing.Point(186, 109);
+            this.txtNomeFuncionario.Name = "txtNomeFuncionario";
+            this.txtNomeFuncionario.Size = new System.Drawing.Size(297, 22);
+            this.txtNomeFuncionario.TabIndex = 4;
+            // 
+            // btnCancelarBuscaFunc
+            // 
+            this.btnCancelarBuscaFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarBuscaFunc.Location = new System.Drawing.Point(682, 552);
+            this.btnCancelarBuscaFunc.Name = "btnCancelarBuscaFunc";
+            this.btnCancelarBuscaFunc.Size = new System.Drawing.Size(108, 42);
+            this.btnCancelarBuscaFunc.TabIndex = 3;
+            this.btnCancelarBuscaFunc.Text = "Cancelar Busca";
+            this.btnCancelarBuscaFunc.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarFuncionario
+            // 
+            this.btnBuscarFuncionario.Location = new System.Drawing.Point(640, 36);
+            this.btnBuscarFuncionario.Name = "btnBuscarFuncionario";
+            this.btnBuscarFuncionario.Size = new System.Drawing.Size(108, 42);
+            this.btnBuscarFuncionario.TabIndex = 5;
+            this.btnBuscarFuncionario.Text = "Buscar";
+            this.btnBuscarFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarFuncionario
+            // 
+            this.btnEditarFuncionario.Location = new System.Drawing.Point(640, 141);
+            this.btnEditarFuncionario.Name = "btnEditarFuncionario";
+            this.btnEditarFuncionario.Size = new System.Drawing.Size(108, 42);
+            this.btnEditarFuncionario.TabIndex = 6;
+            this.btnEditarFuncionario.Text = "Editar";
+            this.btnEditarFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluirFuncionario
+            // 
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(526, 141);
+            this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
+            this.btnExcluirFuncionario.Size = new System.Drawing.Size(108, 42);
+            this.btnExcluirFuncionario.TabIndex = 7;
+            this.btnExcluirFuncionario.Text = "Excluir";
+            this.btnExcluirFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // pcbGameStore
+            // 
+            this.pcbGameStore.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pcbGameStore.Location = new System.Drawing.Point(18, 539);
+            this.pcbGameStore.Name = "pcbGameStore";
+            this.pcbGameStore.Size = new System.Drawing.Size(128, 69);
+            this.pcbGameStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbGameStore.TabIndex = 4;
+            this.pcbGameStore.TabStop = false;
             // 
             // telaGerFuncionario
             // 
@@ -688,8 +815,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaGerFuncionario_FormClosing);
             this.abasGerFuncionario.ResumeLayout(false);
             this.abaCadFuncionario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbDadosCadastrais.ResumeLayout(false);
             this.gpbDadosCadastrais.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).EndInit();
             this.gpbEndereco.ResumeLayout(false);
             this.gpbEndereco.PerformLayout();
             this.gpbDadosPessoais.ResumeLayout(false);
@@ -697,10 +826,11 @@
             this.gpbSexo.ResumeLayout(false);
             this.gpbSexo.PerformLayout();
             this.abaExibiFuncionario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUserSenhaOK)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.gpbDadosFuncionarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibeFuncionarios)).EndInit();
+            this.gpbBuscarFuncionario.ResumeLayout(false);
+            this.gpbBuscarFuncionario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbGameStore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -756,10 +886,21 @@
         private System.Windows.Forms.Button btnCadastrarFuncionario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox imgUserSenhaOK;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbDadosFuncionarios;
         private System.Windows.Forms.DataGridView dgvExibeFuncionarios;
         private System.Windows.Forms.Button btnExibirTodosFunc;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.GroupBox gpbBuscarFuncionario;
+        private System.Windows.Forms.TextBox txtNomeFuncionario;
+        private System.Windows.Forms.Label lbNomeFuncionario;
+        private System.Windows.Forms.Label lbOU;
+        private System.Windows.Forms.MaskedTextBox mtbCpfFuncionario;
+        private System.Windows.Forms.Label lbCpfFuncionario;
+        private System.Windows.Forms.Button btnCancelarBuscaFunc;
+        private System.Windows.Forms.Button btnExcluirFuncionario;
+        private System.Windows.Forms.Button btnEditarFuncionario;
+        private System.Windows.Forms.Button btnBuscarFuncionario;
+        private System.Windows.Forms.PictureBox pcbGameStore;
     }
 }

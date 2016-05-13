@@ -65,7 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FuncionarioBanco.cs" />
     <Compile Include="Model\Aluguel.cs" />
+    <Compile Include="Model\Banco.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Jogos.cs" />
@@ -227,9 +229,7 @@
   <ItemGroup>
     <None Include="Resources\img_linhas.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icon_ok.png" />
   </ItemGroup>

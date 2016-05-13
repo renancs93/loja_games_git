@@ -220,6 +220,8 @@
             this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Visible = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            this.btnClientes.MouseEnter += new System.EventHandler(this.btnClientes_MouseEnter);
+            this.btnClientes.MouseLeave += new System.EventHandler(this.btnClientes_MouseLeave);
             // 
             // btnFuncionarios
             // 
@@ -235,6 +237,8 @@
             this.btnFuncionarios.UseVisualStyleBackColor = false;
             this.btnFuncionarios.Visible = false;
             this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
+            this.btnFuncionarios.MouseEnter += new System.EventHandler(this.btnFuncionarios_MouseEnter);
+            this.btnFuncionarios.MouseLeave += new System.EventHandler(this.btnFuncionarios_MouseLeave);
             // 
             // telaPrincipal
             // 

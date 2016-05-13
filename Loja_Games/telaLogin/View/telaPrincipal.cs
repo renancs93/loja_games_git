@@ -215,6 +215,26 @@ namespace LojaGames
             btnRelatorios.ForeColor = Color.Red;
         }
 
+        private void btnClientes_MouseEnter(object sender, EventArgs e)
+        {
+            btnClientes.ForeColor = Color.Blue;
+        }
+
+        private void btnClientes_MouseLeave(object sender, EventArgs e)
+        {
+            btnClientes.ForeColor = Color.Red;
+        }
+
+        private void btnFuncionarios_MouseEnter(object sender, EventArgs e)
+        {
+            btnFuncionarios.ForeColor = Color.Blue;
+        }
+
+        private void btnFuncionarios_MouseLeave(object sender, EventArgs e)
+        {
+            btnFuncionarios.ForeColor = Color.Red;
+        }
+
         public void habilitarBotoes(bool ativarBotoes)
         {
             btnJogos.Visible = ativarBotoes;
@@ -247,7 +267,9 @@ namespace LojaGames
 
         }
 
-        
+
+
+
 
 
 

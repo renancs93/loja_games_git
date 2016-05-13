@@ -1,11 +1,15 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using LojaGames.Classes;
+using LojaGames.Controller;
+using LojaGames.Model;
 
 namespace LojaGames.View
 {
     public partial class telaGerFuncionario : Form
     {
         private Form telaP = null;
+
 
         public telaGerFuncionario()
         {
@@ -40,9 +44,11 @@ namespace LojaGames.View
 
             if (MensagemErro == "")
             {
-                Funcionario func = CadastrarFuncionario();
-                func.AdicionarFuncionario(func.CPF, func);
-                dgvExibeFuncionarios.Rows.Add(func.CPF,func.Nome);
+                /*instancio a classe(controller) FuncionariBanco para poder usar o metodo dessa classe
+                * chamo esse metodo passando como parametro o objeto retornado do metodo da tela populaNovoFuncionario  
+                */
+                FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+                funcionarioBanco.SalvarFuncionario(popularNovoFuncionario());
 
                 DialogResult cadastrado = MessageBox.Show("Funcionário cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
                 //Close();
@@ -65,18 +71,39 @@ namespace LojaGames.View
             }
         }
 
-        //metodo para cadastrar funcionario
-        private Funcionario CadastrarFuncionario()
+        private Funcionario popularNovoFuncionario()
         {
             Funcionario f = new Funcionario();
+
             f.CPF = long.Parse(mtbCPF.Text);
             f.Nome = txtNome.Text;
+
             return f;
         }
 
+       
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
-            
+            dgvExibeFuncionarios.Rows.Clear(); //limpa o datagrid
+            foreach(KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
+            {
+                dgvExibeFuncionarios.Rows.Add(linha);
+
+            }
+
+
+            //dgvExibeFuncionarios.DataSource = Banco.dicFunc;
+        }
+
+        private void btnSairExibi_Click(object sender, System.EventArgs e)
+        {
+            DialogResult sair = MessageBox.Show("Deseja realmente sair? ", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (sair == DialogResult.Yes)
+            {
+                Close();
+                telaP.Show();
+            }
         }
     }
 }

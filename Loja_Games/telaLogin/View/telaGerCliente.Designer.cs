@@ -68,12 +68,33 @@
             this.lbNome = new System.Windows.Forms.Label();
             this.abaExibiCliente = new System.Windows.Forms.TabPage();
             this.pbLogoCli = new System.Windows.Forms.PictureBox();
+            this.gpbBuscaCli = new System.Windows.Forms.GroupBox();
+            this.gpbDadosExibeCli = new System.Windows.Forms.GroupBox();
+            this.lbCpfExibeCli = new System.Windows.Forms.Label();
+            this.lbOU = new System.Windows.Forms.Label();
+            this.lbNomeExibeCli = new System.Windows.Forms.Label();
+            this.txtNomeExiCli = new System.Windows.Forms.TextBox();
+            this.mtbCpfExiCli = new System.Windows.Forms.MaskedTextBox();
+            this.btnExcluirCli = new System.Windows.Forms.Button();
+            this.btnEditarCli = new System.Windows.Forms.Button();
+            this.btnBuscarCli = new System.Windows.Forms.Button();
+            this.dgvExibeCli = new System.Windows.Forms.DataGridView();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbLogoExiCli = new System.Windows.Forms.PictureBox();
+            this.btnExibirTodosCli = new System.Windows.Forms.Button();
+            this.btnSairCli = new System.Windows.Forms.Button();
             this.abasGerCliente.SuspendLayout();
             this.abaCadCliente.SuspendLayout();
             this.gpbEnderecoCli.SuspendLayout();
             this.gbpDadosPessoaisCli.SuspendLayout();
             this.gbpSexo.SuspendLayout();
+            this.abaExibiCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).BeginInit();
+            this.gpbBuscaCli.SuspendLayout();
+            this.gpbDadosExibeCli.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibeCli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoExiCli)).BeginInit();
             this.SuspendLayout();
             // 
             // abasGerCliente
@@ -85,7 +106,7 @@
             this.abasGerCliente.Margin = new System.Windows.Forms.Padding(4);
             this.abasGerCliente.Name = "abasGerCliente";
             this.abasGerCliente.SelectedIndex = 0;
-            this.abasGerCliente.Size = new System.Drawing.Size(1095, 639);
+            this.abasGerCliente.Size = new System.Drawing.Size(1087, 639);
             this.abasGerCliente.TabIndex = 0;
             // 
             // abaCadCliente
@@ -99,7 +120,7 @@
             this.abaCadCliente.Margin = new System.Windows.Forms.Padding(4);
             this.abaCadCliente.Name = "abaCadCliente";
             this.abaCadCliente.Padding = new System.Windows.Forms.Padding(4);
-            this.abaCadCliente.Size = new System.Drawing.Size(1087, 610);
+            this.abaCadCliente.Size = new System.Drawing.Size(1079, 610);
             this.abaCadCliente.TabIndex = 0;
             this.abaCadCliente.Text = "Cadastrar Cliente";
             this.abaCadCliente.UseVisualStyleBackColor = true;
@@ -539,11 +560,16 @@
             // 
             // abaExibiCliente
             // 
+            this.abaExibiCliente.Controls.Add(this.btnSairCli);
+            this.abaExibiCliente.Controls.Add(this.btnExibirTodosCli);
+            this.abaExibiCliente.Controls.Add(this.pbLogoExiCli);
+            this.abaExibiCliente.Controls.Add(this.gpbDadosExibeCli);
+            this.abaExibiCliente.Controls.Add(this.gpbBuscaCli);
             this.abaExibiCliente.Location = new System.Drawing.Point(4, 25);
             this.abaExibiCliente.Margin = new System.Windows.Forms.Padding(4);
             this.abaExibiCliente.Name = "abaExibiCliente";
             this.abaExibiCliente.Padding = new System.Windows.Forms.Padding(4);
-            this.abaExibiCliente.Size = new System.Drawing.Size(1087, 590);
+            this.abaExibiCliente.Size = new System.Drawing.Size(1079, 610);
             this.abaExibiCliente.TabIndex = 1;
             this.abaExibiCliente.Text = "Exibir Clientes";
             this.abaExibiCliente.UseVisualStyleBackColor = true;
@@ -559,11 +585,176 @@
             this.pbLogoCli.TabIndex = 6;
             this.pbLogoCli.TabStop = false;
             // 
+            // gpbBuscaCli
+            // 
+            this.gpbBuscaCli.Controls.Add(this.btnBuscarCli);
+            this.gpbBuscaCli.Controls.Add(this.btnEditarCli);
+            this.gpbBuscaCli.Controls.Add(this.btnExcluirCli);
+            this.gpbBuscaCli.Controls.Add(this.mtbCpfExiCli);
+            this.gpbBuscaCli.Controls.Add(this.txtNomeExiCli);
+            this.gpbBuscaCli.Controls.Add(this.lbNomeExibeCli);
+            this.gpbBuscaCli.Controls.Add(this.lbOU);
+            this.gpbBuscaCli.Controls.Add(this.lbCpfExibeCli);
+            this.gpbBuscaCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.gpbBuscaCli.Location = new System.Drawing.Point(20, 7);
+            this.gpbBuscaCli.Margin = new System.Windows.Forms.Padding(4);
+            this.gpbBuscaCli.Name = "gpbBuscaCli";
+            this.gpbBuscaCli.Padding = new System.Windows.Forms.Padding(4);
+            this.gpbBuscaCli.Size = new System.Drawing.Size(1050, 233);
+            this.gpbBuscaCli.TabIndex = 2;
+            this.gpbBuscaCli.TabStop = false;
+            this.gpbBuscaCli.Text = "Buscar Cliente";
+            // 
+            // gpbDadosExibeCli
+            // 
+            this.gpbDadosExibeCli.Controls.Add(this.dgvExibeCli);
+            this.gpbDadosExibeCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.gpbDadosExibeCli.Location = new System.Drawing.Point(20, 247);
+            this.gpbDadosExibeCli.Name = "gpbDadosExibeCli";
+            this.gpbDadosExibeCli.Size = new System.Drawing.Size(1050, 264);
+            this.gpbDadosExibeCli.TabIndex = 1;
+            this.gpbDadosExibeCli.TabStop = false;
+            this.gpbDadosExibeCli.Text = "Dados Clientes";
+            // 
+            // lbCpfExibeCli
+            // 
+            this.lbCpfExibeCli.AutoSize = true;
+            this.lbCpfExibeCli.Location = new System.Drawing.Point(37, 48);
+            this.lbCpfExibeCli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCpfExibeCli.Name = "lbCpfExibeCli";
+            this.lbCpfExibeCli.Size = new System.Drawing.Size(137, 18);
+            this.lbCpfExibeCli.TabIndex = 0;
+            this.lbCpfExibeCli.Text = "CPF do Cliente: ";
+            // 
+            // lbOU
+            // 
+            this.lbOU.AutoSize = true;
+            this.lbOU.Location = new System.Drawing.Point(89, 99);
+            this.lbOU.Name = "lbOU";
+            this.lbOU.Size = new System.Drawing.Size(33, 18);
+            this.lbOU.TabIndex = 1;
+            this.lbOU.Text = "OU";
+            // 
+            // lbNomeExibeCli
+            // 
+            this.lbNomeExibeCli.AutoSize = true;
+            this.lbNomeExibeCli.Location = new System.Drawing.Point(37, 138);
+            this.lbNomeExibeCli.Name = "lbNomeExibeCli";
+            this.lbNomeExibeCli.Size = new System.Drawing.Size(148, 18);
+            this.lbNomeExibeCli.TabIndex = 2;
+            this.lbNomeExibeCli.Text = "Nome do Cliente:";
+            // 
+            // txtNomeExiCli
+            // 
+            this.txtNomeExiCli.Font = new System.Drawing.Font("Verdana", 9F);
+            this.txtNomeExiCli.Location = new System.Drawing.Point(191, 135);
+            this.txtNomeExiCli.Name = "txtNomeExiCli";
+            this.txtNomeExiCli.Size = new System.Drawing.Size(395, 26);
+            this.txtNomeExiCli.TabIndex = 4;
+            // 
+            // mtbCpfExiCli
+            // 
+            this.mtbCpfExiCli.Font = new System.Drawing.Font("Verdana", 9F);
+            this.mtbCpfExiCli.Location = new System.Drawing.Point(191, 48);
+            this.mtbCpfExiCli.Mask = "000,000,000-00";
+            this.mtbCpfExiCli.Name = "mtbCpfExiCli";
+            this.mtbCpfExiCli.Size = new System.Drawing.Size(167, 26);
+            this.mtbCpfExiCli.TabIndex = 1;
+            this.mtbCpfExiCli.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // btnExcluirCli
+            // 
+            this.btnExcluirCli.Location = new System.Drawing.Point(853, 26);
+            this.btnExcluirCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluirCli.Name = "btnExcluirCli";
+            this.btnExcluirCli.Size = new System.Drawing.Size(144, 52);
+            this.btnExcluirCli.TabIndex = 7;
+            this.btnExcluirCli.Text = "Excluir";
+            this.btnExcluirCli.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarCli
+            // 
+            this.btnEditarCli.Location = new System.Drawing.Point(853, 85);
+            this.btnEditarCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarCli.Name = "btnEditarCli";
+            this.btnEditarCli.Size = new System.Drawing.Size(144, 52);
+            this.btnEditarCli.TabIndex = 6;
+            this.btnEditarCli.Text = "Editar";
+            this.btnEditarCli.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCli
+            // 
+            this.btnBuscarCli.Location = new System.Drawing.Point(829, 144);
+            this.btnBuscarCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCli.Name = "btnBuscarCli";
+            this.btnBuscarCli.Size = new System.Drawing.Size(189, 65);
+            this.btnBuscarCli.TabIndex = 5;
+            this.btnBuscarCli.Text = "Buscar";
+            this.btnBuscarCli.UseVisualStyleBackColor = true;
+            // 
+            // dgvExibeCli
+            // 
+            this.dgvExibeCli.AllowUserToAddRows = false;
+            this.dgvExibeCli.AllowUserToDeleteRows = false;
+            this.dgvExibeCli.AllowUserToOrderColumns = true;
+            this.dgvExibeCli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExibeCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExibeCli.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPF,
+            this.NOME});
+            this.dgvExibeCli.Location = new System.Drawing.Point(6, 25);
+            this.dgvExibeCli.Name = "dgvExibeCli";
+            this.dgvExibeCli.RowTemplate.Height = 24;
+            this.dgvExibeCli.Size = new System.Drawing.Size(1038, 202);
+            this.dgvExibeCli.TabIndex = 0;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            // 
+            // NOME
+            // 
+            this.NOME.HeaderText = "NOME";
+            this.NOME.Name = "NOME";
+            // 
+            // pbLogoExiCli
+            // 
+            this.pbLogoExiCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pbLogoExiCli.Location = new System.Drawing.Point(24, 517);
+            this.pbLogoExiCli.Name = "pbLogoExiCli";
+            this.pbLogoExiCli.Size = new System.Drawing.Size(171, 85);
+            this.pbLogoExiCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoExiCli.TabIndex = 3;
+            this.pbLogoExiCli.TabStop = false;
+            // 
+            // btnExibirTodosCli
+            // 
+            this.btnExibirTodosCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExibirTodosCli.Location = new System.Drawing.Point(779, 535);
+            this.btnExibirTodosCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExibirTodosCli.Name = "btnExibirTodosCli";
+            this.btnExibirTodosCli.Size = new System.Drawing.Size(127, 55);
+            this.btnExibirTodosCli.TabIndex = 1;
+            this.btnExibirTodosCli.Text = "Exibir Todos";
+            this.btnExibirTodosCli.UseVisualStyleBackColor = true;
+            // 
+            // btnSairCli
+            // 
+            this.btnSairCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSairCli.Location = new System.Drawing.Point(932, 535);
+            this.btnSairCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSairCli.Name = "btnSairCli";
+            this.btnSairCli.Size = new System.Drawing.Size(127, 55);
+            this.btnSairCli.TabIndex = 3;
+            this.btnSairCli.Text = "Sair";
+            this.btnSairCli.UseVisualStyleBackColor = true;
+            // 
             // telaGerCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 639);
+            this.ClientSize = new System.Drawing.Size(1087, 639);
             this.Controls.Add(this.abasGerCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -580,7 +771,13 @@
             this.gbpDadosPessoaisCli.PerformLayout();
             this.gbpSexo.ResumeLayout(false);
             this.gbpSexo.PerformLayout();
+            this.abaExibiCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).EndInit();
+            this.gpbBuscaCli.ResumeLayout(false);
+            this.gpbBuscaCli.PerformLayout();
+            this.gpbDadosExibeCli.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExibeCli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoExiCli)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -627,5 +824,21 @@
         private System.Windows.Forms.Button btnCancelarCli;
         private System.Windows.Forms.Button btnCadastrarCli;
         private System.Windows.Forms.PictureBox pbLogoCli;
+        private System.Windows.Forms.GroupBox gpbDadosExibeCli;
+        private System.Windows.Forms.GroupBox gpbBuscaCli;
+        private System.Windows.Forms.Label lbNomeExibeCli;
+        private System.Windows.Forms.Label lbOU;
+        private System.Windows.Forms.Label lbCpfExibeCli;
+        private System.Windows.Forms.MaskedTextBox mtbCpfExiCli;
+        private System.Windows.Forms.TextBox txtNomeExiCli;
+        private System.Windows.Forms.Button btnBuscarCli;
+        private System.Windows.Forms.Button btnEditarCli;
+        private System.Windows.Forms.Button btnExcluirCli;
+        private System.Windows.Forms.DataGridView dgvExibeCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
+        private System.Windows.Forms.PictureBox pbLogoExiCli;
+        private System.Windows.Forms.Button btnSairCli;
+        private System.Windows.Forms.Button btnExibirTodosCli;
     }
 }

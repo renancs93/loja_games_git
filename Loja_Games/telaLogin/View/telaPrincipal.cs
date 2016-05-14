@@ -55,26 +55,6 @@ namespace LojaGames
             
         }
 
-        private void btnCadastroCliente_Click(object sender, EventArgs e)
-        {
-            CarregamentoBarraProgresso();
-
-            telaCadastroCliente cadCliente = new telaCadastroCliente();
-            cadCliente.setTelaAnterior(this);//chama o metodo dentro da telaCadastroCliente passado essa tela como referencia
-            cadCliente.Show();
-            Hide();
-        }
-
-        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
-        {
-            CarregamentoBarraProgresso();
-
-            telaCadastroFuncionario novoFunc = new telaCadastroFuncionario();
-            novoFunc.setTelaAnterior(this);//chama o metodo dentro da tela Cadastro Funcionario passando a Tela Principal
-            Hide();
-            novoFunc.Show();
-        }
-
         private void btnVenda_Click(object sender, EventArgs e)
         {
             CarregamentoBarraProgresso();
@@ -83,17 +63,6 @@ namespace LojaGames
             venda.setTelaPrincipal(this);//chama o metodo dentro da tela venda passando a Tela Principal
             venda.Show();
             Hide();
-        }
-
-        private void btnBuscaExibir_Click(object sender, EventArgs e)
-        {
-            CarregamentoBarraProgresso();
-
-            //exibição da tela BuscaExibir
-            telaBuscarExibir telaBuscaExibir = new telaBuscarExibir();
-            telaBuscaExibir.setTelaAnterior(this);
-            Hide();
-            telaBuscaExibir.Show();
         }
 
         private void btnRelatorios_Click(object sender, EventArgs e)
@@ -135,8 +104,7 @@ namespace LojaGames
             funcionario.setTelaAnterior(this);
             funcionario.Show();
             Hide();
-
-
+            
         }
 
 
@@ -148,16 +116,6 @@ namespace LojaGames
         private void btnJogos_MouseLeave(object sender, EventArgs e)
         {
             btnJogos.ForeColor = Color.Red;
-        }
-
-        private void btnCadastroCliente_MouseEnter_1(object sender, EventArgs e)
-        {
-            btnCadastroCliente.ForeColor = Color.Blue;
-        }
-
-        private void btnCadastroCliente_MouseLeave_1(object sender, EventArgs e)
-        {
-            btnCadastroCliente.ForeColor = Color.Red;
         }
 
         private void btnSair_MouseEnter(object sender, EventArgs e)
@@ -180,29 +138,9 @@ namespace LojaGames
             btnVenda.ForeColor = Color.Red;
         }
 
-        private void btnCadastrarFuncionario_MouseEnter(object sender, EventArgs e)
-        {
-            btnCadastrarFuncionario.ForeColor = Color.Blue;
-        }
-
-        private void btnCadastrarFuncionario_MouseLeave(object sender, EventArgs e)
-        {
-            btnCadastrarFuncionario.ForeColor = Color.Red;
-        }
-
         private void telaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-        
-        private void btnBuscaExibir_MouseEnter(object sender, EventArgs e)
-        {
-            btnBuscaExibir.ForeColor = Color.Blue;
-        }
-
-        private void btnBuscaExibir_MouseLeave(object sender, EventArgs e)
-        {
-            btnBuscaExibir.ForeColor = Color.Red;
         }
 
         private void btnRelatorios_MouseEnter(object sender, EventArgs e)
@@ -238,10 +176,7 @@ namespace LojaGames
         public void habilitarBotoes(bool ativarBotoes)
         {
             btnJogos.Visible = ativarBotoes;
-            btnCadastroCliente.Visible = ativarBotoes;
-            btnCadastrarFuncionario.Visible = ativarBotoes;
             btnVenda.Visible = ativarBotoes;
-            btnBuscaExibir.Visible = ativarBotoes;
             btnClientes.Visible = ativarBotoes;
             btnFuncionarios.Visible = ativarBotoes;
 
@@ -261,12 +196,6 @@ namespace LojaGames
                 btnLogoff.Enabled = ativarBotoes;
             }
         }
-
-        private void telaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
 
 

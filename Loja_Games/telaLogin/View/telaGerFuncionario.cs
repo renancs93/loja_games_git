@@ -39,7 +39,6 @@ namespace LojaGames.View
         {
             //realizar as verificações dos campos antes de cadastrar
             string MensagemErro = "";
-
             //MensagemErro = ClasseUtil.ValidaCampos(abaCadFuncionario.Controls);
 
             if (MensagemErro == "")
@@ -51,6 +50,7 @@ namespace LojaGames.View
                 funcionarioBanco.SalvarFuncionario(popularNovoFuncionario());
 
                 DialogResult cadastrado = MessageBox.Show("Funcionário cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
                 //Close();
                 //telaP.Show();
             }
@@ -66,8 +66,8 @@ namespace LojaGames.View
 
             if (cancel == DialogResult.Yes)
             {
-                Close();
                 telaP.Show();
+                Close();
             }
         }
 
@@ -77,6 +77,9 @@ namespace LojaGames.View
 
             f.CPF = long.Parse(mtbCpfFunc.Text);
             f.Nome = txtNomeFunc.Text;
+            //f.RG = long.Parse(mtbRgFunc.Text);
+            //f.DataNascimento = dtpDataNascFunc;
+            f.Email = txtEmailFunc.Text;
 
             return f;
         }
@@ -87,7 +90,7 @@ namespace LojaGames.View
             dgvExibeFunc.Rows.Clear(); //limpa o datagrid
             foreach(KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
             {
-                dgvExibeFunc.Rows.Add(linha);
+                dgvExibeFunc.Rows.Add(linha.Key, linha.Value.Nome);
 
             }
 
@@ -101,8 +104,48 @@ namespace LojaGames.View
 
             if (sair == DialogResult.Yes)
             {
-                Close();
                 telaP.Show();
+                Close();
+            }
+        }
+
+        private void btnBuscarFunc_Click(object sender, System.EventArgs e)
+        {
+            string nome = txtNomeExiFunc.Text;
+            string cpf = mtbCpfExiFunc.Text;
+
+            if ((nome == string.Empty) && (cpf == string.Empty))
+            {
+                DialogResult busca = MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!", "Busca!", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                //irá realizar a busca de acordo com os dados fornecido em uns dos campos
+                //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
+
+            }
+        }
+
+        private void btnEditarFunc_Click(object sender, System.EventArgs e)
+        {
+            //pega a linha no dataGrid selecionada e abre a telaCadastro de funcionário já setados para alteração
+            DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (edit == DialogResult.Yes)
+            {
+                abasGerFuncionario.SelectedTab = abaCadFuncionario;
+
+                //seta os dados do funcionario selecionado na tela de cadastro
+            }
+        }
+
+        private void btnExcluirFunc_Click(object sender, System.EventArgs e)
+        {
+            DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (rm == DialogResult.Yes)
+            {
+                MessageBox.Show("Cliente removido com Sucesso");
             }
         }
     }

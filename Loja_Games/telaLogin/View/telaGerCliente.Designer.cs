@@ -105,7 +105,7 @@
             this.abasGerCliente.Location = new System.Drawing.Point(0, 0);
             this.abasGerCliente.Name = "abasGerCliente";
             this.abasGerCliente.SelectedIndex = 0;
-            this.abasGerCliente.Size = new System.Drawing.Size(815, 580);
+            this.abasGerCliente.Size = new System.Drawing.Size(815, 547);
             this.abasGerCliente.TabIndex = 0;
             // 
             // abaCadCliente
@@ -117,8 +117,8 @@
             this.abaCadCliente.Controls.Add(this.gbpDadosPessoaisCli);
             this.abaCadCliente.Location = new System.Drawing.Point(4, 22);
             this.abaCadCliente.Name = "abaCadCliente";
-            this.abaCadCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.abaCadCliente.Size = new System.Drawing.Size(807, 493);
+            this.abaCadCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.abaCadCliente.Size = new System.Drawing.Size(807, 521);
             this.abaCadCliente.TabIndex = 0;
             this.abaCadCliente.Text = "Cadastrar Cliente";
             this.abaCadCliente.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.pcbLogoCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
             this.pcbLogoCli.Location = new System.Drawing.Point(18, 420);
             this.pcbLogoCli.Name = "pcbLogoCli";
-            this.pcbLogoCli.Size = new System.Drawing.Size(128, 69);
+            this.pcbLogoCli.Size = new System.Drawing.Size(143, 92);
             this.pcbLogoCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoCli.TabIndex = 6;
             this.pcbLogoCli.TabStop = false;
@@ -136,22 +136,24 @@
             // btnCancelarCli
             // 
             this.btnCancelarCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCancelarCli.Location = new System.Drawing.Point(699, 435);
+            this.btnCancelarCli.Location = new System.Drawing.Point(685, 450);
             this.btnCancelarCli.Name = "btnCancelarCli";
-            this.btnCancelarCli.Size = new System.Drawing.Size(95, 45);
+            this.btnCancelarCli.Size = new System.Drawing.Size(109, 54);
             this.btnCancelarCli.TabIndex = 5;
             this.btnCancelarCli.Text = "Cancelar";
             this.btnCancelarCli.UseVisualStyleBackColor = true;
+            this.btnCancelarCli.Click += new System.EventHandler(this.btnCancelarCli_Click);
             // 
             // btnCadastrarCli
             // 
             this.btnCadastrarCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrarCli.Location = new System.Drawing.Point(584, 435);
+            this.btnCadastrarCli.Location = new System.Drawing.Point(564, 443);
             this.btnCadastrarCli.Name = "btnCadastrarCli";
-            this.btnCadastrarCli.Size = new System.Drawing.Size(95, 45);
+            this.btnCadastrarCli.Size = new System.Drawing.Size(115, 69);
             this.btnCadastrarCli.TabIndex = 4;
             this.btnCadastrarCli.Text = "Cadastrar";
             this.btnCadastrarCli.UseVisualStyleBackColor = true;
+            this.btnCadastrarCli.Click += new System.EventHandler(this.btnCadastrarCli_Click);
             // 
             // gpbEnderecoCli
             // 
@@ -209,7 +211,7 @@
             "SE",
             "TO"});
             this.cbxEstadoCli.Location = new System.Drawing.Point(688, 106);
-            this.cbxEstadoCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxEstadoCli.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEstadoCli.Name = "cbxEstadoCli";
             this.cbxEstadoCli.Size = new System.Drawing.Size(64, 22);
             this.cbxEstadoCli.TabIndex = 16;
@@ -404,7 +406,7 @@
             "Casado/a",
             "Viúvo/a"});
             this.cbxEstadoCivilCli.Location = new System.Drawing.Point(347, 123);
-            this.cbxEstadoCivilCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxEstadoCivilCli.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEstadoCivilCli.Name = "cbxEstadoCivilCli";
             this.cbxEstadoCivilCli.Size = new System.Drawing.Size(121, 22);
             this.cbxEstadoCivilCli.TabIndex = 8;
@@ -547,8 +549,8 @@
             this.abaExibiCliente.Controls.Add(this.gpbBuscaCli);
             this.abaExibiCliente.Location = new System.Drawing.Point(4, 22);
             this.abaExibiCliente.Name = "abaExibiCliente";
-            this.abaExibiCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.abaExibiCliente.Size = new System.Drawing.Size(807, 554);
+            this.abaExibiCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.abaExibiCliente.Size = new System.Drawing.Size(807, 521);
             this.abaExibiCliente.TabIndex = 1;
             this.abaExibiCliente.Text = "Exibir Clientes";
             this.abaExibiCliente.UseVisualStyleBackColor = true;
@@ -556,28 +558,30 @@
             // btnSairCli
             // 
             this.btnSairCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSairCli.Location = new System.Drawing.Point(705, 504);
+            this.btnSairCli.Location = new System.Drawing.Point(705, 469);
             this.btnSairCli.Name = "btnSairCli";
             this.btnSairCli.Size = new System.Drawing.Size(84, 32);
             this.btnSairCli.TabIndex = 3;
             this.btnSairCli.Text = "Sair";
             this.btnSairCli.UseVisualStyleBackColor = true;
+            this.btnSairCli.Click += new System.EventHandler(this.btnSairCli_Click);
             // 
             // btnExibirTodosCli
             // 
             this.btnExibirTodosCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExibirTodosCli.Location = new System.Drawing.Point(574, 498);
+            this.btnExibirTodosCli.Location = new System.Drawing.Point(574, 463);
             this.btnExibirTodosCli.Name = "btnExibirTodosCli";
             this.btnExibirTodosCli.Size = new System.Drawing.Size(110, 45);
             this.btnExibirTodosCli.TabIndex = 1;
             this.btnExibirTodosCli.Text = "Exibir Todos";
             this.btnExibirTodosCli.UseVisualStyleBackColor = true;
+            this.btnExibirTodosCli.Click += new System.EventHandler(this.btnExibirTodosCli_Click);
             // 
             // pcbLogoExiCli
             // 
             this.pcbLogoExiCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoExiCli.Location = new System.Drawing.Point(9, 498);
-            this.pcbLogoExiCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogoExiCli.Location = new System.Drawing.Point(9, 463);
+            this.pcbLogoExiCli.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogoExiCli.Name = "pcbLogoExiCli";
             this.pcbLogoExiCli.Size = new System.Drawing.Size(128, 50);
             this.pcbLogoExiCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -589,10 +593,10 @@
             this.gpbDadosExibeCli.Controls.Add(this.dgvExibeCli);
             this.gpbDadosExibeCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.gpbDadosExibeCli.Location = new System.Drawing.Point(7, 187);
-            this.gpbDadosExibeCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbDadosExibeCli.Margin = new System.Windows.Forms.Padding(2);
             this.gpbDadosExibeCli.Name = "gpbDadosExibeCli";
-            this.gpbDadosExibeCli.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbDadosExibeCli.Size = new System.Drawing.Size(796, 306);
+            this.gpbDadosExibeCli.Padding = new System.Windows.Forms.Padding(2);
+            this.gpbDadosExibeCli.Size = new System.Drawing.Size(796, 272);
             this.gpbDadosExibeCli.TabIndex = 1;
             this.gpbDadosExibeCli.TabStop = false;
             this.gpbDadosExibeCli.Text = "Dados Clientes";
@@ -609,10 +613,10 @@
             this.NOME});
             this.dgvExibeCli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExibeCli.Location = new System.Drawing.Point(2, 17);
-            this.dgvExibeCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvExibeCli.Margin = new System.Windows.Forms.Padding(2);
             this.dgvExibeCli.Name = "dgvExibeCli";
             this.dgvExibeCli.RowTemplate.Height = 24;
-            this.dgvExibeCli.Size = new System.Drawing.Size(792, 287);
+            this.dgvExibeCli.Size = new System.Drawing.Size(792, 253);
             this.dgvExibeCli.TabIndex = 0;
             // 
             // CPF
@@ -651,6 +655,7 @@
             this.btnBuscarCli.TabIndex = 5;
             this.btnBuscarCli.Text = "Buscar";
             this.btnBuscarCli.UseVisualStyleBackColor = true;
+            this.btnBuscarCli.Click += new System.EventHandler(this.btnBuscarCli_Click);
             // 
             // btnEditarCli
             // 
@@ -660,6 +665,7 @@
             this.btnEditarCli.TabIndex = 6;
             this.btnEditarCli.Text = "Editar";
             this.btnEditarCli.UseVisualStyleBackColor = true;
+            this.btnEditarCli.Click += new System.EventHandler(this.btnEditarCli_Click);
             // 
             // btnExcluirCli
             // 
@@ -669,12 +675,13 @@
             this.btnExcluirCli.TabIndex = 7;
             this.btnExcluirCli.Text = "Excluir";
             this.btnExcluirCli.UseVisualStyleBackColor = true;
+            this.btnExcluirCli.Click += new System.EventHandler(this.btnExcluirCli_Click);
             // 
             // mtbCpfExiCli
             // 
             this.mtbCpfExiCli.Font = new System.Drawing.Font("Verdana", 9F);
             this.mtbCpfExiCli.Location = new System.Drawing.Point(143, 39);
-            this.mtbCpfExiCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbCpfExiCli.Margin = new System.Windows.Forms.Padding(2);
             this.mtbCpfExiCli.Mask = "000,000,000-00";
             this.mtbCpfExiCli.Name = "mtbCpfExiCli";
             this.mtbCpfExiCli.Size = new System.Drawing.Size(126, 22);
@@ -685,7 +692,7 @@
             // 
             this.txtNomeExiCli.Font = new System.Drawing.Font("Verdana", 9F);
             this.txtNomeExiCli.Location = new System.Drawing.Point(143, 110);
-            this.txtNomeExiCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomeExiCli.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomeExiCli.Name = "txtNomeExiCli";
             this.txtNomeExiCli.Size = new System.Drawing.Size(297, 22);
             this.txtNomeExiCli.TabIndex = 4;
@@ -723,7 +730,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 580);
+            this.ClientSize = new System.Drawing.Size(815, 547);
             this.Controls.Add(this.abasGerCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

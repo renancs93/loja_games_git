@@ -116,7 +116,7 @@
             this.abasGerFuncionario.Location = new System.Drawing.Point(0, 0);
             this.abasGerFuncionario.Name = "abasGerFuncionario";
             this.abasGerFuncionario.SelectedIndex = 0;
-            this.abasGerFuncionario.Size = new System.Drawing.Size(821, 637);
+            this.abasGerFuncionario.Size = new System.Drawing.Size(821, 578);
             this.abasGerFuncionario.TabIndex = 0;
             // 
             // abaCadFuncionario
@@ -163,7 +163,7 @@
             this.btnCadastrarFunc.Name = "btnCadastrarFunc";
             this.btnCadastrarFunc.Size = new System.Drawing.Size(95, 45);
             this.btnCadastrarFunc.TabIndex = 4;
-            this.btnCadastrarFunc.Text = "Cadastrar Funcionário";
+            this.btnCadastrarFunc.Text = "Cadastrar";
             this.btnCadastrarFunc.UseVisualStyleBackColor = true;
             this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
             // 
@@ -643,7 +643,7 @@
             this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaExibiFuncionario.Name = "abaExibiFuncionario";
             this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 611);
+            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 552);
             this.abaExibiFuncionario.TabIndex = 1;
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
@@ -651,7 +651,7 @@
             // pcbLogoExibeFunc
             // 
             this.pcbLogoExibeFunc.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoExibeFunc.Location = new System.Drawing.Point(18, 548);
+            this.pcbLogoExibeFunc.Location = new System.Drawing.Point(11, 486);
             this.pcbLogoExibeFunc.Name = "pcbLogoExibeFunc";
             this.pcbLogoExibeFunc.Size = new System.Drawing.Size(115, 60);
             this.pcbLogoExibeFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -661,7 +661,7 @@
             // btnSairFunc
             // 
             this.btnSairFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairFunc.Location = new System.Drawing.Point(698, 561);
+            this.btnSairFunc.Location = new System.Drawing.Point(699, 503);
             this.btnSairFunc.Name = "btnSairFunc";
             this.btnSairFunc.Size = new System.Drawing.Size(92, 33);
             this.btnSairFunc.TabIndex = 3;
@@ -765,7 +765,7 @@
             this.gpbDadosFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbDadosFunc.Location = new System.Drawing.Point(8, 201);
             this.gpbDadosFunc.Name = "gpbDadosFunc";
-            this.gpbDadosFunc.Size = new System.Drawing.Size(797, 341);
+            this.gpbDadosFunc.Size = new System.Drawing.Size(797, 282);
             this.gpbDadosFunc.TabIndex = 0;
             this.gpbDadosFunc.TabStop = false;
             this.gpbDadosFunc.Text = "Dados Funcionarios";
@@ -784,7 +784,7 @@
             this.dgvExibeFunc.Enabled = false;
             this.dgvExibeFunc.Location = new System.Drawing.Point(3, 18);
             this.dgvExibeFunc.Name = "dgvExibeFunc";
-            this.dgvExibeFunc.Size = new System.Drawing.Size(791, 320);
+            this.dgvExibeFunc.Size = new System.Drawing.Size(791, 261);
             this.dgvExibeFunc.TabIndex = 0;
             // 
             // CPF
@@ -800,7 +800,7 @@
             // btnExibirTodosFunc
             // 
             this.btnExibirTodosFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibirTodosFunc.Location = new System.Drawing.Point(570, 556);
+            this.btnExibirTodosFunc.Location = new System.Drawing.Point(576, 498);
             this.btnExibirTodosFunc.Name = "btnExibirTodosFunc";
             this.btnExibirTodosFunc.Size = new System.Drawing.Size(108, 42);
             this.btnExibirTodosFunc.TabIndex = 1;
@@ -812,7 +812,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 637);
+            this.ClientSize = new System.Drawing.Size(821, 578);
             this.Controls.Add(this.abasGerFuncionario);
             this.MaximizeBox = false;
             this.Name = "telaGerFuncionario";

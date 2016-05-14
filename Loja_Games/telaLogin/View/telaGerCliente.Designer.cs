@@ -105,7 +105,7 @@
             this.abasGerCliente.Location = new System.Drawing.Point(0, 0);
             this.abasGerCliente.Name = "abasGerCliente";
             this.abasGerCliente.SelectedIndex = 0;
-            this.abasGerCliente.Size = new System.Drawing.Size(815, 519);
+            this.abasGerCliente.Size = new System.Drawing.Size(815, 580);
             this.abasGerCliente.TabIndex = 0;
             // 
             // abaCadCliente
@@ -150,7 +150,7 @@
             this.btnCadastrarCli.Name = "btnCadastrarCli";
             this.btnCadastrarCli.Size = new System.Drawing.Size(95, 45);
             this.btnCadastrarCli.TabIndex = 4;
-            this.btnCadastrarCli.Text = "Cadastrar Cliente";
+            this.btnCadastrarCli.Text = "Cadastrar";
             this.btnCadastrarCli.UseVisualStyleBackColor = true;
             // 
             // gpbEnderecoCli
@@ -548,7 +548,7 @@
             this.abaExibiCliente.Location = new System.Drawing.Point(4, 22);
             this.abaExibiCliente.Name = "abaExibiCliente";
             this.abaExibiCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.abaExibiCliente.Size = new System.Drawing.Size(807, 493);
+            this.abaExibiCliente.Size = new System.Drawing.Size(807, 554);
             this.abaExibiCliente.TabIndex = 1;
             this.abaExibiCliente.Text = "Exibir Clientes";
             this.abaExibiCliente.UseVisualStyleBackColor = true;
@@ -556,9 +556,9 @@
             // btnSairCli
             // 
             this.btnSairCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSairCli.Location = new System.Drawing.Point(699, 435);
+            this.btnSairCli.Location = new System.Drawing.Point(705, 504);
             this.btnSairCli.Name = "btnSairCli";
-            this.btnSairCli.Size = new System.Drawing.Size(95, 45);
+            this.btnSairCli.Size = new System.Drawing.Size(84, 32);
             this.btnSairCli.TabIndex = 3;
             this.btnSairCli.Text = "Sair";
             this.btnSairCli.UseVisualStyleBackColor = true;
@@ -566,9 +566,9 @@
             // btnExibirTodosCli
             // 
             this.btnExibirTodosCli.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExibirTodosCli.Location = new System.Drawing.Point(584, 435);
+            this.btnExibirTodosCli.Location = new System.Drawing.Point(574, 498);
             this.btnExibirTodosCli.Name = "btnExibirTodosCli";
-            this.btnExibirTodosCli.Size = new System.Drawing.Size(95, 45);
+            this.btnExibirTodosCli.Size = new System.Drawing.Size(110, 45);
             this.btnExibirTodosCli.TabIndex = 1;
             this.btnExibirTodosCli.Text = "Exibir Todos";
             this.btnExibirTodosCli.UseVisualStyleBackColor = true;
@@ -576,10 +576,10 @@
             // pcbLogoExiCli
             // 
             this.pcbLogoExiCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoExiCli.Location = new System.Drawing.Point(9, 417);
+            this.pcbLogoExiCli.Location = new System.Drawing.Point(9, 498);
             this.pcbLogoExiCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbLogoExiCli.Name = "pcbLogoExiCli";
-            this.pcbLogoExiCli.Size = new System.Drawing.Size(128, 69);
+            this.pcbLogoExiCli.Size = new System.Drawing.Size(128, 50);
             this.pcbLogoExiCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoExiCli.TabIndex = 3;
             this.pcbLogoExiCli.TabStop = false;
@@ -592,7 +592,7 @@
             this.gpbDadosExibeCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gpbDadosExibeCli.Name = "gpbDadosExibeCli";
             this.gpbDadosExibeCli.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbDadosExibeCli.Size = new System.Drawing.Size(796, 228);
+            this.gpbDadosExibeCli.Size = new System.Drawing.Size(796, 306);
             this.gpbDadosExibeCli.TabIndex = 1;
             this.gpbDadosExibeCli.TabStop = false;
             this.gpbDadosExibeCli.Text = "Dados Clientes";
@@ -612,7 +612,7 @@
             this.dgvExibeCli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvExibeCli.Name = "dgvExibeCli";
             this.dgvExibeCli.RowTemplate.Height = 24;
-            this.dgvExibeCli.Size = new System.Drawing.Size(792, 209);
+            this.dgvExibeCli.Size = new System.Drawing.Size(792, 287);
             this.dgvExibeCli.TabIndex = 0;
             // 
             // CPF
@@ -723,7 +723,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 519);
+            this.ClientSize = new System.Drawing.Size(815, 580);
             this.Controls.Add(this.abasGerCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

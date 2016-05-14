@@ -114,10 +114,9 @@
             this.abasGerFuncionario.Controls.Add(this.abaExibiFuncionario);
             this.abasGerFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.abasGerFuncionario.Location = new System.Drawing.Point(0, 0);
-            this.abasGerFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.abasGerFuncionario.Name = "abasGerFuncionario";
             this.abasGerFuncionario.SelectedIndex = 0;
-            this.abasGerFuncionario.Size = new System.Drawing.Size(1095, 791);
+            this.abasGerFuncionario.Size = new System.Drawing.Size(821, 637);
             this.abasGerFuncionario.TabIndex = 0;
             // 
             // abaCadFuncionario
@@ -128,11 +127,10 @@
             this.abaCadFuncionario.Controls.Add(this.gpbDadosCadFunc);
             this.abaCadFuncionario.Controls.Add(this.gpbEnderecoFunc);
             this.abaCadFuncionario.Controls.Add(this.gpbDadosPessoaisFunc);
-            this.abaCadFuncionario.Location = new System.Drawing.Point(4, 25);
-            this.abaCadFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.abaCadFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaCadFuncionario.Name = "abaCadFuncionario";
-            this.abaCadFuncionario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.abaCadFuncionario.Size = new System.Drawing.Size(1087, 762);
+            this.abaCadFuncionario.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.abaCadFuncionario.Size = new System.Drawing.Size(813, 611);
             this.abaCadFuncionario.TabIndex = 0;
             this.abaCadFuncionario.Text = "Cadastro de Funcionário";
             this.abaCadFuncionario.UseVisualStyleBackColor = true;
@@ -140,10 +138,9 @@
             // pcbLogoFunc
             // 
             this.pcbLogoFunc.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoFunc.Location = new System.Drawing.Point(24, 663);
-            this.pcbLogoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbLogoFunc.Location = new System.Drawing.Point(18, 539);
             this.pcbLogoFunc.Name = "pcbLogoFunc";
-            this.pcbLogoFunc.Size = new System.Drawing.Size(171, 85);
+            this.pcbLogoFunc.Size = new System.Drawing.Size(128, 69);
             this.pcbLogoFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoFunc.TabIndex = 6;
             this.pcbLogoFunc.TabStop = false;
@@ -151,10 +148,9 @@
             // btnCancelarFunc
             // 
             this.btnCancelarFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarFunc.Location = new System.Drawing.Point(932, 681);
-            this.btnCancelarFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarFunc.Location = new System.Drawing.Point(699, 553);
             this.btnCancelarFunc.Name = "btnCancelarFunc";
-            this.btnCancelarFunc.Size = new System.Drawing.Size(127, 55);
+            this.btnCancelarFunc.Size = new System.Drawing.Size(95, 45);
             this.btnCancelarFunc.TabIndex = 5;
             this.btnCancelarFunc.Text = "Cancelar";
             this.btnCancelarFunc.UseVisualStyleBackColor = true;
@@ -163,10 +159,9 @@
             // btnCadastrarFunc
             // 
             this.btnCadastrarFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarFunc.Location = new System.Drawing.Point(779, 681);
-            this.btnCadastrarFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrarFunc.Location = new System.Drawing.Point(584, 553);
             this.btnCadastrarFunc.Name = "btnCadastrarFunc";
-            this.btnCadastrarFunc.Size = new System.Drawing.Size(127, 55);
+            this.btnCadastrarFunc.Size = new System.Drawing.Size(95, 45);
             this.btnCadastrarFunc.TabIndex = 4;
             this.btnCadastrarFunc.Text = "Cadastrar Funcionário";
             this.btnCadastrarFunc.UseVisualStyleBackColor = true;
@@ -183,11 +178,9 @@
             this.gpbDadosCadFunc.Controls.Add(this.txtCargoFunc);
             this.gpbDadosCadFunc.Controls.Add(this.lbCargo);
             this.gpbDadosCadFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDadosCadFunc.Location = new System.Drawing.Point(24, 533);
-            this.gpbDadosCadFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDadosCadFunc.Location = new System.Drawing.Point(18, 433);
             this.gpbDadosCadFunc.Name = "gpbDadosCadFunc";
-            this.gpbDadosCadFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbDadosCadFunc.Size = new System.Drawing.Size(1035, 123);
+            this.gpbDadosCadFunc.Size = new System.Drawing.Size(776, 100);
             this.gpbDadosCadFunc.TabIndex = 3;
             this.gpbDadosCadFunc.TabStop = false;
             this.gpbDadosCadFunc.Text = "Dados Cadastrais";
@@ -195,10 +188,9 @@
             // imgUserSenhaOKFunc
             // 
             this.imgUserSenhaOKFunc.Image = global::LojaGames.Properties.Resources.icon_ok;
-            this.imgUserSenhaOKFunc.Location = new System.Drawing.Point(876, 86);
-            this.imgUserSenhaOKFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgUserSenhaOKFunc.Location = new System.Drawing.Point(657, 70);
             this.imgUserSenhaOKFunc.Name = "imgUserSenhaOKFunc";
-            this.imgUserSenhaOKFunc.Size = new System.Drawing.Size(21, 20);
+            this.imgUserSenhaOKFunc.Size = new System.Drawing.Size(16, 16);
             this.imgUserSenhaOKFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUserSenhaOKFunc.TabIndex = 21;
             this.imgUserSenhaOKFunc.TabStop = false;
@@ -206,10 +198,9 @@
             // 
             // btnCadastroFunc
             // 
-            this.btnCadastroFunc.Location = new System.Drawing.Point(671, 81);
-            this.btnCadastroFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastroFunc.Location = new System.Drawing.Point(503, 66);
             this.btnCadastroFunc.Name = "btnCadastroFunc";
-            this.btnCadastroFunc.Size = new System.Drawing.Size(197, 28);
+            this.btnCadastroFunc.Size = new System.Drawing.Size(148, 23);
             this.btnCadastroFunc.TabIndex = 20;
             this.btnCadastroFunc.Text = "Cadastrar Senha";
             this.btnCadastroFunc.UseVisualStyleBackColor = true;
@@ -218,56 +209,50 @@
             // dtpDataInicioFunc
             // 
             this.dtpDataInicioFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicioFunc.Location = new System.Drawing.Point(669, 37);
-            this.dtpDataInicioFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDataInicioFunc.Location = new System.Drawing.Point(502, 30);
             this.dtpDataInicioFunc.Name = "dtpDataInicioFunc";
-            this.dtpDataInicioFunc.Size = new System.Drawing.Size(197, 26);
+            this.dtpDataInicioFunc.Size = new System.Drawing.Size(149, 22);
             this.dtpDataInicioFunc.TabIndex = 18;
             // 
             // lbDataInicio
             // 
             this.lbDataInicio.AutoSize = true;
-            this.lbDataInicio.Location = new System.Drawing.Point(523, 41);
-            this.lbDataInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDataInicio.Location = new System.Drawing.Point(392, 33);
             this.lbDataInicio.Name = "lbDataInicio";
-            this.lbDataInicio.Size = new System.Drawing.Size(127, 18);
+            this.lbDataInicio.Size = new System.Drawing.Size(104, 14);
             this.lbDataInicio.TabIndex = 4;
             this.lbDataInicio.Text = "Data de Início:";
             // 
             // txtSalarioBaseFunc
             // 
-            this.txtSalarioBaseFunc.Location = new System.Drawing.Point(180, 82);
-            this.txtSalarioBaseFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSalarioBaseFunc.Location = new System.Drawing.Point(135, 67);
             this.txtSalarioBaseFunc.Name = "txtSalarioBaseFunc";
-            this.txtSalarioBaseFunc.Size = new System.Drawing.Size(191, 26);
+            this.txtSalarioBaseFunc.Size = new System.Drawing.Size(144, 22);
             this.txtSalarioBaseFunc.TabIndex = 19;
             // 
             // lbSalarioBase
             // 
             this.lbSalarioBase.AutoSize = true;
-            this.lbSalarioBase.Location = new System.Drawing.Point(44, 86);
-            this.lbSalarioBase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSalarioBase.Location = new System.Drawing.Point(33, 70);
             this.lbSalarioBase.Name = "lbSalarioBase";
-            this.lbSalarioBase.Size = new System.Drawing.Size(115, 18);
+            this.lbSalarioBase.Size = new System.Drawing.Size(95, 14);
             this.lbSalarioBase.TabIndex = 2;
             this.lbSalarioBase.Text = "Salário Base:";
             // 
             // txtCargoFunc
             // 
             this.txtCargoFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargoFunc.Location = new System.Drawing.Point(123, 37);
-            this.txtCargoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCargoFunc.Location = new System.Drawing.Point(92, 30);
             this.txtCargoFunc.Name = "txtCargoFunc";
-            this.txtCargoFunc.Size = new System.Drawing.Size(375, 26);
+            this.txtCargoFunc.Size = new System.Drawing.Size(282, 22);
             this.txtCargoFunc.TabIndex = 17;
             // 
             // lbCargo
             // 
             this.lbCargo.AutoSize = true;
-            this.lbCargo.Location = new System.Drawing.Point(44, 41);
-            this.lbCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCargo.Location = new System.Drawing.Point(33, 33);
             this.lbCargo.Name = "lbCargo";
-            this.lbCargo.Size = new System.Drawing.Size(62, 18);
+            this.lbCargo.Size = new System.Drawing.Size(51, 14);
             this.lbCargo.TabIndex = 0;
             this.lbCargo.Text = "Cargo:";
             // 
@@ -286,11 +271,9 @@
             this.gpbEnderecoFunc.Controls.Add(this.mtbCepFunc);
             this.gpbEnderecoFunc.Controls.Add(this.lbCEP);
             this.gpbEnderecoFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbEnderecoFunc.Location = new System.Drawing.Point(24, 325);
-            this.gpbEnderecoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbEnderecoFunc.Location = new System.Drawing.Point(18, 265);
             this.gpbEnderecoFunc.Name = "gpbEnderecoFunc";
-            this.gpbEnderecoFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbEnderecoFunc.Size = new System.Drawing.Size(1035, 188);
+            this.gpbEnderecoFunc.Size = new System.Drawing.Size(776, 152);
             this.gpbEnderecoFunc.TabIndex = 2;
             this.gpbEnderecoFunc.TabStop = false;
             this.gpbEnderecoFunc.Text = "Endereço";
@@ -327,113 +310,101 @@
             "SP",
             "SE",
             "TO"});
-            this.cbxEstadoFunc.Location = new System.Drawing.Point(917, 130);
-            this.cbxEstadoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEstadoFunc.Location = new System.Drawing.Point(688, 106);
             this.cbxEstadoFunc.Name = "cbxEstadoFunc";
-            this.cbxEstadoFunc.Size = new System.Drawing.Size(84, 26);
+            this.cbxEstadoFunc.Size = new System.Drawing.Size(64, 22);
             this.cbxEstadoFunc.TabIndex = 16;
             // 
             // lbEstado
             // 
             this.lbEstado.AutoSize = true;
-            this.lbEstado.Location = new System.Drawing.Point(824, 134);
-            this.lbEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEstado.Location = new System.Drawing.Point(618, 109);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(70, 18);
+            this.lbEstado.Size = new System.Drawing.Size(56, 14);
             this.lbEstado.TabIndex = 10;
             this.lbEstado.Text = "Estado:";
             // 
             // txtCidadeFunc
             // 
-            this.txtCidadeFunc.Location = new System.Drawing.Point(607, 130);
-            this.txtCidadeFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCidadeFunc.Location = new System.Drawing.Point(455, 106);
             this.txtCidadeFunc.Name = "txtCidadeFunc";
-            this.txtCidadeFunc.Size = new System.Drawing.Size(189, 26);
+            this.txtCidadeFunc.Size = new System.Drawing.Size(143, 22);
             this.txtCidadeFunc.TabIndex = 15;
             // 
             // lbCidade
             // 
             this.lbCidade.AutoSize = true;
-            this.lbCidade.Location = new System.Drawing.Point(523, 134);
-            this.lbCidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCidade.Location = new System.Drawing.Point(392, 109);
             this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(69, 18);
+            this.lbCidade.Size = new System.Drawing.Size(57, 14);
             this.lbCidade.TabIndex = 8;
             this.lbCidade.Text = "Cidade:";
             // 
             // txtBairroFunc
             // 
-            this.txtBairroFunc.Location = new System.Drawing.Point(123, 130);
-            this.txtBairroFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBairroFunc.Location = new System.Drawing.Point(92, 106);
             this.txtBairroFunc.Name = "txtBairroFunc";
-            this.txtBairroFunc.Size = new System.Drawing.Size(375, 26);
+            this.txtBairroFunc.Size = new System.Drawing.Size(282, 22);
             this.txtBairroFunc.TabIndex = 14;
             // 
             // lbBairro
             // 
             this.lbBairro.AutoSize = true;
-            this.lbBairro.Location = new System.Drawing.Point(44, 134);
-            this.lbBairro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBairro.Location = new System.Drawing.Point(33, 109);
             this.lbBairro.Name = "lbBairro";
-            this.lbBairro.Size = new System.Drawing.Size(63, 18);
+            this.lbBairro.Size = new System.Drawing.Size(53, 14);
             this.lbBairro.TabIndex = 6;
             this.lbBairro.Text = "Bairro:";
             // 
             // txtNumFunc
             // 
-            this.txtNumFunc.Location = new System.Drawing.Point(917, 81);
-            this.txtNumFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumFunc.Location = new System.Drawing.Point(688, 66);
             this.txtNumFunc.Name = "txtNumFunc";
-            this.txtNumFunc.Size = new System.Drawing.Size(84, 26);
+            this.txtNumFunc.Size = new System.Drawing.Size(64, 22);
             this.txtNumFunc.TabIndex = 13;
             // 
             // lbNumero
             // 
             this.lbNumero.AutoSize = true;
-            this.lbNumero.Location = new System.Drawing.Point(824, 85);
-            this.lbNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNumero.Location = new System.Drawing.Point(618, 69);
             this.lbNumero.Name = "lbNumero";
-            this.lbNumero.Size = new System.Drawing.Size(79, 18);
+            this.lbNumero.Size = new System.Drawing.Size(64, 14);
             this.lbNumero.TabIndex = 4;
             this.lbNumero.Text = "Número:";
             // 
             // txtRuaFunc
             // 
             this.txtRuaFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuaFunc.Location = new System.Drawing.Point(123, 81);
-            this.txtRuaFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRuaFunc.Location = new System.Drawing.Point(92, 66);
             this.txtRuaFunc.Name = "txtRuaFunc";
-            this.txtRuaFunc.Size = new System.Drawing.Size(673, 26);
+            this.txtRuaFunc.Size = new System.Drawing.Size(506, 22);
             this.txtRuaFunc.TabIndex = 12;
             // 
             // lbRua
             // 
             this.lbRua.AutoSize = true;
-            this.lbRua.Location = new System.Drawing.Point(45, 85);
-            this.lbRua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbRua.Location = new System.Drawing.Point(34, 69);
             this.lbRua.Name = "lbRua";
-            this.lbRua.Size = new System.Drawing.Size(46, 18);
+            this.lbRua.Size = new System.Drawing.Size(37, 14);
             this.lbRua.TabIndex = 2;
             this.lbRua.Text = "Rua:";
             // 
             // mtbCepFunc
             // 
             this.mtbCepFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCepFunc.Location = new System.Drawing.Point(123, 34);
-            this.mtbCepFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCepFunc.Location = new System.Drawing.Point(92, 28);
             this.mtbCepFunc.Mask = "00000-000";
             this.mtbCepFunc.Name = "mtbCepFunc";
-            this.mtbCepFunc.Size = new System.Drawing.Size(119, 26);
+            this.mtbCepFunc.Size = new System.Drawing.Size(90, 22);
             this.mtbCepFunc.TabIndex = 11;
             this.mtbCepFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
-            this.lbCEP.Location = new System.Drawing.Point(44, 38);
-            this.lbCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCEP.Location = new System.Drawing.Point(33, 31);
             this.lbCEP.Name = "lbCEP";
-            this.lbCEP.Size = new System.Drawing.Size(46, 18);
+            this.lbCEP.Size = new System.Drawing.Size(38, 14);
             this.lbCEP.TabIndex = 0;
             this.lbCEP.Text = "CEP:";
             // 
@@ -457,11 +428,9 @@
             this.gpbDadosPessoaisFunc.Controls.Add(this.lbCodFunc);
             this.gpbDadosPessoaisFunc.Controls.Add(this.lbCodigo);
             this.gpbDadosPessoaisFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDadosPessoaisFunc.Location = new System.Drawing.Point(24, 21);
-            this.gpbDadosPessoaisFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDadosPessoaisFunc.Location = new System.Drawing.Point(18, 17);
             this.gpbDadosPessoaisFunc.Name = "gpbDadosPessoaisFunc";
-            this.gpbDadosPessoaisFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbDadosPessoaisFunc.Size = new System.Drawing.Size(1035, 286);
+            this.gpbDadosPessoaisFunc.Size = new System.Drawing.Size(776, 232);
             this.gpbDadosPessoaisFunc.TabIndex = 1;
             this.gpbDadosPessoaisFunc.TabStop = false;
             this.gpbDadosPessoaisFunc.Text = "Dados Pessoais";
@@ -469,19 +438,17 @@
             // txtEmailFunc
             // 
             this.txtEmailFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailFunc.Location = new System.Drawing.Point(411, 213);
-            this.txtEmailFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailFunc.Location = new System.Drawing.Point(308, 173);
             this.txtEmailFunc.Name = "txtEmailFunc";
-            this.txtEmailFunc.Size = new System.Drawing.Size(591, 26);
+            this.txtEmailFunc.Size = new System.Drawing.Size(444, 22);
             this.txtEmailFunc.TabIndex = 10;
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(331, 219);
-            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEmail.Location = new System.Drawing.Point(248, 178);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(58, 18);
+            this.lbEmail.Size = new System.Drawing.Size(48, 14);
             this.lbEmail.TabIndex = 15;
             this.lbEmail.Text = "Email:";
             // 
@@ -494,40 +461,36 @@
             "Solteiro/a",
             "Casado/a",
             "Viúvo/a"});
-            this.cbxEstCivilFunc.Location = new System.Drawing.Point(463, 151);
-            this.cbxEstCivilFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxEstCivilFunc.Location = new System.Drawing.Point(347, 123);
             this.cbxEstCivilFunc.Name = "cbxEstCivilFunc";
-            this.cbxEstCivilFunc.Size = new System.Drawing.Size(160, 26);
+            this.cbxEstCivilFunc.Size = new System.Drawing.Size(121, 22);
             this.cbxEstCivilFunc.TabIndex = 8;
             // 
             // lbEstadoCivil
             // 
             this.lbEstadoCivil.AutoSize = true;
-            this.lbEstadoCivil.Location = new System.Drawing.Point(331, 155);
-            this.lbEstadoCivil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEstadoCivil.Location = new System.Drawing.Point(248, 126);
             this.lbEstadoCivil.Name = "lbEstadoCivil";
-            this.lbEstadoCivil.Size = new System.Drawing.Size(108, 18);
+            this.lbEstadoCivil.Size = new System.Drawing.Size(89, 14);
             this.lbEstadoCivil.TabIndex = 13;
             this.lbEstadoCivil.Text = "Estado Civil:";
             // 
             // mtbTelefoneFunc
             // 
             this.mtbTelefoneFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefoneFunc.Location = new System.Drawing.Point(755, 151);
-            this.mtbTelefoneFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbTelefoneFunc.Location = new System.Drawing.Point(566, 123);
             this.mtbTelefoneFunc.Mask = "(00)00000-0000";
             this.mtbTelefoneFunc.Name = "mtbTelefoneFunc";
-            this.mtbTelefoneFunc.Size = new System.Drawing.Size(188, 26);
+            this.mtbTelefoneFunc.Size = new System.Drawing.Size(142, 22);
             this.mtbTelefoneFunc.TabIndex = 9;
             this.mtbTelefoneFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(655, 155);
-            this.lbTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTelefone.Location = new System.Drawing.Point(491, 126);
             this.lbTelefone.Name = "lbTelefone";
-            this.lbTelefone.Size = new System.Drawing.Size(84, 18);
+            this.lbTelefone.Size = new System.Drawing.Size(69, 14);
             this.lbTelefone.TabIndex = 11;
             this.lbTelefone.Text = "Telefone:";
             // 
@@ -536,11 +499,9 @@
             this.gpbSexo.Controls.Add(this.rbtnNInformadoFunc);
             this.gpbSexo.Controls.Add(this.rbtnFemininoFunc);
             this.gpbSexo.Controls.Add(this.rbtnMasculinoFunc);
-            this.gpbSexo.Location = new System.Drawing.Point(48, 151);
-            this.gpbSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbSexo.Location = new System.Drawing.Point(36, 123);
             this.gpbSexo.Name = "gpbSexo";
-            this.gpbSexo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbSexo.Size = new System.Drawing.Size(211, 113);
+            this.gpbSexo.Size = new System.Drawing.Size(158, 92);
             this.gpbSexo.TabIndex = 10;
             this.gpbSexo.TabStop = false;
             this.gpbSexo.Text = "Sexo";
@@ -549,10 +510,9 @@
             // 
             this.rbtnNInformadoFunc.AutoSize = true;
             this.rbtnNInformadoFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNInformadoFunc.Location = new System.Drawing.Point(35, 84);
-            this.rbtnNInformadoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnNInformadoFunc.Location = new System.Drawing.Point(26, 68);
             this.rbtnNInformadoFunc.Name = "rbtnNInformadoFunc";
-            this.rbtnNInformadoFunc.Size = new System.Drawing.Size(142, 22);
+            this.rbtnNInformadoFunc.Size = new System.Drawing.Size(119, 18);
             this.rbtnNInformadoFunc.TabIndex = 7;
             this.rbtnNInformadoFunc.TabStop = true;
             this.rbtnNInformadoFunc.Text = "Não Informado";
@@ -562,10 +522,9 @@
             // 
             this.rbtnFemininoFunc.AutoSize = true;
             this.rbtnFemininoFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFemininoFunc.Location = new System.Drawing.Point(35, 54);
-            this.rbtnFemininoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnFemininoFunc.Location = new System.Drawing.Point(26, 44);
             this.rbtnFemininoFunc.Name = "rbtnFemininoFunc";
-            this.rbtnFemininoFunc.Size = new System.Drawing.Size(96, 22);
+            this.rbtnFemininoFunc.Size = new System.Drawing.Size(81, 18);
             this.rbtnFemininoFunc.TabIndex = 6;
             this.rbtnFemininoFunc.TabStop = true;
             this.rbtnFemininoFunc.Text = "Feminino";
@@ -575,10 +534,9 @@
             // 
             this.rbtnMasculinoFunc.AutoSize = true;
             this.rbtnMasculinoFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMasculinoFunc.Location = new System.Drawing.Point(35, 25);
-            this.rbtnMasculinoFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnMasculinoFunc.Location = new System.Drawing.Point(26, 20);
             this.rbtnMasculinoFunc.Name = "rbtnMasculinoFunc";
-            this.rbtnMasculinoFunc.Size = new System.Drawing.Size(101, 22);
+            this.rbtnMasculinoFunc.Size = new System.Drawing.Size(86, 18);
             this.rbtnMasculinoFunc.TabIndex = 5;
             this.rbtnMasculinoFunc.TabStop = true;
             this.rbtnMasculinoFunc.Text = "Masculino";
@@ -587,101 +545,91 @@
             // dtpDataNascFunc
             // 
             this.dtpDataNascFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataNascFunc.Location = new System.Drawing.Point(813, 92);
-            this.dtpDataNascFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDataNascFunc.Location = new System.Drawing.Point(610, 75);
             this.dtpDataNascFunc.Name = "dtpDataNascFunc";
-            this.dtpDataNascFunc.Size = new System.Drawing.Size(188, 26);
+            this.dtpDataNascFunc.Size = new System.Drawing.Size(131, 22);
             this.dtpDataNascFunc.TabIndex = 4;
             this.dtpDataNascFunc.Value = new System.DateTime(2016, 5, 11, 0, 0, 0, 0);
             // 
             // lbDataNascimento
             // 
             this.lbDataNascimento.AutoSize = true;
-            this.lbDataNascimento.Location = new System.Drawing.Point(613, 96);
-            this.lbDataNascimento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDataNascimento.Location = new System.Drawing.Point(460, 78);
             this.lbDataNascimento.Name = "lbDataNascimento";
-            this.lbDataNascimento.Size = new System.Drawing.Size(179, 18);
+            this.lbDataNascimento.Size = new System.Drawing.Size(144, 14);
             this.lbDataNascimento.TabIndex = 8;
             this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
             // mtbRgFunc
             // 
             this.mtbRgFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbRgFunc.Location = new System.Drawing.Point(380, 92);
-            this.mtbRgFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbRgFunc.Location = new System.Drawing.Point(285, 75);
             this.mtbRgFunc.Mask = "00,000,000-00";
             this.mtbRgFunc.Name = "mtbRgFunc";
-            this.mtbRgFunc.Size = new System.Drawing.Size(155, 26);
+            this.mtbRgFunc.Size = new System.Drawing.Size(117, 22);
             this.mtbRgFunc.TabIndex = 3;
             this.mtbRgFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbRG
             // 
             this.lbRG.AutoSize = true;
-            this.lbRG.Location = new System.Drawing.Point(331, 96);
-            this.lbRG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbRG.Location = new System.Drawing.Point(248, 78);
             this.lbRG.Name = "lbRG";
-            this.lbRG.Size = new System.Drawing.Size(38, 18);
+            this.lbRG.Size = new System.Drawing.Size(31, 14);
             this.lbRG.TabIndex = 6;
             this.lbRG.Text = "RG:";
             // 
             // mtbCpfFunc
             // 
             this.mtbCpfFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCpfFunc.Location = new System.Drawing.Point(123, 92);
-            this.mtbCpfFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCpfFunc.Location = new System.Drawing.Point(92, 75);
             this.mtbCpfFunc.Mask = "000,000,000-00";
             this.mtbCpfFunc.Name = "mtbCpfFunc";
-            this.mtbCpfFunc.Size = new System.Drawing.Size(161, 26);
+            this.mtbCpfFunc.Size = new System.Drawing.Size(122, 22);
             this.mtbCpfFunc.TabIndex = 2;
             this.mtbCpfFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
-            this.lbCPF.Location = new System.Drawing.Point(60, 96);
-            this.lbCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCPF.Location = new System.Drawing.Point(45, 78);
             this.lbCPF.Name = "lbCPF";
-            this.lbCPF.Size = new System.Drawing.Size(46, 18);
+            this.lbCPF.Size = new System.Drawing.Size(38, 14);
             this.lbCPF.TabIndex = 4;
             this.lbCPF.Text = "CPF:";
             // 
             // txtNomeFunc
             // 
             this.txtNomeFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeFunc.Location = new System.Drawing.Point(123, 39);
-            this.txtNomeFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeFunc.Location = new System.Drawing.Point(92, 32);
             this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.Size = new System.Drawing.Size(576, 26);
+            this.txtNomeFunc.Size = new System.Drawing.Size(433, 22);
             this.txtNomeFunc.TabIndex = 1;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(44, 43);
-            this.lbNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNome.Location = new System.Drawing.Point(36, 35);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(62, 18);
+            this.lbNome.Size = new System.Drawing.Size(50, 14);
             this.lbNome.TabIndex = 2;
             this.lbNome.Text = "Nome:";
             // 
             // lbCodFunc
             // 
             this.lbCodFunc.AutoSize = true;
-            this.lbCodFunc.Location = new System.Drawing.Point(967, 43);
-            this.lbCodFunc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCodFunc.Location = new System.Drawing.Point(725, 35);
             this.lbCodFunc.Name = "lbCodFunc";
-            this.lbCodFunc.Size = new System.Drawing.Size(19, 18);
+            this.lbCodFunc.Size = new System.Drawing.Size(16, 14);
             this.lbCodFunc.TabIndex = 1;
             this.lbCodFunc.Text = "1";
             // 
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Location = new System.Drawing.Point(883, 43);
-            this.lbCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCodigo.Location = new System.Drawing.Point(662, 35);
             this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(69, 18);
+            this.lbCodigo.Size = new System.Drawing.Size(57, 14);
             this.lbCodigo.TabIndex = 0;
             this.lbCodigo.Text = "Código:";
             // 
@@ -692,11 +640,10 @@
             this.abaExibiFuncionario.Controls.Add(this.gpbBuscarFunc);
             this.abaExibiFuncionario.Controls.Add(this.gpbDadosFunc);
             this.abaExibiFuncionario.Controls.Add(this.btnExibirTodosFunc);
-            this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 25);
-            this.abaExibiFuncionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.abaExibiFuncionario.Location = new System.Drawing.Point(4, 22);
             this.abaExibiFuncionario.Name = "abaExibiFuncionario";
-            this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.abaExibiFuncionario.Size = new System.Drawing.Size(1087, 762);
+            this.abaExibiFuncionario.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.abaExibiFuncionario.Size = new System.Drawing.Size(813, 611);
             this.abaExibiFuncionario.TabIndex = 1;
             this.abaExibiFuncionario.Text = "Exibir Funcionários";
             this.abaExibiFuncionario.UseVisualStyleBackColor = true;
@@ -704,10 +651,9 @@
             // pcbLogoExibeFunc
             // 
             this.pcbLogoExibeFunc.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbLogoExibeFunc.Location = new System.Drawing.Point(24, 674);
-            this.pcbLogoExibeFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbLogoExibeFunc.Location = new System.Drawing.Point(18, 548);
             this.pcbLogoExibeFunc.Name = "pcbLogoExibeFunc";
-            this.pcbLogoExibeFunc.Size = new System.Drawing.Size(153, 74);
+            this.pcbLogoExibeFunc.Size = new System.Drawing.Size(115, 60);
             this.pcbLogoExibeFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbLogoExibeFunc.TabIndex = 4;
             this.pcbLogoExibeFunc.TabStop = false;
@@ -715,10 +661,9 @@
             // btnSairFunc
             // 
             this.btnSairFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairFunc.Location = new System.Drawing.Point(931, 690);
-            this.btnSairFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSairFunc.Location = new System.Drawing.Point(698, 561);
             this.btnSairFunc.Name = "btnSairFunc";
-            this.btnSairFunc.Size = new System.Drawing.Size(123, 41);
+            this.btnSairFunc.Size = new System.Drawing.Size(92, 33);
             this.btnSairFunc.TabIndex = 3;
             this.btnSairFunc.Text = "Sair";
             this.btnSairFunc.UseVisualStyleBackColor = true;
@@ -735,41 +680,36 @@
             this.gpbBuscarFunc.Controls.Add(this.mtbCpfExiFunc);
             this.gpbBuscarFunc.Controls.Add(this.lbCpfFuncionario);
             this.gpbBuscarFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbBuscarFunc.Location = new System.Drawing.Point(11, 7);
-            this.gpbBuscarFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbBuscarFunc.Location = new System.Drawing.Point(8, 6);
             this.gpbBuscarFunc.Name = "gpbBuscarFunc";
-            this.gpbBuscarFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbBuscarFunc.Size = new System.Drawing.Size(1059, 233);
+            this.gpbBuscarFunc.Size = new System.Drawing.Size(794, 189);
             this.gpbBuscarFunc.TabIndex = 2;
             this.gpbBuscarFunc.TabStop = false;
             this.gpbBuscarFunc.Text = "Buscar Funcionário";
             // 
             // btnExcluirFunc
             // 
-            this.btnExcluirFunc.Location = new System.Drawing.Point(853, 26);
-            this.btnExcluirFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirFunc.Location = new System.Drawing.Point(640, 21);
             this.btnExcluirFunc.Name = "btnExcluirFunc";
-            this.btnExcluirFunc.Size = new System.Drawing.Size(144, 52);
+            this.btnExcluirFunc.Size = new System.Drawing.Size(108, 42);
             this.btnExcluirFunc.TabIndex = 7;
             this.btnExcluirFunc.Text = "Excluir";
             this.btnExcluirFunc.UseVisualStyleBackColor = true;
             // 
             // btnEditarFunc
             // 
-            this.btnEditarFunc.Location = new System.Drawing.Point(853, 85);
-            this.btnEditarFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarFunc.Location = new System.Drawing.Point(640, 69);
             this.btnEditarFunc.Name = "btnEditarFunc";
-            this.btnEditarFunc.Size = new System.Drawing.Size(144, 52);
+            this.btnEditarFunc.Size = new System.Drawing.Size(108, 42);
             this.btnEditarFunc.TabIndex = 6;
             this.btnEditarFunc.Text = "Editar";
             this.btnEditarFunc.UseVisualStyleBackColor = true;
             // 
             // btnBuscarFunc
             // 
-            this.btnBuscarFunc.Location = new System.Drawing.Point(829, 144);
-            this.btnBuscarFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarFunc.Location = new System.Drawing.Point(622, 117);
             this.btnBuscarFunc.Name = "btnBuscarFunc";
-            this.btnBuscarFunc.Size = new System.Drawing.Size(189, 65);
+            this.btnBuscarFunc.Size = new System.Drawing.Size(142, 53);
             this.btnBuscarFunc.TabIndex = 5;
             this.btnBuscarFunc.Text = "Buscar";
             this.btnBuscarFunc.UseVisualStyleBackColor = true;
@@ -777,50 +717,45 @@
             // txtNomeExiFunc
             // 
             this.txtNomeExiFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeExiFunc.Location = new System.Drawing.Point(248, 134);
-            this.txtNomeExiFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeExiFunc.Location = new System.Drawing.Point(186, 109);
             this.txtNomeExiFunc.Name = "txtNomeExiFunc";
-            this.txtNomeExiFunc.Size = new System.Drawing.Size(395, 26);
+            this.txtNomeExiFunc.Size = new System.Drawing.Size(297, 22);
             this.txtNomeExiFunc.TabIndex = 4;
             // 
             // lbNomeFuncionario
             // 
             this.lbNomeFuncionario.AutoSize = true;
-            this.lbNomeFuncionario.Location = new System.Drawing.Point(37, 138);
-            this.lbNomeFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNomeFuncionario.Location = new System.Drawing.Point(28, 112);
             this.lbNomeFuncionario.Name = "lbNomeFuncionario";
-            this.lbNomeFuncionario.Size = new System.Drawing.Size(185, 18);
+            this.lbNomeFuncionario.Size = new System.Drawing.Size(151, 14);
             this.lbNomeFuncionario.TabIndex = 3;
             this.lbNomeFuncionario.Text = "Nome do Funcionário:";
             // 
             // lbOU
             // 
             this.lbOU.AutoSize = true;
-            this.lbOU.Location = new System.Drawing.Point(159, 97);
-            this.lbOU.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbOU.Location = new System.Drawing.Point(119, 79);
             this.lbOU.Name = "lbOU";
-            this.lbOU.Size = new System.Drawing.Size(33, 18);
+            this.lbOU.Size = new System.Drawing.Size(28, 14);
             this.lbOU.TabIndex = 2;
             this.lbOU.Text = "OU";
             // 
             // mtbCpfExiFunc
             // 
             this.mtbCpfExiFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCpfExiFunc.Location = new System.Drawing.Point(248, 44);
-            this.mtbCpfExiFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCpfExiFunc.Location = new System.Drawing.Point(186, 36);
             this.mtbCpfExiFunc.Mask = "000,000,000-00";
             this.mtbCpfExiFunc.Name = "mtbCpfExiFunc";
-            this.mtbCpfExiFunc.Size = new System.Drawing.Size(167, 26);
+            this.mtbCpfExiFunc.Size = new System.Drawing.Size(126, 22);
             this.mtbCpfExiFunc.TabIndex = 1;
             this.mtbCpfExiFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbCpfFuncionario
             // 
             this.lbCpfFuncionario.AutoSize = true;
-            this.lbCpfFuncionario.Location = new System.Drawing.Point(37, 48);
-            this.lbCpfFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCpfFuncionario.Location = new System.Drawing.Point(28, 39);
             this.lbCpfFuncionario.Name = "lbCpfFuncionario";
-            this.lbCpfFuncionario.Size = new System.Drawing.Size(169, 18);
+            this.lbCpfFuncionario.Size = new System.Drawing.Size(139, 14);
             this.lbCpfFuncionario.TabIndex = 0;
             this.lbCpfFuncionario.Text = "CPF do Funcionário:";
             // 
@@ -828,11 +763,9 @@
             // 
             this.gpbDadosFunc.Controls.Add(this.dgvExibeFunc);
             this.gpbDadosFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbDadosFunc.Location = new System.Drawing.Point(11, 247);
-            this.gpbDadosFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDadosFunc.Location = new System.Drawing.Point(8, 201);
             this.gpbDadosFunc.Name = "gpbDadosFunc";
-            this.gpbDadosFunc.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpbDadosFunc.Size = new System.Drawing.Size(1063, 420);
+            this.gpbDadosFunc.Size = new System.Drawing.Size(797, 341);
             this.gpbDadosFunc.TabIndex = 0;
             this.gpbDadosFunc.TabStop = false;
             this.gpbDadosFunc.Text = "Dados Funcionarios";
@@ -849,10 +782,9 @@
             this.Nome});
             this.dgvExibeFunc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExibeFunc.Enabled = false;
-            this.dgvExibeFunc.Location = new System.Drawing.Point(4, 23);
-            this.dgvExibeFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvExibeFunc.Location = new System.Drawing.Point(3, 18);
             this.dgvExibeFunc.Name = "dgvExibeFunc";
-            this.dgvExibeFunc.Size = new System.Drawing.Size(1055, 393);
+            this.dgvExibeFunc.Size = new System.Drawing.Size(791, 320);
             this.dgvExibeFunc.TabIndex = 0;
             // 
             // CPF
@@ -868,10 +800,9 @@
             // btnExibirTodosFunc
             // 
             this.btnExibirTodosFunc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibirTodosFunc.Location = new System.Drawing.Point(760, 684);
-            this.btnExibirTodosFunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExibirTodosFunc.Location = new System.Drawing.Point(570, 556);
             this.btnExibirTodosFunc.Name = "btnExibirTodosFunc";
-            this.btnExibirTodosFunc.Size = new System.Drawing.Size(144, 52);
+            this.btnExibirTodosFunc.Size = new System.Drawing.Size(108, 42);
             this.btnExibirTodosFunc.TabIndex = 1;
             this.btnExibirTodosFunc.Text = "Exibir Todos";
             this.btnExibirTodosFunc.UseVisualStyleBackColor = true;
@@ -879,11 +810,10 @@
             // 
             // telaGerFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 791);
+            this.ClientSize = new System.Drawing.Size(821, 637);
             this.Controls.Add(this.abasGerFuncionario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "telaGerFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

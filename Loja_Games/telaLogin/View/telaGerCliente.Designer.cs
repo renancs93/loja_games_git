@@ -67,7 +67,7 @@
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.abaExibiCliente = new System.Windows.Forms.TabPage();
-            this.pbLogoCli = new System.Windows.Forms.PictureBox();
+            this.pcbLogoCli = new System.Windows.Forms.PictureBox();
             this.gpbBuscaCli = new System.Windows.Forms.GroupBox();
             this.gpbDadosExibeCli = new System.Windows.Forms.GroupBox();
             this.lbCpfExibeCli = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.dgvExibeCli = new System.Windows.Forms.DataGridView();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbLogoExiCli = new System.Windows.Forms.PictureBox();
+            this.pcbLogoExiCli = new System.Windows.Forms.PictureBox();
             this.btnExibirTodosCli = new System.Windows.Forms.Button();
             this.btnSairCli = new System.Windows.Forms.Button();
             this.abasGerCliente.SuspendLayout();
@@ -90,11 +90,11 @@
             this.gbpDadosPessoaisCli.SuspendLayout();
             this.gbpSexo.SuspendLayout();
             this.abaExibiCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCli)).BeginInit();
             this.gpbBuscaCli.SuspendLayout();
             this.gpbDadosExibeCli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibeCli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoExiCli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoExiCli)).BeginInit();
             this.SuspendLayout();
             // 
             // abasGerCliente
@@ -111,7 +111,7 @@
             // 
             // abaCadCliente
             // 
-            this.abaCadCliente.Controls.Add(this.pbLogoCli);
+            this.abaCadCliente.Controls.Add(this.pcbLogoCli);
             this.abaCadCliente.Controls.Add(this.btnCancelarCli);
             this.abaCadCliente.Controls.Add(this.btnCadastrarCli);
             this.abaCadCliente.Controls.Add(this.gpbEnderecoCli);
@@ -562,7 +562,7 @@
             // 
             this.abaExibiCliente.Controls.Add(this.btnSairCli);
             this.abaExibiCliente.Controls.Add(this.btnExibirTodosCli);
-            this.abaExibiCliente.Controls.Add(this.pbLogoExiCli);
+            this.abaExibiCliente.Controls.Add(this.pcbLogoExiCli);
             this.abaExibiCliente.Controls.Add(this.gpbDadosExibeCli);
             this.abaExibiCliente.Controls.Add(this.gpbBuscaCli);
             this.abaExibiCliente.Location = new System.Drawing.Point(4, 25);
@@ -574,16 +574,16 @@
             this.abaExibiCliente.Text = "Exibir Clientes";
             this.abaExibiCliente.UseVisualStyleBackColor = true;
             // 
-            // pbLogoCli
+            // pcbLogoCli
             // 
-            this.pbLogoCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pbLogoCli.Location = new System.Drawing.Point(24, 517);
-            this.pbLogoCli.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogoCli.Name = "pbLogoCli";
-            this.pbLogoCli.Size = new System.Drawing.Size(171, 85);
-            this.pbLogoCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoCli.TabIndex = 6;
-            this.pbLogoCli.TabStop = false;
+            this.pcbLogoCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pcbLogoCli.Location = new System.Drawing.Point(24, 517);
+            this.pcbLogoCli.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbLogoCli.Name = "pcbLogoCli";
+            this.pcbLogoCli.Size = new System.Drawing.Size(171, 85);
+            this.pcbLogoCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogoCli.TabIndex = 6;
+            this.pcbLogoCli.TabStop = false;
             // 
             // gpbBuscaCli
             // 
@@ -718,15 +718,15 @@
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             // 
-            // pbLogoExiCli
+            // pcbLogoExiCli
             // 
-            this.pbLogoExiCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pbLogoExiCli.Location = new System.Drawing.Point(24, 517);
-            this.pbLogoExiCli.Name = "pbLogoExiCli";
-            this.pbLogoExiCli.Size = new System.Drawing.Size(171, 85);
-            this.pbLogoExiCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoExiCli.TabIndex = 3;
-            this.pbLogoExiCli.TabStop = false;
+            this.pcbLogoExiCli.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pcbLogoExiCli.Location = new System.Drawing.Point(24, 517);
+            this.pcbLogoExiCli.Name = "pcbLogoExiCli";
+            this.pcbLogoExiCli.Size = new System.Drawing.Size(171, 85);
+            this.pcbLogoExiCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogoExiCli.TabIndex = 3;
+            this.pcbLogoExiCli.TabStop = false;
             // 
             // btnExibirTodosCli
             // 
@@ -772,12 +772,12 @@
             this.gbpSexo.ResumeLayout(false);
             this.gbpSexo.PerformLayout();
             this.abaExibiCliente.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoCli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCli)).EndInit();
             this.gpbBuscaCli.ResumeLayout(false);
             this.gpbBuscaCli.PerformLayout();
             this.gpbDadosExibeCli.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExibeCli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoExiCli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoExiCli)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -823,7 +823,7 @@
         private System.Windows.Forms.RadioButton rbtnMasculinoCli;
         private System.Windows.Forms.Button btnCancelarCli;
         private System.Windows.Forms.Button btnCadastrarCli;
-        private System.Windows.Forms.PictureBox pbLogoCli;
+        private System.Windows.Forms.PictureBox pcbLogoCli;
         private System.Windows.Forms.GroupBox gpbDadosExibeCli;
         private System.Windows.Forms.GroupBox gpbBuscaCli;
         private System.Windows.Forms.Label lbNomeExibeCli;
@@ -837,7 +837,7 @@
         private System.Windows.Forms.DataGridView dgvExibeCli;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
-        private System.Windows.Forms.PictureBox pbLogoExiCli;
+        private System.Windows.Forms.PictureBox pcbLogoExiCli;
         private System.Windows.Forms.Button btnSairCli;
         private System.Windows.Forms.Button btnExibirTodosCli;
     }

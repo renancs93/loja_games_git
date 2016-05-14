@@ -30,8 +30,8 @@ namespace LojaGames.View
 
         private void btnCadastro_Click(object sender, System.EventArgs e)
         {
-            DadosLoginFuncionario telaLoginSenha = new DadosLoginFuncionario(imgUserSenhaOK);
-            imgUserSenhaOK.Visible = false;
+            DadosLoginFuncionario telaLoginSenha = new DadosLoginFuncionario(imgUserSenhaOKFunc);
+            imgUserSenhaOKFunc.Visible = false;
             telaLoginSenha.Show();
         }
 
@@ -75,8 +75,8 @@ namespace LojaGames.View
         {
             Funcionario f = new Funcionario();
 
-            f.CPF = long.Parse(mtbCPF.Text);
-            f.Nome = txtNome.Text;
+            f.CPF = long.Parse(mtbCpfFunc.Text);
+            f.Nome = txtNomeFunc.Text;
 
             return f;
         }
@@ -84,10 +84,10 @@ namespace LojaGames.View
        
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
-            dgvExibeFuncionarios.Rows.Clear(); //limpa o datagrid
+            dgvExibeFunc.Rows.Clear(); //limpa o datagrid
             foreach(KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
             {
-                dgvExibeFuncionarios.Rows.Add(linha);
+                dgvExibeFunc.Rows.Add(linha);
 
             }
 

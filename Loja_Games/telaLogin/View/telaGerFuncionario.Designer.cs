@@ -229,6 +229,7 @@
             this.txtSalarioBaseFunc.Name = "txtSalarioBaseFunc";
             this.txtSalarioBaseFunc.Size = new System.Drawing.Size(144, 22);
             this.txtSalarioBaseFunc.TabIndex = 19;
+            this.txtSalarioBaseFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioBaseFunc_KeyPress);
             // 
             // lbSalarioBase
             // 

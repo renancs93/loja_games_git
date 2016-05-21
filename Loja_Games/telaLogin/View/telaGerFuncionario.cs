@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
@@ -77,9 +79,25 @@ namespace LojaGames.View
 
             f.CPF = long.Parse(mtbCpfFunc.Text);
             f.Nome = txtNomeFunc.Text;
-            //f.RG = long.Parse(mtbRgFunc.Text);
-            //f.DataNascimento = dtpDataNascFunc;
+            f.RG = mtbRgFunc.Text;
+            f.DataNascimento = Convert.ToDateTime(dtpDataNascFunc);
+
+            //verifica a opção do sexo selecionada
+            if (rbtnMasculinoFunc.Checked == true)
+            {
+                f.Sexo = "Masculino";
+            }
+            else if (rbtnFemininoFunc.Checked == true)
+            {
+                f.Sexo = "Feminino";
+            }
+            else if (rbtnNInformadoFunc.Checked == true)
+            {
+                f.Sexo = "Não Informado";
+            }
+
             f.Email = txtEmailFunc.Text;
+
 
             return f;
         }
@@ -88,14 +106,17 @@ namespace LojaGames.View
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
             dgvExibeFunc.Rows.Clear(); //limpa o datagrid
-            foreach(KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
+
+            /*
+            foreach (KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
             {
                 dgvExibeFunc.Rows.Add(linha.Key, linha.Value.Nome);
 
             }
+            */
+            
 
-
-            //dgvExibeFuncionarios.DataSource = Banco.dicFunc;
+            
         }
 
         private void btnSairExibi_Click(object sender, System.EventArgs e)
@@ -147,6 +168,14 @@ namespace LojaGames.View
             {
                 MessageBox.Show("Cliente removido com Sucesso");
             }
+        }
+
+        private void txtSalarioBaseFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //força o campo a receber apenas numeros (estilo monetários)
+            ClasseUtil.somenteValores(txtSalarioBaseFunc, e);
+
+            
         }
     }
 }

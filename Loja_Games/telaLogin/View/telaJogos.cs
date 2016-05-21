@@ -240,26 +240,9 @@ namespace LojaGames
 
         private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
-              (e.KeyChar != ',' && e.KeyChar != '.' &&
-               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
-            {
-                e.KeyChar = (Char)0;
-            }
-            else
-            {
-                if (e.KeyChar == '.' || e.KeyChar == ',')
-                {
-                    if (!txtPreco.Text.Contains(','))
-                    {
-                        e.KeyChar = ',';
-                    }
-                    else
-                    {
-                        e.KeyChar = (Char)0;
-                    }
-                }
-            }
+            //força o campo a receber apenas numeros (estilo monetários)
+            ClasseUtil.somenteValores(txtPreco, e);
+
         }
     }
     

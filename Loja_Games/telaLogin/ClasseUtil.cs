@@ -15,14 +15,15 @@ namespace LojaGames
             return n1 + n2;
         }
 
-        //Verifica se um textBox está vazio
-        public static bool CampoVazio(TextBox campo)
+        //Verifica se um campo de texto está vazio
+        public static bool CampoVazio(Control campo)
         {
             bool retorno = false;
             if (string.IsNullOrEmpty(campo.Text))
             {                
                 retorno = true;
             }
+            
             return retorno;
         }
 
@@ -107,11 +108,36 @@ namespace LojaGames
                         mensagem += string.Format("\nO campo {0} deve ser preenchido!", nomeDoCampo);
                     }
                 }
-                
+                //verifica os campos MaskedTextBox
+                if (controle.GetType() == typeof(MaskedTextBox))
+                {
+                    bool r = CampoVazio((MaskedTextBox)controle);
+
+                    if (r)
+                    {
+                        // escrever a mensagem
+                        String nomeDoCampo = ((MaskedTextBox)controle).Name.Remove(0, 3);
+                        mensagem += string.Format("\nO campo {0} deve ser preenchido!", nomeDoCampo);
+                    }
+                }
+                //verifica os campos ComboBox
+                if (controle.GetType() == typeof(ComboBox))
+                {
+                    bool r = CampoVazio((ComboBox)controle);
+
+                    if (r)
+                    {
+                        // escrever a mensagem
+                        String nomeDoCampo = ((ComboBox)controle).Name.Remove(0, 3);
+                        mensagem += string.Format("\nO campo {0} deve ser preenchido!", nomeDoCampo);
+                    }
+                }
+
+
 
             }
 
-            
+
             return mensagem;
         }
 

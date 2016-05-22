@@ -15,7 +15,7 @@ namespace LojaGames.Model
         private DateTime dataNascimento;
         private string telefone;
         private string sexo;
-        private string status;
+        private string estadoCivil;
         private string email;
         private string rua;
         private int numero;
@@ -41,7 +41,7 @@ namespace LojaGames.Model
         public DateTime DataNascimento { get; set; }
         public string Telefone { get; set; }
         public string Sexo { get; set; }
-        public string Status { get; set; }
+        public string EstadoCivil { get; set; }
         public string Email { get; set; }
         public string Rua { get; set; }
         public int Numero

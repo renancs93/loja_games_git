@@ -1,0 +1,92 @@
+Comandos Criação de Tabelas -> Projeto Loja Games
+
+- Criação da DataBase: 
+ 
+create database games;
+
+- Selecionando a database:
+
+use games;
+
+- Criação da Tabela de Clientes:
+
+create table cliente(
+codigo_cliente integer not null auto_increment,
+nome varchar(50) not null,
+cpf varchar(14),
+rg varchar(15),
+data_nascimento date,
+telefone varchar(10),
+sexo char,
+estado_civil varchar(10),
+email varchar(30),
+rua varchar(40),
+numero integer,
+bairro varchar(30),
+estado varchar(2),
+cep varchar(10),
+cidade varchar(20),
+primary key (codigo_cliente));
+
+- Criação da Tabela de Funcionários:
+
+create table funcionario(
+codigo_funcionario integer not null auto_increment,
+nome varchar(50) not null,
+cpf varchar(14),
+rg varchar(15),
+data_nascimento date,
+telefone varchar(10),
+sexo char,
+estado_civil varchar(10),
+email varchar(30),
+numero integer,
+bairro varchar(30),
+estado varchar(2),
+cep varchar(10),
+cidade varchar(20),
+username varchar(20),
+senha varchar(10),
+cargo varchar(30),
+salario_base float,
+data_inicio date,
+primary key (codigo_funcionario));
+
+- Criação da Tabela Jogos:
+
+create table jogos(
+codigo_jogo integer not null,
+nome varchar(40),
+preco float,
+console varchar(20),
+genero varchar(20),
+qnt_estoque integer,
+primary key (codigo_jogo));
+
+- Criação da Tabela Pagamento:
+
+create table pagamento(
+codigo_pagamento integer not null,
+tipo varchar(10) not null,
+primary key (codigo_pagamento));
+
+- Criação da Tabela Vendas:
+
+create table venda(
+codigo_venda integer not null auto_increment,
+cod_cli integer not null,
+cod_func integer not null,
+cod_jogos integer not null,
+cod_pagamento integer not null,
+quantidade integer,
+numero_parcelas integer,
+valor_parcelas float,
+valor_total float,
+primary key (codigo_venda, cod_cli, cod_func, cod_jogos, cod_pagamento),
+foreign key (cod_cli) references cliente(codigo_cliente),
+foreign key (cod_func) references funcionario(codigo_funcionario),
+foreign key (cod_jogos) references jogos(codigo_jogo),
+foreign key (cod_pagamento) references pagamento(codigo_pagamento));
+
+
+

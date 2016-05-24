@@ -14,10 +14,9 @@ namespace LojaGames.Model
         private Cliente cliente;
         private Funcionario funcionario;
         private Jogos jogos;
+        private Pagamento pagamento;
         private int dias;
-        private string formaPagamento;
-        private int numeroParcelas;
-        private float totalCompra;
+        private float valorTotal;
 
         //Declaração das propriedades
         public int CodigoAluguel
@@ -34,7 +33,7 @@ namespace LojaGames.Model
         public Cliente Cliente { get; set; }
         public Funcionario Funcionario { get; set; }
         public Jogos Jogos { get; set; }
-
+        public Pagamento Pagamento { get; set; }
         public int Dias
         {
             get
@@ -46,28 +45,16 @@ namespace LojaGames.Model
                 dias = value >= 0 ? value : 0;
             }
         }
-        public string FormaPagamento { get; set; }
-        public int NumeroParcelas
+        
+        public float ValorTotal
         {
             get
             {
-                return numeroParcelas;
+                return valorTotal;
             }
             set
             {
-                numeroParcelas = value >= 0 ? value : 0;
-            }
-        }
-
-        public float TotalCompra
-        {
-            get
-            {
-                return totalCompra;
-            }
-            set
-            {
-                totalCompra = value >= 0 ? value : 0;
+                valorTotal = value >= 0 ? value : 0;
             }
         }
 

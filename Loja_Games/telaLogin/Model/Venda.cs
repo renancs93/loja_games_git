@@ -9,7 +9,7 @@ namespace LojaGames.Classes
     class Venda
     {
         //Declaração das Variáveis
-        private int codigo;
+        private int codigoVenda;
         private Cliente cliente;
         private Jogos jogos;
         private Funcionario funcionario;
@@ -21,15 +21,15 @@ namespace LojaGames.Classes
         
 
         //Declaração das Propriedades
-        public int Codigo
+        public int CodigoVenda
         {
             get
             {
-                return codigo;
+                return codigoVenda;
             }
             set
             {
-                codigo = value >= 0 ? value : 0;
+                codigoVenda = value >= 0 ? value : 0;
             }
         }
 

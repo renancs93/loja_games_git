@@ -1,14 +1,14 @@
-Comandos Criação de Tabelas -> Projeto Loja Games
+Comandos Criação de Tabelas -> Projeto Loja Games;
 
-- Criação da DataBase: 
+- Criação da DataBase:;
  
 create database games;
 
-- Selecionando a database:
+- Selecionando a database:;
 
 use games;
 
-- Criação da Tabela de Pessoa:
+- Criação da Tabela de Pessoa:;
 
 create table pessoa(
 cpf_pessoa varchar(14) not null,
@@ -28,14 +28,14 @@ cep varchar(10),
 cidade varchar(20),
 primary key(cpf_pessoa));
 
-- Criação da Tabela de Clientes(especialização):
+- Criação da Tabela de Clientes(especialização):;
 
 create table cliente(
 cpf_cliente varchar(14) not null,
 primary key (cpf_cliente),
 foreign key (cpf_cliente) references pessoa(cpf_pessoa));
 
-- Criação da Tabela de Funcionários(especialização):
+- Criação da Tabela de Funcionários(especialização):;
 
 create table funcionario(
 cpf_funcionario varchar(14) not null,
@@ -48,7 +48,7 @@ data_inicio date,
 primary key (cpf_funcionario),
 foreign key (cpf_funcionario) references pessoa(cpf_pessoa));
 
-- Criação da Tabela Jogos:
+- Criação da Tabela Jogos:;
 
 create table jogos(
 codigo_jogo integer not null,
@@ -59,14 +59,14 @@ genero varchar(20),
 qnt_estoque integer,
 primary key (codigo_jogo));
 
-- Criação da Tabela Pagamento:
+- Criação da Tabela Pagamento:;
 
 create table pagamento(
 codigo_pagamento integer not null,
 tipo varchar(10) not null,
 primary key (codigo_pagamento));
 
-- Criação da Tabela Vendas:
+- Criação da Tabela Vendas:;
 
 create table venda(
 codigo_venda integer not null auto_increment,
@@ -84,7 +84,7 @@ foreign key (cpf_func) references funcionario(cpf_funcionario),
 foreign key (cod_jogos) references jogos(codigo_jogo),
 foreign key (cod_pagamento) references pagamento (codigo_pagamento));
 
-- Criação da Tabela de Aluguel:
+- Criação da Tabela de Aluguel:;
 
 create table aluguel(
 codigo_aluguel integer not null auto_increment,

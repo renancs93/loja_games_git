@@ -10,9 +10,9 @@ use games;
 
 - Criação da Tabela de Pessoa:
 
+create table pessoa(
 codigo_pessoa integer not null auto_increment,
 nome varchar(50) not null,
-cpf varchar(14) not null,
 rg varchar(15),
 data_nascimento date,
 telefone varchar(10),
@@ -25,7 +25,7 @@ bairro varchar(30),
 estado varchar(2),
 cep varchar(10),
 cidade varchar(20),
-primary key(cpf));
+primary key(codigo_pessoa));
 
 - Criação da Tabela de Clientes(especialização):
 
@@ -52,7 +52,7 @@ foreign key (codigo_funcionario) references pessoa(codigo_pessoa));
 
 create table jogos(
 codigo_jogo integer not null,
-nome varchar(40),
+nome varchar(40) not null,
 preco float,
 console varchar(20),
 genero varchar(20),
@@ -70,20 +70,16 @@ primary key (codigo_pagamento));
 
 create table venda(
 codigo_venda integer not null auto_increment,
-cod_cliente integer not null,
-cpf_cliente varchar(14) not null,
-cod_funcionario integer not null,
-cpf_funcionario varchar(14) not null,
+cpf_cli varchar(14) not null,
+cpf_func varchar(14) not null,
 cod_jogos integer not null,
 cod_pagamento integer not null,
 quantidade integer,
 numero_parcelas integer,
 valor_parcelas float,
 valor_total float,
-primary key (codigo_venda, cod_cliente, cpf_cliente, cod_funcionario, cpf_funcionario, cod_jogos, cod_pagamento),
-foreign key (cod_cliente) references cliente(codigo_cliente),
+primary key (codigo_venda, cpf_cli, cpf_func, cod_jogos, cod_pagamento),
 foreign key (cpf_cli) references cliente(cpf_cliente),
-foreign key (cod_funcionario) references funcionario(codigo_funcionario),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
 foreign key (cod_jogos) references jogos(codigo_jogo),
 foreign key (cod_pagamento) references pagamento(codigo_pagamento));

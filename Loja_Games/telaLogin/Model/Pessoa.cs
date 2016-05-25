@@ -18,7 +18,7 @@ namespace LojaGames.Model
         private string estadoCivil;
         private string email;
         private string rua;
-        private int numero;
+        private string numero;
         private string bairro;
         private string estado;
         private string cep;
@@ -44,17 +44,7 @@ namespace LojaGames.Model
         public string EstadoCivil { get; set; }
         public string Email { get; set; }
         public string Rua { get; set; }
-        public int Numero
-        {
-            get
-            {
-                return numero;
-            }
-            set
-            {
-                numero = value >= 0 ? value : 0;
-            }
-        }
+        public string Numero { get; set; }
         public string Bairro { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }

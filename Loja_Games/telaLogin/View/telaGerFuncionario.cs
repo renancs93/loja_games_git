@@ -27,7 +27,6 @@ namespace LojaGames.View
         {
             Dispose();
             telaP.Show();
-
         }
 
         private void btnCadastro_Click(object sender, System.EventArgs e)
@@ -39,7 +38,7 @@ namespace LojaGames.View
 
         private void btnCadastrarFuncionario_Click(object sender, System.EventArgs e)
         {
-            //realizar as verificações dos campos antes de cadastrar
+            //realiza as verificações dos campos antes de cadastrar
             string MensagemErro = "";
             //MensagemErro = ClasseUtil.ValidaCampos(abaCadFuncionario.Controls);
 
@@ -48,11 +47,31 @@ namespace LojaGames.View
                 /*instancio a classe(controller) FuncionariBanco para poder usar o metodo dessa classe
                 * chamo esse metodo passando como parametro o objeto retornado do metodo da tela populaNovoFuncionario  
                 */
-                FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
-                funcionarioBanco.SalvarFuncionario(popularNovoFuncionario());
+                if (imgUserSenhaOKFunc.Visible == false)
+                {
+                    MessageBox.Show("É necessário definir um USUÁRIO e SENHA para o funcionário");
+                }
+                else
+                {
+                    if (btnCadastrarFunc.Text == "Cadastrar")
+                    {
+                        //
+                        FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+                        funcionarioBanco.SalvarFuncionario(popularFuncionario());
 
-                DialogResult cadastrado = MessageBox.Show("Funcionário cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
-                ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
+                        DialogResult cadastrado = MessageBox.Show("Funcionário cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
+                    }
+                    else if (btnCadastrarFunc.Text == "Salvar")
+                    {
+                        //implementação de uma edição de um funcionário
+
+
+                        DialogResult edicao = MessageBox.Show("Funcionário alterado com sucesso.", "Edição!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
+                    }
+                }
+                
                 //Close();
                 //telaP.Show();
             }
@@ -62,7 +81,7 @@ namespace LojaGames.View
             }
         }
 
-        private void btnCancelar_Click(object sender, System.EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult cancel = MessageBox.Show("Os dados serão perdidos! \n Deseja mesmo sair da tela de cadastro? ", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -73,14 +92,15 @@ namespace LojaGames.View
             }
         }
 
-        private Funcionario popularNovoFuncionario()
+        private Funcionario popularFuncionario()
         {
             Funcionario f = new Funcionario();
 
+            //Popula Dados Pessoais
             f.CPF = long.Parse(mtbCpfFunc.Text);
             f.Nome = txtNomeFunc.Text;
             f.RG = mtbRgFunc.Text;
-            f.DataNascimento = Convert.ToDateTime(dtpDataNascFunc);
+            f.DataNascimento = Convert.ToDateTime(dtpDataNascFunc.Text);//ToString("yyyy-MM-dd");
 
             //verifica a opção do sexo selecionada
             if (rbtnMasculinoFunc.Checked == true)
@@ -96,9 +116,18 @@ namespace LojaGames.View
                 f.Sexo = "Não Informado";
             }
 
+            f.EstadoCivil = cbxEstCivilFunc.Text;
+            f.Telefone = mtbTelefoneFunc.Text;
             f.Email = txtEmailFunc.Text;
-
-
+            
+            //Popula Endereço
+            f.Cep = mtbCepFunc.Text;
+            f.Rua = txtRuaFunc.Text;
+            f.Numero = txtNumFunc.Text;
+            f.Bairro = txtBairroFunc.Text;
+            f.Cidade = txtCidadeFunc.Text;
+            f.Estado = cbxEstadoFunc.Text;
+            
             return f;
         }
 
@@ -107,10 +136,12 @@ namespace LojaGames.View
         {
             dgvExibeFunc.Rows.Clear(); //limpa o datagrid
 
+            //dgvExibeFunc.DataSource = Banco.dicFunc;
+
             /*
             foreach (KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
-            {
-                dgvExibeFunc.Rows.Add(linha.Key, linha.Value.Nome);
+            {  
+                //dgvExibeFunc.Rows.Add(linha.Value);
 
             }
             */
@@ -149,25 +180,45 @@ namespace LojaGames.View
 
         private void btnEditarFunc_Click(object sender, System.EventArgs e)
         {
-            //pega a linha no dataGrid selecionada e abre a telaCadastro de funcionário já setados para alteração
-            DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (edit == DialogResult.Yes)
+            if (dgvExibeFunc.CurrentRow != null)
             {
-                abasGerFuncionario.SelectedTab = abaCadFuncionario;
+                //pega a linha no dataGrid selecionada e abre a telaCadastro de funcionário já setados para alteração
+                int linha = dgvExibeFunc.CurrentRow.Index;
 
-                //seta os dados do funcionario selecionado na tela de cadastro
+                DialogResult edit = MessageBox.Show("Deseja editar o Funcionário selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (edit == DialogResult.Yes)
+                {
+                    abasGerFuncionario.SelectedTab = abaCadFuncionario;
+
+                    //seta os dados do funcionario selecionado na tela de cadastro
+                }
             }
+            else
+            {
+                MessageBox.Show("Nenhum funcionário selecionado");
+            }
+
         }
 
         private void btnExcluirFunc_Click(object sender, System.EventArgs e)
         {
-            DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (rm == DialogResult.Yes)
+            if (dgvExibeFunc.CurrentRow != null)
             {
-                MessageBox.Show("Cliente removido com Sucesso");
+                int linha = dgvExibeFunc.CurrentRow.Index;
+
+                DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (rm == DialogResult.Yes)
+                {
+                    MessageBox.Show("Cliente removido com Sucesso");
+                }
             }
+            else
+            {
+                MessageBox.Show("Nenhum funcionário selecionado");
+            }
+
         }
 
         private void txtSalarioBaseFunc_KeyPress(object sender, KeyPressEventArgs e)

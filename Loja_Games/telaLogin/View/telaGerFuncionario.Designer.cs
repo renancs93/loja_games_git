@@ -90,8 +90,6 @@
             this.lbCpfFuncionario = new System.Windows.Forms.Label();
             this.gpbDadosFunc = new System.Windows.Forms.GroupBox();
             this.dgvExibeFunc = new System.Windows.Forms.DataGridView();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExibirTodosFunc = new System.Windows.Forms.Button();
             this.abasGerFuncionario.SuspendLayout();
             this.abaCadFuncionario.SuspendLayout();
@@ -781,24 +779,12 @@
             this.dgvExibeFunc.AllowUserToOrderColumns = true;
             this.dgvExibeFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExibeFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExibeFunc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CPF,
-            this.Nome});
             this.dgvExibeFunc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExibeFunc.Location = new System.Drawing.Point(3, 18);
             this.dgvExibeFunc.Name = "dgvExibeFunc";
+            this.dgvExibeFunc.ReadOnly = true;
             this.dgvExibeFunc.Size = new System.Drawing.Size(791, 301);
             this.dgvExibeFunc.TabIndex = 0;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
             // 
             // btnExibirTodosFunc
             // 
@@ -898,8 +884,6 @@
         private System.Windows.Forms.GroupBox gpbDadosFunc;
         private System.Windows.Forms.DataGridView dgvExibeFunc;
         private System.Windows.Forms.Button btnExibirTodosFunc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.GroupBox gpbBuscarFunc;
         private System.Windows.Forms.TextBox txtNomeExiFunc;
         private System.Windows.Forms.Label lbNomeFuncionario;

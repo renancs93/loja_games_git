@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.numDiasAlug = new System.Windows.Forms.NumericUpDown();
             this.lbProdAlug = new System.Windows.Forms.Label();
             this.lbDias = new System.Windows.Forms.Label();
-            this.txtProdAlug = new System.Windows.Forms.TextBox();
+            this.txtCodProdAluga = new System.Windows.Forms.TextBox();
             this.mtbCPFAluguel = new System.Windows.Forms.MaskedTextBox();
             this.lbNumParcelasAluguel = new System.Windows.Forms.Label();
             this.lbFormasPagamentoAluguel = new System.Windows.Forms.Label();
@@ -59,16 +59,17 @@
             this.txtTotalAluguel = new System.Windows.Forms.TextBox();
             this.lbTotalAlug = new System.Windows.Forms.Label();
             this.txtCodAlug = new System.Windows.Forms.TextBox();
-            this.txtFuncAlug = new System.Windows.Forms.TextBox();
+            this.txtCodFuncAluga = new System.Windows.Forms.TextBox();
             this.lbCodAlug = new System.Windows.Forms.Label();
             this.lbFuncAlug = new System.Windows.Forms.Label();
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
             this.abaVenda = new System.Windows.Forms.TabPage();
             this.gbpDadoVenda = new System.Windows.Forms.GroupBox();
+            this.txtCodFuncVenda = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtConfirmaNomeProduto = new System.Windows.Forms.TextBox();
             this.lbCodigoProduto = new System.Windows.Forms.Label();
-            this.txtCodigoProduto = new System.Windows.Forms.TextBox();
+            this.txtCodProdVenda = new System.Windows.Forms.TextBox();
             this.lbQuantidade = new System.Windows.Forms.Label();
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.btnRemoverItem = new System.Windows.Forms.Button();
@@ -98,7 +99,6 @@
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
-            this.mtbCpfFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,7 +144,7 @@
             this.gpbAlug.Controls.Add(this.txtTotalAluguel);
             this.gpbAlug.Controls.Add(this.lbTotalAlug);
             this.gpbAlug.Controls.Add(this.txtCodAlug);
-            this.gpbAlug.Controls.Add(this.txtFuncAlug);
+            this.gpbAlug.Controls.Add(this.txtCodFuncAluga);
             this.gpbAlug.Controls.Add(this.lbCodAlug);
             this.gpbAlug.Controls.Add(this.lbFuncAlug);
             this.gpbAlug.Controls.Add(this.lbCpfCliAlug);
@@ -182,7 +182,7 @@
             this.groupBox2.Controls.Add(this.numDiasAlug);
             this.groupBox2.Controls.Add(this.lbProdAlug);
             this.groupBox2.Controls.Add(this.lbDias);
-            this.groupBox2.Controls.Add(this.txtProdAlug);
+            this.groupBox2.Controls.Add(this.txtCodProdAluga);
             this.groupBox2.Location = new System.Drawing.Point(7, 106);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(757, 314);
@@ -203,14 +203,14 @@
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
@@ -291,15 +291,14 @@
             this.lbDias.TabIndex = 3;
             this.lbDias.Text = "Dias:";
             // 
-            // txtProdAlug
+            // txtCodProdAluga
             // 
-            this.txtProdAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdAlug.Location = new System.Drawing.Point(107, 22);
-            this.txtProdAlug.Name = "txtProdAlug";
-            this.txtProdAlug.Size = new System.Drawing.Size(134, 23);
-            this.txtProdAlug.TabIndex = 3;
-            this.txtProdAlug.TextChanged += new System.EventHandler(this.txtProdAlug_TextChanged);
-            this.txtProdAlug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProdAlug_KeyPress);
+            this.txtCodProdAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProdAluga.Location = new System.Drawing.Point(107, 22);
+            this.txtCodProdAluga.Name = "txtCodProdAluga";
+            this.txtCodProdAluga.Size = new System.Drawing.Size(134, 23);
+            this.txtCodProdAluga.TabIndex = 3;
+            this.txtCodProdAluga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProdAluga_KeyPress);
             // 
             // mtbCPFAluguel
             // 
@@ -396,7 +395,6 @@
             this.txtTotalAluguel.Name = "txtTotalAluguel";
             this.txtTotalAluguel.Size = new System.Drawing.Size(93, 27);
             this.txtTotalAluguel.TabIndex = 11;
-            this.txtTotalAluguel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalAluguel_KeyPress);
             // 
             // lbTotalAlug
             // 
@@ -418,14 +416,14 @@
             this.txtCodAlug.Size = new System.Drawing.Size(76, 23);
             this.txtCodAlug.TabIndex = 0;
             // 
-            // txtFuncAlug
+            // txtCodFuncAluga
             // 
-            this.txtFuncAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFuncAlug.Location = new System.Drawing.Point(114, 64);
-            this.txtFuncAlug.Name = "txtFuncAlug";
-            this.txtFuncAlug.Size = new System.Drawing.Size(134, 23);
-            this.txtFuncAlug.TabIndex = 2;
-            this.txtFuncAlug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFuncAlug_KeyPress);
+            this.txtCodFuncAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodFuncAluga.Location = new System.Drawing.Point(114, 64);
+            this.txtCodFuncAluga.Name = "txtCodFuncAluga";
+            this.txtCodFuncAluga.Size = new System.Drawing.Size(134, 23);
+            this.txtCodFuncAluga.TabIndex = 2;
+            this.txtCodFuncAluga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFuncAluga_KeyPress);
             // 
             // lbCodAlug
             // 
@@ -469,7 +467,7 @@
             // 
             // gbpDadoVenda
             // 
-            this.gbpDadoVenda.Controls.Add(this.mtbCpfFuncionario);
+            this.gbpDadoVenda.Controls.Add(this.txtCodFuncVenda);
             this.gbpDadoVenda.Controls.Add(this.groupBox1);
             this.gbpDadoVenda.Controls.Add(this.txtConfirmaNomeFuncionario);
             this.gbpDadoVenda.Controls.Add(this.txtConfirmaNomeCliente);
@@ -500,11 +498,19 @@
             this.gbpDadoVenda.TabStop = false;
             this.gbpDadoVenda.Text = "Dados Venda";
             // 
+            // txtCodFuncVenda
+            // 
+            this.txtCodFuncVenda.Location = new System.Drawing.Point(115, 66);
+            this.txtCodFuncVenda.Name = "txtCodFuncVenda";
+            this.txtCodFuncVenda.Size = new System.Drawing.Size(134, 23);
+            this.txtCodFuncVenda.TabIndex = 32;
+            this.txtCodFuncVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFuncVenda_KeyPress);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtConfirmaNomeProduto);
             this.groupBox1.Controls.Add(this.lbCodigoProduto);
-            this.groupBox1.Controls.Add(this.txtCodigoProduto);
+            this.groupBox1.Controls.Add(this.txtCodProdVenda);
             this.groupBox1.Controls.Add(this.lbQuantidade);
             this.groupBox1.Controls.Add(this.numQuantidade);
             this.groupBox1.Controls.Add(this.btnRemoverItem);
@@ -536,15 +542,15 @@
             this.lbCodigoProduto.TabIndex = 5;
             this.lbCodigoProduto.Text = "Código:";
             // 
-            // txtCodigoProduto
+            // txtCodProdVenda
             // 
-            this.txtCodigoProduto.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProduto.Location = new System.Drawing.Point(111, 23);
-            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigoProduto.Name = "txtCodigoProduto";
-            this.txtCodigoProduto.Size = new System.Drawing.Size(133, 23);
-            this.txtCodigoProduto.TabIndex = 3;
-            this.txtCodigoProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoProduto_KeyPress);
+            this.txtCodProdVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProdVenda.Location = new System.Drawing.Point(111, 23);
+            this.txtCodProdVenda.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodProdVenda.Name = "txtCodProdVenda";
+            this.txtCodProdVenda.Size = new System.Drawing.Size(133, 23);
+            this.txtCodProdVenda.TabIndex = 3;
+            this.txtCodProdVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProdVenda_KeyPress);
             // 
             // lbQuantidade
             // 
@@ -593,28 +599,28 @@
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
             this.dgvtbcDescricao,
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgvProdutosVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvProdutosVenda.Location = new System.Drawing.Point(3, 98);
             this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
@@ -720,7 +726,6 @@
             this.txtValorParcela.Name = "txtValorParcela";
             this.txtValorParcela.Size = new System.Drawing.Size(92, 26);
             this.txtValorParcela.TabIndex = 11;
-            this.txtValorParcela.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorParcela_KeyPress);
             // 
             // lbValorParcela
             // 
@@ -772,7 +777,6 @@
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(92, 27);
             this.txtTotalCompra.TabIndex = 12;
-            this.txtTotalCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalCompra_KeyPress);
             // 
             // lbCodigoFuncionario
             // 
@@ -851,14 +855,6 @@
             this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
             // 
-            // mtbCpfFuncionario
-            // 
-            this.mtbCpfFuncionario.Location = new System.Drawing.Point(115, 63);
-            this.mtbCpfFuncionario.Mask = "000,000,000-00";
-            this.mtbCpfFuncionario.Name = "mtbCpfFuncionario";
-            this.mtbCpfFuncionario.Size = new System.Drawing.Size(134, 23);
-            this.mtbCpfFuncionario.TabIndex = 32;
-            // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -916,8 +912,8 @@
         private System.Windows.Forms.Button btnAddAlug;
         private System.Windows.Forms.NumericUpDown numDiasAlug;
         private System.Windows.Forms.TextBox txtCodAlug;
-        private System.Windows.Forms.TextBox txtFuncAlug;
-        private System.Windows.Forms.TextBox txtProdAlug;
+        private System.Windows.Forms.TextBox txtCodFuncAluga;
+        private System.Windows.Forms.TextBox txtCodProdAluga;
         private System.Windows.Forms.Label lbCodAlug;
         private System.Windows.Forms.Label lbDias;
         private System.Windows.Forms.Label lbFuncAlug;
@@ -935,7 +931,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRemoverItem;
         private System.Windows.Forms.Button btnFinalizarVenda;
-        private System.Windows.Forms.TextBox txtCodigoProduto;
+        private System.Windows.Forms.TextBox txtCodProdVenda;
         private System.Windows.Forms.Label lbCodigoProduto;
         private System.Windows.Forms.DataGridView dgvProdutosVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcCodigo;
@@ -967,6 +963,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MaskedTextBox mtbCpfFuncionario;
+        private System.Windows.Forms.TextBox txtCodFuncVenda;
     }
 }

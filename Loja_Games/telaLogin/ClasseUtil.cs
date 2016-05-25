@@ -166,6 +166,30 @@ namespace LojaGames
             }
         }
 
+        public static void apenasNumeros(TextBox campo, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!campo.Text.Contains(','))
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+            
+        }
 
 
 

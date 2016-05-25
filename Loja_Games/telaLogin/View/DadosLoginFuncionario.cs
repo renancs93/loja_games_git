@@ -33,9 +33,9 @@ namespace LojaGames.View
             }
             else
             {
-                MessageBox.Show("Dados cadastrados com sucesso!");
-                //acessaVariavel(true);
+                MessageBox.Show("Dados de acesso ao sistema configurados");
                 img.Visible = true;
+
                 Close();
             }
         }

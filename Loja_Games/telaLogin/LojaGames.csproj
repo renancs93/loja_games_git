@@ -65,7 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AluguelBanco.cs" />
+    <Compile Include="Controller\ClienteBanco.cs" />
     <Compile Include="Controller\FuncionarioBanco.cs" />
+    <Compile Include="Controller\JogosBanco.cs" />
+    <Compile Include="Controller\VendaBanco.cs" />
     <Compile Include="Model\Aluguel.cs" />
     <Compile Include="Model\Banco.cs" />
     <Compile Include="Model\Cliente.cs" />

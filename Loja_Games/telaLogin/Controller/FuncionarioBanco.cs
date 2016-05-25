@@ -1,4 +1,5 @@
-﻿using LojaGames.Classes;
+﻿using System.Collections.Generic;
+using LojaGames.Classes;
 using LojaGames.Model;
 
 namespace LojaGames.Controller
@@ -24,6 +25,12 @@ namespace LojaGames.Controller
         public void BuscarDadosFuncionario()
         {
             
+        }
+
+        public void ExibirTodosFuncionario()
+        {
+            
+            //metodo para exibir todos do banco
         }
 
     }

@@ -134,8 +134,11 @@ namespace LojaGames.View
        
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
-            dgvExibeFunc.Rows.Clear(); //limpa o datagrid
-
+            if(dgvExibeFunc.RowCount > 0)
+            {
+                dgvExibeFunc.Rows.Clear(); //limpa o datagrid
+            }
+            
             //dgvExibeFunc.DataSource = Banco.dicFunc;
 
             /*

@@ -1,0 +1,8 @@
+Server: sql8.freemysqlhosting.net
+Name: sql8122133
+Username: sql8122133
+Password: 9wYweNm9rc
+Port number: 3306
+
+phpMyAdmin
+phpMyAdmin is now available to administer your database. phpMyAdmin will allow you to create, edit and remove tables and to back up and import your data. Follow this link http://www.phpmyadmin.co and use the database details above to get started with your new database.

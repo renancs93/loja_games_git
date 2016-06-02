@@ -47,12 +47,16 @@ namespace LojaGames.View
                 /*instancio a classe(controller) FuncionariBanco para poder usar o metodo dessa classe
                 * chamo esse metodo passando como parametro o objeto retornado do metodo da tela populaNovoFuncionario  
                 */
+
+                /* tirar esse comentario qnd estiver tudo OK
                 if (imgUserSenhaOKFunc.Visible == false)
                 {
                     MessageBox.Show("É necessário definir um USUÁRIO e SENHA para o funcionário");
                 }
                 else
                 {
+                */
+
                     if (btnCadastrarFunc.Text == "Cadastrar")
                     {
                         //
@@ -71,10 +75,9 @@ namespace LojaGames.View
                         ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
                     }
                 }
-                
                 //Close();
                 //telaP.Show();
-            }
+            //} remover esse comentario qnd estiver OK
             else
             {
                 DialogResult alerta = MessageBox.Show(MensagemErro, "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -127,7 +130,11 @@ namespace LojaGames.View
             f.Bairro = txtBairroFunc.Text;
             f.Cidade = txtCidadeFunc.Text;
             f.Estado = cbxEstadoFunc.Text;
-            
+
+            f.Cargo = txtCargoFunc.Text;
+            f.Salario_Base = float.Parse(txtSalarioBaseFunc.Text);
+            f.Data_Inicio = Convert.ToDateTime(dtpDataInicioFunc.Text);
+
             return f;
         }
 

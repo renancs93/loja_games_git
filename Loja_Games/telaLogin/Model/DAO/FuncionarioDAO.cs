@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LojaGames.Classes;
+﻿using LojaGames.Classes;
+using MySql.Data.MySqlClient;
 
 namespace LojaGames.Model.DAO
 {
@@ -12,12 +8,32 @@ namespace LojaGames.Model.DAO
         public void Create(Funcionario f)
         {
             Banco dbGames = Banco.GetInstance();
-            
-            string qry = string.Format("INSERT INTO pessoa (cpf_pessoa, codigo_pessoa,nome) VALUES('{0}','{1}','{2}')", f.CPF, f.Codigo_Funcionario, f.Nome);
-            dbGames.ExecuteSQL(qry);
+            //MySqlConnection conexao = Banco.GetInstance().GetConnection();
 
-            string qry2 = string.Format("INSERT INTO funcionario (cpf_funcionario, codigo_funcionario, cargo, salario_base) VALUES('{0}','{1}','{2}',{3})", f.CPF, f.Codigo_Funcionario, f.Cargo, f.Salario_Base.ToString().Replace(',','.') /*, f.Data_Inicio.ToString("yyyy-MM-dd")*/);
-            dbGames.ExecuteSQL(qry2);
+            string qry = "INSERT INTO funcionario(cpf_funcionario, codigo_funcionario, cargo, salario_base, data_inicio)"
+                        + "VALUES (@CPF, @cod, @cargo , @salarioBase, @dataInicio)";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            //relaciona os parametros do SQL e o tipo do dado
+            comm.Parameters.Add("@CPF", MySqlDbType.Int64);
+            comm.Parameters.Add("@cod", MySqlDbType.Int64);
+            comm.Parameters.Add("@cargo", MySqlDbType.String);
+            comm.Parameters.Add("@salarioBase", MySqlDbType.Float);
+            comm.Parameters.Add("@dataInicio", MySqlDbType.DateTime);
+
+            //seta nos paramentros os dados do objeto passado
+            comm.Parameters["@CPF"].Value = f.CPF;
+            comm.Parameters["@cod"].Value = f.Codigo_Funcionario;
+            comm.Parameters["@cargo"].Value = f.Cargo;
+            comm.Parameters["@salarioBase"].Value = f.Salario_Base;
+            comm.Parameters["@dataInicio"].Value = f.Data_Inicio;
+
+            //chamada para execução do SQL na tabela Pessoa
+            dbGames.ExecuteSQL_NonQuery(comm);
+
+            
+            
 
         }
 

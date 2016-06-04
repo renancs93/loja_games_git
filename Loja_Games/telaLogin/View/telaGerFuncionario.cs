@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
-using LojaGames.Model;
 
 namespace LojaGames.View
 {
@@ -12,10 +9,10 @@ namespace LojaGames.View
     {
         private Form telaP = null;
 
-
         public telaGerFuncionario()
         {
             InitializeComponent();
+            
         }
 
         public void setTelaAnterior(Form t)
@@ -100,6 +97,8 @@ namespace LojaGames.View
             Funcionario f = new Funcionario();
 
             //Popula Dados Pessoais
+            //adicionar o codigo do funcionario
+
             f.CPF = long.Parse(mtbCpfFunc.Text);
             f.Nome = txtNomeFunc.Text;
             f.RG = mtbRgFunc.Text;
@@ -108,15 +107,15 @@ namespace LojaGames.View
             //verifica a opção do sexo selecionada
             if (rbtnMasculinoFunc.Checked == true)
             {
-                f.Sexo = "Masculino";
+                f.Sexo = char.Parse("M");
             }
             else if (rbtnFemininoFunc.Checked == true)
             {
-                f.Sexo = "Feminino";
+                f.Sexo = char.Parse("F");
             }
             else if (rbtnNInformadoFunc.Checked == true)
             {
-                f.Sexo = "Não Informado";
+                f.Sexo = char.Parse("I");
             }
 
             f.EstadoCivil = cbxEstCivilFunc.Text;
@@ -126,14 +125,22 @@ namespace LojaGames.View
             //Popula Endereço
             f.Cep = mtbCepFunc.Text;
             f.Rua = txtRuaFunc.Text;
-            f.Numero = txtNumFunc.Text;
+            f.Numero = int.Parse(txtNumFunc.Text);
             f.Bairro = txtBairroFunc.Text;
-            f.Cidade = txtCidadeFunc.Text;
             f.Estado = cbxEstadoFunc.Text;
+            f.Cidade = txtCidadeFunc.Text;
 
+            //dados somente de funcionario
+            f.Codigo_Funcionario = 0; //alterar esse codigo para ser auto incremental
             f.Cargo = txtCargoFunc.Text;
-            f.Salario_Base = float.Parse(txtSalarioBaseFunc.Text);
+            if(txtSalarioBaseFunc.Text != string.Empty)
+            {
+                f.Salario_Base = float.Parse(txtSalarioBaseFunc.Text);
+            }
             f.Data_Inicio = Convert.ToDateTime(dtpDataInicioFunc.Text);
+
+            //popular o usuário e a senha (FAZER)
+            
 
             return f;
         }

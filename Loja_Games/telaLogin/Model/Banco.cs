@@ -2,13 +2,16 @@
 using LojaGames.Classes;
 using MySql.Data.MySqlClient;
 
+
 namespace LojaGames.Model
 {
     class Banco
     {
         private static MySqlConnection conexao;
         private static Banco instance;
-        private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306 ;Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
+
+        //Conexões
+        private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306; Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
         //private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
 
         private Banco()
@@ -28,15 +31,17 @@ namespace LojaGames.Model
             return conexao;
         }
 
-        public void ExecuteSQL(string qry)
+        public void ExecuteSQL_NonQuery(MySqlCommand comando)
         {
-            if (conexao.State != System.Data.ConnectionState.Open)
-                conexao.Open();
+            comando.Connection = conexao;
+            
+                if (conexao.State != System.Data.ConnectionState.Open)
+                    conexao.Open();
 
-            MySqlCommand comm = new MySqlCommand(qry, conexao);
-            comm.ExecuteNonQuery();
-
-            conexao.Close();
+                comando.ExecuteNonQuery();
+            
+                conexao.Close();
+            
         }
 
         /*

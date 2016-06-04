@@ -546,9 +546,9 @@
             this.dtpDataNascFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataNascFunc.Location = new System.Drawing.Point(610, 75);
             this.dtpDataNascFunc.Name = "dtpDataNascFunc";
-            this.dtpDataNascFunc.Size = new System.Drawing.Size(131, 22);
+            this.dtpDataNascFunc.Size = new System.Drawing.Size(142, 22);
             this.dtpDataNascFunc.TabIndex = 4;
-            this.dtpDataNascFunc.Value = new System.DateTime(2016, 5, 11, 0, 0, 0, 0);
+            this.dtpDataNascFunc.Value = new System.DateTime(2016, 6, 3, 20, 4, 43, 0);
             // 
             // lbDataNascimento
             // 
@@ -619,9 +619,8 @@
             this.lbCodFunc.AutoSize = true;
             this.lbCodFunc.Location = new System.Drawing.Point(725, 35);
             this.lbCodFunc.Name = "lbCodFunc";
-            this.lbCodFunc.Size = new System.Drawing.Size(16, 14);
+            this.lbCodFunc.Size = new System.Drawing.Size(0, 14);
             this.lbCodFunc.TabIndex = 1;
-            this.lbCodFunc.Text = "1";
             // 
             // lbCodigo
             // 

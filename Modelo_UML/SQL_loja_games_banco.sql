@@ -1,10 +1,9 @@
 create table pessoa(
 cpf_pessoa varchar(14) not null,
-codigo_pessoa integer not null,
 nome varchar(50) not null,
 rg varchar(15),
 data_nascimento date,
-telefone varchar(10),
+telefone varchar(11),
 sexo char,
 estado_civil varchar(10),
 email varchar(30),
@@ -76,6 +75,3 @@ foreign key (cpf_cli) references cliente(cpf_cliente),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
 foreign key (cod_jogos) references jogos(codigo_jogo),
 foreign key (cod_pagamento) references pagamento(codigo_pagamento));
-
-
-

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using LojaGames.Classes;
-using LojaGames.Model;
+﻿using LojaGames.Classes;
 using LojaGames.Model.DAO;
 
 namespace LojaGames.Controller
@@ -9,12 +7,13 @@ namespace LojaGames.Controller
     {
         //Declaração dos métodos de controle
 
-        //recebe um objeto do tipo cliente e add ele na lista estático dentro da classe Banco (Model)
         public void SalvarFuncionario(Funcionario f)
         {
-            FuncionarioDAO novo = new FuncionarioDAO();
+            PessoaDAO pessoaDao = new PessoaDAO();
+            pessoaDao.Create(f);
 
-            novo.Create(f);
+            FuncionarioDAO funcDao = new FuncionarioDAO();
+            funcDao.Create(f);
 
             /*
             if (Banco.dicFunc.ContainsKey(f.CPF))

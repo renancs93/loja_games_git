@@ -57,25 +57,7 @@ namespace LojaGames.Classes
         public DateTime Data_Inicio { get; set; }
         public string Username { get; set; }
         public string Senha { get; set; }
-
-        /*
-        //Declaração dos métodos
-        public void AdicionarFuncionario(long cpfFunc, Funcionario func)
-        {
-            //dicFunc.Add(cpfFunc, func);
-        }
-
-        public void RemoverFuncionario()
-        {
-
-        }
-
-        public void EditarDadosFuncionario()
-        {
-
-        }
-        */
-
+        
        
     }
 }

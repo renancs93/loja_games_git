@@ -1,3 +1,7 @@
+phpMyAdmin: http://www.phpmyadmin.co/index.php
+Site Hospedeiro: https://www.freemysqlhosting.net/
+
+Dados de acesso ao Banco:
 Server: sql8.freemysqlhosting.net
 Name: sql8122133
 Username: sql8122133

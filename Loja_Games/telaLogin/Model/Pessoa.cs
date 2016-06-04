@@ -14,11 +14,11 @@ namespace LojaGames.Model
         private string rg;
         private DateTime dataNascimento;
         private string telefone;
-        private string sexo;
+        private char sexo;
         private string estadoCivil;
         private string email;
         private string rua;
-        private string numero;
+        private int numero;
         private string bairro;
         private string estado;
         private string cep;
@@ -40,11 +40,21 @@ namespace LojaGames.Model
         public string RG { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Telefone { get; set; }
-        public string Sexo { get; set; }
+        public char Sexo { get; set; }
         public string EstadoCivil { get; set; }
         public string Email { get; set; }
         public string Rua { get; set; }
-        public string Numero { get; set; }
+        public int Numero
+        {
+            get
+            {
+                return numero;
+            }
+            set
+            {
+                numero = value >= 0 ? value : 0;
+            }
+        }
         public string Bairro { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }

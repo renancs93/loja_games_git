@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
+using MySql.Data.MySqlClient;
 
 namespace LojaGames.View
 {
@@ -37,7 +39,7 @@ namespace LojaGames.View
         {
             //realiza as verificações dos campos antes de cadastrar
             string MensagemErro = "";
-            //MensagemErro = ClasseUtil.ValidaCampos(abaCadFuncionario.Controls);
+            MensagemErro = ClasseUtil.ValidaCampos(abaCadFuncionario.Controls);
 
             if (MensagemErro == "")
             {
@@ -153,18 +155,8 @@ namespace LojaGames.View
                 dgvExibeFunc.Rows.Clear(); //limpa o datagrid
             }
             
-            //dgvExibeFunc.DataSource = Banco.dicFunc;
-
-            /*
-            foreach (KeyValuePair<long, Funcionario> linha in Banco.dicFunc)
-            {  
-                //dgvExibeFunc.Rows.Add(linha.Value);
-
-            }
-            */
-            
-
-            
+            FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+            funcionarioBanco.ExibirTodosFuncionario(dgvExibeFunc); 
         }
 
         private void btnSairExibi_Click(object sender, System.EventArgs e)
@@ -243,6 +235,11 @@ namespace LojaGames.View
             //força o campo a receber apenas numeros (estilo monetários)
             ClasseUtil.somenteValores(txtSalarioBaseFunc, e);
 
+            
+        }
+
+        private void telaGerFuncionario_Load(object sender, EventArgs e)
+        {
             
         }
     }

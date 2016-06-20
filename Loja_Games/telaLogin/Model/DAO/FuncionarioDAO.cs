@@ -1,4 +1,6 @@
-﻿using LojaGames.Classes;
+﻿using System.Collections.Generic;
+using System.Data;
+using LojaGames.Classes;
 using MySql.Data.MySqlClient;
 
 namespace LojaGames.Model.DAO
@@ -31,10 +33,29 @@ namespace LojaGames.Model.DAO
 
             //chamada para execução do SQL na tabela Pessoa
             dbGames.ExecuteSQL_NonQuery(comm);
+  
+        }
 
-            
-            
+        public DataTable ListAllFuncionarios()/*List<Funcionario> ListAllFuncionarios()*/
+        {
+            /*
+            List<Funcionario> listFunc = new List<Funcionario>();
+            Funcionario f;
+            */
 
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dtFuncionario = new DataTable();
+
+            string qry = "SELECT f.cpf_funcionario, p.nome, f.cargo, f.codigo_funcionario, f.salario_base from funcionario f, pessoa p";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dtFuncionario);
+
+            conexao.Close();
+            return dtFuncionario;
         }
 
     }

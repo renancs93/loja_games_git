@@ -1,4 +1,5 @@
-﻿using LojaGames.Classes;
+﻿using System.Windows.Forms;
+using LojaGames.Classes;
 using LojaGames.Model.DAO;
 
 namespace LojaGames.Controller
@@ -33,10 +34,14 @@ namespace LojaGames.Controller
             
         }
 
-        public void ExibirTodosFuncionario()
+        public void ExibirTodosFuncionario(DataGridView dataGrid)
         {
-            
             //metodo para exibir todos do banco
+            FuncionarioDAO funcionarioDao = new FuncionarioDAO();
+            dataGrid.DataSource = funcionarioDao.ListAllFuncionarios();
+            
+
+
         }
 
     }

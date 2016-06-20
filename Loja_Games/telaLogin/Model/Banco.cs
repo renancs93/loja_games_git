@@ -11,8 +11,8 @@ namespace LojaGames.Model
         private static Banco instance;
 
         //Conexões
-        private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306; Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
-        //private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
+        //private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306; Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
+        private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
 
         private Banco()
         {
@@ -44,12 +44,6 @@ namespace LojaGames.Model
             
         }
 
-        /*
-        //lista estática de Funcionarios
-        public static Dictionary<long, Funcionario> dicFunc = new Dictionary<long, Funcionario>();
-
-        //lista estática de Clientes
-        public static Dictionary<long, Cliente> dicCli = new Dictionary<long, Cliente>();
-        */
+       
     }
 }

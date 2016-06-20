@@ -619,8 +619,9 @@
             this.lbCodFunc.AutoSize = true;
             this.lbCodFunc.Location = new System.Drawing.Point(725, 35);
             this.lbCodFunc.Name = "lbCodFunc";
-            this.lbCodFunc.Size = new System.Drawing.Size(0, 14);
+            this.lbCodFunc.Size = new System.Drawing.Size(16, 14);
             this.lbCodFunc.TabIndex = 1;
+            this.lbCodFunc.Text = "0";
             // 
             // lbCodigo
             // 
@@ -778,8 +779,7 @@
             this.dgvExibeFunc.AllowUserToOrderColumns = true;
             this.dgvExibeFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExibeFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExibeFunc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExibeFunc.Location = new System.Drawing.Point(3, 18);
+            this.dgvExibeFunc.Location = new System.Drawing.Point(0, 0);
             this.dgvExibeFunc.Name = "dgvExibeFunc";
             this.dgvExibeFunc.ReadOnly = true;
             this.dgvExibeFunc.Size = new System.Drawing.Size(791, 301);
@@ -807,6 +807,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciamento de Funcionário";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaGerFuncionario_FormClosing);
+            this.Load += new System.EventHandler(this.telaGerFuncionario_Load);
             this.abasGerFuncionario.ResumeLayout(false);
             this.abaCadFuncionario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoFunc)).EndInit();
@@ -894,5 +895,6 @@
         private System.Windows.Forms.Button btnEditarFunc;
         private System.Windows.Forms.Button btnBuscarFunc;
         private System.Windows.Forms.PictureBox pcbLogoExibeFunc;
+        
     }
 }

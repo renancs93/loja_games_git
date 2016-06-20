@@ -6,6 +6,8 @@ namespace LojaGames.Controller
 {
     class FuncionarioBanco
     {
+        FuncionarioDAO funcionarioDao = new FuncionarioDAO();
+
         //Declaração dos métodos de controle
 
         public void SalvarFuncionario(Funcionario f)
@@ -23,10 +25,22 @@ namespace LojaGames.Controller
                 Banco.dicFunc.Add(f.CPF, f);
             */        
         }
+        
+        public void AtualizarFuncionario(long cpf_func, Funcionario f)
+        {
+            funcionarioDao.Update(cpf_func, f);
+        }
+
+        //Metodo de busca de apenas um funcionario
+        public Funcionario BuscarFuncionario(long cpf_func)
+        {
+            return funcionarioDao.Read(cpf_func);
+        }
+
 
         public void RemoverFuncionario(long removeCpf)
         {
-            //Banco.dicFunc.Remove(removeCpf);
+            funcionarioDao.Delete(removeCpf);
         }
 
         public void BuscarDadosFuncionario()
@@ -37,11 +51,8 @@ namespace LojaGames.Controller
         public void ExibirTodosFuncionario(DataGridView dataGrid)
         {
             //metodo para exibir todos do banco
-            FuncionarioDAO funcionarioDao = new FuncionarioDAO();
             dataGrid.DataSource = funcionarioDao.ListAllFuncionarios();
             
-
-
         }
 
     }

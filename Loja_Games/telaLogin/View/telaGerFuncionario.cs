@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
+using LojaGames.Model;
 using MySql.Data.MySqlClient;
 
 namespace LojaGames.View
@@ -147,14 +148,32 @@ namespace LojaGames.View
             return f;
         }
 
-       
+        private void PreencheCamposFuncionario(Funcionario f)
+        {
+            //Funcionario
+            mtbCpfFunc.Text = f.CPF.ToString();
+            txtCargoFunc.Text = f.Cargo.ToString();
+
+        }
+
+        private void PreencheCamposPessoa(Pessoa p)
+        {
+            //Pessoa
+            txtNomeFunc.Text = p.Nome.ToString();
+            txtRuaFunc.Text = p.Rua.ToString();
+            
+        }
+
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
-            if(dgvExibeFunc.RowCount > 0)
+            int x = dgvExibeFunc.RowCount;
+
+            while(x != 0)
             {
-                dgvExibeFunc.Rows.Clear(); //limpa o datagrid
+                dgvExibeFunc.Rows.RemoveAt(x); //limpa o datagrid
+                //for(int i=0; i < x; i++)
             }
-            
+             
             FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
             funcionarioBanco.ExibirTodosFuncionario(dgvExibeFunc); 
         }
@@ -199,8 +218,14 @@ namespace LojaGames.View
                 if (edit == DialogResult.Yes)
                 {
                     abasGerFuncionario.SelectedTab = abaCadFuncionario;
+                    btnCadastrarFunc.Text = "Salvar";
 
-                    //seta os dados do funcionario selecionado na tela de cadastro
+                    FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+                    PessoaBanco pessoaBanco = new PessoaBanco();
+
+                    PreencheCamposFuncionario(funcionarioBanco.BuscarFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
+                    //PreencheCamposPessoa(pessoaBanco.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
+                    
                 }
             }
             else
@@ -220,6 +245,9 @@ namespace LojaGames.View
 
                 if (rm == DialogResult.Yes)
                 {
+                    FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+                    funcionarioBanco.RemoverFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString()));
+
                     MessageBox.Show("Cliente removido com Sucesso");
                 }
             }

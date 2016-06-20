@@ -53,5 +53,32 @@ namespace LojaGames.Model.DAO
 
         }
 
+        public Pessoa Read(long cpf)
+        {
+            Pessoa pessoa = new Pessoa();
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+
+            string qry = "SELECT * FROM pessoa where cpf_pessoa = " + cpf + "";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            MySqlCommand comm = new MySqlCommand(qry, conexao);
+            MySqlDataReader dr = comm.ExecuteReader();
+
+            if (dr.Read())
+            {
+                //funcionario = new Funcionario();
+
+                
+                pessoa.Nome = dr.GetString("nome");
+                pessoa.Rua = dr.GetString("rua");
+                
+            }
+
+            conexao.Clone();
+            return pessoa;
+        }
+
     }
 }

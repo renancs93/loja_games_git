@@ -36,7 +36,7 @@ namespace LojaGames.Model.DAO
   
         }
 
-        public DataTable ListAllFuncionarios()/*List<Funcionario> ListAllFuncionarios()*/
+        public DataTable ListAllFuncionarios()
         {
             /*
             List<Funcionario> listFunc = new List<Funcionario>();
@@ -46,7 +46,7 @@ namespace LojaGames.Model.DAO
             MySqlConnection conexao = Banco.GetInstance().GetConnection();
             DataTable dtFuncionario = new DataTable();
 
-            string qry = "SELECT f.cpf_funcionario, p.nome, f.cargo, f.codigo_funcionario, f.salario_base from funcionario f, pessoa p";
+            string qry = "SELECT f.cpf_funcionario, p.nome, f.cargo, f.codigo_funcionario, f.salario_base from funcionario f, pessoa p where p.cpf_pessoa = f.cpf_funcionario";
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
@@ -56,6 +56,7 @@ namespace LojaGames.Model.DAO
 
             conexao.Close();
             return dtFuncionario;
+            
         }
 
     }

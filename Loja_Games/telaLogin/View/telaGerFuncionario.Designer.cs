@@ -548,7 +548,7 @@
             this.dtpDataNascFunc.Name = "dtpDataNascFunc";
             this.dtpDataNascFunc.Size = new System.Drawing.Size(142, 22);
             this.dtpDataNascFunc.TabIndex = 4;
-            this.dtpDataNascFunc.Value = new System.DateTime(2016, 6, 3, 20, 4, 43, 0);
+            this.dtpDataNascFunc.Value = new System.DateTime(2016, 6, 21, 0, 0, 0, 0);
             // 
             // lbDataNascimento
             // 
@@ -807,7 +807,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciamento de Funcionário";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaGerFuncionario_FormClosing);
-            this.Load += new System.EventHandler(this.telaGerFuncionario_Load);
             this.abasGerFuncionario.ResumeLayout(false);
             this.abaCadFuncionario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoFunc)).EndInit();

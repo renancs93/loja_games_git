@@ -11,6 +11,7 @@ namespace LojaGames.View
     public partial class telaGerFuncionario : Form
     {
         private Form telaP = null;
+        private long cpfAntigo;
 
         public telaGerFuncionario()
         {
@@ -56,7 +57,6 @@ namespace LojaGames.View
                 else
                 {
                 */
-
                     if (btnCadastrarFunc.Text == "Cadastrar")
                     {
                         //
@@ -69,11 +69,22 @@ namespace LojaGames.View
                     else if (btnCadastrarFunc.Text == "Salvar")
                     {
                         //implementação de uma edição de um funcionário
+                        FuncionarioBanco funcBanco = new FuncionarioBanco();
+                        PessoaBanco pesBanco = new PessoaBanco();
 
+                        Funcionario dados = popularFuncionario();        
+
+                        funcBanco.AtualizarFuncionario(cpfAntigo , dados);
+                        pesBanco.AtualizarPessoa(cpfAntigo, dados);
 
                         DialogResult edicao = MessageBox.Show("Funcionário alterado com sucesso.", "Edição!", MessageBoxButtons.OK, MessageBoxIcon.None);
                         ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
-                    }
+                        btnCadastrarFunc.Text = "Cadastrar";
+
+                        mtbCpfFunc.Enabled = true;
+                        abasGerFuncionario.SelectedTab = abaExibiFuncionario;
+                    dgvExibeFunc.RefreshEdit();
+                }
                 }
                 //Close();
                 //telaP.Show();
@@ -135,6 +146,7 @@ namespace LojaGames.View
 
             //dados somente de funcionario
             f.Codigo_Funcionario = 0; //alterar esse codigo para ser auto incremental
+
             f.Cargo = txtCargoFunc.Text;
             if(txtSalarioBaseFunc.Text != string.Empty)
             {
@@ -153,6 +165,8 @@ namespace LojaGames.View
             //Funcionario
             mtbCpfFunc.Text = f.CPF.ToString();
             txtCargoFunc.Text = f.Cargo.ToString();
+            dtpDataInicioFunc.Text = f.Data_Inicio.ToString();
+            txtSalarioBaseFunc.Text = f.Salario_Base.ToString();
 
         }
 
@@ -161,19 +175,46 @@ namespace LojaGames.View
             //Pessoa
             txtNomeFunc.Text = p.Nome.ToString();
             txtRuaFunc.Text = p.Rua.ToString();
-            
+            mtbRgFunc.Text = p.RG.ToString();
+            dtpDataNascFunc.Text = p.DataNascimento.ToString();
+
+            if(p.Sexo.ToString() == "M")
+            {
+                rbtnMasculinoFunc.Checked = true;
+            }
+            else if (p.Sexo.ToString() == "F")
+            {
+                rbtnFemininoFunc.Checked = true;
+            }
+            else if(p.Sexo.ToString() == "I")
+            {
+                rbtnNInformadoFunc.Checked = true;
+            }
+
+            cbxEstCivilFunc.Text = p.EstadoCivil.ToString();
+            mtbTelefoneFunc.Text = p.Telefone.ToString();
+            txtEmailFunc.Text = p.Email.ToString();
+            mtbCepFunc.Text = p.Cep.ToString();
+            txtRuaFunc.Text = p.Rua.ToString();
+            txtNumFunc.Text = p.Numero.ToString();
+            txtBairroFunc.Text = p.Bairro.ToString();
+            txtCidadeFunc.Text = p.Cidade.ToString();
+            cbxEstadoFunc.Text = p.Estado.ToString();
+
         }
 
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
             int x = dgvExibeFunc.RowCount;
 
-            while(x != 0)
+
+            if(x > 0)
             {
-                dgvExibeFunc.Rows.RemoveAt(x); //limpa o datagrid
-                //for(int i=0; i < x; i++)
+                dgvExibeFunc.RefreshEdit();
+                //for (int i = 0; i < x; i++)
+                //  dgvExibeFunc.Rows.RemoveAt(i); //limpa o datagrid
             }
-             
+            
             FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
             funcionarioBanco.ExibirTodosFuncionario(dgvExibeFunc); 
         }
@@ -223,9 +264,10 @@ namespace LojaGames.View
                     FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
                     PessoaBanco pessoaBanco = new PessoaBanco();
 
+                    cpfAntigo = long.Parse((dgvExibeFunc[0, linha].Value).ToString());
+                    PreencheCamposPessoa(pessoaBanco.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
                     PreencheCamposFuncionario(funcionarioBanco.BuscarFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
-                    //PreencheCamposPessoa(pessoaBanco.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
-                    
+                    mtbCpfFunc.Enabled = false;
                 }
             }
             else
@@ -245,10 +287,17 @@ namespace LojaGames.View
 
                 if (rm == DialogResult.Yes)
                 {
+                    long cpf = Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString());
+
                     FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
-                    funcionarioBanco.RemoverFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString()));
+                    PessoaBanco pessoaBanco = new PessoaBanco();
+
+                    funcionarioBanco.RemoverFuncionario(cpf);
+                    pessoaBanco.RemoverPessoa(cpf);
 
                     MessageBox.Show("Cliente removido com Sucesso");
+
+                    btnExibirTodosFunc_Click(sender, e);
                 }
             }
             else
@@ -266,9 +315,5 @@ namespace LojaGames.View
             
         }
 
-        private void telaGerFuncionario_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

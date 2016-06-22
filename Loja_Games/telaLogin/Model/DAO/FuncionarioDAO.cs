@@ -53,35 +53,35 @@ namespace LojaGames.Model.DAO
         {
             Banco dbGames = Banco.GetInstance();
 
+            /*
+            string qry = "UPDATE funcionario (codigo_funcionario, cargo, salario_base, data_inicio) "
+                        + "SET (@cod, @cargo, @salario_base, @data_inicio)"
+                        + "WHERE cpf_funcionario = " + cpf_func + "";
+            */
 
-            string qry = "UPDATE INTO funcionario(cpf_funcionario, codigo_funcionario, cargo, salario_base, data_inicio)"
-                        + "VALUES (@CPF, @cod, @cargo , @salarioBase, @dataInicio)";
+            string qry = "UPDATE funcionario SET codigo_funcionario = @cod, cargo = @cargo, salario_base = @salario_base, data_inicio = @data_inicio WHERE cpf_funcionario = "+cpf_func+"";  
 
             MySqlCommand comm = new MySqlCommand(qry);
 
             //relaciona os parametros do SQL e o tipo do dado
-            comm.Parameters.Add("@CPF", MySqlDbType.Int64);
-            comm.Parameters.Add("@cod", MySqlDbType.Int64);
+            comm.Parameters.Add("@cod", MySqlDbType.Int32);
             comm.Parameters.Add("@cargo", MySqlDbType.String);
-            comm.Parameters.Add("@salarioBase", MySqlDbType.Float);
-            comm.Parameters.Add("@dataInicio", MySqlDbType.DateTime);
+            comm.Parameters.Add("@salario_base", MySqlDbType.Float);
+            comm.Parameters.Add("@data_inicio", MySqlDbType.DateTime);
 
             //seta nos paramentros os dados do objeto passado
-            comm.Parameters["@CPF"].Value = f.CPF;
             comm.Parameters["@cod"].Value = f.Codigo_Funcionario;
             comm.Parameters["@cargo"].Value = f.Cargo;
-            comm.Parameters["@salarioBase"].Value = f.Salario_Base;
-            comm.Parameters["@dataInicio"].Value = f.Data_Inicio;
+            comm.Parameters["@salario_base"].Value = f.Salario_Base;
+            comm.Parameters["@data_inicio"].Value = f.Data_Inicio;
+
+            //add username e senha
 
             dbGames.ExecuteSQL_NonQuery(comm);
         }
 
         public DataTable ListAllFuncionarios()
         {
-            /*
-            List<Funcionario> listFunc = new List<Funcionario>();
-            Funcionario f;
-            */
 
             MySqlConnection conexao = Banco.GetInstance().GetConnection();
             DataTable dtFuncionario = new DataTable();
@@ -119,10 +119,11 @@ namespace LojaGames.Model.DAO
                 funcionario.CPF = dr.GetInt64("cpf_funcionario");
                 funcionario.Cargo = dr.GetString("cargo");
                 funcionario.Salario_Base = dr.GetFloat("salario_base");
+                funcionario.Data_Inicio = dr.GetDateTime("data_inicio");
 
             }
 
-            conexao.Clone();
+            conexao.Close();
             return funcionario;
         }
 

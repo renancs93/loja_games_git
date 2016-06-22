@@ -17,18 +17,13 @@ namespace LojaGames.Controller
 
             FuncionarioDAO funcDao = new FuncionarioDAO();
             funcDao.Create(f);
-
-            /*
-            if (Banco.dicFunc.ContainsKey(f.CPF))
-                Banco.dicFunc[f.CPF] = f;
-            else
-                Banco.dicFunc.Add(f.CPF, f);
-            */        
+   
         }
         
-        public void AtualizarFuncionario(long cpf_func, Funcionario f)
+        public void AtualizarFuncionario(long cpf, Funcionario f)
         {
-            funcionarioDao.Update(cpf_func, f);
+            funcionarioDao.Update(cpf, f);
+
         }
 
         //Metodo de busca de apenas um funcionario

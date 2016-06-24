@@ -777,7 +777,6 @@
             // 
             this.dgvExibeFunc.AllowUserToAddRows = false;
             this.dgvExibeFunc.AllowUserToDeleteRows = false;
-            this.dgvExibeFunc.AllowUserToOrderColumns = true;
             this.dgvExibeFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvExibeFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExibeFunc.Location = new System.Drawing.Point(0, 0);

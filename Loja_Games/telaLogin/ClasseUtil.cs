@@ -69,7 +69,7 @@ namespace LojaGames
                 }
                 else if(campo.GetType() == typeof(ComboBox))
                 {
-                    ((ComboBox)campo).SelectedItem = -1;
+                    ((ComboBox)campo).SelectedIndex = -1;// SelectedItem = -1;
                 }
 
 

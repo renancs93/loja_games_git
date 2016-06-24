@@ -93,7 +93,7 @@ namespace LojaGames.View
                 DialogResult alerta = MessageBox.Show(MensagemErro, "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
 
-            lbCodFunc.Text = lbCodFunc.Text = (1 + funcionarioBanco.gerar_codigoFunc()).ToString();
+            lbCodFunc.Text = (1 + funcionarioBanco.gerar_codigoFunc()).ToString();
             btnExibirTodosFunc_Click(sender, e);
             dgvExibeFunc.RefreshEdit();
         }

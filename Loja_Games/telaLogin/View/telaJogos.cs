@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using LojaGames.Classes;
+using LojaGames.Controller;
 
 namespace LojaGames
 {
     public partial class telaJogos : System.Windows.Forms.Form
     {
         private System.Windows.Forms.Form TelaP = null;
-        double valor;
+        //double valor;
+        JogosBanco jogosBanco = new JogosBanco();
 
         public telaJogos()
         {
@@ -34,10 +37,7 @@ namespace LojaGames
 
         private void btnExibirTodos_Click(object sender, EventArgs e)
         {
-            dGridResultado.ClearSelection();
-
-            //adicionar dados do banco
-
+            dGridResultado.DataSource = jogosBanco.ExibirTodosJogos();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -55,28 +55,7 @@ namespace LojaGames
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtCampoBusca.Text = "";
-
-            //verifica se algumas da opcoes do radioButom (consoles) estão ativas e remove a seleção
-            if((rbtnPS4.Checked || rbtnXbox.Checked || rbtnPc.Checked) == true)
-            {
-                rbtnPS4.Checked = false;
-                rbtnXbox.Checked = false;
-                rbtnPc.Checked = false;
-            }
-
-            //remove as seleções dos combobox de gênero
-            cboxAcaoAventura.Checked = false;
-            cboxCorrida.Checked = false;
-            cboxEsportes.Checked = false;
-            cboxEstrategia.Checked = false;
-            cboxLuta.Checked = false;
-            cboxMusicalRitmico.Checked = false;
-            cboxPlataforma.Checked = false;
-            cboxPuzzle.Checked = false;
-            cboxRpg.Checked = false;
-            cboxTiro.Checked = false;
-
+            ClasseUtil.LimparCampos(abaExibeJogos.Controls);
         }
 
         public void setTelaAnterior(System.Windows.Forms.Form t)
@@ -102,13 +81,6 @@ namespace LojaGames
                         
         }
 
-        private void btnAlteracoes_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
         private void btnBuscarTipo_Click(object sender, EventArgs e)
         {
             
@@ -127,92 +99,67 @@ namespace LojaGames
 
         private void btnCadastrar_Click(object sender, EventArgs e) //mostrar para o grupo
         {
-            string mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+            string mensagemErro = "";
 
-            if (btnCadastrar.Text == "Cadastrar")
+            mensagemErro = ClasseUtil.ValidaCampos(abaCadastraJogos.Controls);
+
+            if (mensagemErro == "")
             {
-                DialogResult salvar = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-                if (salvar == DialogResult.Yes)
+                if (btnCadastrar.Text == "Cadastrar")
                 {
-                    if (mensagemErro == "")
+                    DialogResult confirma = MessageBox.Show("Deseja Cadastrar o Jogo?", "Salvar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (confirma == DialogResult.Yes)
                     {
+                        jogosBanco.CadastraJogo(povoaJogo());
+
                         MessageBox.Show("Cadastrado com Sucesso!");
-                        txtNome.Text = "";
-                        txtPreco.Text = "";
-                        numQuantidade.Value = 0;
-                        rbPS4.Checked = false;
-                        rbXBOX.Checked = false;
-                        rbPC.Checked = false;
-                        ckbAcao.Checked = false;
-                        ckbEsportes.Checked = false;
-                        ckbEstrategia.Checked = false;
-                        ckbLuta.Checked = false;
-                        ckbMusical.Checked = false;
-                        ckbPlataforma.Checked = false;
-                        ckbPuzzle.Checked = false;
-                        ckbRPG.Checked = false;
-                        ckbTiro.Checked = false;
+                        
                     }
-                    else
-                        MessageBox.Show(mensagemErro);
-                }
-                else if (salvar == DialogResult.No)
-                {
-                    MessageBox.Show("Jogo não salvo!");
-                }
-            }
-
-            if(btnCadastrar.Text == "Salvar")
-            {
-                DialogResult Confirmar = MessageBox.Show("As informações do Jogo serão alteradas!\nDeseja realmente salvar?", "Confirmar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-                //chama o metodo da classe útil e valida se os campos (textBox) estão preenchido
-                
-                if (Confirmar == DialogResult.Yes)
-                {
-                    if (mensagemErro == "")
+                    else if (confirma == DialogResult.No)
                     {
-                        //salvar as aterações no jogo e voltar para aba de exibição de jogos
-                        btnCadastrar.Enabled = true;
-                        MessageBox.Show("Jogo alterado com Sucesso!");
-                        txtNome.Text = "";
-                        txtPreco.Text = "";
-                        numQuantidade.Value = 0;
-                        rbPS4.Checked = false;
-                        rbXBOX.Checked = false;
-                        rbPC.Checked = false;
-                        ckbAcao.Checked = false;
-                        ckbEsportes.Checked = false;
-                        ckbEstrategia.Checked = false;
-                        ckbLuta.Checked = false;
-                        ckbMusical.Checked = false;
-                        ckbPlataforma.Checked = false;
-                        ckbPuzzle.Checked = false;
-                        ckbRPG.Checked = false;
-                        ckbTiro.Checked = false;
+                        MessageBox.Show("Jogo não Cadastrado!");
+                    }
+                    ClasseUtil.LimparCampos(abaCadastraJogos.Controls);
+                }
 
-                        btnCadastrar.Text = "Cadastrar";
+                if (btnCadastrar.Text == "Salvar")
+                {
+                    DialogResult Confirmar = MessageBox.Show("As informações do Jogo serão alteradas!\nDeseja realmente salvar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    //chama o metodo da classe útil e valida se os campos (textBox) estão preenchido
+
+                    if (Confirmar == DialogResult.Yes)
+                    {
+                            //Salvar no banco
+
+
+                            MessageBox.Show("Jogo alterado com Sucesso!");
+
+                            //restaurar tela e voltar para aba de exibição de jogos
+                            btnCadastrar.Enabled = true;
+                            ClasseUtil.LimparCampos(abaCadastraJogos.Controls);
+
+                            btnCadastrar.Text = "Cadastrar";
+                            paginaAbasJogos.SelectTab(abaExibeJogos);
+                    }
+                    else if (Confirmar == DialogResult.No)
+                    {
+                        //Não fazer nada e voltar para aba de exibição de jogos
+                        MessageBox.Show("Nenhuma informação do jogo foi alterada!");
+
                         paginaAbasJogos.SelectTab(abaExibeJogos);
-
+                        btnCadastrar.Text = "Cadastrar";
 
                     }
-                    else
-                    {
-                        MessageBox.Show(mensagemErro);
-                    }
-
-                }
-                else if (Confirmar == DialogResult.No)
-                {
-                    //Não fazer nada e voltar para aba de exibição de jogos
-                    MessageBox.Show("Nenhuma informação do jogo foi alterada!");
-
-                    paginaAbasJogos.SelectTab(abaExibeJogos);
-                    btnCadastrar.Text = "Cadastrar";
-
                 }
             }
+            else
+            {
+                MessageBox.Show(mensagemErro);
+            }
+
+            lbCodigoNumero.Text = (1 + jogosBanco.gerar_codigo_Jogo()).ToString();
 
         }
 
@@ -229,7 +176,7 @@ namespace LojaGames
 
         private void telaJogos_Load(object sender, EventArgs e)
         {
-            
+            lbCodigoNumero.Text = (1 + jogosBanco.gerar_codigo_Jogo()).ToString();
         }
 
         private void mtbPreco_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -242,8 +189,38 @@ namespace LojaGames
         {
             //força o campo a receber apenas numeros (estilo monetários)
             ClasseUtil.somenteValores(txtPreco, e);
-
         }
+
+        private Jogos povoaJogo()
+        {
+            Jogos jogo = new Jogos();
+
+            jogo.Codigo = Convert.ToInt32(lbCodigoNumero.Text);
+            jogo.Nome = txtNome.Text;
+            jogo.Preco = float.Parse(txtPreco.Text);
+
+            if (rbtnXbox.Checked == true)
+            {
+                jogo.Console = "XBOX ONE";
+            }
+            else if (rbtnPS4.Checked == true)
+            {
+                jogo.Console = "PS4";
+            }
+            else
+            {
+                jogo.Console = "PC";
+            }
+
+            jogo.Genero = cbxGeneroCad.Text;
+            jogo.QntEstoque = Convert.ToInt32(numQuantidade.Value);
+
+            jogo.Lancamento = Convert.ToDateTime(dtpDataLancamento.Text);
+
+            return jogo;
+        }
+
+
     }
     
 }

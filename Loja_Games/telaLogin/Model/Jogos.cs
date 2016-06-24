@@ -16,7 +16,7 @@ namespace LojaGames.Classes
         private string console;
         private string genero;
         private int qntEstoque;
-
+        private DateTime lancamento;
 
         //Declaração das Propriedades
         public int Codigo
@@ -62,20 +62,18 @@ namespace LojaGames.Classes
             }
         }
 
-        //Declaração dos métodos
-        public void AdicionarJogos()
+        public DateTime Lancamento
         {
+            get
+            {
+                return lancamento;
+            }
 
+            set
+            {
+                lancamento = value;
+            }
         }
 
-        public void RemoverJogos()
-        {
-
-        }
-
-        public void EditarDadosJogos()
-        {
-
-        }
     }
 }

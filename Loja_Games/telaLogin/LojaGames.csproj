@@ -77,6 +77,7 @@
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\DAO\ClienteDAO.cs" />
     <Compile Include="Model\DAO\FuncionarioDAO.cs" />
+    <Compile Include="Model\DAO\JogosDAO.cs" />
     <Compile Include="Model\DAO\PessoaDAO.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Jogos.cs" />

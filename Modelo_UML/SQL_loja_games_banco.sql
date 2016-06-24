@@ -38,6 +38,7 @@ preco float,
 console varchar(20),
 genero varchar(20),
 qnt_estoque integer,
+lancamento date,
 primary key (codigo_jogo));
 
 create table pagamento(

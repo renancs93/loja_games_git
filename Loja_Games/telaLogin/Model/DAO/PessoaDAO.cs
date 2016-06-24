@@ -70,7 +70,6 @@ namespace LojaGames.Model.DAO
             {
                 //funcionario = new Funcionario();
 
-                
                 pessoa.Nome = dr.GetString("nome");
                 pessoa.RG = dr.GetString("rg");
                 pessoa.DataNascimento = dr.GetDateTime("data_nascimento");

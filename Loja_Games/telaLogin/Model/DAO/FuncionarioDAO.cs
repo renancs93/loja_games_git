@@ -53,12 +53,6 @@ namespace LojaGames.Model.DAO
         {
             Banco dbGames = Banco.GetInstance();
 
-            /*
-            string qry = "UPDATE funcionario (codigo_funcionario, cargo, salario_base, data_inicio) "
-                        + "SET (@cod, @cargo, @salario_base, @data_inicio)"
-                        + "WHERE cpf_funcionario = " + cpf_func + "";
-            */
-
             string qry = "UPDATE funcionario SET codigo_funcionario = @cod, cargo = @cargo, salario_base = @salario_base, data_inicio = @data_inicio WHERE cpf_funcionario = "+cpf_func+"";  
 
             MySqlCommand comm = new MySqlCommand(qry);
@@ -82,11 +76,11 @@ namespace LojaGames.Model.DAO
 
         public DataTable ListAllFuncionarios()
         {
-
             MySqlConnection conexao = Banco.GetInstance().GetConnection();
             DataTable dtFuncionario = new DataTable();
 
-            string qry = "SELECT f.cpf_funcionario, p.nome, f.cargo, f.codigo_funcionario, f.salario_base from funcionario f, pessoa p where p.cpf_pessoa = f.cpf_funcionario";
+            string qry = "SELECT f.cpf_funcionario as CPF, p.nome as Nome, f.codigo_funcionario as Codigo, f.cargo as Cargo, f.salario_base as Salário, f.data_inicio as Data_Admissão"
+                       + " FROM funcionario f, pessoa p WHERE p.cpf_pessoa = f.cpf_funcionario";
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
@@ -96,7 +90,6 @@ namespace LojaGames.Model.DAO
 
             conexao.Close();
             return dtFuncionario;
-            
         }
 
         public Funcionario Read(long cpf)
@@ -120,6 +113,7 @@ namespace LojaGames.Model.DAO
                 funcionario.Cargo = dr.GetString("cargo");
                 funcionario.Salario_Base = dr.GetFloat("salario_base");
                 funcionario.Data_Inicio = dr.GetDateTime("data_inicio");
+                funcionario.Codigo_Funcionario = dr.GetInt32("codigo_funcionario");
 
             }
 
@@ -127,24 +121,56 @@ namespace LojaGames.Model.DAO
             return funcionario;
         }
 
-        public DataTable ListFuncionario(long cpf_func)
+        public DataTable BuscaFunc_cpf(string cpf_func)
         {
-
             MySqlConnection conexao = Banco.GetInstance().GetConnection();
             DataTable dtFuncionario = new DataTable();
-            Funcionario f = new Funcionario();
 
-            string qry = "SELECT * from funcionario where cpf_funcionario = " + cpf_func + "";
+            string qry = "SELECT f.cpf_funcionario as CPF, p.nome as Nome, p.rg as RG, p.data_nascimento as Data_Nascimento, p.telefone as Telefone, p.sexo as Sexo, p.estado_civil as Estado_Civil, p.email as Email, p.rua as Rua, p.numero as Numero, p.bairro as Bairro, p.estado as Estado, p.cep as CEP, p.cidade as Cidade"
+                       + " FROM funcionario f, pessoa p where f.cpf_funcionario = p.cpf_pessoa and f.cpf_funcionario = " + cpf_func + "";
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
 
             MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
             objAdapter.Fill(dtFuncionario);
-            
+
             conexao.Close();
             return dtFuncionario;
+        }
 
+        public DataTable BuscaFunc_nome(string nome)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dtFuncionario = new DataTable();
+
+            string qry = "SELECT f.cpf_funcionario as CPF, p.nome as Nome, p.rg as RG, p.data_nascimento as Data_Nascimento, p.telefone as Telefone, p.sexo as Sexo, p.estado_civil as Estado_Civil, p.email as Email, p.rua as Rua, p.numero as Numero, p.bairro as Bairro, p.estado as Estado, p.cep as CEP, p.cidade as Cidade"
+                       + " FROM funcionario f, pessoa p WHERE p.cpf_pessoa = f.cpf_funcionario and p.nome like '%"+nome+"%'";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dtFuncionario);
+
+            conexao.Close();
+            return dtFuncionario;
+        }
+
+        public int prox_cod_funcionario()
+        {
+            int total;
+
+            //MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            Banco conexao = Banco.GetInstance();
+
+            string qry = "SELECT distinct MAX(codigo_funcionario) from funcionario";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            total = conexao.ExecuteSQL_Scalar(comm);
+
+            return total;
         }
 
     }

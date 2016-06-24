@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using LojaGames.Classes;
@@ -12,6 +13,8 @@ namespace LojaGames.View
     {
         private Form telaP = null;
         private long cpfAntigo;
+        FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
+        PessoaBanco pessoaBanco = new PessoaBanco();
 
         public telaGerFuncionario()
         {
@@ -59,8 +62,6 @@ namespace LojaGames.View
                 */
                     if (btnCadastrarFunc.Text == "Cadastrar")
                     {
-                        //
-                        FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
                         funcionarioBanco.SalvarFuncionario(popularFuncionario());
 
                         DialogResult cadastrado = MessageBox.Show("Funcionário cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -69,13 +70,11 @@ namespace LojaGames.View
                     else if (btnCadastrarFunc.Text == "Salvar")
                     {
                         //implementação de uma edição de um funcionário
-                        FuncionarioBanco funcBanco = new FuncionarioBanco();
-                        PessoaBanco pesBanco = new PessoaBanco();
 
                         Funcionario dados = popularFuncionario();        
 
-                        funcBanco.AtualizarFuncionario(cpfAntigo , dados);
-                        pesBanco.AtualizarPessoa(cpfAntigo, dados);
+                        funcionarioBanco.AtualizarFuncionario(cpfAntigo , dados);
+                        pessoaBanco.AtualizarPessoa(cpfAntigo, dados);
 
                         DialogResult edicao = MessageBox.Show("Funcionário alterado com sucesso.", "Edição!", MessageBoxButtons.OK, MessageBoxIcon.None);
                         ClasseUtil.LimparCampos(abaCadFuncionario.Controls);
@@ -88,11 +87,15 @@ namespace LojaGames.View
                 }
                 //Close();
                 //telaP.Show();
-            //} remover esse comentario qnd estiver OK
+            //}
             else
             {
                 DialogResult alerta = MessageBox.Show(MensagemErro, "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+
+            lbCodFunc.Text = lbCodFunc.Text = (1 + funcionarioBanco.gerar_codigoFunc()).ToString();
+            btnExibirTodosFunc_Click(sender, e);
+            dgvExibeFunc.RefreshEdit();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -111,8 +114,6 @@ namespace LojaGames.View
             Funcionario f = new Funcionario();
 
             //Popula Dados Pessoais
-            //adicionar o codigo do funcionario
-
             f.CPF = long.Parse(mtbCpfFunc.Text);
             f.Nome = txtNomeFunc.Text;
             f.RG = mtbRgFunc.Text;
@@ -127,7 +128,7 @@ namespace LojaGames.View
             {
                 f.Sexo = char.Parse("F");
             }
-            else if (rbtnNInformadoFunc.Checked == true)
+            else
             {
                 f.Sexo = char.Parse("I");
             }
@@ -145,7 +146,7 @@ namespace LojaGames.View
             f.Cidade = txtCidadeFunc.Text;
 
             //dados somente de funcionario
-            f.Codigo_Funcionario = 0; //alterar esse codigo para ser auto incremental
+            f.Codigo_Funcionario = Convert.ToInt32(lbCodFunc.Text);
 
             f.Cargo = txtCargoFunc.Text;
             if(txtSalarioBaseFunc.Text != string.Empty)
@@ -153,7 +154,7 @@ namespace LojaGames.View
                 f.Salario_Base = float.Parse(txtSalarioBaseFunc.Text);
             }
             f.Data_Inicio = Convert.ToDateTime(dtpDataInicioFunc.Text);
-
+    
             //popular o usuário e a senha (FAZER)
             
 
@@ -168,6 +169,7 @@ namespace LojaGames.View
             dtpDataInicioFunc.Text = f.Data_Inicio.ToString();
             txtSalarioBaseFunc.Text = f.Salario_Base.ToString();
 
+            lbCodFunc.Text = f.Codigo_Funcionario.ToString();
         }
 
         private void PreencheCamposPessoa(Pessoa p)
@@ -215,7 +217,6 @@ namespace LojaGames.View
                 //  dgvExibeFunc.Rows.RemoveAt(i); //limpa o datagrid
             }
             
-            FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
             funcionarioBanco.ExibirTodosFuncionario(dgvExibeFunc); 
         }
 
@@ -235,16 +236,29 @@ namespace LojaGames.View
             string nome = txtNomeExiFunc.Text;
             string cpf = mtbCpfExiFunc.Text;
 
+            //irá realizar a busca de acordo com os dados fornecido em uns dos campos
+            //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
             if ((nome == string.Empty) && (cpf == string.Empty))
             {
                 DialogResult busca = MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!", "Busca!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+            else if((nome == string.Empty) && (cpf != string.Empty))
+            {
+                //exibe a busca por cpf 
+                dgvExibeFunc.DataSource = funcionarioBanco.BuscarFuncionario_cpf(cpf);
+            }
+            else if((cpf == string.Empty) && (nome != string.Empty))
+            {
+                //exibe a busca por nome 
+                dgvExibeFunc.DataSource = funcionarioBanco.BuscarFuncionario_nome(nome);            
+            }
             else
             {
-                //irá realizar a busca de acordo com os dados fornecido em uns dos campos
-                //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
-
+                MessageBox.Show("Por gentileza, preencha apenas um dos campos para Busca", "Dados", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+                ClasseUtil.LimparCampos(abaExibiFuncionario.Controls);
             }
+
+            ClasseUtil.LimparCampos(abaExibiFuncionario.Controls);
         }
 
         private void btnEditarFunc_Click(object sender, System.EventArgs e)
@@ -261,12 +275,13 @@ namespace LojaGames.View
                     abasGerFuncionario.SelectedTab = abaCadFuncionario;
                     btnCadastrarFunc.Text = "Salvar";
 
-                    FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
-                    PessoaBanco pessoaBanco = new PessoaBanco();
+                    PessoaBanco p = new PessoaBanco();
+                    FuncionarioBanco f = new FuncionarioBanco();
 
                     cpfAntigo = long.Parse((dgvExibeFunc[0, linha].Value).ToString());
-                    PreencheCamposPessoa(pessoaBanco.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
-                    PreencheCamposFuncionario(funcionarioBanco.BuscarFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
+                    PreencheCamposPessoa(p.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
+                    PreencheCamposFuncionario(f.BuscarFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
+                    
                     mtbCpfFunc.Enabled = false;
                 }
             }
@@ -274,23 +289,21 @@ namespace LojaGames.View
             {
                 MessageBox.Show("Nenhum funcionário selecionado");
             }
-
+            //btnExibirTodosFunc_Click(sender, e);
+            //dgvExibeFunc.RefreshEdit();
         }
 
         private void btnExcluirFunc_Click(object sender, System.EventArgs e)
         {
             if (dgvExibeFunc.CurrentRow != null)
             {
-                int linha = dgvExibeFunc.CurrentRow.Index;
-
                 DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                int linha = dgvExibeFunc.CurrentRow.Index;
 
                 if (rm == DialogResult.Yes)
                 {
                     long cpf = Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString());
-
-                    FuncionarioBanco funcionarioBanco = new FuncionarioBanco();
-                    PessoaBanco pessoaBanco = new PessoaBanco();
 
                     funcionarioBanco.RemoverFuncionario(cpf);
                     pessoaBanco.RemoverPessoa(cpf);
@@ -304,16 +317,25 @@ namespace LojaGames.View
             {
                 MessageBox.Show("Nenhum funcionário selecionado");
             }
-
+            dgvExibeFunc.RefreshEdit();
         }
 
         private void txtSalarioBaseFunc_KeyPress(object sender, KeyPressEventArgs e)
         {
             //força o campo a receber apenas numeros (estilo monetários)
             ClasseUtil.somenteValores(txtSalarioBaseFunc, e);
-
-            
         }
 
+        private void telaGerFuncionario_Load(object sender, EventArgs e)
+        {
+            lbCodFunc.Text = (1 + funcionarioBanco.gerar_codigoFunc()).ToString();
+        }
+
+        private void dgvExibeFunc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int linha = dgvExibeFunc.CurrentRow.Index;
+
+            dgvExibeFunc.Rows[linha].Selected = true;
+        }
     }
 }

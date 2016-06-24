@@ -202,6 +202,7 @@
             this.btnCadastroFunc.TabIndex = 20;
             this.btnCadastroFunc.Text = "Cadastrar Senha";
             this.btnCadastroFunc.UseVisualStyleBackColor = true;
+            this.btnCadastroFunc.Visible = false;
             this.btnCadastroFunc.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // dtpDataInicioFunc
@@ -777,13 +778,14 @@
             this.dgvExibeFunc.AllowUserToAddRows = false;
             this.dgvExibeFunc.AllowUserToDeleteRows = false;
             this.dgvExibeFunc.AllowUserToOrderColumns = true;
-            this.dgvExibeFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExibeFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvExibeFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExibeFunc.Location = new System.Drawing.Point(0, 0);
             this.dgvExibeFunc.Name = "dgvExibeFunc";
             this.dgvExibeFunc.ReadOnly = true;
             this.dgvExibeFunc.Size = new System.Drawing.Size(791, 301);
             this.dgvExibeFunc.TabIndex = 0;
+            this.dgvExibeFunc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExibeFunc_CellClick);
             // 
             // btnExibirTodosFunc
             // 
@@ -807,6 +809,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciamento de Funcionário";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.telaGerFuncionario_FormClosing);
+            this.Load += new System.EventHandler(this.telaGerFuncionario_Load);
             this.abasGerFuncionario.ResumeLayout(false);
             this.abaCadFuncionario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoFunc)).EndInit();

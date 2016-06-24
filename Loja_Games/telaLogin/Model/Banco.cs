@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using LojaGames.Classes;
 using MySql.Data.MySqlClient;
 
@@ -44,6 +45,19 @@ namespace LojaGames.Model
             
         }
 
-       
+        public int ExecuteSQL_Scalar(MySqlCommand comando)
+        {
+            comando.Connection = conexao;
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            int valor = Convert.ToInt32(comando.ExecuteScalar());
+            
+            conexao.Close();
+            return valor;
+        }
+
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Model.DAO;
 
@@ -38,16 +40,27 @@ namespace LojaGames.Controller
             funcionarioDao.Delete(removeCpf);
         }
 
-        public void BuscarDadosFuncionario()
-        {
-            
-        }
-
         public void ExibirTodosFuncionario(DataGridView dataGrid)
         {
             //metodo para exibir todos do banco
-            dataGrid.DataSource = funcionarioDao.ListAllFuncionarios();
             
+            dataGrid.DataSource = funcionarioDao.ListAllFuncionarios();   
+        }
+
+
+        public DataTable BuscarFuncionario_nome(string nome)
+        {
+            return funcionarioDao.BuscaFunc_nome(nome);
+        }
+
+        public DataTable BuscarFuncionario_cpf(string cpf)
+        {
+            return funcionarioDao.BuscaFunc_cpf(cpf);
+        }
+
+        public int gerar_codigoFunc()
+        {
+            return funcionarioDao.prox_cod_funcionario();
         }
 
     }

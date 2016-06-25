@@ -133,6 +133,24 @@ namespace LojaGames.Model.DAO
             return dtJogos;
         }
 
+        public DataTable itemVenda(int cod_jogo)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dtJogos = new DataTable();
+
+            string qry = "SELECT j.codigo_jogo as Codigo, j.nome as Nome_Jogo, j.preco as Valor_Unitário"
+                       + " FROM jogos j WHERE j.codigo_jogo = "+cod_jogo;
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dtJogos);
+
+            conexao.Close();
+            return dtJogos;
+        }
+
         public string buscaJogoCod(int codigo)
         {
             string nome;
@@ -152,6 +170,37 @@ namespace LojaGames.Model.DAO
             }
 
             return nome;
+        }
+
+        public List<Jogos> ProcuraCodigo (int cod)
+        {
+            List<Jogos> listaJogo = new List<Jogos>();
+            Jogos jogos;
+
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+
+            string qry = "SELECT j.codigo_jogo, j.nome, j.preco"
+                       + " FROM jogos j WHERE j.codigo_jogo = " +cod;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlCommand comm = new MySqlCommand(qry, conexao);
+            MySqlDataReader dr = comm.ExecuteReader();
+
+            if(dr.Read())
+            {
+                jogos = new Jogos();
+
+                jogos.Codigo = dr.GetInt32("codigo_jogo");
+                jogos.Nome = dr.GetString("nome");
+                jogos.Preco = dr.GetFloat("preco");
+
+                listaJogo.Add(jogos);
+            }
+
+            conexao.Close();
+            return listaJogo;
         }
 
 

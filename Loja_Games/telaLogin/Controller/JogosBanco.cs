@@ -45,6 +45,11 @@ namespace LojaGames.Controller
             return jogosDao.buscaPorGeneroJogo(genero);
         }
 
+        public DataTable Add_JogoTabelaVenda(int cod)
+        {
+            return jogosDao.itemVenda(cod);
+        }
+
         public string buscaJogo_cod(int cod)
         {
             return jogosDao.buscaJogoCod(cod);

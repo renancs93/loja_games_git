@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using LojaGames.Classes;
 using LojaGames.Controller;
 
 namespace LojaGames
@@ -22,9 +24,31 @@ namespace LojaGames
         private void btnAdicionarItem_Click(object sender, EventArgs e)
         {
             //Este metodo add os item de compra no dataView
-            MessageBox.Show("Produto adicionado na lista!", "Venda");
-            txtCodProdVenda.Text = string.Empty;
-            numQuantidade.Value = 0;
+
+            if(txtConfirmaNomeProduto.Text != "Nome do Jogo" || txtConfirmaNomeProduto.Text != "Jogo não encontrado")
+            {
+                int codigo = Convert.ToInt32(txtCodProdVenda.Text);
+
+                VendaBanco jogo = new VendaBanco();
+                List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
+                
+                int quantidade = Convert.ToInt32(numQuantidade.Value);
+                float valor_total_item = (item[0].Preco) * (quantidade);
+
+                
+                dgvProdutosVenda.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), item[0].Preco.ToString(), quantidade, valor_total_item);
+
+                //MessageBox.Show("Produto adicionado na lista!", "Venda");
+                txtCodProdVenda.Text = string.Empty;
+                numQuantidade.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Dados Inválidos, tente novamente!", "Venda");
+                txtCodProdVenda.Text = string.Empty;
+                numQuantidade.Value = 0;
+            }
+
 
         }
 

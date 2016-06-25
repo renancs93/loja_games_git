@@ -108,13 +108,6 @@ namespace LojaGames.Model.DAO
         {
             Banco dbGames = Banco.GetInstance();
 
-            /*
-            string qry = "UPDATE pessoa (nome, rg, data_nascimento, telefone, sexo, estado_civil, email, rua, numero, bairro, estado, cep, cidade)"
-                        + "set (@cod, cpf_pessoa, codigo_pessoa, nome, rg, data_nascimento, telefone, sexo, estado_civil, email, rua, numero, bairro, estado, cep, cidade)"
-                        + "where cpf_pessoa = '"+cpf+"'";
-
-            */
-
             string qry = "UPDATE pessoa SET nome = @nome, rg = @rg, data_nascimento = @data_nascimento, telefone = @telefone, sexo = @sexo, estado_civil = @estado_civil, email = @email, rua = @rua, numero = @numero, bairro = @bairro, estado = @estado, cep = @cep, cidade = @cidade WHERE cpf_pessoa = "+cpf+"";
 
             MySqlCommand comm = new MySqlCommand(qry);

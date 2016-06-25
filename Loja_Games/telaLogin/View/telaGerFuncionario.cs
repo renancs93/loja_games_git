@@ -208,9 +208,8 @@ namespace LojaGames.View
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)
         {
             int x = dgvExibeFunc.RowCount;
-
-
-            if(x > 0)
+            
+            if (x > 0)
             {
                 dgvExibeFunc.RefreshEdit();
                 //for (int i = 0; i < x; i++)
@@ -273,15 +272,15 @@ namespace LojaGames.View
                 if (edit == DialogResult.Yes)
                 {
                     abasGerFuncionario.SelectedTab = abaCadFuncionario;
-                    btnCadastrarFunc.Text = "Salvar";
-
+                    
                     PessoaBanco p = new PessoaBanco();
                     FuncionarioBanco f = new FuncionarioBanco();
 
                     cpfAntigo = long.Parse((dgvExibeFunc[0, linha].Value).ToString());
                     PreencheCamposPessoa(p.BuscarPessoa(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
                     PreencheCamposFuncionario(f.BuscarFuncionario(Convert.ToInt64(dgvExibeFunc[0, linha].Value.ToString())));
-                    
+
+                    btnCadastrarFunc.Text = "Salvar";
                     mtbCpfFunc.Enabled = false;
                 }
             }

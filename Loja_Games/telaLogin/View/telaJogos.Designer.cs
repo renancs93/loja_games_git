@@ -71,6 +71,7 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             this.gpbConsoleCadastra.SuspendLayout();
@@ -130,7 +131,7 @@
             this.gpbConsoleCadastra.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbConsoleCadastra.Location = new System.Drawing.Point(11, 75);
             this.gpbConsoleCadastra.Name = "gpbConsoleCadastra";
-            this.gpbConsoleCadastra.Size = new System.Drawing.Size(174, 78);
+            this.gpbConsoleCadastra.Size = new System.Drawing.Size(174, 70);
             this.gpbConsoleCadastra.TabIndex = 0;
             this.gpbConsoleCadastra.TabStop = false;
             this.gpbConsoleCadastra.Text = "Console";
@@ -329,6 +330,7 @@
             // abaExibeJogos
             // 
             this.abaExibeJogos.BackColor = System.Drawing.Color.White;
+            this.abaExibeJogos.Controls.Add(this.btnExcluir);
             this.abaExibeJogos.Controls.Add(this.label1);
             this.abaExibeJogos.Controls.Add(this.btnEditar);
             this.abaExibeJogos.Controls.Add(this.dGridResultado);
@@ -357,9 +359,9 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(342, 412);
+            this.btnEditar.Location = new System.Drawing.Point(356, 417);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(105, 33);
+            this.btnEditar.Size = new System.Drawing.Size(92, 33);
             this.btnEditar.TabIndex = 19;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -379,9 +381,9 @@
             // imgLogo
             // 
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(9, 402);
+            this.imgLogo.Location = new System.Drawing.Point(8, 402);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(115, 48);
+            this.imgLogo.Size = new System.Drawing.Size(116, 60);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
@@ -390,9 +392,9 @@
             // 
             this.btnExibirTodos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExibirTodos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibirTodos.Location = new System.Drawing.Point(220, 412);
+            this.btnExibirTodos.Location = new System.Drawing.Point(130, 409);
             this.btnExibirTodos.Name = "btnExibirTodos";
-            this.btnExibirTodos.Size = new System.Drawing.Size(116, 33);
+            this.btnExibirTodos.Size = new System.Drawing.Size(123, 48);
             this.btnExibirTodos.TabIndex = 18;
             this.btnExibirTodos.Text = "Exibir Todos";
             this.btnExibirTodos.UseVisualStyleBackColor = true;
@@ -402,7 +404,7 @@
             // 
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(452, 412);
+            this.btnSair.Location = new System.Drawing.Point(452, 417);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(94, 33);
             this.btnSair.TabIndex = 20;
@@ -439,7 +441,7 @@
             // 
             this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(365, 37);
+            this.btnLimpar.Location = new System.Drawing.Point(376, 37);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 31);
             this.btnLimpar.TabIndex = 17;
@@ -589,6 +591,17 @@
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(260, 417);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(92, 33);
+            this.btnExcluir.TabIndex = 22;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // telaJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,5 +684,6 @@
         private System.Windows.Forms.ComboBox cbxGeneroExib;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

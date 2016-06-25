@@ -30,5 +30,35 @@ namespace LojaGames.Controller
             return jogosDao.max_cod_jogo();
         }
 
+        public DataTable buscaJogo_nome(string jogo)
+        {
+            return jogosDao.buscaPorNomeJogo(jogo);
+        }
+
+        public DataTable buscaJogo_console(string console)
+        {
+            return jogosDao.buscaPorConsoleJogo(console);
+        }
+
+        public DataTable buscaJogo_genero(string genero)
+        {
+            return jogosDao.buscaPorGeneroJogo(genero);
+        }
+
+        public Jogos buscarJogo_cod_edit(int codigo)
+        {
+            return jogosDao.Read(codigo);
+        }
+
+        public void AtualizarJogo(Jogos jogo)
+        {
+            jogosDao.Update(jogo);
+        }
+
+        public void Deletar_jogo(int codigo_jogo)
+        {
+            jogosDao.Delete(codigo_jogo);
+        }
+
     }
 }

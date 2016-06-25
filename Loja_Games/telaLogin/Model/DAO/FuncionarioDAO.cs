@@ -170,6 +170,11 @@ namespace LojaGames.Model.DAO
 
             total = conexao.ExecuteSQL_Scalar(comm);
 
+            if(total == null)
+            {
+                total = 0;
+            }
+
             return total;
         }
 

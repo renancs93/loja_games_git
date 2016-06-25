@@ -622,7 +622,7 @@
             this.lbCodFunc.Name = "lbCodFunc";
             this.lbCodFunc.Size = new System.Drawing.Size(16, 14);
             this.lbCodFunc.TabIndex = 1;
-            this.lbCodFunc.Text = "0";
+            this.lbCodFunc.Text = "1";
             // 
             // lbCodigo
             // 

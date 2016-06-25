@@ -25,7 +25,6 @@ namespace LojaGames.Controller
         public void AtualizarFuncionario(long cpf, Funcionario f)
         {
             funcionarioDao.Update(cpf, f);
-
         }
 
         //Metodo de busca de apenas um funcionario

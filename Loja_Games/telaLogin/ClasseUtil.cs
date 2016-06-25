@@ -71,6 +71,10 @@ namespace LojaGames
                 {
                     ((ComboBox)campo).SelectedIndex = -1;// SelectedItem = -1;
                 }
+                else if (campo.GetType() == typeof(NumericUpDown))
+                {
+                    ((NumericUpDown)campo).Value = 0;
+                }
 
 
             }

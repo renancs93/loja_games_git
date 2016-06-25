@@ -25,4 +25,5 @@ namespace LojaGames.Model.DAO
 
             dbGames.ExecuteSQL_NonQuery(comm);
         }
+    }
 }

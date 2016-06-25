@@ -20,6 +20,11 @@ namespace LojaGames.Controller
             PessoaDao.Update(cpf, f);
         }
 
+        public void AtualizarPessoaCliente(long cpf, Cliente c)
+        {
+            PessoaDao.UpdatePessoaCliente(cpf, c);
+        }
+
         public void RemoverPessoa(long removeCpf)
         {
             PessoaDao.Delete(removeCpf);

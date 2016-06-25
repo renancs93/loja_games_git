@@ -1,5 +1,6 @@
 ﻿using LojaGames.Controller;
 using System.Windows.Forms;
+using System;
 
 namespace LojaGames.View
 {
@@ -7,6 +8,8 @@ namespace LojaGames.View
     {
         private Form telaP = null;
         ClienteBanco clienteBanco = new ClienteBanco();
+        PessoaBanco pessoaBanco = new PessoaBanco();
+        private long cpfAntigoCliente;
 
         public telaGerCliente()
         {
@@ -58,14 +61,21 @@ namespace LojaGames.View
 
         private void btnEditarCli_Click(object sender, System.EventArgs e)
         {
-            //pega a linha no dataGrid selecionada e abre a telaCadastro de Cliente já setados para alteração
-            DialogResult edit = MessageBox.Show("Deseja editar o Cliente selecionado?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (edit == DialogResult.Yes)
+            if(dgvExibeCli.CurrentRow != null)
             {
-                abasGerCliente.SelectedTab = abaCadCliente;
+                int linha = dgvExibeCli.CurrentRow.Index;
 
-                //seta os dados do Cliente selecionado na tela de cadastro
+                DialogResult edicao = MessageBox.Show("Deseja editar o cliente selecionado?", "Edição", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+                if(edicao == DialogResult.OK)
+                {
+                    abasGerCliente.SelectedTab = abaCadCliente;
+
+                    PessoaBanco p = new PessoaBanco();
+                    ClienteBanco c = new ClienteBanco();
+
+                    cpfAntigoCliente = long.Parse((dgvExibeCli[0, linha].Value).ToString());
+                }
             }
         }
 
@@ -106,8 +116,16 @@ namespace LojaGames.View
                     DialogResult cadastro = MessageBox.Show("Cliente Cadastrado com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
                     ClasseUtil.LimparCampos(abaCadCliente.Controls);
                 }
-                //Close();
-                //telaP.Show();
+                else if(btnCadastrarCli.Text == "Salvar")
+                {
+                    Cliente dados = PopularCliente();
+
+                    pessoaBanco.AtualizarPessoaCliente(cpfAntigoCliente, dados);
+
+                    DialogResult edicaoCliente = MessageBox.Show("Funcionário alterado com sucesso.", "Edição!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    ClasseUtil.LimparCampos(abaCadCliente.Controls);
+                    btnCadastrarCli.Text = "Cadastrar";
+                }                
             }
             else
             {

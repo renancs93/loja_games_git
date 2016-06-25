@@ -146,5 +146,46 @@ namespace LojaGames.Model.DAO
 
         }
 
+        public void UpdatePessoaCliente(long cpf, Cliente c)
+        {
+            Banco dbGames = Banco.GetInstance();
+
+            string qry = "UPDATE pessoa SET nome = @nome, rg = @rg, data_nascimento = @data_nascimento, telefone = @telefone, sexo = @sexo, estado_civil = @estado_civil, email = @email, rua = @rua, numero = @numero, bairro = @bairro, estado = @estado, cep = @cep, cidade = @cidade WHERE cpf_pessoa = " + cpf + "";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            //relaciona os parametros do SQL e o tipo do dado
+            comm.Parameters.Add("@nome", MySqlDbType.String);
+            comm.Parameters.Add("@rg", MySqlDbType.String);
+            comm.Parameters.Add("@data_nascimento", MySqlDbType.DateTime);
+            comm.Parameters.Add("@telefone", MySqlDbType.String);
+            comm.Parameters.Add("@sexo", MySqlDbType.VarChar);
+            comm.Parameters.Add("@estado_civil", MySqlDbType.String);
+            comm.Parameters.Add("@email", MySqlDbType.String);
+            comm.Parameters.Add("@rua", MySqlDbType.String);
+            comm.Parameters.Add("@numero", MySqlDbType.Int32);
+            comm.Parameters.Add("@bairro", MySqlDbType.String);
+            comm.Parameters.Add("@estado", MySqlDbType.String);
+            comm.Parameters.Add("@cep", MySqlDbType.String);
+            comm.Parameters.Add("@cidade", MySqlDbType.String);
+
+            //seta nos paramentros os dados do objeto passado
+            comm.Parameters["@nome"].Value = f.Nome;
+            comm.Parameters["@rg"].Value = f.RG;
+            comm.Parameters["@data_nascimento"].Value = f.DataNascimento;
+            comm.Parameters["@telefone"].Value = f.Telefone;
+            comm.Parameters["@sexo"].Value = f.Sexo;
+            comm.Parameters["@estado_civil"].Value = f.EstadoCivil;
+            comm.Parameters["@email"].Value = f.Email;
+            comm.Parameters["@rua"].Value = f.Rua;
+            comm.Parameters["@numero"].Value = f.Numero;
+            comm.Parameters["@bairro"].Value = f.Bairro;
+            comm.Parameters["@estado"].Value = f.Estado;
+            comm.Parameters["@cep"].Value = f.Cep;
+            comm.Parameters["@cidade"].Value = f.Cidade;
+
+            dbGames.ExecuteSQL_NonQuery(comm);
+        }
+
     }
 }

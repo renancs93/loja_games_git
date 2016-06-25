@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using LojaGames.Model;
 using LojaGames.Model.DAO;
+using System.Windows.Forms;
 
 namespace LojaGames.Controller
 {
@@ -21,6 +22,15 @@ namespace LojaGames.Controller
             ClienteDAO cliDao = new ClienteDAO();
             cliDao.Create(c);
         }
+
+        public Cliente Buscar_Cliente(long cpf)
+        {
+            return clienteDao.Read(cpf);
+        }
         
+        public void ExibirTodosClientes(DataGridView dataGrid)
+        {
+            dataGrid.DataSource = clienteDao.ListAllClientes();
+        }
     }
 }

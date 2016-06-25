@@ -170,19 +170,19 @@ namespace LojaGames.Model.DAO
             comm.Parameters.Add("@cidade", MySqlDbType.String);
 
             //seta nos paramentros os dados do objeto passado
-            comm.Parameters["@nome"].Value = f.Nome;
-            comm.Parameters["@rg"].Value = f.RG;
-            comm.Parameters["@data_nascimento"].Value = f.DataNascimento;
-            comm.Parameters["@telefone"].Value = f.Telefone;
-            comm.Parameters["@sexo"].Value = f.Sexo;
-            comm.Parameters["@estado_civil"].Value = f.EstadoCivil;
-            comm.Parameters["@email"].Value = f.Email;
-            comm.Parameters["@rua"].Value = f.Rua;
-            comm.Parameters["@numero"].Value = f.Numero;
-            comm.Parameters["@bairro"].Value = f.Bairro;
-            comm.Parameters["@estado"].Value = f.Estado;
-            comm.Parameters["@cep"].Value = f.Cep;
-            comm.Parameters["@cidade"].Value = f.Cidade;
+            comm.Parameters["@nome"].Value = c.Nome;
+            comm.Parameters["@rg"].Value = c.RG;
+            comm.Parameters["@data_nascimento"].Value = c.DataNascimento;
+            comm.Parameters["@telefone"].Value = c.Telefone;
+            comm.Parameters["@sexo"].Value = c.Sexo;
+            comm.Parameters["@estado_civil"].Value = c.EstadoCivil;
+            comm.Parameters["@email"].Value = c.Email;
+            comm.Parameters["@rua"].Value = c.Rua;
+            comm.Parameters["@numero"].Value = c.Numero;
+            comm.Parameters["@bairro"].Value = c.Bairro;
+            comm.Parameters["@estado"].Value = c.Estado;
+            comm.Parameters["@cep"].Value = c.Cep;
+            comm.Parameters["@cidade"].Value = c.Cidade;
 
             dbGames.ExecuteSQL_NonQuery(comm);
         }

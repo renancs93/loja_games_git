@@ -58,8 +58,6 @@
             this.mtbCpfCli = new System.Windows.Forms.MaskedTextBox();
             this.txtEmailCli = new System.Windows.Forms.TextBox();
             this.txtNomeCli = new System.Windows.Forms.TextBox();
-            this.lbCodigoNumeroCli = new System.Windows.Forms.Label();
-            this.lbCodigo = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbDataNascimento = new System.Windows.Forms.Label();
@@ -73,8 +71,6 @@
             this.pcbLogoExiCli = new System.Windows.Forms.PictureBox();
             this.gpbDadosExibeCli = new System.Windows.Forms.GroupBox();
             this.dgvExibeCli = new System.Windows.Forms.DataGridView();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbBuscaCli = new System.Windows.Forms.GroupBox();
             this.btnBuscarCli = new System.Windows.Forms.Button();
             this.btnEditarCli = new System.Windows.Forms.Button();
@@ -322,8 +318,6 @@
             this.gbpDadosPessoaisCli.Controls.Add(this.mtbCpfCli);
             this.gbpDadosPessoaisCli.Controls.Add(this.txtEmailCli);
             this.gbpDadosPessoaisCli.Controls.Add(this.txtNomeCli);
-            this.gbpDadosPessoaisCli.Controls.Add(this.lbCodigoNumeroCli);
-            this.gbpDadosPessoaisCli.Controls.Add(this.lbCodigo);
             this.gbpDadosPessoaisCli.Controls.Add(this.lbEmail);
             this.gbpDadosPessoaisCli.Controls.Add(this.lbTelefone);
             this.gbpDadosPessoaisCli.Controls.Add(this.lbDataNascimento);
@@ -457,25 +451,6 @@
             this.txtNomeCli.Size = new System.Drawing.Size(433, 22);
             this.txtNomeCli.TabIndex = 1;
             // 
-            // lbCodigoNumeroCli
-            // 
-            this.lbCodigoNumeroCli.AutoSize = true;
-            this.lbCodigoNumeroCli.Location = new System.Drawing.Point(725, 35);
-            this.lbCodigoNumeroCli.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCodigoNumeroCli.Name = "lbCodigoNumeroCli";
-            this.lbCodigoNumeroCli.Size = new System.Drawing.Size(16, 14);
-            this.lbCodigoNumeroCli.TabIndex = 1;
-            this.lbCodigoNumeroCli.Text = "1";
-            // 
-            // lbCodigo
-            // 
-            this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Location = new System.Drawing.Point(662, 35);
-            this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(57, 14);
-            this.lbCodigo.TabIndex = 0;
-            this.lbCodigo.Text = "Código:";
-            // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
@@ -605,29 +580,16 @@
             // 
             this.dgvExibeCli.AllowUserToAddRows = false;
             this.dgvExibeCli.AllowUserToDeleteRows = false;
-            this.dgvExibeCli.AllowUserToOrderColumns = true;
-            this.dgvExibeCli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExibeCli.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvExibeCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExibeCli.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CPF,
-            this.NOME});
             this.dgvExibeCli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExibeCli.Location = new System.Drawing.Point(2, 17);
             this.dgvExibeCli.Margin = new System.Windows.Forms.Padding(2);
             this.dgvExibeCli.Name = "dgvExibeCli";
+            this.dgvExibeCli.ReadOnly = true;
             this.dgvExibeCli.RowTemplate.Height = 24;
             this.dgvExibeCli.Size = new System.Drawing.Size(792, 253);
             this.dgvExibeCli.TabIndex = 0;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            // 
-            // NOME
-            // 
-            this.NOME.HeaderText = "NOME";
-            this.NOME.Name = "NOME";
             // 
             // gpbBuscaCli
             // 
@@ -767,12 +729,10 @@
         private System.Windows.Forms.Label lbRg;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.Label lbDataNascimento;
         private System.Windows.Forms.Label lbEstadoCivil;
-        private System.Windows.Forms.Label lbCodigoNumeroCli;
         private System.Windows.Forms.Label lbEstado;
         private System.Windows.Forms.Label lbNumero;
         private System.Windows.Forms.Label lbCidade;
@@ -810,8 +770,6 @@
         private System.Windows.Forms.Button btnEditarCli;
         private System.Windows.Forms.Button btnExcluirCli;
         private System.Windows.Forms.DataGridView dgvExibeCli;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.PictureBox pcbLogoExiCli;
         private System.Windows.Forms.Button btnSairCli;
         private System.Windows.Forms.Button btnExibirTodosCli;

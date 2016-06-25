@@ -202,7 +202,6 @@ namespace LojaGames.View
             txtBairroFunc.Text = p.Bairro.ToString();
             txtCidadeFunc.Text = p.Cidade.ToString();
             cbxEstadoFunc.Text = p.Estado.ToString();
-
         }
 
         private void btnExibirTodosFunc_Click(object sender, System.EventArgs e)

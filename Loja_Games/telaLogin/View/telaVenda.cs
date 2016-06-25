@@ -172,9 +172,23 @@ namespace LojaGames
             ClasseUtil.apenasNumeros(txtCodProdAluga, e);
         }
 
+        private void mtbCPFVenda_Leave(object sender, EventArgs e)
+        {
+
+        }
+
         private void mtbCPFAluguel_Leave(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void txtCodFuncVenda_Leave(object sender, EventArgs e)
+        {
+            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
+
+            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
+            txtConfirmaNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
 
         }
 
@@ -187,17 +201,16 @@ namespace LojaGames
 
         }
 
-        private void mtbCPFVenda_Leave(object sender, EventArgs e)
+        private void txtCodProdVenda_Leave(object sender, EventArgs e)
         {
+            int codigo_produto = Convert.ToInt32(txtCodProdVenda.Text);
+
+            JogosBanco jogosBanco = new JogosBanco();
 
         }
 
-        private void txtCodFuncVenda_Leave(object sender, EventArgs e)
+        private void txtCodProdAluga_Leave(object sender, EventArgs e)
         {
-            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
-
-            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
-            txtConfirmaNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
 
         }
     }

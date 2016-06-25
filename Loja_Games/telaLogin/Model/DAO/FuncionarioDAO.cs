@@ -170,7 +170,7 @@ namespace LojaGames.Model.DAO
 
             nome = conexao.ExecuteSQL_Scalar_string(comm);
 
-            if (nome == null)
+            if (nome == null || nome == string.Empty)
             {
                 nome = "Funcionário não encontrado";
             }

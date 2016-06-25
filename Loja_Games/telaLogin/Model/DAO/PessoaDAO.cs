@@ -145,7 +145,8 @@ namespace LojaGames.Model.DAO
             dbGames.ExecuteSQL_NonQuery(comm);
 
         }
-
+        
+        
         public void UpdatePessoaCliente(long cpf, Cliente c)
         {
             Banco dbGames = Banco.GetInstance();

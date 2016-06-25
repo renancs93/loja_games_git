@@ -1,3 +1,7 @@
+create database games;
+
+use games;
+
 create table pessoa(
 cpf_pessoa varchar(14) not null,
 nome varchar(50) not null,
@@ -41,38 +45,43 @@ qnt_estoque integer,
 lancamento date,
 primary key (codigo_jogo));
 
-create table pagamento(
-codigo_pagamento integer not null,
-tipo varchar(10) not null,
-primary key (codigo_pagamento));
-
 create table venda(
-codigo_venda integer not null auto_increment,
+codigo_venda integer not null,
 cpf_cli varchar(14) not null,
 cpf_func varchar(14) not null,
-cod_jogos integer not null,
+cod_jogo integer not null,
 cod_pagamento integer not null,
 quantidade integer,
 numero_parcelas integer,
 valor_parcelas float,
 valor_total float,
-primary key (codigo_venda, cpf_cli, cpf_func, cod_jogos, cod_pagamento),
 foreign key (cpf_cli) references cliente(cpf_cliente),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
-foreign key (cod_jogos) references jogos(codigo_jogo),
+foreign key (cod_jogo) references jogos(codigo_jogo),
 foreign key (cod_pagamento) references pagamento (codigo_pagamento));
 
 create table aluguel(
-codigo_aluguel integer not null auto_increment,
+codigo_aluguel integer not null,
 cpf_cli varchar(14) not null,
 cpf_func varchar(14) not null,
-cod_jogos integer not null,
+cod_jogo integer not null,
 cod_pagamento integer not null,
 quantidade integer,
 dias_aluguel integer,
 valor_total float,
-primary key (codigo_aluguel, cpf_cli, cpf_func, cod_jogos, cod_pagamento),
 foreign key (cpf_cli) references cliente(cpf_cliente),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
-foreign key (cod_jogos) references jogos(codigo_jogo),
+foreign key (cod_jogo) references jogos(codigo_jogo),
 foreign key (cod_pagamento) references pagamento(codigo_pagamento));
+
+create table pagamento(
+codigo_pagamento integer not null,
+tipo varchar(10) not null,
+primary key (codigo_pagamento));
+
+insert into pagamento values (1, 'Dinheiro');
+insert into pagamento values (2, 'Cheque');
+insert into pagamento values (3, 'Débito');
+insert into pagamento values (4, 'Credito');
+insert into pagamento values (5, 'Crédito');
+insert into pagamento values (6, 'Boleto');

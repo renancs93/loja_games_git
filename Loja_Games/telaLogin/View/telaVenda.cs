@@ -185,32 +185,54 @@ namespace LojaGames
 
         private void txtCodFuncVenda_Leave(object sender, EventArgs e)
         {
-            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
+            if (txtCodFuncVenda.Text != string.Empty)
+            {
+                int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
 
-            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
-            txtConfirmaNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
+                FuncionarioBanco funcionariobanco = new FuncionarioBanco();
+                txtConfirmaNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
 
+            }
         }
 
         private void txtCodFuncAluga_Leave(object sender, EventArgs e)
         {
-            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
+            if (txtCodFuncAluga.Text != string.Empty)
+            {
+                int codigo_funcionario = Convert.ToInt32(txtCodFuncAluga.Text);
 
-            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
-            txtExibeNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
-
+                FuncionarioBanco funcionariobanco = new FuncionarioBanco();
+                txtExibeNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
+            }
         }
 
         private void txtCodProdVenda_Leave(object sender, EventArgs e)
         {
-            int codigo_produto = Convert.ToInt32(txtCodProdVenda.Text);
+            if (txtCodProdVenda.Text != string.Empty)
+            {
+                int codigo_produto = Convert.ToInt32(txtCodProdVenda.Text);
 
-            JogosBanco jogosBanco = new JogosBanco();
-
+                JogosBanco jogosBanco = new JogosBanco();
+                txtConfirmaNomeProduto.Text = (jogosBanco.buscaJogo_cod(codigo_produto)).ToString();
+            }
         }
 
         private void txtCodProdAluga_Leave(object sender, EventArgs e)
         {
+            if (txtCodProdAluga.Text != string.Empty)
+            {
+                int codigo_produto = Convert.ToInt32(txtCodProdAluga.Text);
+
+                JogosBanco jogosBanco = new JogosBanco();
+                txtExibeNomeJogo.Text = (jogosBanco.buscaJogo_cod(codigo_produto)).ToString();
+            }
+            
+        }
+
+        private void telaVenda_Load(object sender, EventArgs e)
+        {
+            //exibir os dados da tabela pagamento no campo de forma de pagamento
+
 
         }
     }

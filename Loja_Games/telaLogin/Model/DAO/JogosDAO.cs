@@ -133,6 +133,28 @@ namespace LojaGames.Model.DAO
             return dtJogos;
         }
 
+        public string buscaJogoCod(int codigo)
+        {
+            string nome;
+
+            //MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            Banco conexao = Banco.GetInstance();
+
+            string qry = "SELECT j.nome FROM jogos j WHERE j.codigo_jogo ="+codigo;
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            nome = conexao.ExecuteSQL_Scalar_string(comm);
+
+            if (nome == null || nome == string.Empty)
+            {
+                nome = "Jogo não encontrado";
+            }
+
+            return nome;
+        }
+
+
         public Jogos Read(int cod)
         {
             Jogos jogo = new Jogos();

@@ -45,6 +45,11 @@ namespace LojaGames.Controller
             return jogosDao.buscaPorGeneroJogo(genero);
         }
 
+        public string buscaJogo_cod(int cod)
+        {
+            return jogosDao.buscaJogoCod(cod);
+        }
+
         public Jogos buscarJogo_cod_edit(int codigo)
         {
             return jogosDao.Read(codigo);

@@ -157,6 +157,28 @@ namespace LojaGames.Model.DAO
             return dtFuncionario;
         }
 
+        public string BuscarFunc_cod(int codigo)
+        {
+            string nome;
+
+            //MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            Banco conexao = Banco.GetInstance();
+
+            string qry = "SELECT p.nome FROM pessoa p, funcionario f WHERE  f.codigo_funcionario = "+codigo;
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            nome = conexao.ExecuteSQL_Scalar_string(comm);
+
+            if (nome == null)
+            {
+                nome = "Funcionário não encontrado";
+            }
+
+            return nome;
+        }
+
+
         public int prox_cod_funcionario()
         {
             int total;
@@ -168,7 +190,7 @@ namespace LojaGames.Model.DAO
 
             MySqlCommand comm = new MySqlCommand(qry);
 
-            total = conexao.ExecuteSQL_Scalar(comm);
+            total = conexao.ExecuteSQL_Scalar_int(comm);
 
             if(total == null)
             {

@@ -57,6 +57,11 @@ namespace LojaGames.Controller
             return funcionarioDao.BuscaFunc_cpf(cpf);
         }
 
+        public string BuscarFuncionario_codigo(int cod)
+        {
+            return funcionarioDao.BuscarFunc_cod(cod);
+        }
+
         public int gerar_codigoFunc()
         {
             return funcionarioDao.prox_cod_funcionario();

@@ -45,7 +45,7 @@ namespace LojaGames.Model
             
         }
 
-        public int ExecuteSQL_Scalar(MySqlCommand comando)
+        public int ExecuteSQL_Scalar_int(MySqlCommand comando)
         {
             comando.Connection = conexao;
 
@@ -58,6 +58,18 @@ namespace LojaGames.Model
             return valor;
         }
 
+        public string ExecuteSQL_Scalar_string(MySqlCommand comando)
+        {
+            comando.Connection = conexao;
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            string texto = Convert.ToString(comando.ExecuteScalar());
+
+            conexao.Close();
+            return texto;
+        }
 
     }
 }

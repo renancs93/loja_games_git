@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using LojaGames.Controller;
 
 namespace LojaGames
 {
@@ -169,6 +170,35 @@ namespace LojaGames
         private void txtCodProdAluga_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClasseUtil.apenasNumeros(txtCodProdAluga, e);
+        }
+
+        private void mtbCPFAluguel_Leave(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void txtCodFuncAluga_Leave(object sender, EventArgs e)
+        {
+            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
+
+            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
+            txtExibeNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
+
+        }
+
+        private void mtbCPFVenda_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodFuncVenda_Leave(object sender, EventArgs e)
+        {
+            int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
+
+            FuncionarioBanco funcionariobanco = new FuncionarioBanco();
+            txtConfirmaNomeFuncionario.Text = (funcionariobanco.BuscarFuncionario_codigo(codigo_funcionario)).ToString();
+
         }
     }
 }

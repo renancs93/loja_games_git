@@ -69,7 +69,7 @@ namespace LojaGames.Model.DAO
 
             MySqlCommand comm = new MySqlCommand(qry);
 
-            max = conexao.ExecuteSQL_Scalar(comm);
+            max = conexao.ExecuteSQL_Scalar_int(comm);
 
             if(max == null)
             {

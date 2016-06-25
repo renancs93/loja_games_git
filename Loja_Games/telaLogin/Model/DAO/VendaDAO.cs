@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LojaGames.Controller
+namespace LojaGames.Model.DAO
 {
-    class VendaBanco
+    class VendaDAO
     {
+
 
 
     }

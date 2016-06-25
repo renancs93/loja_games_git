@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtExibeNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.txtExibeNomeCliente = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtExibeNomeJogo = new System.Windows.Forms.TextBox();
             this.dgvProdutosAluga = new System.Windows.Forms.DataGridView();
             this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +58,8 @@
             this.btnCancAlug = new System.Windows.Forms.Button();
             this.txtTotalAluguel = new System.Windows.Forms.TextBox();
             this.lbTotalAlug = new System.Windows.Forms.Label();
-            this.txtCodAlug = new System.Windows.Forms.TextBox();
             this.txtCodFuncAluga = new System.Windows.Forms.TextBox();
-            this.lbCodAlug = new System.Windows.Forms.Label();
+            this.lbCodigoAluguel = new System.Windows.Forms.Label();
             this.lbFuncAlug = new System.Windows.Forms.Label();
             this.lbCpfCliAlug = new System.Windows.Forms.Label();
             this.abaVenda = new System.Windows.Forms.TabPage();
@@ -96,9 +95,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnFinalizarVenda = new System.Windows.Forms.Button();
             this.lbCpfCliente = new System.Windows.Forms.Label();
-            this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
+            this.lbCodVenda = new System.Windows.Forms.Label();
+            this.lbCodAlug = new System.Windows.Forms.Label();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,8 +130,9 @@
             // 
             // gpbAlug
             // 
-            this.gpbAlug.Controls.Add(this.textBox2);
-            this.gpbAlug.Controls.Add(this.textBox1);
+            this.gpbAlug.Controls.Add(this.lbCodAlug);
+            this.gpbAlug.Controls.Add(this.txtExibeNomeFuncionario);
+            this.gpbAlug.Controls.Add(this.txtExibeNomeCliente);
             this.gpbAlug.Controls.Add(this.groupBox2);
             this.gpbAlug.Controls.Add(this.mtbCPFAluguel);
             this.gpbAlug.Controls.Add(this.lbNumParcelasAluguel);
@@ -143,9 +144,8 @@
             this.gpbAlug.Controls.Add(this.btnCancAlug);
             this.gpbAlug.Controls.Add(this.txtTotalAluguel);
             this.gpbAlug.Controls.Add(this.lbTotalAlug);
-            this.gpbAlug.Controls.Add(this.txtCodAlug);
             this.gpbAlug.Controls.Add(this.txtCodFuncAluga);
-            this.gpbAlug.Controls.Add(this.lbCodAlug);
+            this.gpbAlug.Controls.Add(this.lbCodigoAluguel);
             this.gpbAlug.Controls.Add(this.lbFuncAlug);
             this.gpbAlug.Controls.Add(this.lbCpfCliAlug);
             this.gpbAlug.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -157,25 +157,27 @@
             this.gpbAlug.TabStop = false;
             this.gpbAlug.Text = "Dados Aluguel";
             // 
-            // textBox2
+            // txtExibeNomeFuncionario
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(255, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 23);
-            this.textBox2.TabIndex = 28;
+            this.txtExibeNomeFuncionario.Enabled = false;
+            this.txtExibeNomeFuncionario.Location = new System.Drawing.Point(255, 64);
+            this.txtExibeNomeFuncionario.Name = "txtExibeNomeFuncionario";
+            this.txtExibeNomeFuncionario.Size = new System.Drawing.Size(291, 23);
+            this.txtExibeNomeFuncionario.TabIndex = 28;
+            this.txtExibeNomeFuncionario.Text = "Nome do Funcionário";
             // 
-            // textBox1
+            // txtExibeNomeCliente
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(255, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 23);
-            this.textBox1.TabIndex = 27;
+            this.txtExibeNomeCliente.Enabled = false;
+            this.txtExibeNomeCliente.Location = new System.Drawing.Point(255, 25);
+            this.txtExibeNomeCliente.Name = "txtExibeNomeCliente";
+            this.txtExibeNomeCliente.Size = new System.Drawing.Size(291, 23);
+            this.txtExibeNomeCliente.TabIndex = 27;
+            this.txtExibeNomeCliente.Text = "Nome do Cliente";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtExibeNomeJogo);
             this.groupBox2.Controls.Add(this.dgvProdutosAluga);
             this.groupBox2.Controls.Add(this.btnAddAlug);
             this.groupBox2.Controls.Add(this.btnRemAlug);
@@ -190,27 +192,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produtos";
             // 
-            // textBox3
+            // txtExibeNomeJogo
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(248, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(291, 23);
-            this.textBox3.TabIndex = 13;
+            this.txtExibeNomeJogo.Enabled = false;
+            this.txtExibeNomeJogo.Location = new System.Drawing.Point(248, 22);
+            this.txtExibeNomeJogo.Name = "txtExibeNomeJogo";
+            this.txtExibeNomeJogo.Size = new System.Drawing.Size(291, 23);
+            this.txtExibeNomeJogo.TabIndex = 13;
             // 
             // dgvProdutosAluga
             // 
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
@@ -308,6 +310,7 @@
             this.mtbCPFAluguel.Size = new System.Drawing.Size(134, 23);
             this.mtbCPFAluguel.TabIndex = 1;
             this.mtbCPFAluguel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPFAluguel_MaskInputRejected);
+            this.mtbCPFAluguel.Leave += new System.EventHandler(this.mtbCPFAluguel_Leave);
             // 
             // lbNumParcelasAluguel
             // 
@@ -407,15 +410,6 @@
             this.lbTotalAlug.TabIndex = 15;
             this.lbTotalAlug.Text = "Total Aluguel :";
             // 
-            // txtCodAlug
-            // 
-            this.txtCodAlug.Enabled = false;
-            this.txtCodAlug.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodAlug.Location = new System.Drawing.Point(653, 38);
-            this.txtCodAlug.Name = "txtCodAlug";
-            this.txtCodAlug.Size = new System.Drawing.Size(76, 23);
-            this.txtCodAlug.TabIndex = 0;
-            // 
             // txtCodFuncAluga
             // 
             this.txtCodFuncAluga.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,15 +418,16 @@
             this.txtCodFuncAluga.Size = new System.Drawing.Size(134, 23);
             this.txtCodFuncAluga.TabIndex = 2;
             this.txtCodFuncAluga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFuncAluga_KeyPress);
+            this.txtCodFuncAluga.Leave += new System.EventHandler(this.txtCodFuncAluga_Leave);
             // 
-            // lbCodAlug
+            // lbCodigoAluguel
             // 
-            this.lbCodAlug.AutoSize = true;
-            this.lbCodAlug.Location = new System.Drawing.Point(635, 19);
-            this.lbCodAlug.Name = "lbCodAlug";
-            this.lbCodAlug.Size = new System.Drawing.Size(116, 16);
-            this.lbCodAlug.TabIndex = 4;
-            this.lbCodAlug.Text = "Código Aluguel";
+            this.lbCodigoAluguel.AutoSize = true;
+            this.lbCodigoAluguel.Location = new System.Drawing.Point(601, 19);
+            this.lbCodigoAluguel.Name = "lbCodigoAluguel";
+            this.lbCodigoAluguel.Size = new System.Drawing.Size(121, 16);
+            this.lbCodigoAluguel.TabIndex = 4;
+            this.lbCodigoAluguel.Text = "Código Aluguel:";
             // 
             // lbFuncAlug
             // 
@@ -467,6 +462,7 @@
             // 
             // gbpDadoVenda
             // 
+            this.gbpDadoVenda.Controls.Add(this.lbCodVenda);
             this.gbpDadoVenda.Controls.Add(this.txtCodFuncVenda);
             this.gbpDadoVenda.Controls.Add(this.groupBox1);
             this.gbpDadoVenda.Controls.Add(this.txtConfirmaNomeFuncionario);
@@ -485,7 +481,6 @@
             this.gbpDadoVenda.Controls.Add(this.btnCancelar);
             this.gbpDadoVenda.Controls.Add(this.btnFinalizarVenda);
             this.gbpDadoVenda.Controls.Add(this.lbCpfCliente);
-            this.gbpDadoVenda.Controls.Add(this.txtCodigoVenda);
             this.gbpDadoVenda.Controls.Add(this.lbCodigoVenda);
             this.gbpDadoVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbpDadoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -505,6 +500,7 @@
             this.txtCodFuncVenda.Size = new System.Drawing.Size(134, 23);
             this.txtCodFuncVenda.TabIndex = 32;
             this.txtCodFuncVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFuncVenda_KeyPress);
+            this.txtCodFuncVenda.Leave += new System.EventHandler(this.txtCodFuncVenda_Leave);
             // 
             // groupBox1
             // 
@@ -599,28 +595,28 @@
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtbcCodigo,
             this.dgvtbcDescricao,
             this.dgvtbcQuantidade,
             this.dgvtbcValorUnitario,
             this.dgvtbcValorTotalItem});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvProdutosVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvProdutosVenda.Location = new System.Drawing.Point(3, 98);
             this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
@@ -663,6 +659,7 @@
             this.txtConfirmaNomeFuncionario.Name = "txtConfirmaNomeFuncionario";
             this.txtConfirmaNomeFuncionario.Size = new System.Drawing.Size(291, 23);
             this.txtConfirmaNomeFuncionario.TabIndex = 30;
+            this.txtConfirmaNomeFuncionario.Text = "Nome do Funcionário";
             // 
             // txtConfirmaNomeCliente
             // 
@@ -672,6 +669,7 @@
             this.txtConfirmaNomeCliente.Name = "txtConfirmaNomeCliente";
             this.txtConfirmaNomeCliente.Size = new System.Drawing.Size(291, 23);
             this.txtConfirmaNomeCliente.TabIndex = 28;
+            this.txtConfirmaNomeCliente.Text = "Nome do Cliente";
             // 
             // mtbCPFVenda
             // 
@@ -681,6 +679,7 @@
             this.mtbCPFVenda.Size = new System.Drawing.Size(134, 23);
             this.mtbCPFVenda.TabIndex = 1;
             this.mtbCPFVenda.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCPFVenda_MaskInputRejected);
+            this.mtbCPFVenda.Leave += new System.EventHandler(this.mtbCPFVenda_Leave);
             // 
             // numParcelas_Venda
             // 
@@ -822,25 +821,15 @@
             this.lbCpfCliente.TabIndex = 2;
             this.lbCpfCliente.Text = "CPF Cliente:";
             // 
-            // txtCodigoVenda
-            // 
-            this.txtCodigoVenda.Enabled = false;
-            this.txtCodigoVenda.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoVenda.Location = new System.Drawing.Point(651, 36);
-            this.txtCodigoVenda.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigoVenda.Name = "txtCodigoVenda";
-            this.txtCodigoVenda.Size = new System.Drawing.Size(81, 23);
-            this.txtCodigoVenda.TabIndex = 0;
-            // 
             // lbCodigoVenda
             // 
             this.lbCodigoVenda.AutoSize = true;
-            this.lbCodigoVenda.Location = new System.Drawing.Point(635, 18);
+            this.lbCodigoVenda.Location = new System.Drawing.Point(606, 18);
             this.lbCodigoVenda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigoVenda.Name = "lbCodigoVenda";
-            this.lbCodigoVenda.Size = new System.Drawing.Size(108, 16);
+            this.lbCodigoVenda.Size = new System.Drawing.Size(113, 16);
             this.lbCodigoVenda.TabIndex = 0;
-            this.lbCodigoVenda.Text = "Código Venda";
+            this.lbCodigoVenda.Text = "Código Venda:";
             // 
             // tcVendaAluguel
             // 
@@ -854,6 +843,24 @@
             this.tcVendaAluguel.SelectedIndex = 0;
             this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
+            // 
+            // lbCodVenda
+            // 
+            this.lbCodVenda.AutoSize = true;
+            this.lbCodVenda.Location = new System.Drawing.Point(729, 18);
+            this.lbCodVenda.Name = "lbCodVenda";
+            this.lbCodVenda.Size = new System.Drawing.Size(17, 16);
+            this.lbCodVenda.TabIndex = 33;
+            this.lbCodVenda.Text = "1";
+            // 
+            // lbCodAlug
+            // 
+            this.lbCodAlug.AutoSize = true;
+            this.lbCodAlug.Location = new System.Drawing.Point(728, 19);
+            this.lbCodAlug.Name = "lbCodAlug";
+            this.lbCodAlug.Size = new System.Drawing.Size(17, 16);
+            this.lbCodAlug.TabIndex = 29;
+            this.lbCodAlug.Text = "1";
             // 
             // telaVenda
             // 
@@ -911,10 +918,9 @@
         private System.Windows.Forms.Button btnRemAlug;
         private System.Windows.Forms.Button btnAddAlug;
         private System.Windows.Forms.NumericUpDown numDiasAlug;
-        private System.Windows.Forms.TextBox txtCodAlug;
         private System.Windows.Forms.TextBox txtCodFuncAluga;
         private System.Windows.Forms.TextBox txtCodProdAluga;
-        private System.Windows.Forms.Label lbCodAlug;
+        private System.Windows.Forms.Label lbCodigoAluguel;
         private System.Windows.Forms.Label lbDias;
         private System.Windows.Forms.Label lbFuncAlug;
         private System.Windows.Forms.Label lbProdAlug;
@@ -940,7 +946,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcValorTotalItem;
         private System.Windows.Forms.Label lbCpfCliente;
-        private System.Windows.Forms.TextBox txtCodigoVenda;
         private System.Windows.Forms.Label lbCodigoVenda;
         private System.Windows.Forms.TabControl tcVendaAluguel;
         private System.Windows.Forms.Label lbTipoPagamento;
@@ -960,9 +965,11 @@
         private System.Windows.Forms.TextBox txtConfirmaNomeProduto;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtExibeNomeFuncionario;
+        private System.Windows.Forms.TextBox txtExibeNomeCliente;
+        private System.Windows.Forms.TextBox txtExibeNomeJogo;
         private System.Windows.Forms.TextBox txtCodFuncVenda;
+        private System.Windows.Forms.Label lbCodVenda;
+        private System.Windows.Forms.Label lbCodAlug;
     }
 }

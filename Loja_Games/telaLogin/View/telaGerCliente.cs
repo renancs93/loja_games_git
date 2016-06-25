@@ -1,10 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using LojaGames.Controller;
+using System.Windows.Forms;
 
 namespace LojaGames.View
 {
     public partial class telaGerCliente : Form
     {
         private Form telaP = null;
+        ClienteBanco clienteBanco = new ClienteBanco();
 
         public telaGerCliente()
         {
@@ -96,10 +98,14 @@ namespace LojaGames.View
             if(MensagemErro == "")
             {
                 //salvar objeto na classe e lista
+                //salvar objeto na classe e lista
+                if (btnCadastrarCli.Text == "Cadastrar")
+                {
+                    clienteBanco.SalvarCliente(PopularCliente());
 
-
-
-                DialogResult cadastrado = MessageBox.Show("Cliente cadastrado com sucesso.", "Cadastrado!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    DialogResult cadastro = MessageBox.Show("Cliente Cadastrado com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    ClasseUtil.LimparCampos(abaCadCliente.Controls);
+                }
                 //Close();
                 //telaP.Show();
             }
@@ -108,6 +114,44 @@ namespace LojaGames.View
                 DialogResult alerta = MessageBox.Show(MensagemErro, "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
 
+        }
+
+        private Cliente PopularCliente() //Método para popular o objeto do tipo Cliente
+        {
+            Cliente c = new Cliente();
+
+            //Popular Dados Pessoais
+            c.CPF = long.Parse(mtbCpfCli.Text);
+            c.Nome = txtNomeCli.Text;
+            c.RG = mtbRgCli.Text;
+            c.DataNascimento = Convert.ToDateTime(dtpDataNascCli.Text);
+
+            if (rbtnMasculinoCli.Checked == true)
+            {
+                c.Sexo = char.Parse("M");
+            }
+            else if (rbtnFemininoCli.Checked == true)
+            {
+                c.Sexo = char.Parse("F");
+            }
+            else
+            {
+                c.Sexo = char.Parse("I");
+            }
+
+            c.EstadoCivil = cbxEstadoCivilCli.Text;
+            c.Telefone = mtbTelefoneCli.Text;
+            c.Email = txtEmailCli.Text;
+
+            //Popula o Endereço
+            c.Cep = mtbCepCli.Text;
+            c.Rua = txtRuaCli.Text;
+            c.Numero = int.Parse(txtNumeroCli.Text);
+            c.Bairro = txtBairroCli.Text;
+            c.Estado = cbxEstadoCli.Text;
+            c.Cidade = txtCidadeCli.Text;
+
+            return c;
         }
     }
 }

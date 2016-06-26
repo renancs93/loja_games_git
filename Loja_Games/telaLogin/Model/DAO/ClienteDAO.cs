@@ -56,7 +56,7 @@ namespace LojaGames.Model.DAO
             //MySqlConnection conexao = Banco.GetInstance().GetConnection();
             Banco conexao = Banco.GetInstance();
 
-            string qry = "SELECT p.nome FROM pessoa p, cliente c WHERE  c.cpf_cliente = "+ cpf;
+            string qry = "SELECT p.nome FROM pessoa p, cliente c WHERE c.cpf_cliente = p.cpf_pessoa and c.cpf_cliente = " + cpf;
 
             MySqlCommand comm = new MySqlCommand(qry);
 

@@ -158,23 +158,48 @@ namespace LojaGames
 
         private void btnAddAlug_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Produto adicionado na lista!", "Aluguel");
-            txtCodProdAluga.Text = string.Empty;
-            numDiasAlug.Value = 1;
+            if(txtExibeNomeJogo.Text != "Nome do Jogo" || txtExibeNomeJogo.Text != "Jogo não encontrado")
+            {
+                int codigo = Convert.ToInt32(txtCodProdAluga.Text);
 
+                VendaBanco jogo = new VendaBanco();
+                List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
+
+                int dias = Convert.ToInt32(numDiasAlug.Value);
+                float valor_total_aluguel = (item[0].Preco / 10) * dias;
+
+                dgvProdutosAluga.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), dias, valor_total_aluguel);
+
+                txtCodProdAluga.Text = string.Empty;
+                numDiasAlug.Value = 1;
+            }
+            else
+            {
+                MessageBox.Show("Dados Inválidos!, tente novamente!", "Venda");
+                txtCodProdAluga.Text = string.Empty;
+                numDiasAlug.Value = 1;
+            }
         }
 
         private void btnRemAlug_Click(object sender, EventArgs e)
         {
-            DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Aluguel", MessageBoxButtons.YesNo);
+            //Esse botão terá que remover um item da lista de compra do cliente
 
-            if (RmItem == DialogResult.Yes)
+            if(dgvProdutosAluga.CurrentRow != null)
             {
-                MessageBox.Show("Item Removido!");
-                txtCodProdAluga.Text = string.Empty;
-                numDiasAlug.Value = 1;
-            }
+                int linha = dgvProdutosAluga.CurrentRow.Index;
 
+                DialogResult removerItem = MessageBox.Show("Deseja realmente remover o item? ", "Aluguel", MessageBoxButtons.YesNo);
+
+                if(removerItem == DialogResult.Yes)
+                {
+                    dgvProdutosAluga.Rows.RemoveAt(linha);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum produto selecionado!");
+            }
         }
 
         private void mtbCPFVenda_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -225,7 +250,9 @@ namespace LojaGames
         {
             if (mtbCPFAluguel.Text.Trim() != string.Empty)
             {
-                
+                long cpf_cliente = Convert.ToInt64(mtbCPFAluguel.Text);
+                ClienteBanco cliente = new ClienteBanco();
+                txtExibeNomeCliente.Text = (cliente.Buscar_Cliente_apenasNome(cpf_cliente)).ToString();
             }
 
         }
@@ -286,7 +313,6 @@ namespace LojaGames
             //gera o próximo codigo de venda
             VendaBanco gera_codigo = new VendaBanco();
             lbCodVenda.Text = ((1 + gera_codigo.codigoAtual_venda()).ToString());
-
         }
 
         private Venda populaVenda()
@@ -318,12 +344,46 @@ namespace LojaGames
 
         private void dgvProdutosVenda_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
+            int qtdeProdutos = dgvProdutosVenda.Rows.Count;
+            float totalVenda = 0;
 
+            for(int x = 0; x<qtdeProdutos; x++)
+            {
+                totalVenda += float.Parse((dgvProdutosVenda[4,x].Value).ToString());
+            }
+            txtTotalCompra.Text = totalVenda.ToString();
+            txtValorParcela.Text = ((totalVenda) / (double)(numParcelas_Venda.Value)).ToString();
         }
 
         private void numParcelas_Venda_ValueChanged(object sender, EventArgs e)
         {
             txtValorParcela.Text = Convert.ToString(((float.Parse(txtTotalCompra.Text)) / (int.Parse(numParcelas_Venda.Value.ToString()))));
+        }
+
+        private void dgvProdutosAluga_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int qtdeProdutos = dgvProdutosAluga.Rows.Count;
+
+            float total = 0;
+
+            for(int x = 0; x < qtdeProdutos; x++)
+            {
+                total += float.Parse((dgvProdutosAluga[3,x].Value).ToString());
+            }
+            txtTotalAluguel.Text = total.ToString();
+        }
+
+        private void dgvProdutosAluga_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            int qtdeProdutos = dgvProdutosAluga.Rows.Count;
+            float totalAluguel = 0;
+
+            for(int x = 0; x < qtdeProdutos; x++)
+            {
+                totalAluguel += float.Parse((dgvProdutosAluga[3,x].Value).ToString());
+            }
+
+            txtTotalAluguel.Text = totalAluguel.ToString();
         }
     }
 }

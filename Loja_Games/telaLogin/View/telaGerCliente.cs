@@ -54,16 +54,28 @@ namespace LojaGames.View
             string nome = txtNomeExiCli.Text;
             string cpf = mtbCpfExiCli.Text;
 
-            if ((nome == string.Empty) && (cpf == string.Empty))
+            //irá realizar a busca de acordo com os dados fornecidos em um dos campos
+            //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
+
+            if((nome == string.Empty) && (cpf == string.Empty))
             {
-                DialogResult busca = MessageBox.Show("O Campo CPF ou Campo Nome devem ser preenchido!", "Busca!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                DialogResult resultadoBusca = MessageBox.Show("O campo CPF ou Nome deve ser preenchido!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else if((nome == string.Empty) && (cpf !=string.Empty))
+            {
+                //exibe a busca pelo CPF
+                dgvExibeCli.DataSource = clienteBanco.BuscarCliente_CPF(cpf);
+            }
+            else if((cpf == string.Empty) && (nome != string.Empty))
+            {
+                dgvExibeCli.DataSource = clienteBanco.BuscarCliente_NOME(nome);
             }
             else
             {
-                //irá realizar a busca de acordo com os dados fornecido em uns dos campos
-                //caso não encontrado nenhum valor no banco correspondente exibir mensagem e mostrar todos
-
+                MessageBox.Show("Por gentileza, preencha apenas um dos campos para Busca!", "Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClasseUtil.LimparCampos(abaExibiCliente.Controls);
             }
+            ClasseUtil.LimparCampos(abaExibiCliente.Controls);
         }
 
         private void btnEditarCli_Click(object sender, System.EventArgs e)
@@ -97,12 +109,29 @@ namespace LojaGames.View
 
         private void btnExcluirCli_Click(object sender, System.EventArgs e)
         {
-            DialogResult rm = MessageBox.Show("Deseja remover o Cliente selecionado?", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (rm == DialogResult.Yes)
+            if(dgvExibeCli.CurrentRow != null)
             {
-                MessageBox.Show("Cliente removido com Sucesso");
+                DialogResult remover = MessageBox.Show("Deseja remover o cliente selecionado?", "Remoção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                int linha = dgvExibeCli.CurrentRow.Index;
+
+                if(remover == DialogResult.Yes)
+                {
+                    long cpf_cliente = Convert.ToInt64(dgvExibeCli[0, linha].Value.ToString());
+
+                    clienteBanco.RemoverCliente(cpf_cliente);
+                    pessoaBanco.RemoverPessoa(cpf_cliente);
+
+                    MessageBox.Show("Cliente Removido com Sucesso!");
+
+                    btnExibirTodosCli_Click(sender, e);
+                }
             }
+            else
+            {
+                MessageBox.Show("Nenhum cliente selecionado!");
+            }
+            dgvExibeCli.RefreshEdit();
         }
 
         private void btnCancelarCli_Click(object sender, System.EventArgs e)

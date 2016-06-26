@@ -86,5 +86,52 @@ namespace LojaGames.Model.DAO
             conexao.Close();
             return dtCliente;
         }
+
+        public void Delete(long cpf_cli)
+        {
+            Banco dbGames = Banco.GetInstance();
+
+            string qry = "DELETE from CLIENTE where cpf_cliente = " + cpf_cli + "";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            dbGames.ExecuteSQL_NonQuery(comm);
+        }
+
+        public DataTable BuscaCliente_CPF(string cpf_cli)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dtCliente = new DataTable();
+
+            string qry = "SELECT c.cpf_cliente as CPF, p.nome as Nome, p.rg as RG, p.data_nascimento as Data_Nascimento, p.telefone as Telefone, p.sexo as Sexo, p.estado_civil as Estado_Civil, p.email as Email, p.rua as Rua, p.numero as Numero, p.bairro as Bairro, p.estado as Estado, p.cep as CEP, p.cidade as Cidade"
+                + " FROM cliente c, pessoa p where c.cpf_cliente = p.cpf_pessoa and c.cpf_cliente = " + cpf_cli + "";
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dtCliente);
+
+            conexao.Close();
+            return dtCliente;
+        }
+
+        public DataTable BuscaCliente_Nome(string nome)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dtCliente = new DataTable();
+
+            string qry = "SELECT c.cpf_cliente as CPF, p.nome as Nome, p.rg as RG, p.data_nascimento as Data_Nascimento, p.telefone as Telefone, p.sexo as Sexo, p.estado_civil as Estado_Civil, p.email as Email, p.rua as Rua, p.numero as Numero, p.bairro as Bairro, p.estado as Estado, p.cep as CEP, p.cidade as Cidade"
+                       + " FROM cliente c, pessoa p WHERE p.cpf_pessoa = c.cpf_cliente and p.nome like '%" + nome + "%'";
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dtCliente);
+
+            conexao.Close();
+            return dtCliente;
+        }
     }
 }

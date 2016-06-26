@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using LojaGames.Model;
 using LojaGames.Model.DAO;
 using System.Windows.Forms;
+using System.Data;
 
 namespace LojaGames.Controller
 {
@@ -36,6 +37,21 @@ namespace LojaGames.Controller
         public void ExibirTodosClientes(DataGridView dataGrid)
         {
             dataGrid.DataSource = clienteDao.ListAllClientes();
+        }
+
+        public void RemoverCliente(long removeCpf)
+        {
+            clienteDao.Delete(removeCpf);
+        }
+
+        public DataTable BuscarCliente_CPF(string cpf_cliente)
+        {
+            return clienteDao.BuscaCliente_CPF(cpf_cliente);
+        }
+
+        public DataTable BuscarCliente_NOME(string nome)
+        {
+            return clienteDao.BuscaCliente_Nome(nome);
         }
     }
 }

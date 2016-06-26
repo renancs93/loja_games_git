@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
             this.lbCodAlug = new System.Windows.Forms.Label();
@@ -215,14 +215,14 @@
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvCodAlug,
             this.dgvDescAlug,
@@ -234,6 +234,8 @@
             this.dgvProdutosAluga.RowHeadersWidth = 50;
             this.dgvProdutosAluga.Size = new System.Drawing.Size(751, 218);
             this.dgvProdutosAluga.TabIndex = 12;
+            this.dgvProdutosAluga.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProdutosAluga_RowsAdded);
+            this.dgvProdutosAluga.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdutosAluga_RowsRemoved);
             // 
             // dgvCodAlug
             // 
@@ -539,7 +541,7 @@
             this.txtCodFuncVenda.Location = new System.Drawing.Point(115, 66);
             this.txtCodFuncVenda.Name = "txtCodFuncVenda";
             this.txtCodFuncVenda.Size = new System.Drawing.Size(134, 23);
-            this.txtCodFuncVenda.TabIndex = 32;
+            this.txtCodFuncVenda.TabIndex = 2;
             this.txtCodFuncVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFuncVenda_KeyPress);
             this.txtCodFuncVenda.Leave += new System.EventHandler(this.txtCodFuncVenda_Leave);
             // 
@@ -556,7 +558,7 @@
             this.groupBox1.Location = new System.Drawing.Point(5, 101);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(759, 319);
-            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produtos";
             // 
@@ -626,7 +628,7 @@
             this.btnRemoverItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoverItem.Name = "btnRemoverItem";
             this.btnRemoverItem.Size = new System.Drawing.Size(137, 30);
-            this.btnRemoverItem.TabIndex = 9;
+            this.btnRemoverItem.TabIndex = 6;
             this.btnRemoverItem.Text = "Remover Item";
             this.btnRemoverItem.UseVisualStyleBackColor = true;
             this.btnRemoverItem.Click += new System.EventHandler(this.btnRemoverItem_Click);
@@ -648,28 +650,28 @@
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colunaCodigo,
             this.colunaNome,
             this.colunaValorUnitario,
             this.colunaQtd,
             this.colunaValorTotalItem});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProdutosVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvProdutosVenda.Location = new System.Drawing.Point(3, 98);
             this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
@@ -758,7 +760,7 @@
             0});
             this.numParcelas_Venda.Name = "numParcelas_Venda";
             this.numParcelas_Venda.Size = new System.Drawing.Size(60, 23);
-            this.numParcelas_Venda.TabIndex = 7;
+            this.numParcelas_Venda.TabIndex = 8;
             this.numParcelas_Venda.Value = new decimal(new int[] {
             1,
             0,
@@ -773,7 +775,7 @@
             this.cbxFormasPagamentosCompra.Location = new System.Drawing.Point(281, 437);
             this.cbxFormasPagamentosCompra.Name = "cbxFormasPagamentosCompra";
             this.cbxFormasPagamentosCompra.Size = new System.Drawing.Size(97, 24);
-            this.cbxFormasPagamentosCompra.TabIndex = 6;
+            this.cbxFormasPagamentosCompra.TabIndex = 7;
             // 
             // lbNumeroParcelas
             // 

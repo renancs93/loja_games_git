@@ -40,13 +40,13 @@ namespace LojaGames
 
                 //MessageBox.Show("Produto adicionado na lista!", "Venda");
                 txtCodProdVenda.Text = string.Empty;
-                numQuantidade.Value = 0;
+                numQuantidade.Value = 1;
             }
             else
             {
                 MessageBox.Show("Dados Inválidos, tente novamente!", "Venda");
                 txtCodProdVenda.Text = string.Empty;
-                numQuantidade.Value = 0;
+                numQuantidade.Value = 1;
             }
 
 
@@ -56,16 +56,21 @@ namespace LojaGames
         {
             //Esse botão terá que remover um item da lista de compra do cliente
 
-            DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Venda", MessageBoxButtons.YesNo);
-
-            if (RmItem == DialogResult.Yes)
+            if (dgvProdutosVenda.CurrentRow != null)
             {
-                MessageBox.Show("Item Removido!");
-                txtCodProdVenda.Text = string.Empty;
-                numQuantidade.Value = 0;
+                int linha = dgvProdutosVenda.CurrentRow.Index;
+
+                DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Venda", MessageBoxButtons.YesNo);
+
+                if (RmItem == DialogResult.Yes)
+                {
+                    dgvProdutosVenda.Rows.RemoveAt(linha);
+                }
             }
-
-
+            else
+            {
+                MessageBox.Show("Nenhum produto selecionado!", "Remover Item");
+            }
         }
 
         //Metodo para a TelaPrincipal
@@ -100,12 +105,20 @@ namespace LojaGames
 
             if(FecharCompra == DialogResult.Yes)
             {
-                //codigo que verifica a venda e faz a baixa do estoque
+                //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
+
+
+
 
 
                 MessageBox.Show("Compra realizada com sucesso!");
-                Close();
-                telaP.Show();
+                
+                //gera o próximo codigo de venda
+                VendaBanco gera_codigo = new VendaBanco();
+                lbCodVenda.Text = ((1 + gera_codigo.codigoAtual_venda()).ToString());
+                
+                //Close();
+                //telaP.Show();
             }
 
 
@@ -147,7 +160,7 @@ namespace LojaGames
         {
             MessageBox.Show("Produto adicionado na lista!", "Aluguel");
             txtCodProdAluga.Text = string.Empty;
-            numDiasAlug.Value = 0;
+            numDiasAlug.Value = 1;
 
         }
 
@@ -159,7 +172,7 @@ namespace LojaGames
             {
                 MessageBox.Show("Item Removido!");
                 txtCodProdAluga.Text = string.Empty;
-                numDiasAlug.Value = 0;
+                numDiasAlug.Value = 1;
             }
 
         }
@@ -198,18 +211,28 @@ namespace LojaGames
 
         private void mtbCPFVenda_Leave(object sender, EventArgs e)
         {
+            if(mtbCPFVenda.Text.Trim() != string.Empty)
+            {
+                long cpf_cli = Convert.ToInt64(mtbCPFVenda.Text);
+                ClienteBanco cliente = new ClienteBanco();
+                txtConfirmaNomeCliente.Text = (cliente.Buscar_Cliente_apenasNome(cpf_cli)).ToString();
+
+            }
 
         }
 
         private void mtbCPFAluguel_Leave(object sender, EventArgs e)
         {
-
+            if (mtbCPFAluguel.Text.Trim() != string.Empty)
+            {
+                
+            }
 
         }
 
         private void txtCodFuncVenda_Leave(object sender, EventArgs e)
         {
-            if (txtCodFuncVenda.Text != string.Empty)
+            if (txtCodFuncVenda.Text.Trim() != string.Empty)
             {
                 int codigo_funcionario = Convert.ToInt32(txtCodFuncVenda.Text);
 
@@ -221,7 +244,7 @@ namespace LojaGames
 
         private void txtCodFuncAluga_Leave(object sender, EventArgs e)
         {
-            if (txtCodFuncAluga.Text != string.Empty)
+            if (txtCodFuncAluga.Text.Trim() != string.Empty)
             {
                 int codigo_funcionario = Convert.ToInt32(txtCodFuncAluga.Text);
 
@@ -232,7 +255,7 @@ namespace LojaGames
 
         private void txtCodProdVenda_Leave(object sender, EventArgs e)
         {
-            if (txtCodProdVenda.Text != string.Empty)
+            if (txtCodProdVenda.Text.Trim() != string.Empty)
             {
                 int codigo_produto = Convert.ToInt32(txtCodProdVenda.Text);
 
@@ -243,7 +266,7 @@ namespace LojaGames
 
         private void txtCodProdAluga_Leave(object sender, EventArgs e)
         {
-            if (txtCodProdAluga.Text != string.Empty)
+            if (txtCodProdAluga.Text.Trim() != string.Empty)
             {
                 int codigo_produto = Convert.ToInt32(txtCodProdAluga.Text);
 
@@ -255,9 +278,52 @@ namespace LojaGames
 
         private void telaVenda_Load(object sender, EventArgs e)
         {
-            //exibir os dados da tabela pagamento no campo de forma de pagamento
+            //exibir os dados da tabela pagamento no campo de forma de pagamento de compra e aluga
+            VendaBanco tiposPagamento = new VendaBanco();
+            tiposPagamento.preencheTiposPagamento(cbxFormasPagamentosCompra);
+            tiposPagamento.preencheTiposPagamento(cbxFormasPagamentoAluguel);
+
+            //gera o próximo codigo de venda
+            VendaBanco gera_codigo = new VendaBanco();
+            lbCodVenda.Text = ((1 + gera_codigo.codigoAtual_venda()).ToString());
+
+        }
+
+        private Venda populaVenda()
+        {
+            Venda v = new Venda();
+
+            //pegar os dados de uma linha do dataGrid
 
 
+            return v;
+        }
+
+
+        //os eeventos de adição e remoção de linha no datagrid servirão pra atualizar os Valores total de compras e valor das parcelas
+        private void dgvProdutosVenda_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int qntProdutos = dgvProdutosVenda.Rows.Count;
+            float total = 0;
+
+            for(int x=0; x < qntProdutos; x++)
+            {
+                total += float.Parse((dgvProdutosVenda[4,x].Value).ToString());
+            }
+            
+            txtTotalCompra.Text = total.ToString();
+            txtValorParcela.Text = ((total) / (double)(numParcelas_Venda.Value)).ToString();
+
+        }
+
+        private void dgvProdutosVenda_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+
+        }
+
+        private void numParcelas_Venda_ValueChanged(object sender, EventArgs e)
+        {
+            txtValorParcela.Text = Convert.ToString(((float.Parse(txtTotalCompra.Text)) / (int.Parse(numParcelas_Venda.Value.ToString()))));
         }
     }
 }

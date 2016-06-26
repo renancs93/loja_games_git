@@ -1,4 +1,4 @@
-create database games;
+﻿create database games;
 
 use games;
 
@@ -83,5 +83,4 @@ insert into pagamento values (1, 'Dinheiro');
 insert into pagamento values (2, 'Cheque');
 insert into pagamento values (3, 'Débito');
 insert into pagamento values (4, 'Credito');
-insert into pagamento values (5, 'Crédito');
-insert into pagamento values (6, 'Boleto');
+insert into pagamento values (5, 'Boleto');

@@ -27,7 +27,12 @@ namespace LojaGames.Controller
         {
             return clienteDao.Read(cpf);
         }
-        
+
+        public string Buscar_Cliente_apenasNome(long cpf)
+        {
+            return clienteDao.BuscarCli_cpf(cpf);
+        }
+
         public void ExibirTodosClientes(DataGridView dataGrid)
         {
             dataGrid.DataSource = clienteDao.ListAllClientes();

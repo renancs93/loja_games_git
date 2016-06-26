@@ -13,12 +13,24 @@ namespace LojaGames.Controller
     {
 
         JogosDAO jogosDao = new JogosDAO();
+        VendaDAO vendaDao = new VendaDAO();
 
         public List<Jogos> AddItem_ListaVenda(int cod)
         {
             return jogosDao.ProcuraCodigo(cod);
         }
 
+        public int codigoAtual_venda()
+        {
+            return vendaDao.max_cod_venda();
+        }
+
+        public void preencheTiposPagamento(System.Windows.Forms.ComboBox cbxPG)
+        {
+            cbxPG.DataSource = vendaDao.tiposPagamento();
+            cbxPG.DisplayMember = "tipo";
+
+        }
 
     }
 }

@@ -186,13 +186,13 @@ namespace LojaGames.Model.DAO
             //MySqlConnection conexao = Banco.GetInstance().GetConnection();
             Banco conexao = Banco.GetInstance();
 
-            string qry = "SELECT distinct MAX(codigo_funcionario) from funcionario";
+            string qry = "SELECT MAX(codigo_funcionario) from funcionario";
 
             MySqlCommand comm = new MySqlCommand(qry);
 
             total = conexao.ExecuteSQL_Scalar_int(comm);
 
-            if(total == null)
+            if(total == null || total == System.Convert.ToInt32(string.Empty))
             {
                 total = 0;
             }

@@ -49,6 +49,27 @@ namespace LojaGames.Model.DAO
             return c;
         }
 
+        public string BuscarCli_cpf(long cpf)
+        {
+            string nome;
+
+            //MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            Banco conexao = Banco.GetInstance();
+
+            string qry = "SELECT p.nome FROM pessoa p, cliente c WHERE  c.cpf_cliente = "+ cpf;
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            nome = conexao.ExecuteSQL_Scalar_string(comm);
+
+            if (nome == null || nome == string.Empty)
+            {
+                nome = "Funcionário não encontrado";
+            }
+
+            return nome;
+        }
+
         public DataTable ListAllClientes()
         {
             MySqlConnection conexao = Banco.GetInstance().GetConnection();

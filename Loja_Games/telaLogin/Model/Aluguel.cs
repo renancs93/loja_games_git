@@ -41,7 +41,7 @@ namespace LojaGames.Model
             }
             set
             {
-                CodigoJogo = value > 0 ? value : 0;
+                codigoJogo = value >= 0 ? value : 0;
             }
         }
         public string Pagamento { get; set; }

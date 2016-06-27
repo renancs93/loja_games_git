@@ -130,7 +130,7 @@ namespace LojaGames
                 AluguelBanco aluguelBanco = new AluguelBanco();
 
                 //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
-                int quantidadeItems = dgvProdutosVenda.RowCount;
+                int quantidadeItems = dgvProdutosAluga.RowCount;
 
                 for(int i = 0; i < quantidadeItems; i++)
                 {
@@ -139,7 +139,7 @@ namespace LojaGames
                     string colunaCPF_Funcionario = (dgvProdutosAluga[1, i].Value.ToString());
                     int colunaCodigo = Convert.ToInt32(dgvProdutosAluga[2, i].Value);
                     int diasAluguel = Convert.ToInt32(dgvProdutosAluga[4, i].Value);
-                    double valor_total = Convert.ToDouble(dgvProdutosAluga[6, i].Value);
+                    double valor_total = Convert.ToDouble(dgvProdutosAluga[5, i].Value);
                     string pagamento = cbxFormasPagamentoAluguel.Text;
 
                     aluguelBanco.RegistraAluguel(populaAluguel(codigoAluguel, colunaCPF_Cliente, colunaCPF_Funcionario, colunaCodigo, diasAluguel, valor_total, pagamento));
@@ -147,12 +147,6 @@ namespace LojaGames
 
                 MessageBox.Show("Aluguel realizada com sucesso!");
                 ClasseUtil.LimparCampos(abaAluguel.Controls);
-
-                //gera o próximo codigo de venda
-                //telaVenda_Load(sender, e);
-                
-                //AluguelBanco gera_codigo_aluguel = new AluguelBanco();
-                //lbCodAlug.Text = Convert.ToString(1 + gera_codigo_aluguel.codigoAtual_Aluguel());
             }
         }
 
@@ -313,6 +307,9 @@ namespace LojaGames
             //gera o próximo codigo de venda
             VendaBanco gera_codigo = new VendaBanco();
             lbCodVenda.Text = (1 + gera_codigo.codigoAtual_venda()).ToString();
+
+            AluguelBanco gera_codigo_atual = new AluguelBanco();
+            lbCodAlug.Text = (1 + gera_codigo_atual.codigoAtual_Aluguel()).ToString();
         }
 
         //os eeventos de adição e remoção de linha no datagrid servirão pra atualizar os Valores total de compras e valor das parcelas

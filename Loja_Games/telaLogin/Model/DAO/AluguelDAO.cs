@@ -39,7 +39,7 @@ namespace LojaGames.Model.DAO
 
         public int max_cod_aluguel()
         {
-            int total;
+            int totalContador;
 
             Banco conexao = Banco.GetInstance();
 
@@ -47,9 +47,9 @@ namespace LojaGames.Model.DAO
 
             MySqlCommand comm = new MySqlCommand(qry);
 
-            total = conexao.ExecuteSQL_Scalar_int(comm);
+            totalContador = conexao.ExecuteSQL_Scalar_int(comm);
             
-            return total;
+            return totalContador;
         }
     }
 }

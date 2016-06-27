@@ -53,10 +53,10 @@ namespace LojaGames.Model
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
 
-            int valor = Convert.ToInt32(comando.ExecuteScalar());
+            int resultado = Convert.ToInt32(comando.ExecuteScalar());
             
             conexao.Close();
-            return valor;
+            return resultado;
         }
 
         public string ExecuteSQL_Scalar_string(MySqlCommand comando)

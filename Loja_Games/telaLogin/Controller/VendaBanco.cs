@@ -20,16 +20,22 @@ namespace LojaGames.Controller
             return jogosDao.ProcuraCodigo(cod);
         }
 
+        
         public int codigoAtual_venda()
         {
             return vendaDao.max_cod_venda();
         }
+       
 
         public void preencheTiposPagamento(System.Windows.Forms.ComboBox cbxPG)
         {
             cbxPG.DataSource = vendaDao.tiposPagamento();
             cbxPG.DisplayMember = "tipo";
+        }
 
+        public void registraVenda(Venda v)
+        {
+            vendaDao.Create(v);
         }
 
     }

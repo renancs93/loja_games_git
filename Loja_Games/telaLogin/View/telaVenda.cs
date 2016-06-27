@@ -99,31 +99,6 @@ namespace LojaGames
             
         }
 
-        private void btnFinalizarVenda_Click(object sender, EventArgs e)
-        {
-            DialogResult FecharCompra = MessageBox.Show("Deseja realmente finalizar a venda?", "Finalizar Compra", MessageBoxButtons.YesNo);
-
-            if(FecharCompra == DialogResult.Yes)
-            {
-                //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
-
-
-
-
-
-                MessageBox.Show("Compra realizada com sucesso!");
-                
-                //gera o próximo codigo de venda
-                VendaBanco gera_codigo = new VendaBanco();
-                lbCodVenda.Text = ((1 + gera_codigo.codigoAtual_venda()).ToString());
-                
-                //Close();
-                //telaP.Show();
-            }
-
-
-        }
-
         private void txtProdAlug_TextChanged(object sender, EventArgs e)
         {
 
@@ -175,7 +150,7 @@ namespace LojaGames
             }
             else
             {
-                MessageBox.Show("Dados Inválidos!, tente novamente!", "Venda");
+                MessageBox.Show("Dados Inválidos!, tente novamente!", "Aluga");
                 txtCodProdAluga.Text = string.Empty;
                 numDiasAlug.Value = 1;
             }
@@ -312,19 +287,8 @@ namespace LojaGames
 
             //gera o próximo codigo de venda
             VendaBanco gera_codigo = new VendaBanco();
-            lbCodVenda.Text = ((1 + gera_codigo.codigoAtual_venda()).ToString());
+            lbCodVenda.Text = (1 + gera_codigo.codigoAtual_venda()).ToString();
         }
-
-        private Venda populaVenda()
-        {
-            Venda v = new Venda();
-
-            //pegar os dados de uma linha do dataGrid
-
-
-            return v;
-        }
-
 
         //os eeventos de adição e remoção de linha no datagrid servirão pra atualizar os Valores total de compras e valor das parcelas
         private void dgvProdutosVenda_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -385,5 +349,69 @@ namespace LojaGames
 
             txtTotalAluguel.Text = totalAluguel.ToString();
         }
+
+        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            DialogResult FecharCompra = MessageBox.Show("Deseja realmente finalizar a venda?", "Finalizar Compra", MessageBoxButtons.YesNo);
+
+            if (FecharCompra == DialogResult.Yes)
+            {
+                VendaBanco venda = new VendaBanco();
+
+                //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
+                int quantidadeItems = dgvProdutosVenda.RowCount;
+                
+                for(int i=0 ; i<quantidadeItems; i++)
+                {
+                    int colunaCodigo = Convert.ToInt32(dgvProdutosVenda[0, i].Value);
+                    int colunaQtd = Convert.ToInt32(dgvProdutosVenda[3, i].Value);
+                    float valor_total_item = float.Parse(dgvProdutosVenda[4, i].Value.ToString());
+
+                    venda.registraVenda(populaVenda(colunaCodigo, colunaQtd, valor_total_item));
+                }
+
+
+                MessageBox.Show("Compra realizada com sucesso!");
+
+                //gera o próximo codigo de venda
+                telaVenda_Load(sender, e);
+
+                //VendaBanco gera_codigo = new VendaBanco();
+                //lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
+
+                //Close();
+                //telaP.Show();
+            }
+
+
+        }
+
+        private Venda populaVenda(int cod, int qtd, float total_item)
+        {
+            FuncionarioBanco f = new FuncionarioBanco();
+            PagamentoBanco p = new PagamentoBanco();
+
+            //pegar os dados de uma linha do dataGrid
+            Venda v = new Venda();
+
+            v.CodigoVenda = Convert.ToInt32(lbCodVenda.Text);
+            v.Funcionario.CPF = f.BuscarFuncionario_codigo_retornaCPF(Convert.ToInt32(txtCodFuncVenda.Text));
+            v.Cliente.CPF = Convert.ToInt64(mtbCPFVenda.Text);
+            v.Jogos.Codigo = cod;
+            v.Pagamento.Codigo_pagamento = p.buscaCodPagamento(cbxFormasPagamentosCompra.Text);
+            v.Quantidade = qtd;
+            v.NumeroParcelas = Convert.ToInt32(numParcelas_Venda.Value);
+            v.ValorParcelas = float.Parse(txtValorParcela.Text);
+            v.Total = total_item;
+
+            return v;
+        }
+
+
+     
+
+
+
+
     }
 }

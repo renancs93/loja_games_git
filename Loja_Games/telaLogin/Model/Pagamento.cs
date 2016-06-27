@@ -8,6 +8,35 @@ namespace LojaGames.Classes
 {
     class Pagamento
     {
+        private int codigo_pagamento;
+        private string tipo;
+
+        public int Codigo_pagamento
+        {
+            get
+            {
+                return codigo_pagamento;
+            }
+
+            set
+            {
+                codigo_pagamento = value;
+            }
+        }
+
+        public string Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+
+            set
+            {
+                tipo = value;
+            }
+        }
+
         //Declaração das Variáveis       
         public enum tipoPagamento
         {
@@ -18,22 +47,6 @@ namespace LojaGames.Classes
             Boleto = 5
         }
         
-        //Declaração das Propriedades
 
-        //Declaração dos métodos
-        public void AdicionarPagamento()
-        {
-
-        }
-
-        public void RemoverPagamento()
-        {
-
-        }
-
-        public void EditarDadosPagamento()
-        {
-
-        }
     }
 }

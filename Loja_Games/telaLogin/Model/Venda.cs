@@ -11,8 +11,8 @@ namespace LojaGames.Classes
         //Declaração das Variáveis
         private int codigoVenda;
         private Cliente cliente;
-        private Jogos jogos;
         private Funcionario funcionario;
+        private Jogos jogos;
         private int quantidade;
         private Pagamento pagamento;
         private int numeroParcelas;
@@ -49,7 +49,7 @@ namespace LojaGames.Classes
             }
         }
 
-        public string Pagamento { get; set; }
+        public Pagamento Pagamento { get; set; }
 
         public int NumeroParcelas
         {
@@ -87,20 +87,5 @@ namespace LojaGames.Classes
             }
         }
 
-        //Declaração dos métodos
-        public void AdicionarVenda()
-        {
-
-        }
-
-        public void RemoverVenda()
-        {
-
-        }
-
-        public void EditarDadosVenda()
-        {
-
-        }
     }
 }

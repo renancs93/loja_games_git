@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using LojaGames.Classes;
 using MySql.Data.MySqlClient;
@@ -178,6 +179,25 @@ namespace LojaGames.Model.DAO
             return nome;
         }
 
+        public long BuscarFunc_PorCod_retCPF(int codigo)
+        {
+            long cpf;
+
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            //Banco conexao = Banco.GetInstance();
+
+            string qry = "SELECT f.cpf_funcionario FROM pessoa p, funcionario f WHERE p.cpf_pessoa = f.cpf_funcionario and f.codigo_funcionario = " + codigo;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlCommand comm = new MySqlCommand(qry, conexao);
+
+            cpf = Convert.ToInt64(comm.ExecuteScalar());
+            
+            return cpf;
+        }
+
 
         public int prox_cod_funcionario()
         {
@@ -192,7 +212,7 @@ namespace LojaGames.Model.DAO
 
             total = conexao.ExecuteSQL_Scalar_int(comm);
 
-            if(total == null || total == System.Convert.ToInt32(string.Empty))
+            if(total == null)
             {
                 total = 0;
             }

@@ -367,35 +367,35 @@ namespace LojaGames
                 
                 for(int i=0 ; i<quantidadeItems; i++)
                 {
+                    int codigoVenda = int.Parse(lbCodVenda.Text);
                     string colunaCpf_cliente = (dgvProdutosVenda[0, i].Value.ToString());
                     string colunaCpf_funcionario = (dgvProdutosVenda[1, i].Value.ToString());
                     int colunaCodigo = Convert.ToInt32(dgvProdutosVenda[2, i].Value);
-                    int codigoPagamento = venda.SelecionaPagamento(cbxFormasPagamentosCompra.Text);
                     int quantidade = Convert.ToInt32(dgvProdutosVenda[5, i].Value.ToString());
                     int numParcelas = Convert.ToInt32(numParcelas_Venda.Value);
                     double valorParcela = Convert.ToDouble(txtValorParcela.Text);
-                    double valorTotal = Convert.ToDouble(txtTotalCompra.Text);
-                    
-                    venda.registraVenda(populaVenda(colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, codigoPagamento, quantidade, numParcelas, valorParcela, valorTotal));
+                    double valorTotal = Convert.ToDouble(dgvProdutosVenda[6, i].Value);
+                    string pagamento = cbxFormasPagamentosCompra.Text;
+
+                    venda.registraVenda(populaVenda(codigoVenda, colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, quantidade, numParcelas, valorParcela, valorTotal, pagamento));
                 }
 
 
                 MessageBox.Show("Compra realizada com sucesso!");
+                ClasseUtil.LimparCampos(abaVenda.Controls);
+                
 
                 //gera o próximo codigo de venda
                 telaVenda_Load(sender, e);
 
-                //VendaBanco gera_codigo = new VendaBanco();
-                //lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
-
-                //Close();
-                //telaP.Show();
+                VendaBanco gera_codigo = new VendaBanco();
+                lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
             }
 
 
         }
 
-        private Venda populaVenda(string cpf_cliente, string cpf_funcionario, int codigo, int codigoPagamento, int qtde, int parcelas, double valorParcela, double total)
+        private Venda populaVenda(int codigoV, string cpf_cliente, string cpf_funcionario, int codigo, int qtde, int parcelas, double valorParcela, double total, string pag)
         {
             FuncionarioBanco f = new FuncionarioBanco();
             PagamentoBanco p = new PagamentoBanco();
@@ -404,14 +404,15 @@ namespace LojaGames
             //Venda v = new Venda();
 
             //v.CodigoVenda = Convert.ToInt32(lbCodVenda.Text);
+            v.CodigoVenda = codigoV;
             v.CPF_Cliente = cpf_cliente;
             v.CPF_Funcionario = cpf_funcionario;
             v.CodJogos = codigo;
-            v.CodPagamento = codigoPagamento;
             v.Quantidade = qtde;
             v.NumeroParcelas = parcelas;
             v.ValorParcelas = float.Parse(valorParcela.ToString());
             v.Total = float.Parse(total.ToString());
+            v.Pagamento = pag;
 
             return v;
         }

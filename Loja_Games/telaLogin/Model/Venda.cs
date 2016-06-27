@@ -14,7 +14,7 @@ namespace LojaGames.Classes
         private string cpf_funcionario;
         private int codJogos;
         private int quantidade;
-        private int codPagamento;
+        private string pagamento;
         private int numeroParcelas;
         private float valorParcelas;
         private float total;
@@ -72,15 +72,15 @@ namespace LojaGames.Classes
             }
         }
 
-        public int CodPagamento
+        public string Pagamento
         {
             get
             {
-                return codPagamento;
+                return pagamento;
             }
             set
             {
-                codPagamento = value > 0 ? value : 0;
+                pagamento = value;
             }
         } 
 

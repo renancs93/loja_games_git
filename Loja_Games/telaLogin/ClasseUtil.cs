@@ -73,14 +73,11 @@ namespace LojaGames
                 }
                 else if (campo.GetType() == typeof(NumericUpDown))
                 {
-                    ((NumericUpDown)campo).Value = 0;
+                    ((NumericUpDown)campo).Value = 1;
                 }
-
-
             }
-            
         }
-
+        
         //validas diversos campos das telas de acordo com o tipo
         public static string ValidaCampos(Control.ControlCollection componentes)
         {

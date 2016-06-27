@@ -38,9 +38,9 @@ namespace LojaGames.Controller
             vendaDao.Create(v);
         }
 
-        public int  SelecionaPagamento(string nome)
+        /*public int  SelecionaPagamento(string nome)
         {
             return vendaDao.TipoPagamento(nome);
-        }
+        }*/
     }
 }

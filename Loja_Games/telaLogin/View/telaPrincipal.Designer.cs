@@ -47,7 +47,7 @@
             this.btnJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJogos.ForeColor = System.Drawing.Color.Red;
-            this.btnJogos.Location = new System.Drawing.Point(545, 64);
+            this.btnJogos.Location = new System.Drawing.Point(545, 155);
             this.btnJogos.Name = "btnJogos";
             this.btnJogos.Size = new System.Drawing.Size(119, 35);
             this.btnJogos.TabIndex = 1;
@@ -105,7 +105,7 @@
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVenda.ForeColor = System.Drawing.Color.Red;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenda.Location = new System.Drawing.Point(545, 104);
+            this.btnVenda.Location = new System.Drawing.Point(545, 195);
             this.btnVenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(119, 35);
@@ -138,7 +138,7 @@
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.Red;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(545, 228);
+            this.btnRelatorios.Location = new System.Drawing.Point(545, 235);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Size = new System.Drawing.Size(119, 36);
             this.btnRelatorios.TabIndex = 6;
@@ -155,7 +155,7 @@
             this.btnClientes.BackColor = System.Drawing.Color.Black;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.Red;
-            this.btnClientes.Location = new System.Drawing.Point(545, 144);
+            this.btnClientes.Location = new System.Drawing.Point(545, 71);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(119, 36);
             this.btnClientes.TabIndex = 10;
@@ -172,7 +172,7 @@
             this.btnFuncionarios.BackColor = System.Drawing.Color.Black;
             this.btnFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionarios.ForeColor = System.Drawing.Color.Red;
-            this.btnFuncionarios.Location = new System.Drawing.Point(545, 186);
+            this.btnFuncionarios.Location = new System.Drawing.Point(545, 113);
             this.btnFuncionarios.Name = "btnFuncionarios";
             this.btnFuncionarios.Size = new System.Drawing.Size(119, 36);
             this.btnFuncionarios.TabIndex = 11;

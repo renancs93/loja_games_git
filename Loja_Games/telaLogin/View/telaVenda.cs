@@ -147,6 +147,10 @@ namespace LojaGames
 
                 MessageBox.Show("Aluguel realizada com sucesso!");
                 ClasseUtil.LimparCampos(abaAluguel.Controls);
+                dgvProdutosAluga.Rows.Clear();
+                
+                //atualiza o codigo do aluguel
+                lbCodAlug.Text = (1 + aluguelBanco.codigoAtual_Aluguel()).ToString();
             }
         }
 
@@ -400,9 +404,6 @@ namespace LojaGames
                 ClasseUtil.LimparCampos(abaVenda.Controls);
                 dgvProdutosVenda.Rows.Clear();
                 
-                //gera o próximo codigo de venda
-                telaVenda_Load(sender, e);
-
                 VendaBanco gera_codigo = new VendaBanco();
                 lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
             }

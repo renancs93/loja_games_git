@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abaAluguel = new System.Windows.Forms.TabPage();
             this.gpbAlug = new System.Windows.Forms.GroupBox();
             this.lbCodAlug = new System.Windows.Forms.Label();
@@ -39,6 +39,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtExibeNomeJogo = new System.Windows.Forms.TextBox();
             this.dgvProdutosAluga = new System.Windows.Forms.DataGridView();
+            this.colunaCPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPF_Func = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddAlug = new System.Windows.Forms.Button();
             this.btnRemAlug = new System.Windows.Forms.Button();
             this.numDiasAlug = new System.Windows.Forms.NumericUpDown();
@@ -97,12 +103,6 @@
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
-            this.colunaCPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaCPF_Func = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -177,7 +177,6 @@
             this.txtExibeNomeFuncionario.Name = "txtExibeNomeFuncionario";
             this.txtExibeNomeFuncionario.Size = new System.Drawing.Size(291, 23);
             this.txtExibeNomeFuncionario.TabIndex = 28;
-            this.txtExibeNomeFuncionario.Text = "Nome do Funcionário";
             // 
             // txtExibeNomeCliente
             // 
@@ -186,7 +185,6 @@
             this.txtExibeNomeCliente.Name = "txtExibeNomeCliente";
             this.txtExibeNomeCliente.Size = new System.Drawing.Size(291, 23);
             this.txtExibeNomeCliente.TabIndex = 27;
-            this.txtExibeNomeCliente.Text = "Nome do Cliente";
             // 
             // groupBox2
             // 
@@ -212,21 +210,20 @@
             this.txtExibeNomeJogo.Name = "txtExibeNomeJogo";
             this.txtExibeNomeJogo.Size = new System.Drawing.Size(291, 23);
             this.txtExibeNomeJogo.TabIndex = 13;
-            this.txtExibeNomeJogo.Text = "Nome do Jogo";
             // 
             // dgvProdutosAluga
             // 
             this.dgvProdutosAluga.AllowUserToAddRows = false;
             this.dgvProdutosAluga.AllowUserToDeleteRows = false;
             this.dgvProdutosAluga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colunaCPF_Cliente,
             this.colunaCPF_Func,
@@ -242,6 +239,36 @@
             this.dgvProdutosAluga.TabIndex = 12;
             this.dgvProdutosAluga.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProdutosAluga_RowsAdded);
             this.dgvProdutosAluga.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdutosAluga_RowsRemoved);
+            // 
+            // colunaCPF_Cliente
+            // 
+            this.colunaCPF_Cliente.HeaderText = "CPF_Cliente";
+            this.colunaCPF_Cliente.Name = "colunaCPF_Cliente";
+            // 
+            // colunaCPF_Func
+            // 
+            this.colunaCPF_Func.HeaderText = "CPF_Func";
+            this.colunaCPF_Func.Name = "colunaCPF_Func";
+            // 
+            // dgvCodAlug
+            // 
+            this.dgvCodAlug.HeaderText = "Código";
+            this.dgvCodAlug.Name = "dgvCodAlug";
+            // 
+            // dgvDescAlug
+            // 
+            this.dgvDescAlug.HeaderText = "Nome";
+            this.dgvDescAlug.Name = "dgvDescAlug";
+            // 
+            // dgvDiasAlug
+            // 
+            this.dgvDiasAlug.HeaderText = "Dias";
+            this.dgvDiasAlug.Name = "dgvDiasAlug";
+            // 
+            // colunaValor
+            // 
+            this.colunaValor.HeaderText = "Valor Total";
+            this.colunaValor.Name = "colunaValor";
             // 
             // btnAddAlug
             // 
@@ -556,7 +583,6 @@
             this.txtConfirmaNomeProduto.Name = "txtConfirmaNomeProduto";
             this.txtConfirmaNomeProduto.Size = new System.Drawing.Size(291, 23);
             this.txtConfirmaNomeProduto.TabIndex = 29;
-            this.txtConfirmaNomeProduto.Text = "Nome do Jogo";
             // 
             // lbCodigoProduto
             // 
@@ -636,14 +662,14 @@
             this.dgvProdutosVenda.AllowUserToAddRows = false;
             this.dgvProdutosVenda.AllowUserToDeleteRows = false;
             this.dgvProdutosVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colunaCPFC,
             this.colunaCPFF,
@@ -652,14 +678,14 @@
             this.colunaValorUnitario,
             this.colunaQtd,
             this.colunaValorTotalItem});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosVenda.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProdutosVenda.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvProdutosVenda.Location = new System.Drawing.Point(3, 98);
             this.dgvProdutosVenda.Margin = new System.Windows.Forms.Padding(2);
@@ -722,7 +748,6 @@
             this.txtConfirmaNomeFuncionario.Name = "txtConfirmaNomeFuncionario";
             this.txtConfirmaNomeFuncionario.Size = new System.Drawing.Size(291, 23);
             this.txtConfirmaNomeFuncionario.TabIndex = 30;
-            this.txtConfirmaNomeFuncionario.Text = "Nome do Funcionário";
             // 
             // txtConfirmaNomeCliente
             // 
@@ -732,7 +757,6 @@
             this.txtConfirmaNomeCliente.Name = "txtConfirmaNomeCliente";
             this.txtConfirmaNomeCliente.Size = new System.Drawing.Size(291, 23);
             this.txtConfirmaNomeCliente.TabIndex = 28;
-            this.txtConfirmaNomeCliente.Text = "Nome do Cliente";
             // 
             // mtbCPFVenda
             // 
@@ -912,36 +936,6 @@
             this.tcVendaAluguel.SelectedIndex = 0;
             this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
-            // 
-            // colunaCPF_Cliente
-            // 
-            this.colunaCPF_Cliente.HeaderText = "CPF_Cliente";
-            this.colunaCPF_Cliente.Name = "colunaCPF_Cliente";
-            // 
-            // colunaCPF_Func
-            // 
-            this.colunaCPF_Func.HeaderText = "CPF_Func";
-            this.colunaCPF_Func.Name = "colunaCPF_Func";
-            // 
-            // dgvCodAlug
-            // 
-            this.dgvCodAlug.HeaderText = "Código";
-            this.dgvCodAlug.Name = "dgvCodAlug";
-            // 
-            // dgvDescAlug
-            // 
-            this.dgvDescAlug.HeaderText = "Nome";
-            this.dgvDescAlug.Name = "dgvDescAlug";
-            // 
-            // dgvDiasAlug
-            // 
-            this.dgvDiasAlug.HeaderText = "Dias";
-            this.dgvDiasAlug.Name = "dgvDiasAlug";
-            // 
-            // colunaValor
-            // 
-            this.colunaValor.HeaderText = "Valor Total";
-            this.colunaValor.Name = "colunaValor";
             // 
             // telaVenda
             // 

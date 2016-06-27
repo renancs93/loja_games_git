@@ -13,8 +13,8 @@ namespace LojaGames.Model
 
         //Conexões
         //private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306; Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
-        private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
-        //private const string URL = "Server=localhost;Database=loja_games;Uid=root;Pwd=1234;";
+        //private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
+        private const string URL = "Server=localhost;Database=loja_games;Uid=root;Pwd=1234;";
 
         private Banco()
         {
@@ -40,10 +40,9 @@ namespace LojaGames.Model
                 if (conexao.State != System.Data.ConnectionState.Open)
                     conexao.Open();
 
-                comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery();
             
-                conexao.Close();
-            
+            conexao.Close();            
         }
 
         public int ExecuteSQL_Scalar_int(MySqlCommand comando)

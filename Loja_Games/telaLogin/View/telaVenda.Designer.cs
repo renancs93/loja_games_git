@@ -76,11 +76,6 @@
             this.btnRemoverItem = new System.Windows.Forms.Button();
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.dgvProdutosVenda = new System.Windows.Forms.DataGridView();
-            this.colunaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtConfirmaNomeFuncionario = new System.Windows.Forms.TextBox();
             this.txtConfirmaNomeCliente = new System.Windows.Forms.TextBox();
             this.mtbCPFVenda = new System.Windows.Forms.MaskedTextBox();
@@ -99,6 +94,13 @@
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
+            this.colunaCPFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPFF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -659,6 +661,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutosVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colunaCPFC,
+            this.colunaCPFF,
             this.colunaCodigo,
             this.colunaNome,
             this.colunaValorUnitario,
@@ -683,36 +687,6 @@
             this.dgvProdutosVenda.TabIndex = 4;
             this.dgvProdutosVenda.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProdutosVenda_RowsAdded);
             this.dgvProdutosVenda.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdutosVenda_RowsRemoved);
-            // 
-            // colunaCodigo
-            // 
-            this.colunaCodigo.HeaderText = "Código";
-            this.colunaCodigo.Name = "colunaCodigo";
-            this.colunaCodigo.ReadOnly = true;
-            // 
-            // colunaNome
-            // 
-            this.colunaNome.HeaderText = "Nome do Jogo";
-            this.colunaNome.Name = "colunaNome";
-            this.colunaNome.ReadOnly = true;
-            // 
-            // colunaValorUnitario
-            // 
-            this.colunaValorUnitario.HeaderText = "Valor Unitário";
-            this.colunaValorUnitario.Name = "colunaValorUnitario";
-            this.colunaValorUnitario.ReadOnly = true;
-            // 
-            // colunaQtd
-            // 
-            this.colunaQtd.HeaderText = "Quantidade";
-            this.colunaQtd.Name = "colunaQtd";
-            this.colunaQtd.ReadOnly = true;
-            // 
-            // colunaValorTotalItem
-            // 
-            this.colunaValorTotalItem.HeaderText = "Valor Total";
-            this.colunaValorTotalItem.Name = "colunaValorTotalItem";
-            this.colunaValorTotalItem.ReadOnly = true;
             // 
             // txtConfirmaNomeFuncionario
             // 
@@ -913,6 +887,48 @@
             this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
             // 
+            // colunaCPFC
+            // 
+            this.colunaCPFC.HeaderText = "CPF_Cliente";
+            this.colunaCPFC.Name = "colunaCPFC";
+            this.colunaCPFC.ReadOnly = true;
+            // 
+            // colunaCPFF
+            // 
+            this.colunaCPFF.HeaderText = "CPF_Func";
+            this.colunaCPFF.Name = "colunaCPFF";
+            this.colunaCPFF.ReadOnly = true;
+            // 
+            // colunaCodigo
+            // 
+            this.colunaCodigo.HeaderText = "Código Jogo";
+            this.colunaCodigo.Name = "colunaCodigo";
+            this.colunaCodigo.ReadOnly = true;
+            // 
+            // colunaNome
+            // 
+            this.colunaNome.HeaderText = "Nome do Jogo";
+            this.colunaNome.Name = "colunaNome";
+            this.colunaNome.ReadOnly = true;
+            // 
+            // colunaValorUnitario
+            // 
+            this.colunaValorUnitario.HeaderText = "Valor Unitário";
+            this.colunaValorUnitario.Name = "colunaValorUnitario";
+            this.colunaValorUnitario.ReadOnly = true;
+            // 
+            // colunaQtd
+            // 
+            this.colunaQtd.HeaderText = "Quantidade";
+            this.colunaQtd.Name = "colunaQtd";
+            this.colunaQtd.ReadOnly = true;
+            // 
+            // colunaValorTotalItem
+            // 
+            this.colunaValorTotalItem.HeaderText = "Valor Total";
+            this.colunaValorTotalItem.Name = "colunaValorTotalItem";
+            this.colunaValorTotalItem.ReadOnly = true;
+            // 
             // telaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1018,6 +1034,8 @@
         private System.Windows.Forms.TextBox txtCodFuncVenda;
         private System.Windows.Forms.Label lbCodVenda;
         private System.Windows.Forms.Label lbCodAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaCPFC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaCPFF;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaValorUnitario;

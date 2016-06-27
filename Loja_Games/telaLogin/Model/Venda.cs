@@ -10,11 +10,11 @@ namespace LojaGames.Classes
     {
         //Declaração das Variáveis
         private int codigoVenda;
-        private Cliente cliente;
-        private Funcionario funcionario;
-        private Jogos jogos;
+        private string cpf_cliente;
+        private string cpf_funcionario;
+        private int codJogos;
         private int quantidade;
-        private Pagamento pagamento;
+        private int codPagamento;
         private int numeroParcelas;
         private float valorParcelas;
         private float total;
@@ -33,9 +33,32 @@ namespace LojaGames.Classes
             }
         }
 
-        public Cliente Cliente { get; set; }
-        public Jogos Jogos { get; set; }
-        public Funcionario Funcionario { get; set; }
+        public string CPF_Cliente
+        {
+            get
+            {
+                return cpf_funcionario;
+            }
+            set
+            {
+                cpf_funcionario = value;
+            }
+        }
+        public string CPF_Funcionario { get; set; }
+
+        public int CodJogos
+        {
+            get
+            {
+                return codJogos;
+            }
+            set
+            {
+                codJogos = value > 0 ? value : 0;
+            }
+
+        }
+        
 
         public int Quantidade
         {
@@ -49,7 +72,17 @@ namespace LojaGames.Classes
             }
         }
 
-        public Pagamento Pagamento { get; set; }
+        public int CodPagamento
+        {
+            get
+            {
+                return codPagamento;
+            }
+            set
+            {
+                codPagamento = value > 0 ? value : 0;
+            }
+        } 
 
         public int NumeroParcelas
         {

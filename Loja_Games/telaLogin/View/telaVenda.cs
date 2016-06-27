@@ -10,6 +10,9 @@ namespace LojaGames
     public partial class telaVenda : Form
     {
         private Form telaP = null;
+        FuncionarioBanco fbanco = new FuncionarioBanco();
+        Venda v = new Venda();
+        Pagamento pagamento = new Pagamento();
 
         public telaVenda()
         {
@@ -35,8 +38,9 @@ namespace LojaGames
                 int quantidade = Convert.ToInt32(numQuantidade.Value);
                 float valor_total_item = (item[0].Preco) * (quantidade);
 
-                
-                dgvProdutosVenda.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), item[0].Preco.ToString(), quantidade, valor_total_item);
+
+                //dgvProdutosVenda.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), item[0].Preco.ToString(), quantidade, valor_total_item);
+                dgvProdutosVenda.Rows.Add(mtbCPFVenda.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncVenda.Text)), item[0].Codigo.ToString(), item[0].Nome, item[0].Preco.ToString(), quantidade, valor_total_item);
 
                 //MessageBox.Show("Produto adicionado na lista!", "Venda");
                 txtCodProdVenda.Text = string.Empty;
@@ -298,7 +302,7 @@ namespace LojaGames
 
             for(int x=0; x < qntProdutos; x++)
             {
-                total += float.Parse((dgvProdutosVenda[4,x].Value).ToString());
+                total += float.Parse((dgvProdutosVenda[6,x].Value).ToString());
             }
             
             txtTotalCompra.Text = total.ToString();
@@ -363,11 +367,16 @@ namespace LojaGames
                 
                 for(int i=0 ; i<quantidadeItems; i++)
                 {
-                    int colunaCodigo = Convert.ToInt32(dgvProdutosVenda[0, i].Value);
-                    int colunaQtd = Convert.ToInt32(dgvProdutosVenda[3, i].Value);
-                    float valor_total_item = float.Parse(dgvProdutosVenda[4, i].Value.ToString());
-
-                    venda.registraVenda(populaVenda(colunaCodigo, colunaQtd, valor_total_item));
+                    string colunaCpf_cliente = (dgvProdutosVenda[0, i].Value.ToString());
+                    string colunaCpf_funcionario = (dgvProdutosVenda[1, i].Value.ToString());
+                    int colunaCodigo = Convert.ToInt32(dgvProdutosVenda[2, i].Value);
+                    int codigoPagamento = venda.SelecionaPagamento(cbxFormasPagamentosCompra.Text);
+                    int quantidade = Convert.ToInt32(dgvProdutosVenda[5, i].Value.ToString());
+                    int numParcelas = Convert.ToInt32(numParcelas_Venda.Value);
+                    double valorParcela = Convert.ToDouble(txtValorParcela.Text);
+                    double valorTotal = Convert.ToDouble(txtTotalCompra.Text);
+                    
+                    venda.registraVenda(populaVenda(colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, codigoPagamento, quantidade, numParcelas, valorParcela, valorTotal));
                 }
 
 
@@ -386,23 +395,23 @@ namespace LojaGames
 
         }
 
-        private Venda populaVenda(int cod, int qtd, float total_item)
+        private Venda populaVenda(string cpf_cliente, string cpf_funcionario, int codigo, int codigoPagamento, int qtde, int parcelas, double valorParcela, double total)
         {
             FuncionarioBanco f = new FuncionarioBanco();
             PagamentoBanco p = new PagamentoBanco();
 
             //pegar os dados de uma linha do dataGrid
-            Venda v = new Venda();
+            //Venda v = new Venda();
 
-            v.CodigoVenda = Convert.ToInt32(lbCodVenda.Text);
-            v.Funcionario.CPF = f.BuscarFuncionario_codigo_retornaCPF(Convert.ToInt32(txtCodFuncVenda.Text));
-            v.Cliente.CPF = Convert.ToInt64(mtbCPFVenda.Text);
-            v.Jogos.Codigo = cod;
-            v.Pagamento.Codigo_pagamento = p.buscaCodPagamento(cbxFormasPagamentosCompra.Text);
-            v.Quantidade = qtd;
-            v.NumeroParcelas = Convert.ToInt32(numParcelas_Venda.Value);
-            v.ValorParcelas = float.Parse(txtValorParcela.Text);
-            v.Total = total_item;
+            //v.CodigoVenda = Convert.ToInt32(lbCodVenda.Text);
+            v.CPF_Cliente = cpf_cliente;
+            v.CPF_Funcionario = cpf_funcionario;
+            v.CodJogos = codigo;
+            v.CodPagamento = codigoPagamento;
+            v.Quantidade = qtde;
+            v.NumeroParcelas = parcelas;
+            v.ValorParcelas = float.Parse(valorParcela.ToString());
+            v.Total = float.Parse(total.ToString());
 
             return v;
         }

@@ -76,6 +76,7 @@
     <Compile Include="Model\Aluguel.cs" />
     <Compile Include="Model\Banco.cs" />
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\DAO\AluguelDAO.cs" />
     <Compile Include="Model\DAO\ClienteDAO.cs" />
     <Compile Include="Model\DAO\FuncionarioDAO.cs" />
     <Compile Include="Model\DAO\JogosDAO.cs" />

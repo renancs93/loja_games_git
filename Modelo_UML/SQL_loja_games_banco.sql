@@ -51,13 +51,11 @@ cpf_cli varchar(14) not null,
 cpf_func varchar(14) not null,
 cod_jogo integer not null,
 quantidade integer,
-numero_parcelas integer,
-valor_parcelas float,
 valor_total float,
 pagamento varchar(10),
 foreign key (cpf_cli) references cliente(cpf_cliente),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
-foreign key (cod_jogo) references jogos(codigo_jogo),
+foreign key (cod_jogo) references jogos(codigo_jogo));
 
 
 create table aluguel(
@@ -65,14 +63,12 @@ codigo_aluguel integer not null,
 cpf_cli varchar(14) not null,
 cpf_func varchar(14) not null,
 cod_jogo integer not null,
-cod_pagamento integer not null,
-quantidade integer,
 dias_aluguel integer,
 valor_total float,
+pagamento varchar(10),
 foreign key (cpf_cli) references cliente(cpf_cliente),
 foreign key (cpf_func) references funcionario(cpf_funcionario),
-foreign key (cod_jogo) references jogos(codigo_jogo),
-foreign key (cod_pagamento) references pagamento(codigo_pagamento));
+foreign key (cod_jogo) references jogos(codigo_jogo));
 
 create table pagamento(
 codigo_pagamento integer not null,

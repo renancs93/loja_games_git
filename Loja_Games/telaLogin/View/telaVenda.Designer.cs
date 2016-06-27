@@ -39,10 +39,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtExibeNomeJogo = new System.Windows.Forms.TextBox();
             this.dgvProdutosAluga = new System.Windows.Forms.DataGridView();
-            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgValorAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddAlug = new System.Windows.Forms.Button();
             this.btnRemAlug = new System.Windows.Forms.Button();
             this.numDiasAlug = new System.Windows.Forms.NumericUpDown();
@@ -76,6 +72,13 @@
             this.btnRemoverItem = new System.Windows.Forms.Button();
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.dgvProdutosVenda = new System.Windows.Forms.DataGridView();
+            this.colunaCPFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPFF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtConfirmaNomeFuncionario = new System.Windows.Forms.TextBox();
             this.txtConfirmaNomeCliente = new System.Windows.Forms.TextBox();
             this.mtbCPFVenda = new System.Windows.Forms.MaskedTextBox();
@@ -94,13 +97,12 @@
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.lbCodigoVenda = new System.Windows.Forms.Label();
             this.tcVendaAluguel = new System.Windows.Forms.TabControl();
-            this.colunaCPFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaCPFF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaValorTotalItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPF_Func = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCodAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDiasAlug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abaAluguel.SuspendLayout();
             this.gpbAlug.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -226,10 +228,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProdutosAluga.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProdutosAluga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colunaCPF_Cliente,
+            this.colunaCPF_Func,
             this.dgvCodAlug,
             this.dgvDescAlug,
             this.dgvDiasAlug,
-            this.dvgValorAlug});
+            this.colunaValor});
             this.dgvProdutosAluga.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvProdutosAluga.Location = new System.Drawing.Point(3, 93);
             this.dgvProdutosAluga.Name = "dgvProdutosAluga";
@@ -238,26 +242,6 @@
             this.dgvProdutosAluga.TabIndex = 12;
             this.dgvProdutosAluga.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProdutosAluga_RowsAdded);
             this.dgvProdutosAluga.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdutosAluga_RowsRemoved);
-            // 
-            // dgvCodAlug
-            // 
-            this.dgvCodAlug.HeaderText = "Código";
-            this.dgvCodAlug.Name = "dgvCodAlug";
-            // 
-            // dgvDescAlug
-            // 
-            this.dgvDescAlug.HeaderText = "Descrição";
-            this.dgvDescAlug.Name = "dgvDescAlug";
-            // 
-            // dgvDiasAlug
-            // 
-            this.dgvDiasAlug.HeaderText = "Dias";
-            this.dgvDiasAlug.Name = "dgvDiasAlug";
-            // 
-            // dvgValorAlug
-            // 
-            this.dvgValorAlug.HeaderText = "Valor Aluguel";
-            this.dvgValorAlug.Name = "dvgValorAlug";
             // 
             // btnAddAlug
             // 
@@ -688,6 +672,48 @@
             this.dgvProdutosVenda.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProdutosVenda_RowsAdded);
             this.dgvProdutosVenda.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProdutosVenda_RowsRemoved);
             // 
+            // colunaCPFC
+            // 
+            this.colunaCPFC.HeaderText = "CPF_Cliente";
+            this.colunaCPFC.Name = "colunaCPFC";
+            this.colunaCPFC.ReadOnly = true;
+            // 
+            // colunaCPFF
+            // 
+            this.colunaCPFF.HeaderText = "CPF_Func";
+            this.colunaCPFF.Name = "colunaCPFF";
+            this.colunaCPFF.ReadOnly = true;
+            // 
+            // colunaCodigo
+            // 
+            this.colunaCodigo.HeaderText = "Código Jogo";
+            this.colunaCodigo.Name = "colunaCodigo";
+            this.colunaCodigo.ReadOnly = true;
+            // 
+            // colunaNome
+            // 
+            this.colunaNome.HeaderText = "Nome do Jogo";
+            this.colunaNome.Name = "colunaNome";
+            this.colunaNome.ReadOnly = true;
+            // 
+            // colunaValorUnitario
+            // 
+            this.colunaValorUnitario.HeaderText = "Valor Unitário";
+            this.colunaValorUnitario.Name = "colunaValorUnitario";
+            this.colunaValorUnitario.ReadOnly = true;
+            // 
+            // colunaQtd
+            // 
+            this.colunaQtd.HeaderText = "Quantidade";
+            this.colunaQtd.Name = "colunaQtd";
+            this.colunaQtd.ReadOnly = true;
+            // 
+            // colunaValorTotalItem
+            // 
+            this.colunaValorTotalItem.HeaderText = "Valor Total";
+            this.colunaValorTotalItem.Name = "colunaValorTotalItem";
+            this.colunaValorTotalItem.ReadOnly = true;
+            // 
             // txtConfirmaNomeFuncionario
             // 
             this.txtConfirmaNomeFuncionario.Cursor = System.Windows.Forms.Cursors.Default;
@@ -887,47 +913,35 @@
             this.tcVendaAluguel.Size = new System.Drawing.Size(782, 556);
             this.tcVendaAluguel.TabIndex = 0;
             // 
-            // colunaCPFC
+            // colunaCPF_Cliente
             // 
-            this.colunaCPFC.HeaderText = "CPF_Cliente";
-            this.colunaCPFC.Name = "colunaCPFC";
-            this.colunaCPFC.ReadOnly = true;
+            this.colunaCPF_Cliente.HeaderText = "CPF_Cliente";
+            this.colunaCPF_Cliente.Name = "colunaCPF_Cliente";
             // 
-            // colunaCPFF
+            // colunaCPF_Func
             // 
-            this.colunaCPFF.HeaderText = "CPF_Func";
-            this.colunaCPFF.Name = "colunaCPFF";
-            this.colunaCPFF.ReadOnly = true;
+            this.colunaCPF_Func.HeaderText = "CPF_Func";
+            this.colunaCPF_Func.Name = "colunaCPF_Func";
             // 
-            // colunaCodigo
+            // dgvCodAlug
             // 
-            this.colunaCodigo.HeaderText = "Código Jogo";
-            this.colunaCodigo.Name = "colunaCodigo";
-            this.colunaCodigo.ReadOnly = true;
+            this.dgvCodAlug.HeaderText = "Código";
+            this.dgvCodAlug.Name = "dgvCodAlug";
             // 
-            // colunaNome
+            // dgvDescAlug
             // 
-            this.colunaNome.HeaderText = "Nome do Jogo";
-            this.colunaNome.Name = "colunaNome";
-            this.colunaNome.ReadOnly = true;
+            this.dgvDescAlug.HeaderText = "Nome";
+            this.dgvDescAlug.Name = "dgvDescAlug";
             // 
-            // colunaValorUnitario
+            // dgvDiasAlug
             // 
-            this.colunaValorUnitario.HeaderText = "Valor Unitário";
-            this.colunaValorUnitario.Name = "colunaValorUnitario";
-            this.colunaValorUnitario.ReadOnly = true;
+            this.dgvDiasAlug.HeaderText = "Dias";
+            this.dgvDiasAlug.Name = "dgvDiasAlug";
             // 
-            // colunaQtd
+            // colunaValor
             // 
-            this.colunaQtd.HeaderText = "Quantidade";
-            this.colunaQtd.Name = "colunaQtd";
-            this.colunaQtd.ReadOnly = true;
-            // 
-            // colunaValorTotalItem
-            // 
-            this.colunaValorTotalItem.HeaderText = "Valor Total";
-            this.colunaValorTotalItem.Name = "colunaValorTotalItem";
-            this.colunaValorTotalItem.ReadOnly = true;
+            this.colunaValor.HeaderText = "Valor Total";
+            this.colunaValor.Name = "colunaValor";
             // 
             // telaVenda
             // 
@@ -979,10 +993,6 @@
         private System.Windows.Forms.TextBox txtTotalAluguel;
         private System.Windows.Forms.Label lbTotalAlug;
         private System.Windows.Forms.DataGridView dgvProdutosAluga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodAlug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDescAlug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiasAlug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgValorAlug;
         private System.Windows.Forms.Button btnRemAlug;
         private System.Windows.Forms.Button btnAddAlug;
         private System.Windows.Forms.NumericUpDown numDiasAlug;
@@ -1041,5 +1051,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaQtd;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaValorTotalItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaCPF_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaCPF_Func;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDescAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDiasAlug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaValor;
     }
 }

@@ -11,10 +11,10 @@ namespace LojaGames.Model
     {
         //Declaração das variáveis
         private int codigoAluguel;
-        private Cliente cliente;
-        private Funcionario funcionario;
-        private Jogos jogos;
-        private Pagamento pagamento;
+        private string cpf_cliente;
+        private string cpf_funcionario;
+        private int codigoJogo;
+        private string pagamento;
         private int dias;
         private float valorTotal;
 
@@ -30,10 +30,23 @@ namespace LojaGames.Model
                 codigoAluguel = value >= 0 ? value : 0;
             }
         }
-        public Cliente Cliente { get; set; }
-        public Funcionario Funcionario { get; set; }
-        public Jogos Jogos { get; set; }
-        public Pagamento Pagamento { get; set; }
+        public string CPF_Cliente { get; set; }
+        public string CPF_Funcionario { get; set; }
+        
+        public int CodigoJogo
+        {
+            get
+            {
+                return codigoJogo;
+            }
+            set
+            {
+                CodigoJogo = value > 0 ? value : 0;
+            }
+        }
+        public string Pagamento { get; set; }
+
+        
         public int Dias
         {
             get

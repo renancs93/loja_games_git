@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
+using LojaGames.Model;
 
 namespace LojaGames
 {
@@ -12,6 +13,7 @@ namespace LojaGames
         private Form telaP = null;
         FuncionarioBanco fbanco = new FuncionarioBanco();
         Venda v = new Venda();
+        Aluguel a = new Aluguel();
         Pagamento pagamento = new Pagamento();
 
         public telaVenda()
@@ -122,16 +124,35 @@ namespace LojaGames
 
         private void btnFinAlug_Click(object sender, EventArgs e)
         {
-            DialogResult FecharAluguel = MessageBox.Show("Deseja realmente finalizar o aluguel?", "Finalizar Aluguel", MessageBoxButtons.YesNo);
-
-            if (FecharAluguel == DialogResult.Yes)
+            DialogResult FecharAluguel = MessageBox.Show("Deseja realmente finalizar o aluguel?", "Finalizar Compra", MessageBoxButtons.YesNo);
+            if(FecharAluguel == DialogResult.Yes)
             {
-                //codigo de verificação
+                AluguelBanco aluguelBanco = new AluguelBanco();
 
+                //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
+                int quantidadeItems = dgvProdutosVenda.RowCount;
 
-                MessageBox.Show("Aluguel realizado com sucesso!");
-                Close();
-                telaP.Show();
+                for(int i = 0; i < quantidadeItems; i++)
+                {
+                    int codigoAluguel = int.Parse(lbCodAlug.Text);
+                    string colunaCPF_Cliente = (dgvProdutosAluga[0, i].Value.ToString());
+                    string colunaCPF_Funcionario = (dgvProdutosAluga[1, i].Value.ToString());
+                    int colunaCodigo = Convert.ToInt32(dgvProdutosAluga[2, i].Value);
+                    int diasAluguel = Convert.ToInt32(dgvProdutosAluga[4, i].Value);
+                    double valor_total = Convert.ToDouble(dgvProdutosAluga[6, i].Value);
+                    string pagamento = cbxFormasPagamentoAluguel.Text;
+
+                    aluguelBanco.RegistraAluguel(populaAluguel(codigoAluguel, colunaCPF_Cliente, colunaCPF_Funcionario, colunaCodigo, diasAluguel, valor_total, pagamento));
+                }
+
+                MessageBox.Show("Aluguel realizada com sucesso!");
+                ClasseUtil.LimparCampos(abaAluguel.Controls);
+
+                //gera o próximo codigo de venda
+                //telaVenda_Load(sender, e);
+                
+                //AluguelBanco gera_codigo_aluguel = new AluguelBanco();
+                //lbCodAlug.Text = Convert.ToString(1 + gera_codigo_aluguel.codigoAtual_Aluguel());
             }
         }
 
@@ -147,7 +168,7 @@ namespace LojaGames
                 int dias = Convert.ToInt32(numDiasAlug.Value);
                 float valor_total_aluguel = (item[0].Preco / 10) * dias;
 
-                dgvProdutosAluga.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), dias, valor_total_aluguel);
+                dgvProdutosAluga.Rows.Add(mtbCPFAluguel.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncAluga.Text)), item[0].Codigo.ToString(), item[0].Nome.ToString(), dias, valor_total_aluguel);
 
                 txtCodProdAluga.Text = string.Empty;
                 numDiasAlug.Value = 1;
@@ -336,7 +357,7 @@ namespace LojaGames
 
             for(int x = 0; x < qtdeProdutos; x++)
             {
-                total += float.Parse((dgvProdutosAluga[3,x].Value).ToString());
+                total += float.Parse((dgvProdutosAluga[5,x].Value).ToString());
             }
             txtTotalAluguel.Text = total.ToString();
         }
@@ -372,56 +393,50 @@ namespace LojaGames
                     string colunaCpf_funcionario = (dgvProdutosVenda[1, i].Value.ToString());
                     int colunaCodigo = Convert.ToInt32(dgvProdutosVenda[2, i].Value);
                     int quantidade = Convert.ToInt32(dgvProdutosVenda[5, i].Value.ToString());
-                    int numParcelas = Convert.ToInt32(numParcelas_Venda.Value);
-                    double valorParcela = Convert.ToDouble(txtValorParcela.Text);
                     double valorTotal = Convert.ToDouble(dgvProdutosVenda[6, i].Value);
                     string pagamento = cbxFormasPagamentosCompra.Text;
 
-                    venda.registraVenda(populaVenda(codigoVenda, colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, quantidade, numParcelas, valorParcela, valorTotal, pagamento));
+                    venda.registraVenda(populaVenda(codigoVenda, colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, quantidade, valorTotal, pagamento));
                 }
-
 
                 MessageBox.Show("Compra realizada com sucesso!");
                 ClasseUtil.LimparCampos(abaVenda.Controls);
+                dgvProdutosVenda.Rows.Clear();
                 
-
                 //gera o próximo codigo de venda
                 telaVenda_Load(sender, e);
 
                 VendaBanco gera_codigo = new VendaBanco();
                 lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
             }
-
-
         }
 
-        private Venda populaVenda(int codigoV, string cpf_cliente, string cpf_funcionario, int codigo, int qtde, int parcelas, double valorParcela, double total, string pag)
+        private Venda populaVenda(int codigoV, string cpf_cliente, string cpf_funcionario, int codigo, int qtde, double total, string pag)
         {
-            FuncionarioBanco f = new FuncionarioBanco();
-            PagamentoBanco p = new PagamentoBanco();
-
             //pegar os dados de uma linha do dataGrid
-            //Venda v = new Venda();
 
-            //v.CodigoVenda = Convert.ToInt32(lbCodVenda.Text);
             v.CodigoVenda = codigoV;
             v.CPF_Cliente = cpf_cliente;
             v.CPF_Funcionario = cpf_funcionario;
             v.CodJogos = codigo;
             v.Quantidade = qtde;
-            v.NumeroParcelas = parcelas;
-            v.ValorParcelas = float.Parse(valorParcela.ToString());
             v.Total = float.Parse(total.ToString());
             v.Pagamento = pag;
 
             return v;
         }
 
+        private Aluguel populaAluguel(int codigoA, string cpf_cli, string cpf_func, int codigo, int dias, double total, string pag)
+        {
+            a.CodigoAluguel = codigoA;
+            a.CPF_Cliente = cpf_cli;
+            a.CPF_Funcionario = cpf_func;
+            a.CodigoJogo = codigo;
+            a.Dias = dias;
+            a.ValorTotal = float.Parse(total.ToString());
+            a.Pagamento = pag;
 
-     
-
-
-
-
+            return a;
+        }
     }
 }

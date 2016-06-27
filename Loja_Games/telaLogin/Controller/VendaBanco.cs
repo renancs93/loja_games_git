@@ -11,7 +11,6 @@ namespace LojaGames.Controller
 {
     class VendaBanco
     {
-
         JogosDAO jogosDao = new JogosDAO();
         VendaDAO vendaDao = new VendaDAO();
 

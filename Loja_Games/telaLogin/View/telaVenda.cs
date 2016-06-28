@@ -54,9 +54,7 @@ namespace LojaGames
 
                     txtCodProdVenda.Text = string.Empty;
                     numQuantidade.Value = 1;
-
-                    int qtdeAtualizada = (qtdeProdutoAtual - qtdeVendida);
-                    jogoBanco.AtualizaQtde(qtdeAtualizada, item[0].Codigo);
+                    
                 }
                 else
                 {
@@ -81,15 +79,12 @@ namespace LojaGames
                 int linha = dgvProdutosVenda.CurrentRow.Index;
                 qtdeVendida = Convert.ToInt32(dgvProdutosVenda[5, linha].Value);
                 int codigoAtual = Convert.ToInt32(dgvProdutosVenda[2, linha].Value);
-                qtdeProdutoAtual = jogoBanco.QuantidadeAtual(codigoAtual);
 
                 DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Venda", MessageBoxButtons.YesNo);
 
                 if (RmItem == DialogResult.Yes)
                 {
                     dgvProdutosVenda.Rows.RemoveAt(linha);
-                    int qtdeAtualizada = (qtdeProdutoAtual + qtdeVendida);
-                    jogoBanco.AtualizaQtde(qtdeAtualizada, codigoAtual);
                 }
             }
             else
@@ -160,6 +155,10 @@ namespace LojaGames
                     int diasAluguel = Convert.ToInt32(dgvProdutosAluga[4, i].Value);
                     double valor_total = Convert.ToDouble(dgvProdutosAluga[5, i].Value);
                     string pagamento = cbxFormasPagamentoAluguel.Text;
+                    qtdeProdutoAtual = jogoBanco.QuantidadeAtual(Convert.ToInt32(dgvProdutosAluga[2, i].Value));
+
+                    int qtdeAtualizada = (qtdeProdutoAtual - 1);
+                    jogoBanco.AtualizaQtde(qtdeAtualizada, colunaCodigo);
 
                     aluguelBanco.RegistraAluguel(populaAluguel(codigoAluguel, colunaCPF_Cliente, colunaCPF_Funcionario, colunaCodigo, diasAluguel, valor_total, pagamento));
                 }
@@ -175,27 +174,37 @@ namespace LojaGames
 
         private void btnAddAlug_Click(object sender, EventArgs e)
         {
-            if(txtExibeNomeJogo.Text != "Nome do Jogo" || txtExibeNomeJogo.Text != "Jogo não encontrado")
+            qtdeProdutoAtual = jogoBanco.QuantidadeAtual(Convert.ToInt32(txtCodProdAluga.Text));
+
+            if(qtdeProdutoAtual != 0)
             {
-                int codigo = Convert.ToInt32(txtCodProdAluga.Text);
+                if (txtExibeNomeJogo.Text != "Nome do Jogo" || txtExibeNomeJogo.Text != "Jogo não encontrado")
+                {
+                    int codigo = Convert.ToInt32(txtCodProdAluga.Text);
 
-                VendaBanco jogo = new VendaBanco();
-                List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
+                    VendaBanco jogo = new VendaBanco();
+                    List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
 
-                int dias = Convert.ToInt32(numDiasAlug.Value);
-                float valor_total_aluguel = (item[0].Preco / 10) * dias;
+                    int dias = Convert.ToInt32(numDiasAlug.Value);
+                    float valor_total_aluguel = (item[0].Preco / 10) * dias;
 
-                dgvProdutosAluga.Rows.Add(mtbCPFAluguel.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncAluga.Text)), item[0].Codigo.ToString(), item[0].Nome.ToString(), dias, valor_total_aluguel);
+                    dgvProdutosAluga.Rows.Add(mtbCPFAluguel.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncAluga.Text)), item[0].Codigo.ToString(), item[0].Nome.ToString(), dias, valor_total_aluguel);
 
-                txtCodProdAluga.Text = string.Empty;
-                numDiasAlug.Value = 1;
+                    txtCodProdAluga.Text = string.Empty;
+                    numDiasAlug.Value = 1;
+                }
+                else
+                {
+                    MessageBox.Show("Dados Inválidos!, tente novamente!", "Aluga");
+                    txtCodProdAluga.Text = string.Empty;
+                    numDiasAlug.Value = 1;
+                }
             }
             else
             {
-                MessageBox.Show("Dados Inválidos!, tente novamente!", "Aluga");
-                txtCodProdAluga.Text = string.Empty;
-                numDiasAlug.Value = 1;
+                MessageBox.Show("Quantidade insuficiente no estoque!", "Atenção!", MessageBoxButtons.OK);
             }
+            
         }
 
         private void btnRemAlug_Click(object sender, EventArgs e)
@@ -397,6 +406,7 @@ namespace LojaGames
 
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
+
             DialogResult FecharCompra = MessageBox.Show("Deseja realmente finalizar a venda?", "Finalizar Compra", MessageBoxButtons.YesNo);
 
             if (FecharCompra == DialogResult.Yes)
@@ -415,6 +425,11 @@ namespace LojaGames
                     int quantidade = Convert.ToInt32(dgvProdutosVenda[5, i].Value.ToString());
                     double valorTotal = Convert.ToDouble(dgvProdutosVenda[6, i].Value);
                     string pagamento = cbxFormasPagamentosCompra.Text;
+                    qtdeVendida = Convert.ToInt32(dgvProdutosVenda[5, i].Value);
+                    qtdeProdutoAtual = jogoBanco.QuantidadeAtual(Convert.ToInt32(dgvProdutosVenda[2, i].Value));
+
+                    int qtdeAtualizada = (qtdeProdutoAtual - qtdeVendida);
+                    jogoBanco.AtualizaQtde(qtdeAtualizada, colunaCodigo);
 
                     venda.registraVenda(populaVenda(codigoVenda, colunaCpf_cliente, colunaCpf_funcionario, colunaCodigo, quantidade, valorTotal, pagamento));
                 }
@@ -422,7 +437,7 @@ namespace LojaGames
                 MessageBox.Show("Compra realizada com sucesso!");
                 ClasseUtil.LimparCampos(abaVenda.Controls);
                 dgvProdutosVenda.Rows.Clear();
-
+                
                 VendaBanco gera_codigo = new VendaBanco();
                 lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
             }

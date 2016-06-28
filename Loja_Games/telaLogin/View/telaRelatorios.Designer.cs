@@ -32,27 +32,27 @@
             this.abaRelatorioVendaAluga = new System.Windows.Forms.TabPage();
             this.gbxResultado = new System.Windows.Forms.GroupBox();
             this.dgvResultado = new System.Windows.Forms.DataGridView();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gbxDadosVendaAluga = new System.Windows.Forms.GroupBox();
+            this.btnBuscarTipo = new System.Windows.Forms.Button();
+            this.pcbGameLogo = new System.Windows.Forms.PictureBox();
             this.btnBuscarCod = new System.Windows.Forms.Button();
             this.btnBuscaCpf = new System.Windows.Forms.Button();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.gbxTipo = new System.Windows.Forms.GroupBox();
-            this.btnBuscarTipo = new System.Windows.Forms.Button();
             this.rbAluguel = new System.Windows.Forms.RadioButton();
             this.rbVenda = new System.Windows.Forms.RadioButton();
             this.mtbCpfCliente = new System.Windows.Forms.MaskedTextBox();
             this.lbCpfCliente = new System.Windows.Forms.Label();
             this.txtCodVendaAluga = new System.Windows.Forms.TextBox();
             this.lbCodigoVendaAluguel = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.pcbGameLogo = new System.Windows.Forms.PictureBox();
             this.tcVendaAluguel.SuspendLayout();
             this.abaRelatorioVendaAluga.SuspendLayout();
             this.gbxResultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.gbxDadosVendaAluga.SuspendLayout();
-            this.gbxTipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).BeginInit();
+            this.gbxTipo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcVendaAluguel
@@ -101,6 +101,17 @@
             this.dgvResultado.Size = new System.Drawing.Size(769, 281);
             this.dgvResultado.TabIndex = 0;
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(693, 473);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(87, 27);
+            this.btnSair.TabIndex = 1;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // gbxDadosVendaAluga
             // 
             this.gbxDadosVendaAluga.Controls.Add(this.btnBuscarTipo);
@@ -120,6 +131,27 @@
             this.gbxDadosVendaAluga.TabIndex = 0;
             this.gbxDadosVendaAluga.TabStop = false;
             this.gbxDadosVendaAluga.Text = "Dados";
+            // 
+            // btnBuscarTipo
+            // 
+            this.btnBuscarTipo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarTipo.Location = new System.Drawing.Point(260, 105);
+            this.btnBuscarTipo.Name = "btnBuscarTipo";
+            this.btnBuscarTipo.Size = new System.Drawing.Size(127, 23);
+            this.btnBuscarTipo.TabIndex = 2;
+            this.btnBuscarTipo.Text = "Buscar Tipo";
+            this.btnBuscarTipo.UseVisualStyleBackColor = true;
+            this.btnBuscarTipo.Click += new System.EventHandler(this.btnBuscarTipo_Click);
+            // 
+            // pcbGameLogo
+            // 
+            this.pcbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
+            this.pcbGameLogo.Location = new System.Drawing.Point(664, 14);
+            this.pcbGameLogo.Name = "pcbGameLogo";
+            this.pcbGameLogo.Size = new System.Drawing.Size(105, 76);
+            this.pcbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbGameLogo.TabIndex = 2;
+            this.pcbGameLogo.TabStop = false;
             // 
             // btnBuscarCod
             // 
@@ -151,6 +183,7 @@
             this.btnGerarRelatorio.TabIndex = 7;
             this.btnGerarRelatorio.Text = "Gerar Relatório";
             this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Visible = false;
             this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
             // 
             // gbxTipo
@@ -163,17 +196,6 @@
             this.gbxTipo.TabIndex = 6;
             this.gbxTipo.TabStop = false;
             this.gbxTipo.Text = "Tipo";
-            // 
-            // btnBuscarTipo
-            // 
-            this.btnBuscarTipo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarTipo.Location = new System.Drawing.Point(260, 105);
-            this.btnBuscarTipo.Name = "btnBuscarTipo";
-            this.btnBuscarTipo.Size = new System.Drawing.Size(127, 23);
-            this.btnBuscarTipo.TabIndex = 2;
-            this.btnBuscarTipo.Text = "Buscar Tipo";
-            this.btnBuscarTipo.UseVisualStyleBackColor = true;
-            this.btnBuscarTipo.Click += new System.EventHandler(this.btnBuscarTipo_Click);
             // 
             // rbAluguel
             // 
@@ -235,27 +257,6 @@
             this.lbCodigoVendaAluguel.TabIndex = 2;
             this.lbCodigoVendaAluguel.Text = "Código de Venda/Aluguel";
             // 
-            // btnSair
-            // 
-            this.btnSair.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(693, 473);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(87, 27);
-            this.btnSair.TabIndex = 1;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // pcbGameLogo
-            // 
-            this.pcbGameLogo.Image = global::LojaGames.Properties.Resources.img_game_logo;
-            this.pcbGameLogo.Location = new System.Drawing.Point(664, 14);
-            this.pcbGameLogo.Name = "pcbGameLogo";
-            this.pcbGameLogo.Size = new System.Drawing.Size(105, 76);
-            this.pcbGameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbGameLogo.TabIndex = 2;
-            this.pcbGameLogo.TabStop = false;
-            // 
             // telaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -276,9 +277,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.gbxDadosVendaAluga.ResumeLayout(false);
             this.gbxDadosVendaAluga.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).EndInit();
             this.gbxTipo.ResumeLayout(false);
             this.gbxTipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbGameLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

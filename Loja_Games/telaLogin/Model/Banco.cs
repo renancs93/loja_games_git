@@ -11,9 +11,12 @@ namespace LojaGames.Model
         private static MySqlConnection conexao;
         private static Banco instance;
 
-        //Conexões
+        //Conexões server
         //private const string URL = "Server=sql8.freemysqlhosting.net; Port=3306; Database=sql8122133; Uid=sql8122133; Pwd=9wYweNm9rc;";
-        private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
+        private const string URL = "Server=sql6.freemysqlhosting.net; Port=3306; Database=sql6125738; Uid=sql6125738; Pwd=z7alel5IHI;";
+
+        //conexão Local
+        //private const string URL = "Server=localhost;Database=games;Uid=root;Pwd=cafess123;";
         //private const string URL = "Server=localhost;Database=loja_games;Uid=root;Pwd=1234;";
 
         private Banco()

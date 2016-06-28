@@ -259,5 +259,10 @@ namespace LojaGames.View
             //Funcionario
             mtbCpfCli.Text = c.CPF.ToString();            
         }
+
+        private void txtNumeroCli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClasseUtil.apenasNumeros(txtNumeroCli, e);
+        }
     }
 }

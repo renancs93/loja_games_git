@@ -44,7 +44,55 @@ namespace LojaGames.Model.DAO
             conexao.Close();
             return dt;
         }
-        
+
+        public DataTable exibiTodasVendas()
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM venda ORDER BY codigo_venda";
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable exibiTodasVendas_cod(int cod_venda)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM venda WHERE codigo_venda = "+cod_venda;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable exibiTodasVendas_cli(long cpf_cli)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM venda WHERE cpf_cli = "+cpf_cli;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+        }
+
         public void Create(Venda v)
         {
             Banco dbGames = Banco.GetInstance();
@@ -77,5 +125,7 @@ namespace LojaGames.Model.DAO
             dbGames.ExecuteSQL_NonQuery(comm);
 
         }
+        
+
     }
 }

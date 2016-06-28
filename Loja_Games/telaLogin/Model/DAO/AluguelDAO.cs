@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,5 +52,55 @@ namespace LojaGames.Model.DAO
             
             return totalContador;
         }
+
+        public DataTable exibiTodosAlugueis()
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM aluguel ORDER BY codigo_aluguel";
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+
+        }
+
+        public DataTable exibiTodosAlugueis_cod(int cod_aluguel)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM aluguel WHERE codigo_aluguel = " + cod_aluguel;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable exibiTodosAlugueis_cli(long cpf_cli)
+        {
+            MySqlConnection conexao = Banco.GetInstance().GetConnection();
+            DataTable dt = new DataTable();
+
+            string qry = "SELECT * FROM aluguel WHERE cpf_cli = "+ cpf_cli;
+
+            if (conexao.State != ConnectionState.Open)
+                conexao.Open();
+
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter(qry, conexao);
+            objAdapter.Fill(dt);
+
+            return dt;
+        }
+
     }
 }

@@ -362,6 +362,7 @@
             this.txtNumFunc.Name = "txtNumFunc";
             this.txtNumFunc.Size = new System.Drawing.Size(64, 22);
             this.txtNumFunc.TabIndex = 13;
+            this.txtNumFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumFunc_KeyPress);
             // 
             // lbNumero
             // 

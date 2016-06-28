@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,22 @@ namespace LojaGames.Controller
         {
             vendaDao.Create(v);
         }
+
+        public DataTable todasVendas()
+        {
+            return vendaDao.exibiTodasVendas();
+        }
+
+        public DataTable todasVendas_cod(int cod)
+        {
+            return vendaDao.exibiTodasVendas_cod(cod);
+        }
+
+        public DataTable todasVendas_cli(long cpf)
+        {
+            return vendaDao.exibiTodasVendas_cli(cpf);
+        }
+
 
         /*public int  SelecionaPagamento(string nome)
         {

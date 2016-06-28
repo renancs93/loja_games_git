@@ -335,5 +335,10 @@ namespace LojaGames.View
 
             dgvExibeFunc.Rows[linha].Selected = true;
         }
+
+        private void txtNumFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ClasseUtil.apenasNumeros(txtNumFunc, e);
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace LojaGames.Controller
 {
@@ -21,5 +22,21 @@ namespace LojaGames.Controller
         {
             return aluguelDao.max_cod_aluguel();
         }
+
+        public DataTable todosAlugueis()
+        {
+            return aluguelDao.exibiTodosAlugueis();
+        }
+
+        public DataTable todosAlugueis_cod(int cod)
+        {
+            return aluguelDao.exibiTodosAlugueis_cod(cod);
+        }
+
+        public DataTable todosAlugueis_cli(long cpf)
+        {
+            return aluguelDao.exibiTodosAlugueis_cli(cpf);
+        }
+
     }
 }

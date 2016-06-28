@@ -229,6 +229,7 @@
             this.txtNumeroCli.Name = "txtNumeroCli";
             this.txtNumeroCli.Size = new System.Drawing.Size(64, 22);
             this.txtNumeroCli.TabIndex = 13;
+            this.txtNumeroCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroCli_KeyPress);
             // 
             // txtCidadeCli
             // 

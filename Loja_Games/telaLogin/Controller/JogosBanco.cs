@@ -70,5 +70,19 @@ namespace LojaGames.Controller
             jogosDao.Delete(codigo_jogo);
         }
 
+        public void AtualizaQtde(int qtde, int codigo)
+        {
+            jogosDao.UpdateQuantidade(qtde, codigo);
+        }
+
+        public int QuantidadeAtual(int codigo)
+        {
+            int qtde;
+
+            qtde = jogosDao.SelecionaQuantidade(codigo);
+
+            return qtde;
+        }
+
     }
 }

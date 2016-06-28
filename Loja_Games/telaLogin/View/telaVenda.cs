@@ -11,10 +11,14 @@ namespace LojaGames
     public partial class telaVenda : Form
     {
         private Form telaP = null;
+        Jogos jogos = new Jogos();
+        JogosBanco jogoBanco = new JogosBanco();
         FuncionarioBanco fbanco = new FuncionarioBanco();
         Venda v = new Venda();
         Aluguel a = new Aluguel();
         Pagamento pagamento = new Pagamento();
+        int qtdeVendida;
+        int qtdeProdutoAtual;
 
         public telaVenda()
         {
@@ -29,48 +33,63 @@ namespace LojaGames
         private void btnAdicionarItem_Click(object sender, EventArgs e)
         {
             //Este metodo add os item de compra no dataView
+            qtdeVendida = Convert.ToInt32(numQuantidade.Value);
+            JogosBanco jogoBanco = new JogosBanco();
+            qtdeProdutoAtual = jogoBanco.QuantidadeAtual(Convert.ToInt32(txtCodProdVenda.Text));
 
-            if(txtConfirmaNomeProduto.Text != "Nome do Jogo" || txtConfirmaNomeProduto.Text != "Jogo não encontrado")
+            if(qtdeVendida <= qtdeProdutoAtual)
             {
-                int codigo = Convert.ToInt32(txtCodProdVenda.Text);
+                if (txtConfirmaNomeProduto.Text != "Nome do Jogo" || txtConfirmaNomeProduto.Text != "Jogo não encontrado")
+                {
+                    int codigo = Convert.ToInt32(txtCodProdVenda.Text);
 
-                VendaBanco jogo = new VendaBanco();
-                List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
-                
-                int quantidade = Convert.ToInt32(numQuantidade.Value);
-                float valor_total_item = (item[0].Preco) * (quantidade);
+                    VendaBanco jogo = new VendaBanco();
+                    List<Jogos> item = jogo.AddItem_ListaVenda(codigo);
 
+                    int quantidade = Convert.ToInt32(numQuantidade.Value);
+                    float valor_total_item = (item[0].Preco) * (quantidade);
 
-                //dgvProdutosVenda.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), item[0].Preco.ToString(), quantidade, valor_total_item);
-                dgvProdutosVenda.Rows.Add(mtbCPFVenda.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncVenda.Text)), item[0].Codigo.ToString(), item[0].Nome, item[0].Preco.ToString(), quantidade, valor_total_item);
+                    //dgvProdutosVenda.Rows.Add(item[0].Codigo.ToString(), item[0].Nome.ToString(), item[0].Preco.ToString(), quantidade, valor_total_item);
+                    dgvProdutosVenda.Rows.Add(mtbCPFVenda.Text, fbanco.BuscarFuncionario_codigo_retornaCPF(int.Parse(txtCodFuncVenda.Text)), item[0].Codigo.ToString(), item[0].Nome, item[0].Preco.ToString(), quantidade, valor_total_item);
 
-                //MessageBox.Show("Produto adicionado na lista!", "Venda");
-                txtCodProdVenda.Text = string.Empty;
-                numQuantidade.Value = 1;
+                    txtCodProdVenda.Text = string.Empty;
+                    numQuantidade.Value = 1;
+
+                    int qtdeAtualizada = (qtdeProdutoAtual - qtdeVendida);
+                    jogoBanco.AtualizaQtde(qtdeAtualizada, item[0].Codigo);
+                }
+                else
+                {
+                    MessageBox.Show("Dados Inválidos, tente novamente!", "Venda");
+                    txtCodProdVenda.Text = string.Empty;
+                    numQuantidade.Value = 1;
+                }
             }
             else
             {
-                MessageBox.Show("Dados Inválidos, tente novamente!", "Venda");
-                txtCodProdVenda.Text = string.Empty;
-                numQuantidade.Value = 1;
+                MessageBox.Show("Quantidade insuficiente no estoque!", "Atenção!", MessageBoxButtons.OK);
             }
-
-
         }
 
         private void btnRemoverItem_Click(object sender, EventArgs e)
         {
             //Esse botão terá que remover um item da lista de compra do cliente
-
+            JogosBanco jogoBanco = new JogosBanco();
+            
             if (dgvProdutosVenda.CurrentRow != null)
             {
                 int linha = dgvProdutosVenda.CurrentRow.Index;
+                qtdeVendida = Convert.ToInt32(dgvProdutosVenda[5, linha].Value);
+                int codigoAtual = Convert.ToInt32(dgvProdutosVenda[2, linha].Value);
+                qtdeProdutoAtual = jogoBanco.QuantidadeAtual(codigoAtual);
 
                 DialogResult RmItem = MessageBox.Show("Deseja realmente remover o item?", "Venda", MessageBoxButtons.YesNo);
 
                 if (RmItem == DialogResult.Yes)
                 {
                     dgvProdutosVenda.Rows.RemoveAt(linha);
+                    int qtdeAtualizada = (qtdeProdutoAtual + qtdeVendida);
+                    jogoBanco.AtualizaQtde(qtdeAtualizada, codigoAtual);
                 }
             }
             else
@@ -386,7 +405,7 @@ namespace LojaGames
 
                 //pegar os dados no dataGrid linha a linha e inseri no Banco na tabela venda e dar baixa no estoque da tabela Jogos
                 int quantidadeItems = dgvProdutosVenda.RowCount;
-                
+
                 for(int i=0 ; i<quantidadeItems; i++)
                 {
                     int codigoVenda = int.Parse(lbCodVenda.Text);
@@ -403,7 +422,7 @@ namespace LojaGames
                 MessageBox.Show("Compra realizada com sucesso!");
                 ClasseUtil.LimparCampos(abaVenda.Controls);
                 dgvProdutosVenda.Rows.Clear();
-                
+
                 VendaBanco gera_codigo = new VendaBanco();
                 lbCodVenda.Text = Convert.ToString(1 + gera_codigo.codigoAtual_venda());
             }

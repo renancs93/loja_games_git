@@ -39,6 +39,38 @@ namespace LojaGames.Model.DAO
             dbGames.ExecuteSQL_NonQuery(comm);
         }
 
+        public void UpdateQuantidade(int quantidade, int codigoJogo)
+        {
+            int codigo = codigoJogo;
+
+            Banco dbGames = Banco.GetInstance();
+
+            string qry = "UPDATE jogos SET qnt_estoque = @qnt_estoque WHERE codigo_jogo = " + codigo+"";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            comm.Parameters.Add("@qnt_estoque", MySqlDbType.Int32);
+
+            comm.Parameters["@qnt_estoque"].Value = quantidade;
+
+            dbGames.ExecuteSQL_NonQuery(comm);
+        }
+
+        public int SelecionaQuantidade(int codigoProduto)
+        {
+            int quantidade;
+
+            Banco dbGames = Banco.GetInstance();
+
+            string qry = "SELECT qnt_estoque FROM jogos WHERE codigo_jogo = " + codigoProduto + "";
+
+            MySqlCommand comm = new MySqlCommand(qry);
+
+            quantidade = dbGames.ExecuteSQL_Scalar_int(comm);
+
+            return quantidade;
+        }
+
         public DataTable ListAll_Jogos()
         {
             MySqlConnection conexao = Banco.GetInstance().GetConnection();

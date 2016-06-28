@@ -51,6 +51,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.abaExibeJogos = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dGridResultado = new System.Windows.Forms.DataGridView();
@@ -71,7 +72,6 @@
             this.txtCampoBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.lbNomeDoJogo = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.paginaAbasJogos.SuspendLayout();
             this.abaCadastraJogos.SuspendLayout();
             this.gpbConsoleCadastra.SuspendLayout();
@@ -187,7 +187,7 @@
             this.cbxGeneroCad.FormattingEnabled = true;
             this.cbxGeneroCad.Items.AddRange(new object[] {
             "Ação/Aventura",
-            "Corida",
+            "Corrida",
             "Esportes",
             "Estratégia",
             "Luta",
@@ -346,6 +346,17 @@
             this.abaExibeJogos.TabIndex = 1;
             this.abaExibeJogos.Text = "Exibir Jogos";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(260, 417);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(92, 33);
+            this.btnExcluir.TabIndex = 22;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -479,7 +490,7 @@
             this.cbxGeneroExib.FormattingEnabled = true;
             this.cbxGeneroExib.Items.AddRange(new object[] {
             "Ação/Aventura",
-            "Corida",
+            "Corrida",
             "Esportes",
             "Estratégia",
             "Luta",
@@ -590,17 +601,6 @@
             this.lbNomeDoJogo.Size = new System.Drawing.Size(110, 16);
             this.lbNomeDoJogo.TabIndex = 0;
             this.lbNomeDoJogo.Text = "Nome do Jogo";
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(260, 417);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(92, 33);
-            this.btnExcluir.TabIndex = 22;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // telaJogos
             // 

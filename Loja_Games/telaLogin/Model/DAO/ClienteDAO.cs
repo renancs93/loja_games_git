@@ -91,7 +91,7 @@ namespace LojaGames.Model.DAO
         {
             Banco dbGames = Banco.GetInstance();
 
-            string qry = "DELETE from CLIENTE where cpf_cliente = " + cpf_cli + "";
+            string qry = "DELETE FROM cliente where cpf_cliente = " + cpf_cli + "";
 
             MySqlCommand comm = new MySqlCommand(qry);
 

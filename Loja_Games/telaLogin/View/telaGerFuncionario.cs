@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using LojaGames.Classes;
 using LojaGames.Controller;
 using LojaGames.Model;
+using LojaGames.ServiceReferenceCorreios;
 using MySql.Data.MySqlClient;
 
 namespace LojaGames.View
@@ -339,6 +340,51 @@ namespace LojaGames.View
         private void txtNumFunc_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClasseUtil.apenasNumeros(txtNumFunc, e);
+        }
+
+        private void mtbCepFunc_Leave(object sender, EventArgs e)
+        {
+            if (mtbCepFunc.Text != string.Empty)
+            {
+                try
+                {
+                    AtendeClienteClient ws = new AtendeClienteClient("AtendeClientePort"); //Verificar o nome do endpoint no arquivo Web.config
+                    var dados = ws.consultaCEP(mtbCepFunc.Text);
+                    if (dados != null)
+                    {
+                        //MessageBox.Show(dados.cidade);
+                        //preenche os campos da tela com as informações retornadas do WebService dos Correios
+                        txtRuaFunc.Text = dados.end;
+                        txtBairroFunc.Text = dados.bairro;
+                        txtCidadeFunc.Text = dados.cidade;
+                        cbxEstadoFunc.Text = dados.uf;
+
+                        mtbCepFunc.BackColor = System.Drawing.Color.Green;
+                        txtNumFunc.Focus();
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show("CEP não encontrado");
+                    mtbCepFunc.Text = string.Empty;
+
+                    txtRuaFunc.Text = string.Empty;
+                    txtBairroFunc.Text = string.Empty;
+                    txtCidadeFunc.Text = string.Empty;
+                    cbxEstadoFunc.Text = string.Empty;
+
+                    mtbCepFunc.BackColor = System.Drawing.Color.Red;
+                    mtbCepFunc.Focus();
+                }
+            }
+            else
+                mtbCepFunc.BackColor = System.Drawing.Color.White;
+        }
+
+        private void mtbCepFunc_TextChanged(object sender, EventArgs e)
+        {
+            mtbCepFunc.BackColor = System.Drawing.Color.White;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using LojaGames.Classes;
 using MySql.Data.MySqlClient;
 
@@ -38,14 +39,24 @@ namespace LojaGames.Model
 
         public void ExecuteSQL_NonQuery(MySqlCommand comando)
         {
-            comando.Connection = conexao;
-            
+            try
+            {
+
+
+                comando.Connection = conexao;
+
                 if (conexao.State != System.Data.ConnectionState.Open)
                     conexao.Open();
 
-            comando.ExecuteNonQuery();
-            
-            conexao.Close();            
+                comando.ExecuteNonQuery();
+
+                conexao.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         public int ExecuteSQL_Scalar_int(MySqlCommand comando)

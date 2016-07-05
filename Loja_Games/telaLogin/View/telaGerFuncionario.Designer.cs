@@ -399,6 +399,8 @@
             this.mtbCepFunc.Size = new System.Drawing.Size(90, 22);
             this.mtbCepFunc.TabIndex = 11;
             this.mtbCepFunc.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbCepFunc.TextChanged += new System.EventHandler(this.mtbCepFunc_TextChanged);
+            this.mtbCepFunc.Leave += new System.EventHandler(this.mtbCepFunc_Leave);
             // 
             // lbCEP
             // 

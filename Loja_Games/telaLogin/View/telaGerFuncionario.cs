@@ -360,6 +360,11 @@ namespace LojaGames.View
                         cbxEstadoFunc.Text = dados.uf;
 
                         mtbCepFunc.BackColor = System.Drawing.Color.Green;
+
+                        //chama metodo para alterar o estado ENABLE dos campos do endereço
+                        habilitaCamposEndereco();
+                        
+                        //deixa o cursor setado no campo de numero
                         txtNumFunc.Focus();
                     }
                 }
@@ -369,11 +374,8 @@ namespace LojaGames.View
                     //MessageBox.Show("CEP não encontrado");
                     mtbCepFunc.Text = string.Empty;
 
-                    txtRuaFunc.Text = string.Empty;
-                    txtBairroFunc.Text = string.Empty;
-                    txtCidadeFunc.Text = string.Empty;
-                    cbxEstadoFunc.Text = string.Empty;
-
+                    limpaCamposEndereco();
+                    
                     mtbCepFunc.BackColor = System.Drawing.Color.Red;
                     mtbCepFunc.Focus();
                 }
@@ -385,6 +387,51 @@ namespace LojaGames.View
         private void mtbCepFunc_TextChanged(object sender, EventArgs e)
         {
             mtbCepFunc.BackColor = System.Drawing.Color.White;
+            limpaCamposEndereco();
+
         }
+
+        private void limpaCamposEndereco()
+        {
+            txtRuaFunc.Text = string.Empty;
+            txtBairroFunc.Text = string.Empty;
+            txtCidadeFunc.Text = string.Empty;
+            cbxEstadoFunc.SelectedIndex = -1;
+
+            habilitaCamposEndereco();
+        }
+
+        private void habilitaCamposEndereco()
+        {
+            //caso os campos trazerem dados, desabilita para não serem alterados
+            if (txtRuaFunc.Text != string.Empty)
+            {
+                txtRuaFunc.Enabled = false;
+            }
+            else
+                txtRuaFunc.Enabled = true;
+
+            if (txtBairroFunc.Text != string.Empty)
+            {
+                txtBairroFunc.Enabled = false;
+            }
+            else
+                txtBairroFunc.Enabled = true;
+
+            if (txtCidadeFunc.Text != string.Empty)
+            {
+                txtCidadeFunc.Enabled = false;
+            }
+            else
+                txtCidadeFunc.Enabled = true;
+
+            if (cbxEstadoFunc.Text != string.Empty)
+            {
+                cbxEstadoFunc.Enabled = false;
+            }
+            else
+                cbxEstadoFunc.Enabled = true;
+        }
+
     }
 }

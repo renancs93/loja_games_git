@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System;
 using LojaGames.Model;
+using LojaGames.ServiceReferenceCorreios;
 
 namespace LojaGames.View
 {
@@ -264,5 +265,99 @@ namespace LojaGames.View
         {
             ClasseUtil.apenasNumeros(txtNumeroCli, e);
         }
+
+        private void mtbCepCli_Leave(object sender, EventArgs e)
+        {
+            if (mtbCepCli.Text != string.Empty)
+            {
+                try
+                {
+                    AtendeClienteClient ws = new AtendeClienteClient("AtendeClientePort"); //Verificar o nome do endpoint no arquivo Web.config
+                    var dados = ws.consultaCEP(mtbCepCli.Text);
+                    if (dados != null)
+                    {
+                        //MessageBox.Show(dados.cidade);
+                        //preenche os campos da tela com as informações retornadas do WebService dos Correios
+                        txtRuaCli.Text = dados.end;
+                        txtBairroCli.Text = dados.bairro;
+                        txtCidadeCli.Text = dados.cidade;
+                        cbxEstadoCli.Text = dados.uf;
+
+                        mtbCepCli.BackColor = System.Drawing.Color.Green;
+
+                        //chama metodo para alterar o estado ENABLE dos campos do endereço
+                        habilitaCamposEndereco();
+
+                        //deixa o cursor setado no campo de numero
+                        txtNumeroCli.Focus();
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show("CEP não encontrado");
+                    mtbCepCli.Text = string.Empty;
+
+                    limpaCamposEndereco();
+
+                    mtbCepCli.BackColor = System.Drawing.Color.Red;
+                    mtbCepCli.Focus();
+                }
+            }
+            else
+                mtbCepCli.BackColor = System.Drawing.Color.White;
+
+
+        }
+
+        private void mtbCepCli_TextChanged(object sender, EventArgs e)
+        {
+            mtbCepCli.BackColor = System.Drawing.Color.White;
+            limpaCamposEndereco();
+        }
+
+        private void limpaCamposEndereco()
+        {
+            txtRuaCli.Text = string.Empty;
+            txtBairroCli.Text = string.Empty;
+            txtCidadeCli.Text = string.Empty;
+            cbxEstadoCli.SelectedIndex = -1;
+
+            habilitaCamposEndereco();
+        }
+
+        private void habilitaCamposEndereco()
+        {
+            //caso os campos trazerem dados, desabilita para não serem alterados
+            if (txtRuaCli.Text != string.Empty)
+            {
+                txtRuaCli.Enabled = false;
+            }
+            else
+                txtRuaCli.Enabled = true;
+
+            if (txtBairroCli.Text != string.Empty)
+            {
+                txtBairroCli.Enabled = false;
+            }
+            else
+                txtBairroCli.Enabled = true;
+
+            if (txtCidadeCli.Text != string.Empty)
+            {
+                txtCidadeCli.Enabled = false;
+            }
+            else
+                txtCidadeCli.Enabled = true;
+
+            if (cbxEstadoCli.Text != string.Empty)
+            {
+                cbxEstadoCli.Enabled = false;
+            }
+            else
+                cbxEstadoCli.Enabled = true;
+        }
+
+
     }
 }

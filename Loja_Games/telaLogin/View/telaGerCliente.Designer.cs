@@ -221,6 +221,8 @@
             this.mtbCepCli.Size = new System.Drawing.Size(90, 22);
             this.mtbCepCli.TabIndex = 11;
             this.mtbCepCli.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbCepCli.TextChanged += new System.EventHandler(this.mtbCepCli_TextChanged);
+            this.mtbCepCli.Leave += new System.EventHandler(this.mtbCepCli_Leave);
             // 
             // txtNumeroCli
             // 
